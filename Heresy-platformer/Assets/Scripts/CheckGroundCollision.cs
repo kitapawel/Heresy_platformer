@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class CheckGroundCollision : MonoBehaviour
 {
-    CharacterController parentCharacterController;
+    CharacterMovement parentCharacterMovementController;
     private void Awake()
     {
-        parentCharacterController = GetComponentInParent<CharacterController>();
+        parentCharacterMovementController = GetComponentInParent<CharacterMovement>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        parentCharacterController.CheckGroundCollision(true);
+        parentCharacterMovementController.CheckGroundCollision(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        parentCharacterController.CheckGroundCollision(false);
+        parentCharacterMovementController.CheckGroundCollision(false);
     }
 }

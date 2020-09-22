@@ -78,8 +78,7 @@ AnimationClip:
   - time: 0.016666668
     functionName: SetCanWalk
     data: 
-    objectReferenceParameter: {fileID: 5569541206496952849, guid: 53e764ab295dd3e45b6da165af320924,
-      type: 3}
+    objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
     messageOptions: 0

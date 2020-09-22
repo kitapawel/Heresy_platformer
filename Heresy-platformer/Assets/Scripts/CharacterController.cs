@@ -31,10 +31,7 @@ public class CharacterController : MonoBehaviour
 
     void Start()
     {
-        myRigidBody2D = GetComponent<Rigidbody2D>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
-        myAnimator = GetComponent<Animator>();
-        groundChecker = GetComponentInChildren<BoxCollider2D>();
+
     }
 
     void FixedUpdate()

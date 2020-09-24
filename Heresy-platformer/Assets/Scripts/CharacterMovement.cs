@@ -26,6 +26,9 @@ public class CharacterMovement : MonoBehaviour
     [Header("Character's movement stats")]
     [SerializeField] float moveSpeed = 1.8f;
     [SerializeField] float runSpeed = 3.6f;
+    [SerializeField] float jumpForce = 320f;
+    [SerializeField] float rollForce = 500f;
+    [SerializeField] float dodgeForce = 320f;
 
     void Start()
     {
@@ -59,7 +62,7 @@ public class CharacterMovement : MonoBehaviour
         if (myPlayerInput.jump && isGrounded && canWalk)
         {
             SetCanWalk(0);
-            myRigidBody2D.AddForce(new Vector2(0f, 320f), ForceMode2D.Impulse);
+            myRigidBody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             isWalking = false;
             //Set the SetCanWalk parameter in other animations, so that after jump the value is reset
         }
@@ -69,7 +72,7 @@ public class CharacterMovement : MonoBehaviour
             isWalking = false;
             myAnimator.SetTrigger("Roll");
             myRigidBody2D.velocity = new Vector2(0f, 0f);
-            myRigidBody2D.AddForce(new Vector2(500f * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
+            myRigidBody2D.AddForce(new Vector2(rollForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
         }
         else if (myPlayerInput.dodge && isGrounded && canWalk)
         {               
@@ -77,7 +80,7 @@ public class CharacterMovement : MonoBehaviour
             isWalking = false;
             myAnimator.SetTrigger("Dodge");
             myRigidBody2D.velocity = new Vector2(0f, 0f);
-            myRigidBody2D.AddForce(new Vector2(-320f * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
+            myRigidBody2D.AddForce(new Vector2(-dodgeForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
         }
         else if (myPlayerInput.shiftPressed && myPlayerInput.horizontal != 0 && canWalk)
         {
@@ -133,6 +136,7 @@ public class CharacterMovement : MonoBehaviour
         if ((myRigidBody2D.velocity.y != 0) && !isTouchingGround)
         {
             isGrounded = false;
+            SetCanWalk(0);
             myAnimator.SetBool("isGrounded", false);
         }
         else
@@ -152,6 +156,7 @@ public class CharacterMovement : MonoBehaviour
         if (value == false)
         {
             isTouchingGround = false;
+            SetCanWalk(0);
             UnityEngine.Debug.Log(isTouchingGround);
         }
     }

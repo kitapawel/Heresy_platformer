@@ -47,6 +47,57 @@ TextureImporter:
   - first:
       213: 5793103780864907578
     second: Heresy_testspritesheet_14
+  - first:
+      213: -4503059792703637747
+    second: Heresy_testspritesheet_0
+  - first:
+      213: -3974898140541709459
+    second: Heresy_testspritesheet_15
+  - first:
+      213: -5942257839926339959
+    second: Heresy_testspritesheet_16
+  - first:
+      213: -6818405764762245225
+    second: Heresy_testspritesheet_17
+  - first:
+      213: -7840130853852559796
+    second: Heresy_testspritesheet_18
+  - first:
+      213: 2034360736696548481
+    second: Heresy_testspritesheet_19
+  - first:
+      213: 8873212113958841769
+    second: Heresy_testspritesheet_20
+  - first:
+      213: -2632537877418870502
+    second: Heresy_testspritesheet_21
+  - first:
+      213: 3589107068397604254
+    second: Heresy_testspritesheet_22
+  - first:
+      213: 5216643982583755433
+    second: Heresy_testspritesheet_23
+  - first:
+      213: 9213578494706188058
+    second: Heresy_testspritesheet_24
+  - first:
+      213: -4003312426986199642
+    second: Heresy_testspritesheet_25
+  - first:
+      213: -4253189403804917593
+    second: Heresy_testspritesheet_26
+  - first:
+      213: -3993673737331326896
+    second: Heresy_testspritesheet_27
+  - first:
+      213: -7319721832702215776
+    second: Heresy_testspritesheet_28
+  - first:
+      213: 2958268137638113869
+    second: Heresy_testspritesheet_29
+  - first:
+      213: -7167465580336653797
+    second: Heresy_testspritesheet_30
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -169,27 +220,6 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites:
-    - serializedVersion: 2
-      name: Heresy_testspritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 117
-        width: 1
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87a659689b2b9fd50800000000000000
-      internalID: 6771640024624884344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     - serializedVersion: 2
       name: Heresy_testspritesheet_1
       rect:
@@ -367,7 +397,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -388,7 +418,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -409,7 +439,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,7 +460,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -451,7 +481,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -472,7 +502,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -480,6 +510,363 @@ TextureImporter:
       bones: []
       spriteID: a39dc6d023d356050800000000000000
       internalID: 5793103780864907578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 106
+        width: 16
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d073e8d0afae181c0800000000000000
+      internalID: -4503059792703637747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 104
+        width: 8
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6396aa733356d8c0800000000000000
+      internalID: -3974898140541709459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 104
+        width: 8
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 986196f5afbd88da0800000000000000
+      internalID: -5942257839926339959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 103
+        width: 16
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 797eed815182061a0800000000000000
+      internalID: -6818405764762245225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 101
+        width: 4
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46c987f682423390800000000000000
+      internalID: -7840130853852559796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 99
+        width: 2
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18cbccfbf408b3c10800000000000000
+      internalID: 2034360736696548481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 102
+        width: 3
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ada535c76bf32b70800000000000000
+      internalID: 8873212113958841769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 101
+        width: 3
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a19ffae8fb8577bd0800000000000000
+      internalID: -2632537877418870502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 99
+        width: 3
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9dcea0ecd11fc130800000000000000
+      internalID: 3589107068397604254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 99
+        width: 11
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2759d201e356840800000000000000
+      internalID: 5216643982583755433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 101
+        width: 6
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ff32743d43ddf70800000000000000
+      internalID: 9213578494706188058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 96
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a5a490ee806178c0800000000000000
+      internalID: -4003312426986199642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 101
+        width: 1
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0a0c785c2a9f4c0800000000000000
+      internalID: -4253189403804917593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 105
+        width: 1
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0504f8135ee9398c0800000000000000
+      internalID: -3993673737331326896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 105
+        width: 1
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9fc1356cf1b6a90800000000000000
+      internalID: -7319721832702215776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 101
+        width: 1
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42b6469231ed0920800000000000000
+      internalID: 2958268137638113869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_testspritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 96
+        width: 5
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ad130970c088c90800000000000000
+      internalID: -7167465580336653797
       vertices: []
       indices: 
       edges: []

@@ -865,7 +865,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 200
+  m_Mass: 500
   m_LinearDrag: 0.05
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -1147,6 +1147,7 @@ GameObject:
   - component: {fileID: 478758496}
   - component: {fileID: 478758492}
   - component: {fileID: 478758497}
+  - component: {fileID: 478758498}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1326,6 +1327,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87d45ef926ce644391737008609f766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &478758498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478758489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81759e01eb5567a409e2d6c89ed893bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 100
+  healthPoints: 100
+  maxStability: 100
+  stability: 100
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

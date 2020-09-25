@@ -19,6 +19,7 @@ public class CharacterMovement : MonoBehaviour
     bool canWalk = true;
     bool isWalking = false;
     bool isMoving = false;
+    bool isFallen = false;
     bool isGrounded = true;
     bool isTouchingGround = true;
     bool shiftPressed = false;
@@ -107,12 +108,12 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    void MonitorVelocity()
+    public void MonitorVelocity()
     {
         myVelocity = myRigidBody2D.velocity;
     }
 
-    void SetCanWalk(int value)
+    public void SetCanWalk(int value)
     {
         if (value == 0)
         {
@@ -124,14 +125,20 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    void Death()
+    public void Death()
     {
         isAlive = false;
         canWalk = false;
         myAnimator.Play("Hero_Death");
     }
 
-    void CheckIfGrounded()
+    public void Fall()
+    {
+        myAnimator.Play("Sword_Hero_fall");
+        myAnimator.SetBool("isFallen", true);
+    }
+
+    public void CheckIfGrounded()
     {
         if ((myRigidBody2D.velocity.y != 0) && !isTouchingGround)
         {

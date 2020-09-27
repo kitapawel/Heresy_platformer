@@ -4,50 +4,41 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    private CharacterMovement myCharacterMovement;
+    private CharacterController myCharacterController;
     private Animator myAnimator;
 
     [SerializeField]
-    private int maxHealthPoints = 100;
+    private float maxHealthPoints = 100;
     [SerializeField]
-    private int healthPoints = 100;
+    private float healthPoints = 100;
     [SerializeField]
-    private int maxStability = 100;
+    private float maxStability = 100;
     [SerializeField]
-    private int stability = 100;
+    private float stability = 100;
 
     void Start()
     {
-        myCharacterMovement = GetComponent<CharacterMovement>();
+        myCharacterController = GetComponent<CharacterController>();
         myAnimator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        MonitorHealthState();
-        MonitorStability();
+        RegenerateStability();
     }
 
-    private void MonitorHealthState()
+    private void CheckHealthState()
     {
         if (healthPoints <= 0)
         {
-            myCharacterMovement.Death();
+            myCharacterController.Death();
         }
     }
-    private void MonitorStability()
+    private void CheckStability()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            stability = -3000;
-        }
         if (stability <= 0)
         {
-            myCharacterMovement.Fall();
-        }
-        if (stability < maxStability)
-        {
-            RegenerateStability();
+            myCharacterController.Fall();
         }
         if (stability > 0)
         {
@@ -57,6 +48,22 @@ public class HealthSystem : MonoBehaviour
 
     private void RegenerateStability()
     {
-        stability = stability + 1;
+        if (stability < maxStability)
+        {
+            stability = stability + 1;
+        }
+    }
+
+    public void ProcessIncomingHit(float incomingDamage)
+    {
+        CheckHealthState();
+        //CheckStability();
+        TakeDamage(incomingDamage);
+    }
+    private void TakeDamage(float incomingDamage)
+    {
+        healthPoints -= incomingDamage;
+        CheckHealthState();
+        //CheckStability();
     }
 }

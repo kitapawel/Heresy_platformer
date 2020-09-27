@@ -5,29 +5,35 @@ using UnityEngine;
 public class CombatSystem : MonoBehaviour
 {
     Animator myAnimator;
-    PlayerInput myPlayerInput;
+
+    private HitCollisionChecker hitCollisionChecker;
+    [SerializeField] private float minDamage = 10f;
+    [SerializeField] private float maxDamage = 20f;
 
     void Start()
     {
-        myPlayerInput = GetComponent<PlayerInput>();
         myAnimator = GetComponent<Animator>();
+        hitCollisionChecker = GetComponentInChildren<HitCollisionChecker>();
     }
 
     void Update()
     {
-        ProcessAttacks();
+
     }
 
-    void ProcessAttacks()
+    public void DealDamage()
     {
-         if (myPlayerInput.basicAttack && myPlayerInput.shiftPressed)
-         {
-             myAnimator.SetTrigger("Stab");
-         }
-         if (myPlayerInput.basicAttack)
-         {
-             myAnimator.SetTrigger("Attack");
-         }
+        foreach (GameObject hitTarget in hitCollisionChecker.hitTargets)
+        {
+            float hit = CalculateDamageToDeal();
+            Debug.Log(hitTarget+ " hit for " + hit + " dmg");
+            hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(hit);
+        }
     }
 
+    private float CalculateDamageToDeal()
+    {
+        float damageToDeal = Random.Range(minDamage, maxDamage);
+        return damageToDeal;
+    }
 }

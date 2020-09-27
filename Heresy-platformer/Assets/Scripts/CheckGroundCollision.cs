@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class CheckGroundCollision : MonoBehaviour
 {
-    CharacterMovement parentCharacterMovementController;
+    CharacterController parentCharacterMovementController;
     private void Awake()
     {
-        parentCharacterMovementController = GetComponentInParent<CharacterMovement>();
+        parentCharacterMovementController = GetComponentInParent<CharacterController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -11,6 +11,7 @@ public class PlayerInput : MonoBehaviour
 	[HideInInspector] public bool jump;
 	[HideInInspector] public bool roll;
 	[HideInInspector] public bool dodge;
+	[HideInInspector] public bool climb;
 	[HideInInspector] public bool basicAttack;
 	[HideInInspector] public bool shiftPressed;
 
@@ -41,6 +42,7 @@ public class PlayerInput : MonoBehaviour
 		jump = false;
 		roll = false;
 		dodge = false;
+		climb = false;
 		basicAttack = false;
 		shiftPressed = false;
 
@@ -57,6 +59,7 @@ public class PlayerInput : MonoBehaviour
 		dodge = dodge || Input.GetKey(KeyCode.S);
 		basicAttack = basicAttack || Input.GetMouseButton(0);
 		roll = roll || Input.GetKey(KeyCode.Space);
+		climb = climb || Input.GetKey(KeyCode.Z);
 	}
 
 	void IsShiftPressed()

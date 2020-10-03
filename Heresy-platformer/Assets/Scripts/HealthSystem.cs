@@ -50,20 +50,26 @@ public class HealthSystem : MonoBehaviour
     {
         if (stability < maxStability)
         {
-            stability = stability + 1;
+            stability = stability + 0.2f;
+            CheckStability();
         }
     }
 
-    public void ProcessIncomingHit(float incomingDamage)
+    public void ProcessIncomingHit(float incomingDamage, float incomingStabilityDamage)
     {
         CheckHealthState();
-        //CheckStability();
-        TakeDamage(incomingDamage);
+        CheckStability();
+        TakeHealthDamage(incomingDamage);
+        TakeStabilityDamage(incomingStabilityDamage);
     }
-    private void TakeDamage(float incomingDamage)
+    private void TakeHealthDamage(float incomingDamage)
     {
         healthPoints -= incomingDamage;
         CheckHealthState();
-        //CheckStability();
+    } 
+    private void TakeStabilityDamage(float incomingStabilityDamage)
+    {
+        stability -= incomingStabilityDamage;
+        CheckStability();
     }
 }

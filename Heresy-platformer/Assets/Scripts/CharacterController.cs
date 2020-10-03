@@ -10,6 +10,7 @@ public class CharacterController : MonoBehaviour
     SpriteRenderer mySpriteRenderer;
     Animator myAnimator;
     BoxCollider2D groundChecker;
+    AudioSource myAudioSource;
 
     [Header("Physical properties")]
     Vector2 myVelocity;
@@ -31,13 +32,19 @@ public class CharacterController : MonoBehaviour
     [SerializeField] float rollForce = 500f;
     [SerializeField] float dodgeForce = 320f;
 
-    void Start()
+    private void Awake()
+    {
+        gameObject.AddComponent<AudioSource>();
+    }
+
+    private void Start()
     {
         myPlayerInput = GetComponent<PlayerInput>();
         myRigidBody2D = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAnimator = GetComponent<Animator>();
         groundChecker = GetComponentInChildren<BoxCollider2D>();
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -62,7 +69,7 @@ public class CharacterController : MonoBehaviour
     void ProcessMovement()
     {
         if (myPlayerInput.jump && isGrounded && canWalk)
-        {
+        {            
             SetCanWalk(0);
             myRigidBody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             isWalking = false;
@@ -83,6 +90,10 @@ public class CharacterController : MonoBehaviour
             myAnimator.SetTrigger("Dodge");
             myRigidBody2D.velocity = new Vector2(0f, 0f);
             myRigidBody2D.AddForce(new Vector2(-dodgeForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
+        }
+        else if (myPlayerInput.climb && isGrounded && canWalk)
+        {
+            StartCoroutine("Climbing");
         }
         else if (myPlayerInput.shiftPressed && myPlayerInput.horizontal != 0 && canWalk)
         {
@@ -121,6 +132,24 @@ public class CharacterController : MonoBehaviour
                 myAnimator.SetTrigger("Attack");
             }
         }
+    }
+    IEnumerator Climbing()
+    {
+        SetCanWalk(0);
+        isWalking = false;
+        myRigidBody2D.bodyType = RigidbodyType2D.Static;
+        myAnimator.Play("Sword_Hero_Climb");
+        yield return new WaitForSeconds(0.2f);
+        transform.position = transform.position + new Vector3(0.2f * GetSpriteDirection(), 0f, 0f); 
+        yield return new WaitForSeconds(0.2f);
+        transform.position = transform.position + new Vector3(0.1f * GetSpriteDirection(), 0.5f, 0f);
+        yield return new WaitForSeconds(0.2f);
+        transform.position = transform.position + new Vector3(0f * GetSpriteDirection(), 0.2f, 0f);
+        yield return new WaitForSeconds(0.2f);
+        transform.position = transform.position + new Vector3(0.2f * GetSpriteDirection(), 0.3f, 0f);
+        yield return new WaitForSeconds(0.1f);
+        SetCanWalk(1);
+        myRigidBody2D.bodyType = RigidbodyType2D.Dynamic;
     }
 
     public void MonitorVelocity()

@@ -12,6 +12,10 @@ public class SoundSystemForAnimateObjects : MonoBehaviour
     private AudioClip[] footSteps;
     [SerializeField]
     private AudioClip[] weaponSwingSounds;
+    [SerializeField]
+    private AudioClip[] effortSounds;
+    [SerializeField]
+    private AudioClip[] receiveDamageSounds;
 
     private void Start()
     {
@@ -20,17 +24,19 @@ public class SoundSystemForAnimateObjects : MonoBehaviour
 
     public void PlayFootsteps()
     {
-        foreach(AudioClip clip in footSteps)
-        {
-            myAudioSource.PlayOneShot(footSteps[RandomSoundFromArray(footSteps)], 0.3f);
-        }
+        myAudioSource.PlayOneShot(footSteps[RandomSoundFromArray(footSteps)], 0.3f);
     }
     public void PlayWeaponSwingSounds()
     {
-        foreach(AudioClip clip in weaponSwingSounds)
-        {
-            myAudioSource.PlayOneShot(weaponSwingSounds[RandomSoundFromArray(weaponSwingSounds)], 0.5f);
-        }
+        myAudioSource.PlayOneShot(weaponSwingSounds[RandomSoundFromArray(weaponSwingSounds)], 0.5f);
+    }
+    public void PlayPainSounds()
+    {
+        myAudioSource.PlayOneShot(receiveDamageSounds[RandomSoundFromArray(receiveDamageSounds)], 0.5f);
+    }
+    public void PlayEffortSounds()
+    {
+        myAudioSource.PlayOneShot(effortSounds[RandomSoundFromArray(effortSounds)], 0.5f);
     }
 
     private int RandomSoundFromArray(Array array)

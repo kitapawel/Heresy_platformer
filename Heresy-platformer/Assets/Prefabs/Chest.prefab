@@ -1501,7 +1501,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4013702969282711108}
         m_TargetAssemblyTypeName: Chest, Assembly-CSharp
-        m_MethodName: ToggleChest
+        m_MethodName: ToggleOpen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

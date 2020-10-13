@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
@@ -18,6 +19,7 @@ public class CharacterController : MonoBehaviour
     [Header("Boolean values")]
     bool isAlive = true;
     bool canWalk = true;
+    bool canClimb = false;
     bool isWalking = false;
     bool isMoving = false;
     bool isFallen = false;
@@ -93,7 +95,11 @@ public class CharacterController : MonoBehaviour
         }
         else if (myPlayerInput.climb && isGrounded && canWalk)
         {
-            StartCoroutine("Climbing");
+            CheckIfCanClimb();
+            if (canClimb)
+            {
+                StartCoroutine("Climbing");
+            }
         }
         else if (myPlayerInput.shiftPressed && myPlayerInput.horizontal != 0 && canWalk)
         {
@@ -148,7 +154,7 @@ public class CharacterController : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         transform.position = transform.position + new Vector3(0.2f * GetSpriteDirection(), 0.3f, 0f);
         yield return new WaitForSeconds(0.1f);
-        SetCanWalk(1);
+        CheckIfCanClimb();
         myRigidBody2D.bodyType = RigidbodyType2D.Dynamic;
     }
 
@@ -178,13 +184,32 @@ public class CharacterController : MonoBehaviour
 
     public void Fall()
     {
-        myAnimator.Play("Sword_Hero_fall");
-        myAnimator.SetBool("isFallen", true);
+        if (isGrounded)
+        {
+            myAnimator.Play("Sword_Hero_fall");
+            myAnimator.SetBool("isFallen", true);
+        }
+    }
+
+    // The options "Queries hit triggers" and "Queries start in colliders" need to be disabled,
+    //  as the raycast first hits all the colliders on the gameobject itself
+    public void CheckIfCanClimb()
+    {   
+        RaycastHit2D overheadRaycastHit = Physics2D.Raycast(new Vector2 (transform.position.x, transform.position.y + 1.05f), Vector2.right * GetSpriteDirection(), 0.5f);
+        RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2 (transform.position.x, transform.position.y + 0.85f), Vector2.right * GetSpriteDirection(), 0.3f);
+
+        if (!overheadRaycastHit && eyeRaycastHit)
+        {
+            canClimb = true;
+        } else
+        {
+            canClimb = false;
+        }
     }
 
     public void CheckIfGrounded()
     {
-        if ((myRigidBody2D.velocity.y != 0) && !isTouchingGround)
+        if ((myRigidBody2D.velocity.y != 0) && !isTouchingGround && !isFallen)
         {
             isGrounded = false;
             SetCanWalk(0);
@@ -212,7 +237,7 @@ public class CharacterController : MonoBehaviour
         }
     }
 
-    private float GetSpriteDirection()
+    public float GetSpriteDirection()
     {
         return Mathf.Sign(transform.localScale.x);
     }

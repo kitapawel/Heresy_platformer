@@ -14,15 +14,24 @@ public class CheckGroundCollision : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        mySoundPlayerAnimate.PlayFootsteps();
+        if (!collision.isTrigger)
+        {
+            mySoundPlayerAnimate.PlayFootsteps();
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        parentCharacterMovementController.CheckGroundCollision(true);
+        if (!collision.isTrigger)
+        {
+            parentCharacterMovementController.CheckGroundCollision(true);
+        }        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        parentCharacterMovementController.CheckGroundCollision(false);
+        if (!collision.isTrigger)
+        {
+            parentCharacterMovementController.CheckGroundCollision(false);
+        }
     }
 }

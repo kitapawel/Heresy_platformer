@@ -779,6 +779,7 @@ GameObject:
   - component: {fileID: 3286077538609609916}
   - component: {fileID: 3286077538609609858}
   - component: {fileID: 3286077538609609918}
+  - component: {fileID: 247634981534601800}
   - component: {fileID: 3286077538609609859}
   - component: {fileID: 3286077538609609856}
   - component: {fileID: 3286077538609609857}
@@ -951,6 +952,32 @@ MonoBehaviour:
   jumpForce: 160
   rollForce: 250
   dodgeForce: 160
+--- !u!114 &247634981534601800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3286077538609609915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b3fd3c01e813140872643793ab0b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHealth: 0
+  currentHealth: 0
+  baseEnergy: 0
+  currentEnergy: 0
+  baseStability: 0
+  currentStability: 0
+  baseVitality: 0
+  currentVitality: 0
+  baseDamageBonus: 0
+  currentDamageBonus: 0
+  baseCritRate: 0
+  currentCritRate: 0
+  baseCritBonus: 0
+  currentCritBonus: 0
 --- !u!114 &3286077538609609859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -979,10 +1006,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81759e01eb5567a409e2d6c89ed893bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 100
-  healthPoints: 100
-  maxStability: 100
-  stability: 100
 --- !u!114 &3286077538609609857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,6 +1033,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 99d75260050f1044a898083c037b61e4, type: 3}
   - {fileID: 8300000, guid: 09bb4a5bd1e34c842aee5e897878719c, type: 3}
   - {fileID: 8300000, guid: 9923f5aa83703694ba39a3ff61fc391c, type: 3}
+  effortSounds: []
+  receiveDamageSounds: []
 --- !u!1 &3286077538674045678
 GameObject:
   m_ObjectHideFlags: 0

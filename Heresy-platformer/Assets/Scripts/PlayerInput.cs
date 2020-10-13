@@ -55,11 +55,11 @@ public class PlayerInput : MonoBehaviour
 		horizontal += Input.GetAxis("Horizontal");
 
 		//Accumulate button inputs
-		jump = jump || Input.GetKey(KeyCode.W);
-		dodge = dodge || Input.GetKey(KeyCode.S);
+		jump = jump || Input.GetKeyDown(KeyCode.W);
+		dodge = dodge || Input.GetKeyDown(KeyCode.S);
 		basicAttack = basicAttack || Input.GetMouseButton(0);
-		roll = roll || Input.GetKey(KeyCode.Space);
-		climb = climb || Input.GetKey(KeyCode.Z);
+		roll = roll || Input.GetKeyDown(KeyCode.Space);
+		climb = climb || Input.GetKeyDown(KeyCode.Z);
 	}
 
 	void IsShiftPressed()

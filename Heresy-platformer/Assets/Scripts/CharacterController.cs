@@ -6,7 +6,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     [Header("Component references")]
-    PlayerInput myPlayerInput;
+    ControlInput myInput;
     Rigidbody2D myRigidBody2D;
     SpriteRenderer mySpriteRenderer;
     Animator myAnimator;
@@ -25,7 +25,6 @@ public class CharacterController : MonoBehaviour
     bool isFallen = false;
     bool isGrounded = true;
     bool isTouchingGround = true;
-    bool shiftPressed = false;
 
     [Header("Character's movement stats")]
     [SerializeField] float moveSpeed = 1.8f;
@@ -41,7 +40,7 @@ public class CharacterController : MonoBehaviour
 
     private void Start()
     {
-        myPlayerInput = GetComponent<PlayerInput>();
+        myInput = GetComponent<ControlInput>();
         myRigidBody2D = GetComponent<Rigidbody2D>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAnimator = GetComponent<Animator>();
@@ -70,14 +69,14 @@ public class CharacterController : MonoBehaviour
     }
     void ProcessMovement()
     {
-        if (myPlayerInput.jump && isGrounded && canWalk)
+        if (myInput.jump && isGrounded && canWalk)
         {            
             SetCanWalk(0);
             myRigidBody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             isWalking = false;
             //Set the SetCanWalk parameter in other animations, so that after jump the value is reset
         }
-        else if (myPlayerInput.roll && isGrounded && canWalk)
+        else if (myInput.roll && isGrounded && canWalk)
         {
             SetCanWalk(0);
             isWalking = false;
@@ -85,7 +84,7 @@ public class CharacterController : MonoBehaviour
             myRigidBody2D.velocity = new Vector2(0f, 0f);
             myRigidBody2D.AddForce(new Vector2(rollForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
         }
-        else if (myPlayerInput.dodge && isGrounded && canWalk)
+        else if (myInput.dodge && isGrounded && canWalk)
         {               
             SetCanWalk(0);
             isWalking = false;
@@ -93,7 +92,7 @@ public class CharacterController : MonoBehaviour
             myRigidBody2D.velocity = new Vector2(0f, 0f);
             myRigidBody2D.AddForce(new Vector2(-dodgeForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
         }
-        else if (myPlayerInput.climb && isGrounded && canWalk)
+        else if (myInput.climb && isGrounded && canWalk)
         {
             CheckIfCanClimb();
             if (canClimb)
@@ -101,22 +100,22 @@ public class CharacterController : MonoBehaviour
                 StartCoroutine("Climbing");
             }
         }
-        else if (myPlayerInput.shiftPressed && myPlayerInput.horizontal != 0 && canWalk)
+        else if (myInput.shiftPressed && myInput.horizontal != 0 && canWalk)
         {
             isWalking = true;
             myAnimator.SetBool("isMoving", true);
             myAnimator.SetFloat("MoveBlendValue", 1);
             transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
-            float xVelocity = runSpeed * myPlayerInput.horizontal;
+            float xVelocity = runSpeed * myInput.horizontal;
             myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
         }
-        else if (myPlayerInput.shiftPressed == false && myPlayerInput.horizontal != 0 && canWalk)
+        else if (myInput.shiftPressed == false && myInput.horizontal != 0 && canWalk)
         {
             isWalking = true;
             myAnimator.SetBool("isMoving", true);
             myAnimator.SetFloat("MoveBlendValue", 0);
             transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
-            float xVelocity = moveSpeed * myPlayerInput.horizontal;
+            float xVelocity = moveSpeed * myInput.horizontal;
             myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
         }
         else
@@ -129,11 +128,11 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded && canWalk)
         {
-            if (myPlayerInput.basicAttack && myPlayerInput.shiftPressed)
+            if (myInput.basicAttack && myInput.shiftPressed)
             {
                 myAnimator.SetTrigger("Stab");
             }
-            if (myPlayerInput.basicAttack)
+            if (myInput.basicAttack)
             {
                 myAnimator.SetTrigger("Attack");
             }
@@ -243,7 +242,7 @@ public class CharacterController : MonoBehaviour
     }
     private float GetMoveDirection()
     {
-        return Mathf.Sign(myPlayerInput.horizontal);
+        return Mathf.Sign(myInput.horizontal);
     }
 
 }

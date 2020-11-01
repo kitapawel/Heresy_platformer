@@ -3522,6 +3522,7 @@ GameObject:
   - component: {fileID: 1955086900}
   - component: {fileID: 1955086899}
   - component: {fileID: 1955086898}
+  - component: {fileID: 1955086908}
   m_Layer: 0
   m_Name: EnemyBasic
   m_TagString: Untagged
@@ -3769,6 +3770,26 @@ MonoBehaviour:
   currentCritRate: 0
   baseCritBonus: 0
   currentCritBonus: 0
+--- !u!114 &1955086908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955086897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2d867115b3f3c42aa7d4afbaeff11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontal: 0
+  jump: 0
+  roll: 0
+  dodge: 0
+  climb: 0
+  basicAttack: 0
+  shiftPressed: 0
+  target: {fileID: 0}
 --- !u!1 &1995089132
 GameObject:
   m_ObjectHideFlags: 0

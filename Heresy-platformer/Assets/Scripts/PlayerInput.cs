@@ -3,17 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DefaultExecutionOrder(-100)]
-public class PlayerInput : MonoBehaviour
+public class PlayerInput : ControlInput
 {
     bool readyToClear;
-
-	[HideInInspector] public float horizontal;
-	[HideInInspector] public bool jump;
-	[HideInInspector] public bool roll;
-	[HideInInspector] public bool dodge;
-	[HideInInspector] public bool climb;
-	[HideInInspector] public bool basicAttack;
-	[HideInInspector] public bool shiftPressed;
 
 	void Update()
 	{

@@ -5,26 +5,33 @@ using UnityEngine;
 [DefaultExecutionOrder(-100)]
 public class EnemyAIBasic : ControlInput
 {
+	[SerializeField]
+	AIState aiState = AIState.Searching;
+
 	CharacterController myCharacterController;
+	[SerializeField]
 	GameObject target;
 	
 	[SerializeField]
 	float sightRange = 5f;
+	[SerializeField]
+	float moveSpeed = .8f;
+	[SerializeField]
+	float lookAroundIntervalBase = 3f;
+	[SerializeField]
+	float lookAroundInterval = 3f;
 
 	bool readyToClear;
 
-	private void Start()
+	void Start()
 	{
 		myCharacterController = GetComponent<CharacterController>();
 	}
-    void Update()
+	void Update()
 	{
-		LookForTargets();
-		if (target != null)
-        {
-			float step = 1 * Time.deltaTime; // calculate distance to move
-			transform.position = Vector2.MoveTowards(transform.position, target.transform.position, step);
-		}
+		ClearInput();
+		CheckState();
+		PerformStateActions();
 	}
 
 	void FixedUpdate()
@@ -32,36 +39,102 @@ public class EnemyAIBasic : ControlInput
 		readyToClear = true;
 	}
 
-	void ClearInput()
+	void ClearInput() 
 	{
+		//If we're not ready to clear input, exit
+		if (!readyToClear)
+			return;
 
+		//Reset all inputs each FixedUpdate
+		horizontal = 0f;
+		jump = false;
+		roll = false;
+		dodge = false;
+		climb = false;
+		basicAttack = false;
+		shiftPressed = false;
+
+		readyToClear = false;
 	}
 
-	void ProcessInputs()
+	void CheckState()
 	{
-
+		if (target == null)
+        {
+			aiState = AIState.Searching;
+        }
+		else
+        {
+			aiState = AIState.Chasing;
+        }
+	}
+	void PerformStateActions()
+	{
+		switch (aiState)
+		{
+			case AIState.Passive:
+				break;
+			case AIState.Searching:
+				LookAround();
+				LookForTargets();
+				break;
+			case AIState.Chasing:
+				LookForTargets();
+				ChaseTarget();
+				break;
+			case AIState.Fighting:
+				break;
+			default:
+				break;
+		}
 	}
 
 	void IsShiftPressed()
 	{
-		if (Input.GetKey(KeyCode.LeftShift))
-		{
-			shiftPressed = true;
-		}
-		else
-		{
-			shiftPressed = false;
-		}
+
 	}
 
-	public void LookForTargets()
+	void LookAround()
+	{
+		if (lookAroundInterval <= 0)
+        {
+			transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+			lookAroundInterval = lookAroundIntervalBase;
+		} else
+        {
+			lookAroundInterval -= 1f * Time.deltaTime;
+        }
+    }
+
+	void LookForTargets()
 	{
 		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange);
 
+		if (!eyeRaycastHit)
+		{
+			target = null;
+		}
+
 		if (eyeRaycastHit)
 		{
-			target = eyeRaycastHit.transform.gameObject;
+			if (eyeRaycastHit.transform.tag == "Player")
+            {
+				target = eyeRaycastHit.transform.gameObject;
+			}			
 		}
 	}
 
+    void ChaseTarget()
+	{
+			//float step = 1 * Time.deltaTime; // calculate distance to move
+			//transform.position = Vector2.MoveTowards(transform.position, target.transform.position, step);
+			if (transform.position.x < target.transform.position.x)
+            {
+				horizontal = moveSpeed;
+			}
+			else if (transform.position.x > target.transform.position.x)
+			{
+				horizontal = -moveSpeed;
+			}
+	}
 }

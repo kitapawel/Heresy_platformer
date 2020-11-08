@@ -9,11 +9,15 @@ public class EnemyAIBasic : ControlInput
 	AIState aiState = AIState.Searching;
 
 	CharacterController myCharacterController;
+	AIPerception myAIPerception;
+
 	[SerializeField]
 	GameObject target;
 	
 	[SerializeField]
 	float sightRange = 5f;
+	[SerializeField]
+	float meleeRange = 1.5f;
 	[SerializeField]
 	float moveSpeed = .8f;
 	[SerializeField]
@@ -21,11 +25,13 @@ public class EnemyAIBasic : ControlInput
 	[SerializeField]
 	float lookAroundInterval = 3f;
 
+	bool isTargetInMeleeRange;
 	bool readyToClear;
 
 	void Start()
 	{
 		myCharacterController = GetComponent<CharacterController>();
+		myAIPerception = GetComponentInChildren<AIPerception>();
 	}
 	void Update()
 	{
@@ -39,30 +45,17 @@ public class EnemyAIBasic : ControlInput
 		readyToClear = true;
 	}
 
-	void ClearInput() 
-	{
-		//If we're not ready to clear input, exit
-		if (!readyToClear)
-			return;
 
-		//Reset all inputs each FixedUpdate
-		horizontal = 0f;
-		jump = false;
-		roll = false;
-		dodge = false;
-		climb = false;
-		basicAttack = false;
-		shiftPressed = false;
-
-		readyToClear = false;
-	}
 
 	void CheckState()
 	{
 		if (target == null)
         {
 			aiState = AIState.Searching;
-        }
+        } else if (isTargetInMeleeRange)
+        {
+			aiState = AIState.Fighting;
+		}
 		else
         {
 			aiState = AIState.Chasing;
@@ -83,6 +76,8 @@ public class EnemyAIBasic : ControlInput
 				ChaseTarget();
 				break;
 			case AIState.Fighting:
+				FightTarget();
+				LookForTargets();
 				break;
 			default:
 				break;
@@ -109,10 +104,13 @@ public class EnemyAIBasic : ControlInput
 	void LookForTargets()
 	{
 		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange);
-
+		RaycastHit2D meleeRangeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), meleeRange);
 		if (!eyeRaycastHit)
 		{
-			target = null;
+            if (!myAIPerception.IsPlayerInRange())
+            {
+				target = null;
+			}
 		}
 
 		if (eyeRaycastHit)
@@ -121,6 +119,14 @@ public class EnemyAIBasic : ControlInput
             {
 				target = eyeRaycastHit.transform.gameObject;
 			}			
+		}
+		if (!meleeRangeRaycastHit)
+		{
+			isTargetInMeleeRange = false;
+		}
+		if (meleeRangeRaycastHit)
+		{
+			isTargetInMeleeRange = true;
 		}
 	}
 
@@ -136,5 +142,27 @@ public class EnemyAIBasic : ControlInput
 			{
 				horizontal = -moveSpeed;
 			}
+	}
+
+	void FightTarget()
+	{
+		basicAttack = true;
+	}
+	void ClearInput()
+	{
+		//If we're not ready to clear input, exit
+		if (!readyToClear)
+			return;
+
+		//Reset all inputs each FixedUpdate
+		horizontal = 0f;
+		jump = false;
+		roll = false;
+		dodge = false;
+		climb = false;
+		basicAttack = false;
+		shiftPressed = false;
+
+		readyToClear = false;
 	}
 }

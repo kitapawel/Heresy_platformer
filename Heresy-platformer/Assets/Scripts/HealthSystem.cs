@@ -16,6 +16,8 @@ public class HealthSystem : MonoBehaviour
     [SerializeField]
     private float healthPoints;
     [SerializeField]
+    private float minStability;
+    [SerializeField]
     private float maxStability;
     [SerializeField]
     private float stability;
@@ -29,7 +31,7 @@ public class HealthSystem : MonoBehaviour
         mySoundSystem = GetComponent<SoundSystemForAnimateObjects>();
 
         InitializeStats();
-        InvokeRepeating("RegenerateStability", 0, 5f);
+        InvokeRepeating("RegenerateStability", 0, 1f);
     }
 
     void Update()
@@ -43,24 +45,28 @@ public class HealthSystem : MonoBehaviour
         healthPoints = maxHealthPoints;
         maxStability = myCharacterStats.currentStability;
         stability = maxStability;
+        minStability = myCharacterStats.minStability;
     }
 
     private void CheckHealthState()
     {
         if (healthPoints <= 0)
         {
-            myCharacterController.Death();
+            myCharacterController.SetAliveState(0);
         }
     }
     private void CheckStability()
     {
-        if (stability <= 0)
+        if (myCharacterController.isAlive)
         {
-            myCharacterController.Fall();
-        }
-        if (stability > 0)
-        {
-            myAnimator.SetBool("isFallen", false);          
+            if (stability <= 0)
+            {
+                myCharacterController.Fall();
+            }
+            if (stability > 0)
+            {
+                myAnimator.SetBool("isFallen", false);
+            }
         }
     }
 
@@ -69,6 +75,10 @@ public class HealthSystem : MonoBehaviour
         if (stability < maxStability)
         {
             stability = stability + 5f;
+            if (stability > maxStability)
+            {
+                stability = maxStability;
+            }
             CheckStability();
         }
     }
@@ -91,6 +101,10 @@ public class HealthSystem : MonoBehaviour
     private void TakeStabilityDamage(float incomingStabilityDamage)
     {
         stability -= incomingStabilityDamage;
+        if (stability < minStability)
+        {
+            stability = minStability;
+        }
         CheckStability();
     }
 }

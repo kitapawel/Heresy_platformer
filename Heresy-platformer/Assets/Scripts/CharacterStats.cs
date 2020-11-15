@@ -11,6 +11,7 @@ public class CharacterStats : MonoBehaviour
     public float baseEnergy;
     public float currentEnergy;
     public float baseStability;
+    public float minStability;
     public float currentStability;
     public float baseVitality;
     public float currentVitality;
@@ -34,10 +35,11 @@ public class CharacterStats : MonoBehaviour
         baseHealth = Mathf.Clamp(50, 1f, 100f); // TODO in the future, clamp the incoming values within allowed ranges, using Properties get/set
         currentHealth = baseHealth;
 
-        baseEnergy = 100;
+        baseEnergy = 50;
         currentEnergy = baseEnergy;
 
-        baseStability = 100;
+        minStability = -10;
+        baseStability = 20;
         currentStability = baseStability;
 
         baseVitality = 100;

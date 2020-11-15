@@ -17,7 +17,7 @@ public class EnemyAIBasic : ControlInput
 	[SerializeField]
 	float sightRange = 5f;
 	[SerializeField]
-	float meleeRange = 1.5f;
+	float meleeRange = 1.2f;
 	[SerializeField]
 	float moveSpeed = .8f;
 	[SerializeField]
@@ -36,16 +36,16 @@ public class EnemyAIBasic : ControlInput
 	void Update()
 	{
 		ClearInput();
-		CheckState();
-		PerformStateActions();
 	}
 
+	/*perform all AI states in FixedUpdate to not overwhelm AI with multiple commands,
+	but perform ClearInput in Update to clear unwanted commands to the AI all the time*/
 	void FixedUpdate()
 	{
+		CheckState();
+		PerformStateActions();
 		readyToClear = true;
 	}
-
-
 
 	void CheckState()
 	{
@@ -134,11 +134,11 @@ public class EnemyAIBasic : ControlInput
 	{
 			//float step = 1 * Time.deltaTime; // calculate distance to move
 			//transform.position = Vector2.MoveTowards(transform.position, target.transform.position, step);
-			if (transform.position.x < target.transform.position.x)
+			if (IsTargetToTheRight())//(transform.position.x < target.transform.position.x)
             {
 				horizontal = moveSpeed;
 			}
-			else if (transform.position.x > target.transform.position.x)
+			else if (!IsTargetToTheRight())//(transform.position.x > target.transform.position.x)
 			{
 				horizontal = -moveSpeed;
 			}
@@ -146,8 +146,36 @@ public class EnemyAIBasic : ControlInput
 
 	void FightTarget()
 	{
-		basicAttack = true;
+		
+		int randomValue = Random.Range(0, 3);
+		switch(randomValue)
+		{
+			case 0:
+				dodge = true;
+				break;
+			case 1:
+				roll = true;
+				break;
+			case 2:
+				basicAttack = true;				
+				break;
+			default:
+				break;
+		}
 	}
+
+	bool IsTargetToTheRight()
+    {
+		if (transform.position.x < target.transform.position.x)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 	void ClearInput()
 	{
 		//If we're not ready to clear input, exit

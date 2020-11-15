@@ -18,6 +18,9 @@ MonoBehaviour:
   maximumDamage: 11
   minimumStabilityDamage: 25
   maximumStabilityDamage: 100
+  minimumForce: 70
+  maximumForce: 100
+  armorPenetration: 0
   critRateBonus: 1
   critDamageBonus: 2
   energyCost: 2

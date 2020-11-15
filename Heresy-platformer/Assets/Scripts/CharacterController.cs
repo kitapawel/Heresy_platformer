@@ -17,7 +17,7 @@ public class CharacterController : MonoBehaviour
     Vector2 myVelocity;
 
     [Header("Boolean values")]
-    bool isAlive = true;
+    public bool isAlive = true;
     bool canWalk = true;
     bool canClimb = false;
     bool isWalking = false;
@@ -32,6 +32,9 @@ public class CharacterController : MonoBehaviour
     [SerializeField] float jumpForce = 320f;
     [SerializeField] float rollForce = 500f;
     [SerializeField] float dodgeForce = 320f;
+
+    const int ACTOR_LAYER = 22;
+    const int ACTORNONCOLLIDABLE_LAYER = 23;
 
     private void Awake()
     {
@@ -50,19 +53,13 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CheckIfGrounded();
-        MonitorVelocity();
-        ProcessAttacks();
-        ProcessMovement();
-
         if (isAlive)
         {
-            if (isGrounded && canWalk)
-            {
-                
-            }
-        }
-        if (!isAlive)
+            CheckIfGrounded();
+            MonitorVelocity();
+            ProcessAttacks();
+            ProcessMovement();
+        } else if (!isAlive)
         {
             Death();
         }
@@ -174,11 +171,48 @@ public class CharacterController : MonoBehaviour
         }
     }
 
+    public void SetCollisionLayer(int value)
+    {
+        if (value == 1)
+        {
+            gameObject.layer = ACTOR_LAYER;
+        }
+        else if (value == 0)
+        {
+            gameObject.layer = ACTORNONCOLLIDABLE_LAYER;
+        }
+    }
+    public void SetAliveState(int value)
+    {
+        if (value == 0)
+        {
+            isAlive = false;
+        }
+        else if (value == 1)
+        {
+            isAlive = true;
+        }
+    }
+
     public void Death()
     {
-        isAlive = false;
+        DisableChildComponents();
+        SetCollisionLayer(0);
         canWalk = false;
         myAnimator.Play("Hero_Death");
+        this.enabled = false;
+    }
+
+    private void DisableChildComponents()
+    {
+        //Loop through and disable all child objects
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            var child = transform.GetChild(i).gameObject;
+            if (child != null)
+                child.SetActive(false);
+        }
+        myInput.enabled = false;
     }
 
     public void Fall()

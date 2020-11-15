@@ -21,6 +21,8 @@ public class CombatSystem : MonoBehaviour
     [SerializeField] private float maxWeaponDamage;
     [SerializeField] private float minWeaponStabilityDamage;
     [SerializeField] private float maxWeaponStabilityDamage;
+    [SerializeField] private float minWeaponForce;
+    [SerializeField] private float maxWeaponForce;
     [SerializeField] private float weaponCritRateBonus;
     [SerializeField] private float weaponCritDamageBonus;
 
@@ -51,6 +53,8 @@ public class CombatSystem : MonoBehaviour
         maxWeaponDamage = equippedWeapon.maximumDamage;        
         minWeaponStabilityDamage = equippedWeapon.minimumStabilityDamage;
         maxWeaponStabilityDamage = equippedWeapon.maximumStabilityDamage;
+        minWeaponForce = equippedWeapon.minimumForce;
+        maxWeaponForce = equippedWeapon.maximumForce;
         weaponCritRateBonus = equippedWeapon.critRateBonus;
         weaponCritDamageBonus = equippedWeapon.critDamageBonus;
 
@@ -62,7 +66,7 @@ public class CombatSystem : MonoBehaviour
         {
             float damageToDeal = CalculateDamageToDeal(minWeaponDamage+damageBonus, maxWeaponDamage+damageBonus);
             float stabilityDamageToDeal = Random.Range(minWeaponStabilityDamage, maxWeaponStabilityDamage); //TODO maybe spice this up a bit
-            float appliedForce = 200f; //TODO randomize this and maybe tie this somehow to stabilitydamage
+            float appliedForce = Random.Range(minWeaponForce, maxWeaponForce); //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {

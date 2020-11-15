@@ -26,7 +26,6 @@ public class EnemyAIBasic : ControlInput
 	float lookAroundInterval = 3f;
 
 	bool isTargetInMeleeRange;
-	bool readyToClear;
 
 	void Start()
 	{
@@ -174,23 +173,5 @@ public class EnemyAIBasic : ControlInput
 		{
 			return false;
 		}
-	}
-
-	void ClearInput()
-	{
-		//If we're not ready to clear input, exit
-		if (!readyToClear)
-			return;
-
-		//Reset all inputs each FixedUpdate
-		horizontal = 0f;
-		jump = false;
-		roll = false;
-		dodge = false;
-		climb = false;
-		basicAttack = false;
-		shiftPressed = false;
-
-		readyToClear = false;
 	}
 }

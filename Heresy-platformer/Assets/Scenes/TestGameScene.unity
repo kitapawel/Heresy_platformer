@@ -3693,6 +3693,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5d37a6cf235dc4c478b3d92d472a5e35, type: 3}
   - {fileID: 8300000, guid: 586dcac06bd429f44857d5e2ca6e6699, type: 3}
   - {fileID: 8300000, guid: e25e245ea38804641b3adb794f62982d, type: 3}
+  parrySounds: []
 --- !u!114 &1955086899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3747,6 +3748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAlive: 1
+  isParrying: 0
   moveSpeed: 1.8
   runSpeed: 3.6
   jumpForce: 160
@@ -3924,6 +3926,7 @@ MonoBehaviour:
   dodge: 0
   climb: 0
   basicAttack: 0
+  parry: 0
   shiftPressed: 0
   aiState: 0
   target: {fileID: 0}
@@ -4083,6 +4086,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3286077538609609857, guid: 7287c7225432eff44b055f870f54bb29,
         type: 3}
+      propertyPath: parrySounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286077538609609857, guid: 7287c7225432eff44b055f870f54bb29,
+        type: 3}
       propertyPath: receiveDamageSounds.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 45d79a6be72d79d4eba4e27c903bcbde, type: 3}
@@ -4116,6 +4124,21 @@ PrefabInstance:
       propertyPath: effortSounds.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 840336247861f0f4bbbe23e4f6d59aa1, type: 3}
+    - target: {fileID: 3286077538609609857, guid: 7287c7225432eff44b055f870f54bb29,
+        type: 3}
+      propertyPath: parrySounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b7a23155d897be49be6fc80fd7c1ede, type: 3}
+    - target: {fileID: 3286077538609609857, guid: 7287c7225432eff44b055f870f54bb29,
+        type: 3}
+      propertyPath: parrySounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 85bec74dce8405949afcf1ebbe4eff0e, type: 3}
+    - target: {fileID: 3286077538609609857, guid: 7287c7225432eff44b055f870f54bb29,
+        type: 3}
+      propertyPath: parrySounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 99c1f470b0ad7ec439c0f23a1b96d686, type: 3}
     - target: {fileID: 3286077538609609859, guid: 7287c7225432eff44b055f870f54bb29,
         type: 3}
       propertyPath: equippedWeapon

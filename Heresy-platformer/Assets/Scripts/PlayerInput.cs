@@ -5,7 +5,6 @@ using UnityEngine;
 [DefaultExecutionOrder(-100)]
 public class PlayerInput : ControlInput
 {
-    bool readyToClear;
 
 	void Update()
 	{
@@ -23,23 +22,7 @@ public class PlayerInput : ControlInput
 		readyToClear = true;
 	}
 
-	void ClearInput()
-	{
-		//If we're not ready to clear input, exit
-		if (!readyToClear)
-			return;
 
-		//Reset all inputs
-		horizontal = 0f;
-		jump = false;
-		roll = false;
-		dodge = false;
-		climb = false;
-		basicAttack = false;
-		shiftPressed = false;
-
-		readyToClear = false;
-	}
 
 	void ProcessInputs()
 	{
@@ -50,6 +33,7 @@ public class PlayerInput : ControlInput
 		jump = jump || Input.GetKeyDown(KeyCode.W);
 		dodge = dodge || Input.GetKeyDown(KeyCode.S);
 		basicAttack = basicAttack || Input.GetMouseButton(0);
+		parry = parry || Input.GetMouseButton(1);
 		roll = roll || Input.GetKeyDown(KeyCode.Space);
 		climb = climb || Input.GetKeyDown(KeyCode.Z);
 	}

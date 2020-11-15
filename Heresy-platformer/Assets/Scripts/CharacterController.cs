@@ -21,7 +21,7 @@ public class CharacterController : MonoBehaviour
     bool canWalk = true;
     bool canClimb = false;
     bool isWalking = false;
-    bool isMoving = false;
+    public bool isParrying = false;
     bool isFallen = false;
     bool isGrounded = true;
     bool isTouchingGround = true;
@@ -133,6 +133,10 @@ public class CharacterController : MonoBehaviour
             {
                 myAnimator.SetTrigger("Attack");
             }
+            if (myInput.parry)
+            {
+                myAnimator.SetTrigger("Parry");
+            }
         }
     }
     IEnumerator Climbing()
@@ -168,6 +172,17 @@ public class CharacterController : MonoBehaviour
         else if (value == 1)
         {
             canWalk = true;
+        }
+    }
+    public void SetisParrying(int value)
+    {
+        if (value == 0)
+        {
+            isParrying = false;
+        }
+        else if (value == 1)
+        {
+            isParrying = true;
         }
     }
 
@@ -221,6 +236,14 @@ public class CharacterController : MonoBehaviour
         {
             myAnimator.Play("Sword_Hero_fall");
             myAnimator.SetBool("isFallen", true);
+        }
+    }
+
+    public void GetHit()
+    {
+        if (isGrounded && myAnimator.GetBool("isFallen") == false)
+        {
+            myAnimator.Play("Sword_Hero_GetHit");
         }
     }
 

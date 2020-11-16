@@ -64,6 +64,7 @@ public class CombatSystem : MonoBehaviour
     {
         foreach (GameObject hitTarget in hitCollisionChecker.hitTargets)
         {
+            GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
             float damageToDeal = CalculateDamageToDeal(minWeaponDamage+damageBonus, maxWeaponDamage+damageBonus);
             float stabilityDamageToDeal = Random.Range(minWeaponStabilityDamage, maxWeaponStabilityDamage); //TODO maybe spice this up a bit
             float appliedForce = Random.Range(minWeaponForce, maxWeaponForce); //TODO randomize this and maybe tie this somehow to stabilitydamage
@@ -71,7 +72,7 @@ public class CombatSystem : MonoBehaviour
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {
                 Debug.Log(hitTarget + " organic target was hit for " + damageToDeal + " dmg + " +stabilityDamageToDeal + " stability damage.");
-                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, stabilityDamageToDeal, appliedForce, attackVector);
+                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
             } 
             if (hitTarget.GetComponentInParent<StructureSystem>())
             {

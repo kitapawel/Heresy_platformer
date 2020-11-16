@@ -232,7 +232,7 @@ public class CharacterController : MonoBehaviour
 
     public void Fall()
     {
-        if (isGrounded)
+        if (isGrounded && myAnimator.GetBool("isFallen") == false)
         {
             myAnimator.Play("Sword_Hero_fall");
             myAnimator.SetBool("isFallen", true);
@@ -244,6 +244,14 @@ public class CharacterController : MonoBehaviour
         if (isGrounded && myAnimator.GetBool("isFallen") == false)
         {
             myAnimator.Play("Sword_Hero_GetHit");
+        }
+    }
+    public void GetParried(float appliedForce, float attackVector)
+    {
+        if (isGrounded && myAnimator.GetBool("isFallen") == false)
+        {
+            myAnimator.Play("Sword_Hero_GetParried");
+            myRigidBody2D.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
         }
     }
 

@@ -83,13 +83,17 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    public void ProcessIncomingHit(float incomingDamage, float incomingStabilityDamage, float appliedForce, float attackVector)
+    public void ProcessIncomingHit(float incomingDamage, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker)
     {
         if (myCharacterController.isParrying)
         {
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
             mySoundSystem.PlayParrySounds();
+            CharacterController attackersCharacterController = attacker.GetComponent<CharacterController>();
+            attackersCharacterController.GetParried(appliedForce*2, -attackVector);
+            CheckHealthState();
+            CheckStability();
         } else
         {
             CheckHealthState();

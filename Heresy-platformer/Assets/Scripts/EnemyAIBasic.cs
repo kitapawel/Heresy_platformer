@@ -142,7 +142,6 @@ public class EnemyAIBasic : ControlInput
 				horizontal = -moveSpeed;
 			}
 	}
-
 	void FightTarget()
 	{
 		

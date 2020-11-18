@@ -14,9 +14,11 @@ public class SoundSystemForAnimateObjects : MonoBehaviour
     [SerializeField]
     private AudioClip[] effortSounds;
     [SerializeField]
-    private AudioClip[] receiveDamageSounds;
+    private AudioClip[] painSounds;
     [SerializeField]
     private AudioClip[] parrySounds;
+    [SerializeField]
+    private AudioClip[] getHitSounds;
 
     private void Start()
     {
@@ -33,7 +35,7 @@ public class SoundSystemForAnimateObjects : MonoBehaviour
     }
     public void PlayPainSounds()
     {
-        myAudioSource.PlayOneShot(receiveDamageSounds[RandomSoundFromArray(receiveDamageSounds)], 0.5f);
+        myAudioSource.PlayOneShot(painSounds[RandomSoundFromArray(painSounds)], 0.5f);
     }
     public void PlayEffortSounds()
     {
@@ -42,6 +44,10 @@ public class SoundSystemForAnimateObjects : MonoBehaviour
     public void PlayParrySounds()
     {
         myAudioSource.PlayOneShot(parrySounds[RandomSoundFromArray(parrySounds)], 0.5f);
+    }
+    public void PlayGetHitSounds()
+    {
+        myAudioSource.PlayOneShot(getHitSounds[RandomSoundFromArray(getHitSounds)], 0.5f);
     }
 
     private int RandomSoundFromArray(Array array)

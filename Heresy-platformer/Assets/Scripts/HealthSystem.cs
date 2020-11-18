@@ -9,6 +9,7 @@ public class HealthSystem : MonoBehaviour
     private Rigidbody2D myRigidbody2d;
     private SoundSystemForAnimateObjects mySoundSystem;
     private CharacterStats myCharacterStats;
+    private ParticleSystem myBloodFX;
 
     //SerializedFields just for debug purposes
     [SerializeField]
@@ -29,6 +30,7 @@ public class HealthSystem : MonoBehaviour
         myRigidbody2d = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySoundSystem = GetComponent<SoundSystemForAnimateObjects>();
+        myBloodFX = GetComponentInChildren<ParticleSystem>();
 
         InitializeStats();
         InvokeRepeating("RegenerateStability", 0, 1f);
@@ -85,6 +87,7 @@ public class HealthSystem : MonoBehaviour
 
     public void ProcessIncomingHit(float incomingDamage, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker)
     {
+        CameraEffects.ScreenShakeAtHit();
         if (myCharacterController.isParrying)
         {
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
@@ -103,7 +106,9 @@ public class HealthSystem : MonoBehaviour
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
             myCharacterController.GetHit();
+            mySoundSystem.PlayParrySounds();
             mySoundSystem.PlayPainSounds();
+            myBloodFX.Play();
         }
     }
     private void TakeHealthDamage(float incomingDamage)

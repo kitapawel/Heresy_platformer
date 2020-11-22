@@ -22,7 +22,6 @@ public class CharacterController : MonoBehaviour
     bool canClimb = false;
     bool isWalking = false;
     public bool isParrying = false;
-    bool isFallen = false;
     bool isGrounded = true;
     bool isTouchingGround = true;
 
@@ -277,7 +276,7 @@ public class CharacterController : MonoBehaviour
 
     public void CheckIfGrounded()
     {
-        if ((myRigidBody2D.velocity.y != 0) && !isTouchingGround && !isFallen)
+        if ((myRigidBody2D.velocity.y != 0) && !isTouchingGround && !myAnimator.GetBool("isFallen"))
         {
             isGrounded = false;
             SetCanWalk(0);

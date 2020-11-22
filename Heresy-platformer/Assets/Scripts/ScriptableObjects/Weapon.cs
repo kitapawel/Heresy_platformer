@@ -7,12 +7,9 @@ public class Weapon : ScriptableObject
     public WeaponType weaponType;
 
 
-    public float minimumDamage;
-    public float maximumDamage;
-    public float minimumStabilityDamage;
-    public float maximumStabilityDamage;
-    public float minimumForce;
-    public float maximumForce;
+    public float damage;
+    public float stabilityDamage;
+    public float force;
     public float armorPenetration;
     public float critRateBonus;
     public float critDamageBonus;

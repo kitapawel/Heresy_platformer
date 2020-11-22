@@ -9,6 +9,7 @@ public class EnemyAIBasic : ControlInput
 	AIState aiState = AIState.Searching;
 
 	CharacterController myCharacterController;
+	Animator myAnimator;
 	AIPerception myAIPerception;
 
 	[SerializeField]
@@ -30,6 +31,7 @@ public class EnemyAIBasic : ControlInput
 	void Start()
 	{
 		myCharacterController = GetComponent<CharacterController>();
+		myAnimator = GetComponent<Animator>();
 		myAIPerception = GetComponentInChildren<AIPerception>();
 	}
 	void Update()
@@ -90,14 +92,18 @@ public class EnemyAIBasic : ControlInput
 
 	void LookAround()
 	{
-		if (lookAroundInterval <= 0)
-        {
-			transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
-			lookAroundInterval = lookAroundIntervalBase;
-		} else
-        {
-			lookAroundInterval -= 1f * Time.deltaTime;
-        }
+        if (myAnimator.GetBool("isFallen") == false)
+		{
+			if (lookAroundInterval <= 0)
+			{
+				transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+				lookAroundInterval = lookAroundIntervalBase;
+			}
+			else
+			{
+				lookAroundInterval -= 1f * Time.deltaTime;
+			}
+		}
     }
 
 	void LookForTargets()
@@ -152,8 +158,7 @@ public class EnemyAIBasic : ControlInput
 
 	}
 	void FightTarget()
-	{
-		
+	{		
 		int randomValue = Random.Range(0, 4);
 		switch(randomValue)
 		{

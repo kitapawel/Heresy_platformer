@@ -17,12 +17,9 @@ public class CombatSystem : MonoBehaviour
     [SerializeField] private float critRate;
     [SerializeField] private float critDamage;
 
-    [SerializeField] private float minWeaponDamage;
-    [SerializeField] private float maxWeaponDamage;
-    [SerializeField] private float minWeaponStabilityDamage;
-    [SerializeField] private float maxWeaponStabilityDamage;
-    [SerializeField] private float minWeaponForce;
-    [SerializeField] private float maxWeaponForce;
+    [SerializeField] private float weaponDamage;
+    [SerializeField] private float stabilityDamage;
+    [SerializeField] private float force;
     [SerializeField] private float weaponCritRateBonus;
     [SerializeField] private float weaponCritDamageBonus;
 
@@ -52,12 +49,9 @@ public class CombatSystem : MonoBehaviour
         critDamage = myCharacterStats.currentCritBonus;
 
         //weapon-based stats
-        minWeaponDamage = equippedWeapon.minimumDamage;
-        maxWeaponDamage = equippedWeapon.maximumDamage;        
-        minWeaponStabilityDamage = equippedWeapon.minimumStabilityDamage;
-        maxWeaponStabilityDamage = equippedWeapon.maximumStabilityDamage;
-        minWeaponForce = equippedWeapon.minimumForce;
-        maxWeaponForce = equippedWeapon.maximumForce;
+        weaponDamage = equippedWeapon.damage;    
+        stabilityDamage = equippedWeapon.stabilityDamage;
+        force = equippedWeapon.force;
         weaponCritRateBonus = equippedWeapon.critRateBonus;
         weaponCritDamageBonus = equippedWeapon.critDamageBonus;
 
@@ -68,9 +62,9 @@ public class CombatSystem : MonoBehaviour
         foreach (GameObject hitTarget in hitCollisionChecker.hitTargets)
         {
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
-            float damageToDeal = CalculateDamageToDeal(minWeaponDamage+damageBonus, maxWeaponDamage+damageBonus);
-            float stabilityDamageToDeal = Random.Range(minWeaponStabilityDamage, maxWeaponStabilityDamage); //TODO maybe spice this up a bit
-            float appliedForce = Random.Range(minWeaponForce, maxWeaponForce); //TODO randomize this and maybe tie this somehow to stabilitydamage
+            float damageToDeal = weaponDamage+damageBonus;
+            float stabilityDamageToDeal = stabilityDamage; //TODO maybe spice this up a bit
+            float appliedForce = force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {
@@ -85,11 +79,6 @@ public class CombatSystem : MonoBehaviour
         }
     }
 
-    private float CalculateDamageToDeal(float min, float max)
-    {
-        float damageToDeal = Random.Range(min, max);
-        return CalculateCriticalDamage(damageToDeal);
-    }
     private float CalculateCriticalDamage(float damage)
     {
         float critChance = Mathf.Clamp(critRate + weaponCritRateBonus, 0, 1f);

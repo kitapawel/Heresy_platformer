@@ -131,21 +131,30 @@ public class EnemyAIBasic : ControlInput
 
     void ChaseTarget()
 	{
-			//float step = 1 * Time.deltaTime; // calculate distance to move
-			//transform.position = Vector2.MoveTowards(transform.position, target.transform.position, step);
+		//float step = 1 * Time.deltaTime; // calculate distance to move
+		//transform.position = Vector2.MoveTowards(transform.position, target.transform.position, step);
+		int randomValue = Random.Range(0, 101);
+		if (randomValue > 1)
+        {
 			if (IsTargetToTheRight())//(transform.position.x < target.transform.position.x)
-            {
+			{
 				horizontal = moveSpeed;
 			}
 			else if (!IsTargetToTheRight())//(transform.position.x > target.transform.position.x)
 			{
 				horizontal = -moveSpeed;
 			}
+		}
+		else
+		{
+			throwItem = true;
+		}
+
 	}
 	void FightTarget()
 	{
 		
-		int randomValue = Random.Range(0, 3);
+		int randomValue = Random.Range(0, 4);
 		switch(randomValue)
 		{
 			case 0:
@@ -156,6 +165,9 @@ public class EnemyAIBasic : ControlInput
 				break;
 			case 2:
 				basicAttack = true;				
+				break;
+			case 3:
+				throwItem = true;				
 				break;
 			default:
 				break;

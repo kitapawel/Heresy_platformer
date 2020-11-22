@@ -36,6 +36,7 @@ public class PlayerInput : ControlInput
 		parry = parry || Input.GetMouseButton(1);
 		roll = roll || Input.GetKeyDown(KeyCode.Space);
 		climb = climb || Input.GetKeyDown(KeyCode.Z);
+		throwItem = throwItem || Input.GetKeyDown(KeyCode.E);
 	}
 
 	void IsShiftPressed()

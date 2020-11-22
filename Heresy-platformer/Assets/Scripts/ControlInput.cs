@@ -14,6 +14,8 @@ public class ControlInput : MonoBehaviour
     [HideInInspector] public bool basicAttack;
     [HideInInspector] public bool parry;
     [HideInInspector] public bool shiftPressed;
+    [HideInInspector] public bool throwItem;
+
 
 	protected void ClearInput()
 	{
@@ -30,6 +32,7 @@ public class ControlInput : MonoBehaviour
 		basicAttack = false;
 		parry = false;
 		shiftPressed = false;
+		throwItem = false;
 
 		readyToClear = false;
 	}

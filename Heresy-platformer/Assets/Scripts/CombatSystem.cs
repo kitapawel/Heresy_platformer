@@ -26,6 +26,9 @@ public class CombatSystem : MonoBehaviour
     [SerializeField] private float weaponCritRateBonus;
     [SerializeField] private float weaponCritDamageBonus;
 
+    [SerializeField] private GameObject thrownWeapon;
+    [SerializeField] private GameObject thrownStartingPoint;
+
 
     void Start()
     {
@@ -101,6 +104,13 @@ public class CombatSystem : MonoBehaviour
             Debug.Log("Normal hit: " + damage);
             return Mathf.Round(damage);
         }
+    }
+
+    public void ThrowItem()
+    {
+        //TODO use mousetoscreenposition to determine vertical force of throw
+        GameObject thrownW = Instantiate(thrownWeapon, thrownStartingPoint.transform.position, thrownStartingPoint.transform.rotation);
+        thrownW.GetComponent<Rigidbody2D>().AddForce(new Vector2(20f *myCharacterController.GetSpriteDirection(), 5f), ForceMode2D.Impulse);
     }
     
 }

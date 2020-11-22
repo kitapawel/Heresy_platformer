@@ -137,6 +137,10 @@ public class CharacterController : MonoBehaviour
             {
                 myAnimator.SetTrigger("Parry");
             }
+            if (myInput.throwItem)
+            {
+                myAnimator.SetTrigger("Throw");
+            }
         }
     }
     IEnumerator Climbing()

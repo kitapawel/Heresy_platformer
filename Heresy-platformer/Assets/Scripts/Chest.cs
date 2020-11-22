@@ -11,7 +11,7 @@ public class Chest : MonoBehaviour
     SpriteRenderer mySpriteRenderer;
 
     public bool isPlayerInRange;
-    public KeyCode interactionKey;
+    public KeyCode interactionKey = KeyCode.F;
     public UnityEvent interactAction;
 
     private bool isClosed = true;

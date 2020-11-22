@@ -85,7 +85,7 @@ public class HealthSystem : MonoBehaviour
         }
     }
 
-    public void ProcessIncomingHit(float incomingDamage, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker)
+    public void ProcessIncomingHit(float incomingDamage, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker = null)
     {
         CameraEffects.ScreenShakeAtHit();
         if (myCharacterController.isParrying)

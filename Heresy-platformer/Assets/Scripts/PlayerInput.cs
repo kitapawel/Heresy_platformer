@@ -22,8 +22,6 @@ public class PlayerInput : ControlInput
 		readyToClear = true;
 	}
 
-
-
 	void ProcessInputs()
 	{
 		//Accumulate horizontal axis input
@@ -36,7 +34,7 @@ public class PlayerInput : ControlInput
 		parry = parry || Input.GetMouseButton(1);
 		roll = roll || Input.GetKeyDown(KeyCode.Space);
 		climb = climb || Input.GetKeyDown(KeyCode.Z);
-		throwItem = throwItem || Input.GetKeyDown(KeyCode.E);
+		throwItem = throwItem || Input.GetKeyDown(KeyCode.Q);
 	}
 
 	void IsShiftPressed()
@@ -50,5 +48,4 @@ public class PlayerInput : ControlInput
 			shiftPressed = false;
 		}
 	}
-
 }

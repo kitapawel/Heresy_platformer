@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthSystem : MonoBehaviour
-{
+public class HealthSystem : MonoBehaviour{
+
     private CharacterController myCharacterController;
     private Animator myAnimator;
     private Rigidbody2D myRigidbody2d;

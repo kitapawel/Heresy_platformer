@@ -156,8 +156,8 @@ public class CharacterController : MonoBehaviour
         transform.position = transform.position + new Vector3(0f * GetSpriteDirection(), 0.2f, 0f);
         yield return new WaitForSeconds(0.2f);
         transform.position = transform.position + new Vector3(0.2f * GetSpriteDirection(), 0.3f, 0f);
-        yield return new WaitForSeconds(0.1f);
-        CheckIfCanClimb();
+/*        yield return new WaitForSeconds(0.1f);
+        CheckIfCanClimb();*/
         myRigidBody2D.bodyType = RigidbodyType2D.Dynamic;
     }
 
@@ -175,6 +175,7 @@ public class CharacterController : MonoBehaviour
         else if (value == 1)
         {
             canWalk = true;
+            SetCollisionLayer(1);//Precaution
         }
     }
     public void SetisParrying(int value)
@@ -188,7 +189,6 @@ public class CharacterController : MonoBehaviour
             isParrying = true;
         }
     }
-
     public void SetCollisionLayer(int value)
     {
         if (value == 1)
@@ -239,6 +239,7 @@ public class CharacterController : MonoBehaviour
         {
             myAnimator.Play("Sword_Hero_fall");
             myAnimator.SetBool("isFallen", true);
+            SetCollisionLayer(0);
         }
     }
 

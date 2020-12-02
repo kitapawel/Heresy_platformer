@@ -77,17 +77,12 @@ public class EnemyAIBasic : ControlInput
 				ChaseTarget();
 				break;
 			case AIState.Fighting:
-				FightTarget();
 				LookForTargets();
+				FightTarget();
 				break;
 			default:
 				break;
 		}
-	}
-
-	void IsShiftPressed()
-	{
-
 	}
 
 	void LookAround()
@@ -110,11 +105,14 @@ public class EnemyAIBasic : ControlInput
 	{
 		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange);
 		RaycastHit2D meleeRangeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), meleeRange);
-		if (!eyeRaycastHit)
-		{
-            if (!myAIPerception.IsPlayerInRange())
-            {
-				target = null;
+		if (target) // removes NullReference exceptions
+        {
+			if (eyeRaycastHit.transform.tag != "Player")
+			{
+				if (!myAIPerception.IsPlayerInRange())
+				{
+					target = null;
+				}
 			}
 		}
 
@@ -137,12 +135,7 @@ public class EnemyAIBasic : ControlInput
 
     void ChaseTarget()
 	{
-		//float step = 1 * Time.deltaTime; // calculate distance to move
-		//transform.position = Vector2.MoveTowards(transform.position, target.transform.position, step);
-		int randomValue = Random.Range(0, 101);
-		if (randomValue > 1)
-        {
-			if (IsTargetToTheRight())//(transform.position.x < target.transform.position.x)
+		if (IsTargetToTheRight())//(transform.position.x < target.transform.position.x)
 			{
 				horizontal = moveSpeed;
 			}
@@ -150,29 +143,18 @@ public class EnemyAIBasic : ControlInput
 			{
 				horizontal = -moveSpeed;
 			}
-		}
-		else
-		{
-			throwItem = true;
-		}
-
 	}
 	void FightTarget()
 	{		
-		int randomValue = Random.Range(0, 4);
+		int randomValue = Random.Range(0, 3);
 		switch(randomValue)
 		{
 			case 0:
 				dodge = true;
 				break;
 			case 1:
-				roll = true;
-				break;
 			case 2:
 				basicAttack = true;				
-				break;
-			case 3:
-				throwItem = true;				
 				break;
 			default:
 				break;

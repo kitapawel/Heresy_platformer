@@ -5,7 +5,17 @@ using UnityEngine;
 public class ProjectileRotating : MonoBehaviour
 {
     Rigidbody2D myRigidbody2D;
-    bool thrown = true;
+    bool flyingAtTarget = true;
+    public GameObject throwingEntity = null;
+
+    [Header("Weapon Stats")]
+    [SerializeField]
+    float damage;
+    [SerializeField]
+    float stabilitydamage;
+    [SerializeField]
+    float force;
+
     void Start()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
@@ -14,7 +24,7 @@ public class ProjectileRotating : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (thrown)
+        if (flyingAtTarget)
         {
             float angle = Mathf.Atan2(myRigidbody2D.velocity.y, myRigidbody2D.velocity.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
@@ -22,26 +32,30 @@ public class ProjectileRotating : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        gameObject.transform.parent = collision.gameObject.transform;
-        StopOnHittingTarget();
-        GameObject target = collision.gameObject;
-        DealDamageToTarget(target);
+        if (flyingAtTarget)
+        {         
+            GameObject target = collision.gameObject;
+            DealDamageToTarget(target);
+            StopOnHittingTarget();
+        }
     }
 
     void StopOnHittingTarget()
     {
-        thrown = false;
-        Destroy(gameObject.GetComponent<Rigidbody2D>());
-        Destroy(gameObject.GetComponent<PolygonCollider2D>());
-        Destroy(this.gameObject, 2f);
+        flyingAtTarget = false;
+        throwingEntity = null;
+        //Destroy(gameObject.GetComponent<Rigidbody2D>());
+        //Destroy(gameObject.GetComponent<PolygonCollider2D>());
+        //Destroy(this.gameObject, 2f);
     }
 
     void DealDamageToTarget(GameObject target) //TODO pull data from user
     {
         if (target.GetComponent<HealthSystem>())
         {
+            float attackVector = 1f * throwingEntity.GetComponent<CharacterController>().GetSpriteDirection();
             HealthSystem targetHealthSystem = target.GetComponent<HealthSystem>();
-            targetHealthSystem.ProcessIncomingHit(20f, 50f, 50f, 1f);
+            targetHealthSystem.ProcessIncomingHit(damage, stabilitydamage, force, attackVector);
         }
     }
 

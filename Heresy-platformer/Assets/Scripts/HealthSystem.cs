@@ -9,6 +9,7 @@ public class HealthSystem : MonoBehaviour{
     private Rigidbody2D myRigidbody2d;
     private SoundSystemForAnimateObjects mySoundSystem;
     private CharacterStats myCharacterStats;
+    private InventorySystem myInventorySystem;
     private ParticleSystem myBloodFX;
 
     //SerializedFields just for debug purposes
@@ -26,6 +27,7 @@ public class HealthSystem : MonoBehaviour{
     void Start()
     {
         myCharacterStats = GetComponent<CharacterStats>();
+        myInventorySystem = GetComponent<InventorySystem>();
         myCharacterController = GetComponent<CharacterController>();
         myRigidbody2d = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
@@ -113,7 +115,12 @@ public class HealthSystem : MonoBehaviour{
     }
     private void TakeHealthDamage(float incomingDamage)
     {
-        healthPoints -= incomingDamage;
+        float finalDamageValue = incomingDamage - myInventorySystem.GetDefenseValue();
+        if (finalDamageValue < 1f)
+        {
+            finalDamageValue = 1;
+        }
+        healthPoints -= finalDamageValue;
         CheckHealthState();
         mySoundSystem.PlayPainSounds();
     } 

@@ -4,6 +4,7 @@
 public class Weapon : ScriptableObject
 {
     public string prefabName;
+    public GameObject prefab;
     public WeaponType weaponType;
 
 

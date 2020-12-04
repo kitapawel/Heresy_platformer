@@ -115,7 +115,6 @@ public class EnemyAIBasic : ControlInput
 				}
 			}
 		}
-
 		if (eyeRaycastHit)
 		{
 			if (eyeRaycastHit.transform.tag == "Player")

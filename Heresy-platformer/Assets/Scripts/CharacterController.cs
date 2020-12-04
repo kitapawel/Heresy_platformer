@@ -211,7 +211,6 @@ public class CharacterController : MonoBehaviour
             isAlive = true;
         }
     }
-
     public void Death()
     {
         DisableChildComponents();
@@ -274,7 +273,6 @@ public class CharacterController : MonoBehaviour
             canClimb = false;
         }
     }
-
     public void CheckIfGrounded()
     {
         if ((myRigidBody2D.velocity.y != 0) && !isTouchingGround && !myAnimator.GetBool("isFallen"))
@@ -289,7 +287,6 @@ public class CharacterController : MonoBehaviour
             myAnimator.SetBool("isGrounded", true);
         }
     }
-
     public void CheckGroundCollision(bool value)
     {
         if (value == true)
@@ -304,7 +301,6 @@ public class CharacterController : MonoBehaviour
             UnityEngine.Debug.Log(isTouchingGround);
         }
     }
-
     public float GetSpriteDirection()
     {
         return Mathf.Sign(transform.localScale.x);

@@ -5,26 +5,18 @@ using UnityEngine.Timeline;
 
 public class CombatSystem : MonoBehaviour
 {
-    [SerializeField]
-    private Weapon equippedWeapon;
-
     Animator myAnimator;
     CharacterController myCharacterController;
-    private CharacterStats myCharacterStats;
+    CharacterStats myCharacterStats;
+    InventorySystem myInventorySystem;
+
 
     private HitCollisionChecker hitCollisionChecker;
     [SerializeField] private float damageBonus;
     [SerializeField] private float critRate;
     [SerializeField] private float critDamage;
 
-    [SerializeField] private float weaponDamage;
-    [SerializeField] private float stabilityDamage;
-    [SerializeField] private float force;
-    [SerializeField] private float weaponCritRateBonus;
-    [SerializeField] private float weaponCritDamageBonus;
-
-    [SerializeField] private ProjectileRotating thrownWeapon;
-    [SerializeField] private GameObject thrownStartingPoint;
+    public GameObject thrownStartingPoint;
 
 
     void Start()
@@ -33,28 +25,20 @@ public class CombatSystem : MonoBehaviour
         myCharacterController = GetComponent<CharacterController>();
         hitCollisionChecker = GetComponentInChildren<HitCollisionChecker>();
         myCharacterStats = GetComponent<CharacterStats>();
+        myInventorySystem = GetComponent<InventorySystem>();
 
-        InitializeStats();
+        UpdateCharacterStats();
     }
 
     void Update()
     {
         
     }
-    private void InitializeStats()
+    private void UpdateCharacterStats()
     {
-        //character-based stats
         damageBonus = myCharacterStats.currentDamageBonus;
         critRate = myCharacterStats.currentCritRate;
         critDamage = myCharacterStats.currentCritBonus;
-
-        //weapon-based stats
-        weaponDamage = equippedWeapon.damage;    
-        stabilityDamage = equippedWeapon.stabilityDamage;
-        force = equippedWeapon.force;
-        weaponCritRateBonus = equippedWeapon.critRateBonus;
-        weaponCritDamageBonus = equippedWeapon.critDamageBonus;
-
     }
 
     public void DealDamage()
@@ -62,9 +46,9 @@ public class CombatSystem : MonoBehaviour
         foreach (GameObject hitTarget in hitCollisionChecker.hitTargets)
         {
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
-            float damageToDeal = weaponDamage+damageBonus;
-            float stabilityDamageToDeal = stabilityDamage; //TODO maybe spice this up a bit
-            float appliedForce = force; //TODO randomize this and maybe tie this somehow to stabilitydamage
+            float damageToDeal = myInventorySystem.equippedWeapon.damage + damageBonus;
+            float stabilityDamageToDeal = myInventorySystem.equippedWeapon.stabilityDamage; //TODO maybe spice this up a bit
+            float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {
@@ -81,10 +65,10 @@ public class CombatSystem : MonoBehaviour
 
     private float CalculateCriticalDamage(float damage)
     {
-        float critChance = Mathf.Clamp(critRate + weaponCritRateBonus, 0, 1f);
+        float critChance = Mathf.Clamp(critRate + myInventorySystem.equippedWeapon.critRateBonus, 0, 1f);
         if (Random.Range(0f, 1f) < critChance)
         {
-            float bonusCriticalDamage = critDamage + weaponCritDamageBonus;
+            float bonusCriticalDamage = critDamage + myInventorySystem.equippedWeapon.critDamageBonus;
             damage = damage * bonusCriticalDamage;
             Debug.Log("Critical hit: " + damage);
             return Mathf.Round(damage);//TODO decide how to do rounding and at which point to round
@@ -97,10 +81,10 @@ public class CombatSystem : MonoBehaviour
 
     public void ThrowItem()
     {
-        if (thrownWeapon != null)
+        if (myInventorySystem.equippedProjectile != null)
         {
             //TODO use mousetoscreenposition to determine vertical force of throw
-            ProjectileRotating thrownW = Instantiate(thrownWeapon, thrownStartingPoint.transform.position, thrownStartingPoint.transform.rotation);
+            ProjectileRotating thrownW = Instantiate(myInventorySystem.equippedProjectile, thrownStartingPoint.transform.position, thrownStartingPoint.transform.rotation);
             thrownW.throwingEntity = transform.gameObject;
             thrownW.GetComponent<Rigidbody2D>().AddForce(new Vector2(20f * myCharacterController.GetSpriteDirection(), 5f), ForceMode2D.Impulse);
         }        

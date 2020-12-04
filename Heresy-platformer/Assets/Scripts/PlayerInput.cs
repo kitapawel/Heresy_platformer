@@ -5,16 +5,28 @@ using UnityEngine;
 [DefaultExecutionOrder(-100)]
 public class PlayerInput : ControlInput
 {
+	[SerializeField] Texture2D normalCursor = null;
+	[SerializeField] Texture2D useCursor = null;
+	[SerializeField] Vector2 cursorHotSpot = new Vector2(0, 0);
+
+	public bool isInCombatMode = true;
+
+
 
 	void Update()
 	{
-		//Clear out existing input values, used for synching Update with FixedUpdate
-		ClearInput();
-		IsShiftPressed();
-		ProcessInputs();
+		SwitchPlayerMode();
 
-		//Clamp the horizontal input to be between -1 and 1
-		horizontal = Mathf.Clamp(horizontal, -1f, 1f);
+		//Clear out existing input values, used for synching Update with FixedUpdate
+		if (isInCombatMode)
+        {
+			ClearInput();
+			IsShiftPressed();
+			ProcessInputs();
+
+			//Clamp the horizontal input to be between -1 and 1
+			horizontal = Mathf.Clamp(horizontal, -1f, 1f);
+		}
 	}
 
 	void FixedUpdate()
@@ -22,6 +34,22 @@ public class PlayerInput : ControlInput
 		readyToClear = true;
 	}
 
+	void SwitchPlayerMode()
+    {
+		if (Input.GetKeyUp(KeyCode.Tab))
+		{
+			if (isInCombatMode)
+			{
+				isInCombatMode = false;
+				Cursor.SetCursor(useCursor, cursorHotSpot, CursorMode.Auto);
+			}
+			else
+			{
+				isInCombatMode = true;
+				Cursor.SetCursor(normalCursor, cursorHotSpot, CursorMode.Auto);
+			}
+		}
+	}
 	void ProcessInputs()
 	{
 		//Accumulate horizontal axis input
@@ -47,5 +75,5 @@ public class PlayerInput : ControlInput
 		{
 			shiftPressed = false;
 		}
-	}
+	}	
 }

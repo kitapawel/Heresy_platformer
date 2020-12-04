@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 585febce1c1c3fd49a632fa9bc41576c, type: 3}
-  m_Name: Sword
+  m_Name: RustySaber
   m_EditorClassIdentifier: 
-  prefabName: Rusty Sword
+  prefabName: Rusty Saber
+  prefab: {fileID: 1459760042894036328, guid: 2632c92f570f62140abb9a18afdc3c50, type: 3}
   weaponType: 0
-  damage: 15
-  stabilityDamage: 15
-  force: 55
-  armorPenetration: 1
-  critRateBonus: 0.05
-  critDamageBonus: 1.25
+  damage: 10
+  stabilityDamage: 10
+  force: 50
+  armorPenetration: 0
+  critRateBonus: 0
+  critDamageBonus: 0
   energyCost: 0
-  flavourText: An old damaged blade.
+  flavourText: 

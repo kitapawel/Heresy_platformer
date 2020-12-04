@@ -4,7 +4,7 @@
 public class Armor : ScriptableObject
 {
     public string prefabName;
-    public GameObject armorObject;
+    public GameObject prefab;
     public ArmorType armorType;
 
 

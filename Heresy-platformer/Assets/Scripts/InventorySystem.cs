@@ -5,13 +5,20 @@ using UnityEngine;
 public class InventorySystem : MonoBehaviour
 {
     public Weapon defaultWeapon;
-    public Armor defaultArmor;
+    public Armor defaultArmor; 
 
     public Weapon equippedWeapon;
     public Armor equippedArmor;
+    public int projectileCount;
+    public int baseInventorySpace;
+    public int inventorySpace;
+    public PlayerCanvasController playerCanvasController;
+
     public ProjectileRotating equippedProjectile;
 
     public GameObject thrownStartingPoint;
+
+    public List<Item> items = new List<Item>();
 
     private void Start()
     {
@@ -28,13 +35,15 @@ public class InventorySystem : MonoBehaviour
         {
             equippedArmor = defaultArmor;
         }
+        projectileCount = equippedArmor.projectileSlots;
+        inventorySpace = baseInventorySpace + equippedArmor.inventorySlots;
     }
 
-    public void SwitchItem(ScriptableObject scriptableObject)
+    //Initiated from the PickableItem script, flows to the PlayerCanvasController to update inventory UI
+    public void EquipItem(ScriptableObject scriptableObject)
     {
         if (scriptableObject.GetType() == typeof(Weapon))
-        {
-            //Vector3 position = gameObject.GetComponent<CombatSystem>().thrownStartingPoint.transform;
+        {            
             GameObject droppedWeapon = Instantiate(equippedWeapon.prefab);
             droppedWeapon.transform.position = thrownStartingPoint.transform.position;
             droppedWeapon.transform.parent = null;
@@ -43,20 +52,18 @@ public class InventorySystem : MonoBehaviour
         } 
         else if (scriptableObject.GetType() == typeof(Armor))
         {
-            //Vector3 position = gameObject.GetComponent<CombatSystem>().thrownStartingPoint.transform;
+            //TODO cannot equip if more items would overflow inventory
             GameObject droppedArmor = Instantiate(equippedArmor.prefab);
             droppedArmor.transform.position = thrownStartingPoint.transform.position;
             droppedArmor.transform.parent = null;
             equippedArmor = scriptableObject as Armor;
+        } else
+        {
+            items.Add(scriptableObject as Item);
+            playerCanvasController.UpdateInventoryPanel();
         }
 
-    }
-    public void SwitchItem(Armor newArmor)
-    {
-        GameObject droppedArmor = Instantiate(equippedArmor.prefab, transform.parent);
-        equippedArmor = newArmor;
-        //TODO notify CharacterController to switch animations
-    }
+    }    
 
     public float GetDefenseValue()
     {

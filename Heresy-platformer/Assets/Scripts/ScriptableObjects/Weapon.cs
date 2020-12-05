@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewWeapon", menuName = "ScriptableObjects/Weapon", order = 1)]
-public class Weapon : ScriptableObject
+public class Weapon : Item
 {
-    public string prefabName;
-    public GameObject prefab;
     public WeaponType weaponType;
 
 
@@ -16,5 +14,4 @@ public class Weapon : ScriptableObject
     public float critDamageBonus;
     public float energyCost;
 
-    public string flavourText;
 }

@@ -133,4 +133,12 @@ public class HealthSystem : MonoBehaviour{
         }
         CheckStability();
     }
+
+    public float GetHealthAsPercentage()
+    {
+        float div = healthPoints/maxHealthPoints;
+        //float healthPercentage = div * 100;
+        //Debug.Log(healthPercentage);
+        return div;
+    }
 }

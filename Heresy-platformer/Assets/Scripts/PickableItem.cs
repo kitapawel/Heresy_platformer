@@ -33,6 +33,14 @@ public class PickableItem : MonoBehaviour
             myRigidBody2D.isKinematic = false;
         }
     }
+    private void OnMouseOver()
+    {
+        if (isPlayerInRange)
+        {
+            PickObject();
+        }
+    }
+
 
     private void Start()
     {
@@ -46,11 +54,36 @@ public class PickableItem : MonoBehaviour
     {
         CarryItem();
     }
-    void FixedUpdate()
+
+    private void CarryItem()
     {
-        //MonitorVelocity();
+        if (isMousePressed && isPlayerInRange && myRigidBody2D.velocity.x == 0 && myRigidBody2D.velocity.y == 0)
+        {
+            Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = cursorPosition;
+            transform.Rotate(new Vector3(transform.rotation.x, transform.rotation.y, rotateSpeed * Input.GetAxis("Mouse ScrollWheel")));
+            //TODO disable collision with player
+            PickObject();
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().isKinematic = false;
+        }
     }
 
+    void PickObject()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && isPlayerInRange)
+        {
+            if (scriptableObject)
+            {
+                //the whole EquipItem operation needs to be completed, otherwise Destroy() operation might
+                //get omitted, which will lead to duplication
+                FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().EquipItem(scriptableObject);
+                Destroy(gameObject);
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<ControlInput>())
@@ -65,38 +98,4 @@ public class PickableItem : MonoBehaviour
             isPlayerInRange = false;
         }
     }
-
-    private void CarryItem()
-    {
-        if (isMousePressed && isPlayerInRange && myRigidBody2D.velocity.x == 0 && myRigidBody2D.velocity.y == 0)
-        {
-            Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            transform.position = cursorPosition;
-            transform.Rotate(new Vector3(transform.rotation.x, transform.rotation.y, rotateSpeed * Input.GetAxis("Mouse ScrollWheel")));
-            //TODO disable collision with player
-            if (Input.GetKeyDown(KeyCode.E) && isPlayerInRange)
-            {
-                if (scriptableObject)
-                {
-                    FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().SwitchItem(scriptableObject);
-                    Destroy(gameObject);
-                }
-            }
-        }
-        else
-        {
-            GetComponent<Rigidbody2D>().isKinematic = false;
-        }
-    }
-/*    private void MonitorVelocity()
-    {
-        if (myRigidBody2D.velocity.x == 0 && myRigidBody2D.velocity.y == 0)
-        {
-            gameObject.layer = ACTORNONCOLLIDABLE_LAYER;
-        }
-        else
-        {
-            gameObject.layer = ACTOR_LAYER;            
-        }
-    }*/
 }

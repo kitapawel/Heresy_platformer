@@ -36,7 +36,7 @@ public class PickableItem : MonoBehaviour
     private void OnMouseOver()
     {
         if (isPlayerInRange)
-        {
+        {            
             PickObject();
         }
     }
@@ -48,7 +48,7 @@ public class PickableItem : MonoBehaviour
         var boxCollider2D = gameObject.AddComponent<BoxCollider2D>();
         boxCollider2D.isTrigger = true;
         boxCollider2D.size = new Vector2(2f, 2f);
-        boxCollider2D.offset = new Vector2(0, 0.5f);
+        boxCollider2D.offset = new Vector2(0, 0);
     }
     void Update()
     {
@@ -57,13 +57,12 @@ public class PickableItem : MonoBehaviour
 
     private void CarryItem()
     {
-        if (isMousePressed && isPlayerInRange && myRigidBody2D.velocity.x == 0 && myRigidBody2D.velocity.y == 0)
+        if (isMousePressed && isPlayerInRange /*&& myRigidBody2D.velocity.x == 0 */&& myRigidBody2D.velocity.y == 0)
         {
             Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = cursorPosition;
             transform.Rotate(new Vector3(transform.rotation.x, transform.rotation.y, rotateSpeed * Input.GetAxis("Mouse ScrollWheel")));
-            //TODO disable collision with player
-            PickObject();
+            //TODO disable collision with player          
         }
         else
         {
@@ -77,10 +76,17 @@ public class PickableItem : MonoBehaviour
         {
             if (scriptableObject)
             {
-                //the whole EquipItem operation needs to be completed, otherwise Destroy() operation might
-                //get omitted, which will lead to duplication
-                FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().EquipItem(scriptableObject);
-                Destroy(gameObject);
+                if (FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().isInventoryFull() == false)
+                {
+                    //the whole EquipItem operation needs to be completed, otherwise Destroy() operation might
+                    //get omitted, which will lead to duplication
+                    FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().EquipItem(scriptableObject);
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    Debug.Log("Inventory is full. Try to free up some space.");
+                }
             }
         }
     }

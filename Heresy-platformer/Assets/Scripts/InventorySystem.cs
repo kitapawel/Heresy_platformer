@@ -10,7 +10,7 @@ public class InventorySystem : MonoBehaviour
     public Weapon equippedWeapon;
     public Armor equippedArmor;
     public int projectileCount;
-    public int baseInventorySpace;
+    public int baseInventorySpace = 3;
     public int inventorySpace;
     public PlayerCanvasController playerCanvasController;
 
@@ -59,11 +59,33 @@ public class InventorySystem : MonoBehaviour
             equippedArmor = scriptableObject as Armor;
         } else
         {
-            items.Add(scriptableObject as Item);
-            playerCanvasController.UpdateInventoryPanel();
+            if (items.Count <= inventorySpace)
+            {
+                items.Add(scriptableObject as Item);
+                playerCanvasController.UpdateInventoryPanel();
+            }
         }
 
     }    
+
+    public void DropItem(Item item)
+    {
+        GameObject droppedItem = Instantiate(item.prefab);
+        droppedItem.transform.position = thrownStartingPoint.transform.position;
+        droppedItem.transform.parent = null;
+        items.Remove(item);
+    }
+
+    public bool isInventoryFull()
+    {
+        if (inventorySpace <= items.Count)
+        {
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
 
     public float GetDefenseValue()
     {

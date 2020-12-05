@@ -63,6 +63,9 @@ public class PlayerInput : ControlInput
 		roll = roll || Input.GetKeyDown(KeyCode.Space);
 		climb = climb || Input.GetKeyDown(KeyCode.Z);
 		throwItem = throwItem || Input.GetKeyDown(KeyCode.Q);
+
+		//Interface inputs
+
 	}
 
 	void IsShiftPressed()

@@ -9,5 +9,5 @@ AnimatorOverrideController:
   m_Name: _HeroWithShield
   m_Controller: {fileID: 9100000, guid: bbbbfbafc2835954fa82e2bec92793eb, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: 9de3e6416873f3e4c93c9f5f7ac68ce5, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: dc07424d939d1304ca7ccdbb335bc221, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0318a00dc59214845be67e70fea26b72, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ade0373e7c0d8ec41ba26bafcd1ace34, type: 2}

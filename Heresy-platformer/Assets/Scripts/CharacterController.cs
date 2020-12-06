@@ -12,6 +12,7 @@ public class CharacterController : MonoBehaviour
     Animator myAnimator;
     BoxCollider2D groundChecker;
     AudioSource myAudioSource;
+    HealthSystem myHealthSystem;
 
     [Header("Physical properties")]
     Vector2 myVelocity;
@@ -48,6 +49,7 @@ public class CharacterController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         groundChecker = GetComponentInChildren<BoxCollider2D>();
         myAudioSource = GetComponent<AudioSource>();
+        myHealthSystem = GetComponent<HealthSystem>();
     }
 
     private void FixedUpdate()
@@ -124,11 +126,11 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded && canWalk)
         {
-            if (myInput.basicAttack && myInput.shiftPressed)
+            if (myInput.basicAttack && myInput.shiftPressed && myHealthSystem.CanUseEnergyBasedAction(10))
             {
                 myAnimator.SetTrigger("Stab");
             }
-            if (myInput.basicAttack)
+            else if (myInput.basicAttack && !myInput.shiftPressed && myHealthSystem.CanUseEnergyBasedAction(10))
             {
                 myAnimator.SetTrigger("Attack");
             }
@@ -305,9 +307,19 @@ public class CharacterController : MonoBehaviour
     {
         return Mathf.Sign(transform.localScale.x);
     }
-    private float GetMoveDirection()
+    public float GetMoveDirection()
     {
         return Mathf.Sign(myInput.horizontal);
+    }
+
+    //Used for adding movement to animations
+    public void BoostVelocity(float boostValue)
+    {
+        myRigidBody2D.AddForce(new Vector2(boostValue * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
+    }
+    public void LookTheOtherWay()
+    {
+        transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
     }
 
 }

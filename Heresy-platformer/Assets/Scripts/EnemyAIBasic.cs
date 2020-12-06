@@ -91,7 +91,7 @@ public class EnemyAIBasic : ControlInput
 		{
 			if (lookAroundInterval <= 0)
 			{
-				transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+				myCharacterController.LookTheOtherWay();
 				lookAroundInterval = lookAroundIntervalBase;
 			}
 			else

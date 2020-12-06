@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerCanvasController : MonoBehaviour
 {
     public Image healthBar;
+    public Image energyBar;
     HealthSystem myHealthSystem;
     InventorySystem myInventorySystem;
     
@@ -17,6 +18,7 @@ public class PlayerCanvasController : MonoBehaviour
     private void Start()
     {
         healthBar = GameObject.Find("PlayerHealth").GetComponent<Image>();
+        energyBar = GameObject.Find("PlayerEnergy").GetComponent<Image>();
         myHealthSystem = GetComponentInParent<HealthSystem>();
         myInventorySystem = GetComponentInParent<InventorySystem>();
         inventoryWindow.gameObject.SetActive(false);
@@ -25,6 +27,7 @@ public class PlayerCanvasController : MonoBehaviour
     private void Update()
     {
         healthBar.fillAmount = myHealthSystem.GetHealthAsPercentage();
+        energyBar.fillAmount = myHealthSystem.GetEnergyAsPercentage();
         ShowUIElements();
     }
 

@@ -18,6 +18,10 @@ public class HealthSystem : MonoBehaviour{
     [SerializeField]
     private float healthPoints;
     [SerializeField]
+    private float maxEnergy;
+    [SerializeField]
+    private float energy;
+    [SerializeField]
     private float minStability;
     [SerializeField]
     private float maxStability;
@@ -45,8 +49,10 @@ public class HealthSystem : MonoBehaviour{
 
     private void InitializeStats()
     {
-        maxHealthPoints = myCharacterStats.currentHealth;
+        maxHealthPoints = myCharacterStats.baseHealth;
         healthPoints = maxHealthPoints;
+        maxEnergy = myCharacterStats.baseEnergy;
+        energy = maxEnergy;
         maxStability = myCharacterStats.currentStability;
         stability = maxStability;
         minStability = myCharacterStats.minStability;
@@ -137,8 +143,25 @@ public class HealthSystem : MonoBehaviour{
     public float GetHealthAsPercentage()
     {
         float div = healthPoints/maxHealthPoints;
-        //float healthPercentage = div * 100;
-        //Debug.Log(healthPercentage);
         return div;
+    }    
+    public float GetEnergyAsPercentage()
+    {
+        float div = energy/maxEnergy;
+        return div;
+    }
+
+    public bool CanUseEnergyBasedAction(float energyCost)
+    {
+        if (energyCost <= energy)
+        {
+            energy -= energyCost;
+            return true;
+        } else
+        {
+            Debug.LogError("Tried to use ability that costs " + energyCost + 
+                " but only the following number of energy points left: " + energy);
+            return false;
+        }
     }
 }

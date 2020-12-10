@@ -15,9 +15,7 @@ public class PickableItem : MonoBehaviour
     bool isMousePressed = false;
     bool isPlayerInRange = false;
 
-    //TODO only if in range
-
-    private void OnMouseDown()
+/*    private void OnMouseDown()
     {
         if (isPlayerInRange)
         {
@@ -32,7 +30,7 @@ public class PickableItem : MonoBehaviour
             isMousePressed = false;
             myRigidBody2D.isKinematic = false;
         }
-    }
+    }*/
     private void OnMouseOver()
     {
         if (isPlayerInRange)
@@ -49,15 +47,17 @@ public class PickableItem : MonoBehaviour
         boxCollider2D.isTrigger = true;
         boxCollider2D.size = new Vector2(2f, 2f);
         boxCollider2D.offset = new Vector2(0, 0);
+        gameObject.layer = ACTORNONCOLLIDABLE_LAYER;
+
     }
     void Update()
     {
-        CarryItem();
+        //CarryItem();
     }
 
-    private void CarryItem()
+/*    private void CarryItem()
     {
-        if (isMousePressed && isPlayerInRange /*&& myRigidBody2D.velocity.x == 0 */&& myRigidBody2D.velocity.y == 0)
+        if (isMousePressed && isPlayerInRange *//*&& myRigidBody2D.velocity.x == 0 *//*&& myRigidBody2D.velocity.y == 0)
         {
             Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = cursorPosition;
@@ -68,7 +68,7 @@ public class PickableItem : MonoBehaviour
         {
             GetComponent<Rigidbody2D>().isKinematic = false;
         }
-    }
+    }*/
 
     void PickObject()
     {
@@ -92,14 +92,15 @@ public class PickableItem : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<ControlInput>())
+        //PickableItem detects collision checker on AllActorChecker layer, not the Player on Actor layer
+        if (collision.gameObject.GetComponentInParent<ControlInput>())
         {
             isPlayerInRange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<ControlInput>())
+        if (collision.gameObject.GetComponentInParent<ControlInput>())
         {
             isPlayerInRange = false;
         }

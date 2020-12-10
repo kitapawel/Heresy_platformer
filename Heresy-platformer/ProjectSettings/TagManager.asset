@@ -27,7 +27,7 @@ TagManager:
   - 
   - Walkable
   - IgnoreSelfRaycast
-  - 
+  - AllActorChecker
   - Actor
   - ActorNonCollidable
   - Thrown

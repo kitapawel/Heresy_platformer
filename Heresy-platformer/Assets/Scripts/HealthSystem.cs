@@ -156,6 +156,7 @@ public class HealthSystem : MonoBehaviour{
         if (energyCost <= energy)
         {
             energy -= energyCost;
+            Debug.Log("Used energy");
             return true;
         } else
         {

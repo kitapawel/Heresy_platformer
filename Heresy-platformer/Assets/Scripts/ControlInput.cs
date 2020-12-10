@@ -12,6 +12,7 @@ public class ControlInput : MonoBehaviour
     [HideInInspector] public bool dodge;
     [HideInInspector] public bool climb;
     [HideInInspector] public bool basicAttack;
+    [HideInInspector] public bool advancedAttack;
     [HideInInspector] public bool parry;
     [HideInInspector] public bool shiftPressed;
     [HideInInspector] public bool throwItem;
@@ -30,6 +31,7 @@ public class ControlInput : MonoBehaviour
 		dodge = false;
 		climb = false;
 		basicAttack = false;
+		advancedAttack = false;
 		parry = false;
 		shiftPressed = false;
 		throwItem = false;

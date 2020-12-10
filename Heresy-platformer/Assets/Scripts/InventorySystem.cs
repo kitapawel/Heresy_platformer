@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
+    //TODO determine which type of weapon can go to main weapon slot
+    //and which weapon as secondary based on character type or class
     public Weapon defaultWeapon;
-    public Armor defaultArmor; 
+    public Armor defaultArmor;
 
     public Weapon equippedWeapon;
     public Armor equippedArmor;

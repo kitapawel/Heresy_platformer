@@ -1988,13 +1988,14 @@ MonoBehaviour:
   dodge: 0
   climb: 0
   basicAttack: 0
+  advancedAttack: 0
   parry: 0
   shiftPressed: 0
   throwItem: 0
   aiState: 1
   target: {fileID: 0}
   sightRange: 5
-  meleeRange: 1.2
+  meleeRange: 1.7
   moveSpeed: 0.8
   lookAroundIntervalBase: 3
   lookAroundInterval: 3
@@ -8390,6 +8391,7 @@ MonoBehaviour:
   dodge: 0
   climb: 0
   basicAttack: 0
+  advancedAttack: 0
   parry: 0
   shiftPressed: 0
   throwItem: 0
@@ -8848,6 +8850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4214025810664467639, guid: d9f2e95b2fef6e44aa1a2a2a5d9c693b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9f2e95b2fef6e44aa1a2a2a5d9c693b, type: 3}

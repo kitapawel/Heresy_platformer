@@ -126,13 +126,13 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded && canWalk)
         {
-            if (myInput.basicAttack && myInput.shiftPressed && myHealthSystem.CanUseEnergyBasedAction(10))
-            {
-                myAnimator.SetTrigger("Stab");
-            }
-            else if (myInput.basicAttack && !myInput.shiftPressed && myHealthSystem.CanUseEnergyBasedAction(10))
+            if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(10))
             {
                 myAnimator.SetTrigger("Attack");
+            }
+            if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(10))
+            {
+                myAnimator.SetTrigger("Stab");
             }
             if (myInput.parry)
             {
@@ -144,6 +144,7 @@ public class CharacterController : MonoBehaviour
             }
         }
     }
+
     IEnumerator Climbing()
     {
         SetCanWalk(0);
@@ -294,13 +295,13 @@ public class CharacterController : MonoBehaviour
         if (value == true)
         {
             isTouchingGround = true;
-            UnityEngine.Debug.Log(isTouchingGround);
+            //UnityEngine.Debug.Log(isTouchingGround);
         }
         if (value == false)
         {
             isTouchingGround = false;
             SetCanWalk(0);
-            UnityEngine.Debug.Log(isTouchingGround);
+            //UnityEngine.Debug.Log(isTouchingGround);
         }
     }
     public float GetSpriteDirection()

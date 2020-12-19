@@ -101,6 +101,7 @@ public class HealthSystem : MonoBehaviour{
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
             mySoundSystem.PlayParrySounds();
+            UseEnergy(/*parry proficiency minus*/ incomingStabilityDamage);
             CharacterController attackersCharacterController = attacker.GetComponent<CharacterController>();
             attackersCharacterController.GetParried(appliedForce*2, -attackVector);
             CheckHealthState();
@@ -155,8 +156,7 @@ public class HealthSystem : MonoBehaviour{
     {
         if (energyCost <= energy)
         {
-            energy -= energyCost;
-            Debug.Log("Used energy");
+            Debug.Log("Enough energy to use skill.");
             return true;
         } else
         {
@@ -164,5 +164,10 @@ public class HealthSystem : MonoBehaviour{
                 " but only the following number of energy points left: " + energy);
             return false;
         }
+    }
+    public void UseEnergy(float energyCost)
+    {
+        energy -= energyCost;
+        Debug.Log("Used energy");
     }
 }

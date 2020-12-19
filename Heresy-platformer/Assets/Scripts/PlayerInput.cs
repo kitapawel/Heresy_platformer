@@ -15,18 +15,13 @@ public class PlayerInput : ControlInput
 
 	void Update()
 	{
-		SwitchPlayerMode();
+		ProcessInputs();
+		IsShiftPressed();
+		ClearInput();
 
-		//Clear out existing input values, used for synching Update with FixedUpdate
-		if (isInCombatMode)
-        {
-			ClearInput();
-			IsShiftPressed();
-			ProcessInputs();
+		//Clamp the horizontal input to be between -1 and 1
+		horizontal = Mathf.Clamp(horizontal, -1f, 1f);
 
-			//Clamp the horizontal input to be between -1 and 1
-			horizontal = Mathf.Clamp(horizontal, -1f, 1f);
-		}
 	}
 
 	void FixedUpdate()

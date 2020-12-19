@@ -58,9 +58,13 @@ public class CharacterController : MonoBehaviour
         {
             CheckIfGrounded();
             MonitorVelocity();
-            ProcessAttacks();
             ProcessMovement();
-        } else if (!isAlive)
+            ProcessAttacks();
+        }
+    }
+    private void Update()
+    {
+        if (!isAlive)
         {
             Death();
         }
@@ -129,10 +133,20 @@ public class CharacterController : MonoBehaviour
             if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(10))
             {
                 myAnimator.SetTrigger("Attack");
+                myHealthSystem.UseEnergy(10);
             }
             if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(10))
             {
                 myAnimator.SetTrigger("Stab");
+                myHealthSystem.UseEnergy(10);
+            }
+            if (myInput.basicAttack && !myHealthSystem.CanUseEnergyBasedAction(10))
+            {
+                myAnimator.SetTrigger("AttackSlow");
+            }
+            if (myInput.advancedAttack && !myHealthSystem.CanUseEnergyBasedAction(10))
+            {
+                myAnimator.SetTrigger("AttackSlow");
             }
             if (myInput.parry)
             {

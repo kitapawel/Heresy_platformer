@@ -391,12 +391,11 @@ GameObject:
   - component: {fileID: 4214025809544596520}
   - component: {fileID: 4214025809544596521}
   - component: {fileID: 4214025809544596503}
-  - component: {fileID: 4214025809544596523}
   - component: {fileID: 1481264873065702109}
+  - component: {fileID: 4214025809544596523}
   - component: {fileID: 4214025809544596502}
   - component: {fileID: 4214025809544596501}
   - component: {fileID: 4214025809544596500}
-  - component: {fileID: 4214025809077131694}
   m_Layer: 22
   m_Name: Player 1
   m_TagString: Player
@@ -549,8 +548,38 @@ MonoBehaviour:
   dodge: 0
   climb: 0
   basicAttack: 0
+  advancedAttack: 0
   parry: 0
   shiftPressed: 0
+  throwItem: 0
+  normalCursor: {fileID: 0}
+  useCursor: {fileID: 0}
+  cursorHotSpot: {x: 0, y: 0}
+  isInCombatMode: 1
+--- !u!114 &1481264873065702109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214025809544596526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b3fd3c01e813140872643793ab0b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseHealth: 0
+  baseEnergy: 0
+  baseStability: 0
+  minStability: 0
+  currentStability: 0
+  baseVitality: 0
+  baseDamageBonus: 0
+  currentDamageBonus: 0
+  baseCritRate: 0
+  currentCritRate: 0
+  baseCritBonus: 0
+  currentCritBonus: 0
 --- !u!114 &4214025809544596523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,33 +599,6 @@ MonoBehaviour:
   jumpForce: 160
   rollForce: 250
   dodgeForce: 160
---- !u!114 &1481264873065702109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4214025809544596526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83b3fd3c01e813140872643793ab0b8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseHealth: 0
-  currentHealth: 0
-  baseEnergy: 0
-  currentEnergy: 0
-  baseStability: 0
-  minStability: 0
-  currentStability: 0
-  baseVitality: 0
-  currentVitality: 0
-  baseDamageBonus: 0
-  currentDamageBonus: 0
-  baseCritRate: 0
-  currentCritRate: 0
-  baseCritBonus: 0
-  currentCritBonus: 0
 --- !u!114 &4214025809544596502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,18 +611,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87d45ef926ce644391737008609f766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  equippedWeapon: {fileID: 11400000, guid: 7c850eb7919e2214b8654da712905177, type: 2}
   damageBonus: 0
   critRate: 0
   critDamage: 0
-  minWeaponDamage: 0
-  maxWeaponDamage: 0
-  minWeaponStabilityDamage: 0
-  maxWeaponStabilityDamage: 0
-  minWeaponForce: 0
-  maxWeaponForce: 0
-  weaponCritRateBonus: 0
-  weaponCritDamageBonus: 0
+  thrownStartingPoint: {fileID: 0}
 --- !u!114 &4214025809544596501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -635,6 +629,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealthPoints: 0
   healthPoints: 0
+  maxEnergy: 0
+  energy: 0
   minStability: 0
   maxStability: 0
   stability: 0
@@ -670,41 +666,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a491927f26f93fb43a88217ba1a2e5a2, type: 3}
   - {fileID: 8300000, guid: 5d22597ada72e224e9be4221b2a6b652, type: 3}
   - {fileID: 8300000, guid: 840336247861f0f4bbbe23e4f6d59aa1, type: 3}
-  receiveDamageSounds:
-  - {fileID: 8300000, guid: 45d79a6be72d79d4eba4e27c903bcbde, type: 3}
-  - {fileID: 8300000, guid: f2ae9a005dc8888418ec4cf389300487, type: 3}
-  - {fileID: 8300000, guid: 5d37a6cf235dc4c478b3d92d472a5e35, type: 3}
+  painSounds: []
   parrySounds:
   - {fileID: 8300000, guid: 4b7a23155d897be49be6fc80fd7c1ede, type: 3}
   - {fileID: 8300000, guid: 85bec74dce8405949afcf1ebbe4eff0e, type: 3}
   - {fileID: 8300000, guid: 99c1f470b0ad7ec439c0f23a1b96d686, type: 3}
---- !u!114 &4214025809077131694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4214025809544596526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83b3fd3c01e813140872643793ab0b8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseHealth: 0
-  currentHealth: 0
-  baseEnergy: 0
-  currentEnergy: 0
-  baseStability: 0
-  minStability: 0
-  currentStability: 0
-  baseVitality: 0
-  currentVitality: 0
-  baseDamageBonus: 0
-  currentDamageBonus: 0
-  baseCritRate: 0
-  currentCritRate: 0
-  baseCritBonus: 0
-  currentCritBonus: 0
+  getHitSounds: []
 --- !u!1 &4214025809734970814
 GameObject:
   m_ObjectHideFlags: 0

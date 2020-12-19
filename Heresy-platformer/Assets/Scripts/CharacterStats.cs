@@ -8,10 +8,11 @@ public class CharacterStats : MonoBehaviour
     [Header("Survivability stats:")]
     public float baseHealth;
     public float baseEnergy;
-    public float baseStability;
-    public float minStability;
-    public float currentStability;
+    public float minEnergy;
     public float baseVitality;
+
+    public float energyRegen;
+    public float healthRegen;
 
     
     [Header("Combat stats:")]
@@ -33,10 +34,10 @@ public class CharacterStats : MonoBehaviour
         baseHealth = Mathf.Clamp(50, 1f, 100f); // TODO in the future, clamp the incoming values within allowed ranges, using Properties get/set
 
         baseEnergy = 50;
+        minEnergy = -10;
 
-        minStability = -10;
-        baseStability = 20;
-        currentStability = baseStability;
+        energyRegen = 1;
+        healthRegen = 1;
 
         baseVitality = 100;
 

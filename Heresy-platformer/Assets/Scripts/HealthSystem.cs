@@ -22,11 +22,7 @@ public class HealthSystem : MonoBehaviour{
     [SerializeField]
     private float energy;
     [SerializeField]
-    private float minStability;
-    [SerializeField]
-    private float maxStability;
-    [SerializeField]
-    private float stability;
+    private float minEnergy;
 
     void Start()
     {
@@ -39,12 +35,12 @@ public class HealthSystem : MonoBehaviour{
         myBloodFX = GetComponentInChildren<ParticleSystem>();
 
         InitializeStats();
-        InvokeRepeating("RegenerateStability", 0, 1f);
+        StartCoroutine(RegenerateEnergy());
     }
 
     void Update()
     {
-
+        CheckIfCanGetUp();
     }
 
     private void InitializeStats()
@@ -53,9 +49,7 @@ public class HealthSystem : MonoBehaviour{
         healthPoints = maxHealthPoints;
         maxEnergy = myCharacterStats.baseEnergy;
         energy = maxEnergy;
-        maxStability = myCharacterStats.currentStability;
-        stability = maxStability;
-        minStability = myCharacterStats.minStability;
+        minEnergy = myCharacterStats.minEnergy;
     }
 
     private void CheckHealthState()
@@ -65,31 +59,24 @@ public class HealthSystem : MonoBehaviour{
             myCharacterController.SetAliveState(0);
         }
     }
-    private void CheckStability()
+    private void CheckStability()// split into fall and get up
     {
         if (myCharacterController.isAlive)
         {
-            if (stability <= 0)
+            if (energy <= 0)
             {
                 myCharacterController.Fall();
             }
-            if (stability > 0)
+        }
+    }
+    private void CheckIfCanGetUp()// split into fall and get up
+    {
+        if (myCharacterController.isAlive)
+        {
+            if (energy > 0)
             {
                 myAnimator.SetBool("isFallen", false);
             }
-        }
-    }
-
-    private void RegenerateStability()
-    {
-        if (stability < maxStability)
-        {
-            stability = stability + 5f;
-            if (stability > maxStability)
-            {
-                stability = maxStability;
-            }
-            CheckStability();
         }
     }
 
@@ -133,10 +120,10 @@ public class HealthSystem : MonoBehaviour{
     } 
     private void TakeStabilityDamage(float incomingStabilityDamage)
     {
-        stability -= incomingStabilityDamage;
-        if (stability < minStability)
+        energy -= incomingStabilityDamage;
+        if (energy < minEnergy)
         {
-            stability = minStability;
+            energy = minEnergy;
         }
         CheckStability();
     }
@@ -169,5 +156,18 @@ public class HealthSystem : MonoBehaviour{
     {
         energy -= energyCost;
         Debug.Log("Used energy");
+    }
+
+    IEnumerator RegenerateEnergy()
+    {
+        while (true)
+        {
+            energy = energy + myCharacterStats.energyRegen;
+            if (energy > maxEnergy)
+            {
+                energy = maxEnergy;
+            }
+            yield return new WaitForSeconds(1);
+        }
     }
 }

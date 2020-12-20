@@ -16,7 +16,7 @@ public class InventorySystem : MonoBehaviour
     public int inventorySpace;
     public PlayerCanvasController playerCanvasController;
 
-    public ProjectileRotating equippedProjectile;
+    public ProjectileRotating equippedThrownWeapon;
 
     public GameObject thrownStartingPoint;
 

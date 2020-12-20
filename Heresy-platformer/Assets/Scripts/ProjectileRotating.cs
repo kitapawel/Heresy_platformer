@@ -8,6 +8,9 @@ public class ProjectileRotating : MonoBehaviour
     bool flyingAtTarget = true;
     public GameObject throwingEntity = null;
 
+    const int THROWN_LAYER = 24;
+    const int PICKABLE_LAYER = 25;
+
     [Header("Weapon Stats")]
     [SerializeField]
     float damage;
@@ -44,6 +47,7 @@ public class ProjectileRotating : MonoBehaviour
     {
         flyingAtTarget = false;
         throwingEntity = null;
+        gameObject.layer = PICKABLE_LAYER;
         //Destroy(gameObject.GetComponent<Rigidbody2D>());
         //Destroy(gameObject.GetComponent<PolygonCollider2D>());
         //Destroy(this.gameObject, 2f);

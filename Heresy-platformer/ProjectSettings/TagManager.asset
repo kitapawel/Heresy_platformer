@@ -31,7 +31,7 @@ TagManager:
   - Actor
   - ActorNonCollidable
   - Thrown
-  - 
+  - Pickable
   - 
   - 
   - 

@@ -59,7 +59,7 @@ public class HealthSystem : MonoBehaviour{
             myCharacterController.SetAliveState(0);
         }
     }
-    private void CheckStability()// split into fall and get up
+    private void CheckStability()
     {
         if (myCharacterController.isAlive)
         {

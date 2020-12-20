@@ -1,0 +1,25 @@
+# Animation architecture
+-Basic animation controller. Contains all possible movements for a given weapon set.
+--Override controller for different animations.
+-Other weapon/enemy controller. Copy the basic animation controller and switch its animations.
+--Override controller for different animations.
+
+# Layer architecture
+Actor - player and NPC. Collide with each other.
+ActorNotCollidable - Actors transfer to this layer temporarily while dodging, rolling, falling etc. No collision with Actor, but collide with itself.
+Thrown - collides with Actor, not with ActorNotCollidable.
+Pickable - collides with other pickables.
+
+# Character setup and architecture
+Input is based on ControlInput and its inherited classes: PlayerInput gets input from player. EnemyAI takes input from AI. Both send data to CharacterController to control and animate the characters.
+
+# Special ability architecture
+
+
+# Combat system architecture
+Combat and damage transmission works based on several systems.
+1. The ControlInput and CharacterController trigger attack animation.
+2. The HitCollisionChecker object contains a trigger collider and check which targets are available for an attack.
+3. During an animation the DealDamage() method is called from CombatSystem. It checks the HitCollisionChecker's list, and if targets are found, deals damage to them.
+4. The DealDamage() method gathers important stats from the character and its inventory and passes it to the target's HealthSystem.
+5. Target's HealthSystem takes damage values and decides how to apply damage.

@@ -81,10 +81,10 @@ public class CombatSystem : MonoBehaviour
 
     public void ThrowItem()
     {
-        if (myInventorySystem.equippedProjectile != null)
+        if (myInventorySystem.equippedThrownWeapon != null)
         {
             //TODO use mousetoscreenposition to determine vertical force of throw
-            ProjectileRotating thrownW = Instantiate(myInventorySystem.equippedProjectile, thrownStartingPoint.transform.position, thrownStartingPoint.transform.rotation);
+            ProjectileRotating thrownW = Instantiate(myInventorySystem.equippedThrownWeapon, thrownStartingPoint.transform.position, thrownStartingPoint.transform.rotation);
             thrownW.throwingEntity = transform.gameObject;
             thrownW.GetComponent<Rigidbody2D>().AddForce(new Vector2(20f * myCharacterController.GetSpriteDirection(), 5f), ForceMode2D.Impulse);
         }        

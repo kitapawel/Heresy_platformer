@@ -12,6 +12,8 @@ public class EnemyAIBasic : ControlInput
 	Animator myAnimator;
 	AIPerception myAIPerception;
 
+	LayerMask meleeTargetLayers;
+
 	[SerializeField]
 	GameObject target;
 	
@@ -33,6 +35,7 @@ public class EnemyAIBasic : ControlInput
 		myCharacterController = GetComponent<CharacterController>();
 		myAnimator = GetComponent<Animator>();
 		myAIPerception = GetComponentInChildren<AIPerception>();
+		meleeTargetLayers = LayerMask.GetMask("Actor", "ActorNonCollidable");
 	}
 	void Update()
 	{
@@ -77,8 +80,8 @@ public class EnemyAIBasic : ControlInput
 				ChaseTarget();
 				break;
 			case AIState.Fighting:
-				LookForTargets();
 				FightTarget();
+				LookForTargets();
 				break;
 			default:
 				break;
@@ -87,7 +90,7 @@ public class EnemyAIBasic : ControlInput
 
 	void LookAround()
 	{
-        if (myAnimator.GetBool("isFallen") == false)
+		if (myAnimator.GetBool("isFallen") == false && !target)
 		{
 			if (lookAroundInterval <= 0)
 			{
@@ -99,14 +102,19 @@ public class EnemyAIBasic : ControlInput
 				lookAroundInterval -= 1f * Time.deltaTime;
 			}
 		}
-    }
-
+	}
+	
 	void LookForTargets()
 	{
+		IsTargetInLineOfSight();
+		IsTargetInMeleeRange();
+	}
+	void IsTargetInLineOfSight()
+	{
 		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange);
-		RaycastHit2D meleeRangeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), meleeRange);
+
 		if (target) // removes NullReference exceptions
-        {
+		{
 			if (eyeRaycastHit.transform.tag != "Player")
 			{
 				if (!myAIPerception.IsPlayerInRange())
@@ -118,10 +126,14 @@ public class EnemyAIBasic : ControlInput
 		if (eyeRaycastHit)
 		{
 			if (eyeRaycastHit.transform.tag == "Player")
-            {
+			{
 				target = eyeRaycastHit.transform.gameObject;
-			}			
+			}
 		}
+	}
+	void IsTargetInMeleeRange()
+	{
+		RaycastHit2D meleeRangeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), meleeRange, meleeTargetLayers);
 		if (!meleeRangeRaycastHit)
 		{
 			isTargetInMeleeRange = false;
@@ -132,7 +144,7 @@ public class EnemyAIBasic : ControlInput
 		}
 	}
 
-    void ChaseTarget()
+	void ChaseTarget()
 	{
 		if (IsTargetToTheRight())//(transform.position.x < target.transform.position.x)
 			{
@@ -153,13 +165,13 @@ public class EnemyAIBasic : ControlInput
 				break;
 			case 1:
 			case 2:
+			case 3:
 				basicAttack = true;				
 				break;
 			default:
 				break;
 		}
 	}
-
 	bool IsTargetToTheRight()
     {
 		if (transform.position.x < target.transform.position.x)
@@ -171,4 +183,5 @@ public class EnemyAIBasic : ControlInput
 			return false;
 		}
 	}
+
 }

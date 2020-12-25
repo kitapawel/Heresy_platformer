@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlInput : MonoBehaviour
+public abstract class ControlInput : MonoBehaviour
 {
 	protected bool readyToClear;
 

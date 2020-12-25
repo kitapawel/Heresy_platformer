@@ -251,7 +251,7 @@ public class CharacterController : MonoBehaviour
 
     public void Fall()
     {
-        if (isGrounded && myAnimator.GetBool("isFallen") == false)
+        if (isAlive && isGrounded && myAnimator.GetBool("isFallen") == false)
         {
             myAnimator.Play("Sword_Hero_fall");
             myAnimator.SetBool("isFallen", true);

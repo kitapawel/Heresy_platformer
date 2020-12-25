@@ -11,6 +11,7 @@ public class EnemyAIAggressive : ControlInput
 	CharacterController myCharacterController;
 	Animator myAnimator;
 	AIPerception myAIPerception;
+	LayerMask meleeTargetLayers = LayerMask.GetMask("Actor, ActorNonCollidable");
 
 	[SerializeField]
 	GameObject target;
@@ -36,6 +37,8 @@ public class EnemyAIAggressive : ControlInput
 	}
 	void Update()
 	{
+		CheckState();
+		PerformStateActions();
 		ClearInput();
 	}
 
@@ -43,8 +46,6 @@ public class EnemyAIAggressive : ControlInput
 	but perform ClearInput in Update to clear unwanted commands to the AI all the time*/
 	void FixedUpdate()
 	{
-		CheckState();
-		PerformStateActions();
 		readyToClear = true;
 	}
 
@@ -77,17 +78,12 @@ public class EnemyAIAggressive : ControlInput
 				ChaseTarget();
 				break;
 			case AIState.Fighting:
-				FightTarget();
 				LookForTargets();
+				FightTarget();
 				break;
 			default:
 				break;
 		}
-	}
-
-	void IsShiftPressed()
-	{
-
 	}
 
 	void LookAround()
@@ -108,8 +104,8 @@ public class EnemyAIAggressive : ControlInput
 
 	void LookForTargets()
 	{
-		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange);
-		RaycastHit2D meleeRangeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), meleeRange);
+		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange, meleeTargetLayers);
+		RaycastHit2D meleeRangeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), meleeRange, meleeTargetLayers);
 		if (target)
 		{
 			if (eyeRaycastHit.transform.tag != "Player")
@@ -127,11 +123,11 @@ public class EnemyAIAggressive : ControlInput
 				target = eyeRaycastHit.transform.gameObject;
 			}			
 		}
-		if (!meleeRangeRaycastHit)
+		if (meleeRangeRaycastHit.transform.tag != "Player")
 		{
 			isTargetInMeleeRange = false;
 		}
-		if (meleeRangeRaycastHit)
+		if (meleeRangeRaycastHit.transform.tag == "Player")
 		{
 			isTargetInMeleeRange = true;
 		}

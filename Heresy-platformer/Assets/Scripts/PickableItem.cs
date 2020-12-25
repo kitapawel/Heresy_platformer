@@ -7,6 +7,7 @@ public class PickableItem : MonoBehaviour
     Rigidbody2D myRigidBody2D;
     const int ACTOR_LAYER = 22;
     const int ACTORNONCOLLIDABLE_LAYER = 23;
+    const int PICKABLE_LAYER = 25;
 
     [SerializeField]
     ScriptableObject scriptableObject;
@@ -47,7 +48,7 @@ public class PickableItem : MonoBehaviour
         boxCollider2D.isTrigger = true;
         boxCollider2D.size = new Vector2(2f, 2f);
         boxCollider2D.offset = new Vector2(0, 0);
-        gameObject.layer = ACTORNONCOLLIDABLE_LAYER;
+        gameObject.layer = PICKABLE_LAYER;
 
     }
     void Update()

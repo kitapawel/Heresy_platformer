@@ -20,7 +20,7 @@ public class CharacterController : MonoBehaviour
     [Header("Boolean values")]
     public bool isAlive = true;
     bool canWalk = true;
-    bool canClimb = false;
+    public bool canClimb = false;
     bool isWalking = false;
     public bool isParrying = false;
     bool isGrounded = true;

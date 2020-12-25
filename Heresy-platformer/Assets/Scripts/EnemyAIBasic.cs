@@ -12,7 +12,8 @@ public class EnemyAIBasic : ControlInput
 	Animator myAnimator;
 	AIPerception myAIPerception;
 
-	LayerMask meleeTargetLayers;
+	public LayerMask meleeTargetLayers;
+	public LayerMask meleeIgnoreTargetLayers;
 
 	[SerializeField]
 	GameObject target;
@@ -36,6 +37,7 @@ public class EnemyAIBasic : ControlInput
 		myAnimator = GetComponent<Animator>();
 		myAIPerception = GetComponentInChildren<AIPerception>();
 		meleeTargetLayers = LayerMask.GetMask("Actor", "ActorNonCollidable");
+		meleeIgnoreTargetLayers = LayerMask.GetMask("Pickable");
 	}
 	void Update()
 	{
@@ -111,7 +113,7 @@ public class EnemyAIBasic : ControlInput
 	}
 	void IsTargetInLineOfSight()
 	{
-		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange);
+		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange, ~meleeIgnoreTargetLayers);
 
 		if (target) // removes NullReference exceptions
 		{
@@ -133,6 +135,7 @@ public class EnemyAIBasic : ControlInput
 	}
 	void IsTargetInMeleeRange()
 	{
+		isTargetInMeleeRange = false; // clear, so that the AI does not keep attacking without player in range
 		RaycastHit2D meleeRangeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), meleeRange, meleeTargetLayers);
 		if (!meleeRangeRaycastHit)
 		{
@@ -142,6 +145,17 @@ public class EnemyAIBasic : ControlInput
 		{
 			isTargetInMeleeRange = true;
 		}
+/*		isTargetInMeleeRange = false;
+		foreach (GameObject hitTarget in myHitCollisionChecker.hitTargets)
+		{
+			if (hitTarget.gameObject.CompareTag("Player"))
+            {
+				isTargetInMeleeRange = true;
+			} else
+            {
+				isTargetInMeleeRange = false;
+			}
+		}*/
 	}
 
 	void ChaseTarget()
@@ -157,7 +171,7 @@ public class EnemyAIBasic : ControlInput
 	}
 	void FightTarget()
 	{		
-		int randomValue = Random.Range(0, 3);
+		int randomValue = Random.Range(0, 4);
 		switch(randomValue)
 		{
 			case 0:

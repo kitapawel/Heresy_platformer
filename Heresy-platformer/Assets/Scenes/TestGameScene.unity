@@ -1350,12 +1350,12 @@ PrefabInstance:
     - target: {fileID: 9146827254253958666, guid: 0f0660b7f91baf843ade0c250af0fd91,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.449097
+      value: 9.111
       objectReference: {fileID: 0}
     - target: {fileID: 9146827254253958666, guid: 0f0660b7f91baf843ade0c250af0fd91,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.870944
+      value: 0.846
       objectReference: {fileID: 0}
     - target: {fileID: 9146827254253958666, guid: 0f0660b7f91baf843ade0c250af0fd91,
         type: 3}
@@ -2058,9 +2058,15 @@ MonoBehaviour:
   shiftPressed: 0
   throwItem: 0
   aiState: 1
+  meleeTargetLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  meleeIgnoreTargetLayers:
+    serializedVersion: 2
+    m_Bits: 0
   target: {fileID: 0}
   sightRange: 5
-  meleeRange: 1.7
+  meleeRange: 1.2
   moveSpeed: 0.8
   lookAroundIntervalBase: 3
   lookAroundInterval: 3
@@ -2149,6 +2155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAlive: 1
+  canClimb: 0
   isParrying: 0
   moveSpeed: 1.8
   runSpeed: 3.6
@@ -6049,12 +6056,12 @@ PrefabInstance:
     - target: {fileID: 9146827254253958666, guid: a139546482605754f92471eb31e778ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.61
+      value: 9.12
       objectReference: {fileID: 0}
     - target: {fileID: 9146827254253958666, guid: a139546482605754f92471eb31e778ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 0.269
       objectReference: {fileID: 0}
     - target: {fileID: 9146827254253958666, guid: a139546482605754f92471eb31e778ca,
         type: 3}
@@ -8429,6 +8436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAlive: 1
+  canClimb: 0
   isParrying: 0
   moveSpeed: 1.8
   runSpeed: 3.6

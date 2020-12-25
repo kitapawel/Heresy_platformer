@@ -11,7 +11,7 @@ public class CombatSystem : MonoBehaviour
     InventorySystem myInventorySystem;
 
 
-    private HitCollisionChecker hitCollisionChecker;
+    HitCollisionChecker hitCollisionChecker;
     [SerializeField] private float damageBonus;
     [SerializeField] private float critRate;
     [SerializeField] private float critDamage;

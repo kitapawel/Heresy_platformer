@@ -40,7 +40,7 @@ public class HealthSystem : MonoBehaviour{
 
     void Update()
     {
-        CheckIfCanGetUp();
+
     }
 
     private void InitializeStats()
@@ -160,13 +160,14 @@ public class HealthSystem : MonoBehaviour{
 
     IEnumerator RegenerateEnergy()
     {
-        while (true)
+        while (myCharacterController.isAlive)
         {
             energy = energy + myCharacterStats.energyRegen;
             if (energy > maxEnergy)
             {
                 energy = maxEnergy;
             }
+            CheckIfCanGetUp();
             yield return new WaitForSeconds(1);
         }
     }

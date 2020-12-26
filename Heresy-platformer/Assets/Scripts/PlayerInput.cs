@@ -11,8 +11,6 @@ public class PlayerInput : ControlInput
 
 	public bool isInCombatMode = true;
 
-
-
 	void Update()
 	{
 		ProcessInputs();
@@ -29,7 +27,7 @@ public class PlayerInput : ControlInput
 		readyToClear = true;
 	}
 
-	void SwitchPlayerMode()
+/*	void SwitchPlayerMode()
     {
 		if (Input.GetKeyUp(KeyCode.Tab))
 		{
@@ -44,21 +42,21 @@ public class PlayerInput : ControlInput
 				Cursor.SetCursor(normalCursor, cursorHotSpot, CursorMode.Auto);
 			}
 		}
-	}
+	}*/
 	void ProcessInputs()
 	{
 		//Accumulate horizontal axis input
 		horizontal += Input.GetAxis("Horizontal");
 
 		//Accumulate button inputs
-		jump = jump || Input.GetKeyDown(KeyCode.W);
-		dodge = dodge || Input.GetKeyDown(KeyCode.S);
-		basicAttack = basicAttack || Input.GetMouseButtonDown(0);
-		advancedAttack = advancedAttack || Input.GetMouseButtonDown(2);
-		parry = parry || Input.GetMouseButtonDown(1);
-		roll = roll || Input.GetKeyDown(KeyCode.Space);
-		climb = climb || Input.GetKeyDown(KeyCode.Z);
-		throwItem = throwItem || Input.GetKeyDown(KeyCode.Q);
+		jump = jump || Input.GetKey(KeyCode.W);
+		dodge = dodge || Input.GetKey(KeyCode.S);
+		basicAttack = basicAttack || Input.GetMouseButton(0);
+		advancedAttack = advancedAttack || Input.GetMouseButton(2);
+		parry = parry || Input.GetMouseButton(1);
+		roll = roll || Input.GetKey(KeyCode.Space);
+		climb = climb || Input.GetKey(KeyCode.Z);
+		throwItem = throwItem || Input.GetKey(KeyCode.Q);
 
 		//Interface inputs
 

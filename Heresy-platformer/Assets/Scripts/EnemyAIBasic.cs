@@ -117,17 +117,17 @@ public class EnemyAIBasic : ControlInput
 
 		if (target) // removes NullReference exceptions
 		{
-			if (eyeRaycastHit.transform.tag != "Player")
-			{
+			if (eyeRaycastHit.transform != target.transform)
+            {
 				if (!myAIPerception.IsPlayerInRange())
 				{
 					target = null;
 				}
-			}
+			}	
 		}
 		if (eyeRaycastHit)
 		{
-			if (eyeRaycastHit.transform.tag == "Player")
+			if (eyeRaycastHit.transform.CompareTag("Player"))
 			{
 				target = eyeRaycastHit.transform.gameObject;
 			}

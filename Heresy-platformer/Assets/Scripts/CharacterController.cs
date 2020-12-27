@@ -54,6 +54,10 @@ public class CharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!isAlive)
+        {
+            Death();
+        }
         if (isAlive)
         {
             CheckIfGrounded();
@@ -62,13 +66,7 @@ public class CharacterController : MonoBehaviour
             ProcessAttacks();
         }
     }
-    private void Update()
-    {
-        if (!isAlive)
-        {
-            Death();
-        }
-    }
+
     void ProcessMovement()
     {
         if (myInput.jump && isGrounded && canWalk)
@@ -158,13 +156,12 @@ public class CharacterController : MonoBehaviour
             }
         }
     }
-
     IEnumerator Climbing()
     {
         SetCanWalk(0);
         isWalking = false;
         myRigidBody2D.bodyType = RigidbodyType2D.Static;
-        myAnimator.Play("Sword_Hero_Climb");
+        myAnimator.Play("Climb");
         yield return new WaitForSeconds(0.2f);
         transform.position = transform.position + new Vector3(0.2f * GetSpriteDirection(), 0f, 0f); 
         yield return new WaitForSeconds(0.2f);
@@ -230,10 +227,11 @@ public class CharacterController : MonoBehaviour
     }
     public void Death()
     {
+        myAnimator.SetBool("isGrounded", true);//Dirty trick... stops falling animation when death occurs mid-air
+        myAnimator.Play("Death");
         DisableChildComponents();
         SetCollisionLayer(0);
         canWalk = false;
-        myAnimator.Play("Hero_Death");
         this.enabled = false;
     }
 
@@ -251,9 +249,9 @@ public class CharacterController : MonoBehaviour
 
     public void Fall()
     {
-        if (isAlive && isGrounded && myAnimator.GetBool("isFallen") == false)
+        if (isAlive && myAnimator.GetBool("isFallen") == false)
         {
-            myAnimator.Play("Sword_Hero_fall");
+            myAnimator.Play("Fall");
             myAnimator.SetBool("isFallen", true);
             SetCollisionLayer(0);
         }
@@ -263,14 +261,14 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded && myAnimator.GetBool("isFallen") == false)
         {
-            myAnimator.Play("Sword_Hero_GetHit");
+            myAnimator.Play("GetHit");
         }
     }
     public void GetParried(float appliedForce, float attackVector)
     {
         if (isGrounded && myAnimator.GetBool("isFallen") == false)
         {
-            myAnimator.Play("Sword_Hero_GetParried");
+            myAnimator.Play("GetParried");
             myRigidBody2D.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
         }
     }

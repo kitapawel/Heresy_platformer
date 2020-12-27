@@ -38,10 +38,6 @@ public class HealthSystem : MonoBehaviour{
         StartCoroutine(RegenerateEnergy());
     }
 
-    void Update()
-    {
-
-    }
 
     private void InitializeStats()
     {

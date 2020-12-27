@@ -30,10 +30,6 @@ public class CombatSystem : MonoBehaviour
         UpdateCharacterStats();
     }
 
-    void Update()
-    {
-        
-    }
     private void UpdateCharacterStats()
     {
         damageBonus = myCharacterStats.currentDamageBonus;

@@ -174,7 +174,7 @@ public class CharacterController_Deprecated : MonoBehaviour
     {
         isAlive = false;
         canWalk = false;
-        myAnimator.Play("Hero_Death");
+        myAnimator.SetTrigger("Die");
     }
 
     void CheckIfGrounded() 

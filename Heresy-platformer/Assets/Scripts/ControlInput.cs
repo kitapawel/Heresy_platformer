@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(-100)]
 public abstract class ControlInput : MonoBehaviour
 {
 	protected bool readyToClear;

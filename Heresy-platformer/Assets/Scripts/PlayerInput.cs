@@ -13,13 +13,12 @@ public class PlayerInput : ControlInput
 
 	void Update()
 	{
-		ProcessInputs();
+		ClearInput();//clear inputs befor process inputs
 		IsShiftPressed();
-		ClearInput();
+		ProcessInputs();
 
 		//Clamp the horizontal input to be between -1 and 1
 		horizontal = Mathf.Clamp(horizontal, -1f, 1f);
-
 	}
 
 	void FixedUpdate()
@@ -27,22 +26,28 @@ public class PlayerInput : ControlInput
 		readyToClear = true;
 	}
 
-/*	void SwitchPlayerMode()
-    {
-		if (Input.GetKeyUp(KeyCode.Tab))
+	/*	void SwitchPlayerMode()
 		{
-			if (isInCombatMode)
+			if (Input.GetKeyUp(KeyCode.Tab))
 			{
-				isInCombatMode = false;
-				Cursor.SetCursor(useCursor, cursorHotSpot, CursorMode.Auto);
+				if (isInCombatMode)
+				{
+					isInCombatMode = false;
+					Cursor.SetCursor(useCursor, cursorHotSpot, CursorMode.Auto);
+				}
+				else
+				{
+					isInCombatMode = true;
+					Cursor.SetCursor(normalCursor, cursorHotSpot, CursorMode.Auto);
+				}
 			}
-			else
-			{
-				isInCombatMode = true;
-				Cursor.SetCursor(normalCursor, cursorHotSpot, CursorMode.Auto);
-			}
-		}
-	}*/
+		}*/
+
+	void ProcessMove()
+    {
+		//Accumulate horizontal axis input
+		//horizontal += Input.GetAxis("Horizontal");
+	}
 	void ProcessInputs()
 	{
 		//Accumulate horizontal axis input

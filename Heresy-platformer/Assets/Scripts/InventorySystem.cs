@@ -24,6 +24,7 @@ public class InventorySystem : MonoBehaviour
 
     private void Start()
     {
+        playerCanvasController = FindObjectOfType<PlayerCanvasController>();
         InitializeInventory();
     }
 

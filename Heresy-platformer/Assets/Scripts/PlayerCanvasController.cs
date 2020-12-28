@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerCanvasController : MonoBehaviour
@@ -19,8 +17,8 @@ public class PlayerCanvasController : MonoBehaviour
     {
         healthBar = GameObject.Find("PlayerHealth").GetComponent<Image>();
         energyBar = GameObject.Find("PlayerEnergy").GetComponent<Image>();
-        myHealthSystem = GetComponentInParent<HealthSystem>();
-        myInventorySystem = GetComponentInParent<InventorySystem>();
+        myHealthSystem = FindObjectOfType<PlayerInput>().GetComponent<HealthSystem>();
+        myInventorySystem = FindObjectOfType<PlayerInput>().GetComponentInParent<InventorySystem>();
         inventoryWindow.gameObject.SetActive(false);
     }
 

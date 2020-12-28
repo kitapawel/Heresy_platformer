@@ -15,8 +15,8 @@ public class InventorySlot : MonoBehaviour
     }
     public void RemoveItemFromInventory()
     {
-        GetComponentInParent<InventorySystem>().DropItem(item);
-        GetComponentInParent<PlayerCanvasController>().UpdateInventoryPanel();
+        FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().DropItem(item);
+        FindObjectOfType<PlayerCanvasController>().UpdateInventoryPanel();
 
     }
 

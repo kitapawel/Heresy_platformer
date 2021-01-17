@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: LeatherArmor
   m_EditorClassIdentifier: 
   prefabName: 
+  icon: {fileID: 0}
   prefab: {fileID: 0}
-  armorType: 0
-  defense: 0
-  stability: 0
-  poise: 0
-  weight: 0
   flavourText: 
+  armorType: 1
+  defense: 10
+  stability: 10
+  poise: 10
+  weight: 10
+  projectileSlots: 1
+  inventorySlots: 1

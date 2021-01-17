@@ -93,13 +93,14 @@ public class InventorySystem : MonoBehaviour
     public float GetDefenseValue()
     {
         float defenseRandomValue = Mathf.Round(Random.Range(0f, equippedArmor.defense));
-        Debug.Log("InventorySystem, armor value = " + defenseRandomValue);
+        Debug.Log("InventorySystem.armor roll: " + defenseRandomValue);
         return defenseRandomValue;
     }
     public float GetStabilityValue()
     {
-        float stability = equippedArmor.stability;
-        return stability;
+        float randomStabilityValue = Mathf.Round(Random.Range(0f, equippedArmor.stability));
+        Debug.Log("InventorySystem.stability roll: " + randomStabilityValue);
+        return randomStabilityValue;
     }
     public float GetPoiseValue()
     {

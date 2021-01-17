@@ -12,6 +12,7 @@ public class CombatSystem : MonoBehaviour
 
 
     HitCollisionChecker hitCollisionChecker;
+    InteractionChecker interactionChecker;
     [SerializeField] private float damageBonus;
     [SerializeField] private float critRate;
     [SerializeField] private float critDamage;
@@ -24,6 +25,7 @@ public class CombatSystem : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myCharacterController = GetComponent<CharacterController>();
         hitCollisionChecker = GetComponentInChildren<HitCollisionChecker>();
+        interactionChecker = GetComponentInChildren<InteractionChecker>();
         myCharacterStats = GetComponent<CharacterStats>();
         myInventorySystem = GetComponent<InventorySystem>();
 
@@ -85,5 +87,20 @@ public class CombatSystem : MonoBehaviour
             thrownW.GetComponent<Rigidbody2D>().AddForce(new Vector2(20f * myCharacterController.GetSpriteDirection(), 5f), ForceMode2D.Impulse);
         }        
     }
-    
+    public void FinishOff()
+    {
+        foreach (GameObject finishOffTarget in interactionChecker.finishOffTargets)
+        {            
+            float damageToDeal = 5f;
+            float stabilityDamageToDeal = myInventorySystem.equippedWeapon.stabilityDamage; //TODO maybe spice this up a bit
+            float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
+            float attackVector = myCharacterController.GetSpriteDirection();
+            if (finishOffTarget.GetComponentInParent<HealthSystem>())
+            {
+                Debug.Log(finishOffTarget + " organic target was hit for " + damageToDeal + " dmg + " + stabilityDamageToDeal + " stability damage.");
+                finishOffTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, stabilityDamageToDeal, appliedForce, attackVector);
+            }
+        }
+    }
+
 }

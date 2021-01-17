@@ -116,11 +116,16 @@ public class HealthSystem : MonoBehaviour{
     } 
     private void TakeStabilityDamage(float incomingStabilityDamage)
     {
-        energy -= incomingStabilityDamage;
+        float finalDamageValue = incomingStabilityDamage - myInventorySystem.GetStabilityValue();
+        if (finalDamageValue < 1f)
+        {
+            finalDamageValue = 1;
+        }
         if (energy < minEnergy)
         {
             energy = minEnergy;
         }
+        energy -= incomingStabilityDamage;
         CheckStability();
     }
 

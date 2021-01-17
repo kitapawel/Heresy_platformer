@@ -1,12 +1,12 @@
 # Animation architecture
--Basic animation controller. Contains all possible movements for a given weapon set.
---Override controller for different animations.
--Other weapon/enemy controller. Copy the basic animation controller and switch its animations.
---Override controller for different animations.
+-Basic animation controller. Contains all possible movements for a given type of controller (e.g. for humans).
+--Override controller for different animations (e.g. for new skills).
+OR
+--Override controller for different enemy types with same animation sets (e.g. different armors or weapons).
 
 # Layer architecture
 Actor - player and NPC. Collide with each other.
-ActorNotCollidable - Actors transfer to this layer temporarily while dodging, rolling, falling etc. No collision with Actor, but collide with itself.
+ActorNotCollidable - Actors transfer to this layer temporarily while dodging, rolling, falling etc. No collision with Actor, but collide with ActorNotCollidable.
 Thrown - collides with Actor, not with ActorNotCollidable.
 Pickable - collides with other pickables.
 

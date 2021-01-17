@@ -1,0 +1,1816 @@
+fileFormatVersion: 2
+guid: 7791168dc2a404947ba6db3c34cb1187
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4701890899783349084
+    second: sheet_soldier_sword_large_2_0
+  - first:
+      213: -536409786053410069
+    second: sheet_soldier_sword_large_2_1
+  - first:
+      213: -5371044217958028996
+    second: sheet_soldier_sword_large_2_2
+  - first:
+      213: -6102208473191377257
+    second: sheet_soldier_sword_large_2_3
+  - first:
+      213: 1221944727785808076
+    second: sheet_soldier_sword_large_2_4
+  - first:
+      213: -3111040500890676485
+    second: sheet_soldier_sword_large_2_5
+  - first:
+      213: 6653321144140619395
+    second: sheet_soldier_sword_large_2_6
+  - first:
+      213: 2452161205348245908
+    second: sheet_soldier_sword_large_2_7
+  - first:
+      213: 7805847607097629861
+    second: sheet_soldier_sword_large_2_8
+  - first:
+      213: 4320997688314899598
+    second: sheet_soldier_sword_large_2_9
+  - first:
+      213: -1342536919769813660
+    second: sheet_soldier_sword_large_2_10
+  - first:
+      213: -7412602338165283005
+    second: sheet_soldier_sword_large_2_11
+  - first:
+      213: -7510483137188797391
+    second: sheet_soldier_sword_large_2_12
+  - first:
+      213: -62097277255280492
+    second: sheet_soldier_sword_large_2_13
+  - first:
+      213: 2424768351416768925
+    second: sheet_soldier_sword_large_2_14
+  - first:
+      213: -1275482580638322330
+    second: sheet_soldier_sword_large_2_15
+  - first:
+      213: -1259252115483362116
+    second: sheet_soldier_sword_large_2_16
+  - first:
+      213: 6778554991104985939
+    second: sheet_soldier_sword_large_2_17
+  - first:
+      213: -1730441282441097943
+    second: sheet_soldier_sword_large_2_18
+  - first:
+      213: 3183490260274595251
+    second: sheet_soldier_sword_large_2_19
+  - first:
+      213: -5516029135729133128
+    second: sheet_soldier_sword_large_2_20
+  - first:
+      213: 6291353745629149899
+    second: sheet_soldier_sword_large_2_21
+  - first:
+      213: 7737043384342681195
+    second: sheet_soldier_sword_large_2_22
+  - first:
+      213: 5857402852464020563
+    second: sheet_soldier_sword_large_2_23
+  - first:
+      213: 6615693667779786133
+    second: sheet_soldier_sword_large_2_24
+  - first:
+      213: -2962526227779547238
+    second: sheet_soldier_sword_large_2_25
+  - first:
+      213: -6520810166328060858
+    second: sheet_soldier_sword_large_2_26
+  - first:
+      213: -5682126798809295429
+    second: sheet_soldier_sword_large_2_27
+  - first:
+      213: -3134492547427540161
+    second: sheet_soldier_sword_large_2_28
+  - first:
+      213: 2490598228835952976
+    second: sheet_soldier_sword_large_2_29
+  - first:
+      213: -5379217395919626470
+    second: sheet_soldier_sword_large_2_30
+  - first:
+      213: 3295853919806940074
+    second: sheet_soldier_sword_large_2_31
+  - first:
+      213: -9090279568731356763
+    second: sheet_soldier_sword_large_2_32
+  - first:
+      213: -1124281022275430797
+    second: sheet_soldier_sword_large_2_33
+  - first:
+      213: -1809475112098678609
+    second: sheet_soldier_sword_large_2_34
+  - first:
+      213: 2121210875013082271
+    second: sheet_soldier_sword_large_2_35
+  - first:
+      213: -4560324202351376551
+    second: sheet_soldier_sword_large_2_36
+  - first:
+      213: -8052658274081091380
+    second: sheet_soldier_sword_large_2_37
+  - first:
+      213: 6335054436425729365
+    second: sheet_soldier_sword_large_2_38
+  - first:
+      213: 548385194997703457
+    second: sheet_soldier_sword_large_2_39
+  - first:
+      213: 5984713964339545645
+    second: sheet_soldier_sword_large_2_40
+  - first:
+      213: -3268690609132475444
+    second: sheet_soldier_sword_large_2_41
+  - first:
+      213: 8285810296697600571
+    second: sheet_soldier_sword_large_2_42
+  - first:
+      213: -8769973649001838577
+    second: sheet_soldier_sword_large_2_43
+  - first:
+      213: 898953945541621831
+    second: sheet_soldier_sword_large_2_44
+  - first:
+      213: 4126067696941123145
+    second: sheet_soldier_sword_large_2_45
+  - first:
+      213: -7330256959638237650
+    second: sheet_soldier_sword_large_2_46
+  - first:
+      213: -6877437188016667949
+    second: sheet_soldier_sword_large_2_47
+  - first:
+      213: 7671362539416045430
+    second: sheet_soldier_sword_large_2_48
+  - first:
+      213: 3732937062681146116
+    second: sheet_soldier_sword_large_2_49
+  - first:
+      213: 9062556157243559401
+    second: sheet_soldier_sword_large_2_50
+  - first:
+      213: -832875933968180123
+    second: sheet_soldier_sword_large_2_51
+  - first:
+      213: -6127648851193721343
+    second: sheet_soldier_sword_large_2_52
+  - first:
+      213: -1152159684951022364
+    second: sheet_soldier_sword_large_2_53
+  - first:
+      213: 2963816984587434808
+    second: sheet_soldier_sword_large_2_54
+  - first:
+      213: -1748043539115499558
+    second: sheet_soldier_sword_large_2_55
+  - first:
+      213: -8591212630386451585
+    second: sheet_soldier_sword_large_2_56
+  - first:
+      213: -4936759077075516878
+    second: sheet_soldier_sword_large_2_57
+  - first:
+      213: 8278187253489437583
+    second: sheet_soldier_sword_large_2_58
+  - first:
+      213: 2810617889277679708
+    second: sheet_soldier_sword_large_2_59
+  - first:
+      213: -4148499397191180682
+    second: sheet_soldier_sword_large_2_60
+  - first:
+      213: -4946273822111146625
+    second: sheet_soldier_sword_large_2_61
+  - first:
+      213: 4218695479057075187
+    second: sheet_soldier_sword_large_2_62
+  - first:
+      213: 8272898280031433831
+    second: sheet_soldier_sword_large_2_63
+  - first:
+      213: -758236671275613955
+    second: sheet_soldier_sword_large_2_64
+  - first:
+      213: 4896144326533325722
+    second: sheet_soldier_sword_large_2_65
+  - first:
+      213: -6308859614763160820
+    second: sheet_soldier_sword_large_2_66
+  - first:
+      213: -6118273391686530112
+    second: sheet_soldier_sword_large_2_67
+  - first:
+      213: 783092293804739100
+    second: sheet_soldier_sword_large_2_68
+  - first:
+      213: -6770214049738959042
+    second: sheet_soldier_sword_large_2_69
+  - first:
+      213: -2608038878278928779
+    second: sheet_soldier_sword_large_2_70
+  - first:
+      213: 4846168653236914354
+    second: sheet_soldier_sword_large_2_71
+  - first:
+      213: 2351317129025944920
+    second: sheet_soldier_sword_large_2_72
+  - first:
+      213: 9139443219662706261
+    second: sheet_soldier_sword_large_2_73
+  - first:
+      213: 8297502269968170129
+    second: sheet_soldier_sword_large_2_74
+  - first:
+      213: -3885301663727096125
+    second: sheet_soldier_sword_large_2_75
+  - first:
+      213: -7132292910744452489
+    second: sheet_soldier_sword_large_2_76
+  - first:
+      213: 8296236248666372980
+    second: sheet_soldier_sword_large_2_77
+  - first:
+      213: 4322821702327391928
+    second: sheet_soldier_sword_large_2_78
+  - first:
+      213: 139714876449398725
+    second: sheet_soldier_sword_large_2_79
+  - first:
+      213: 3674927410466325538
+    second: sheet_soldier_sword_large_2_80
+  - first:
+      213: 7235047531674399321
+    second: sheet_soldier_sword_large_2_81
+  - first:
+      213: -4657258768315224819
+    second: sheet_soldier_sword_large_2_82
+  - first:
+      213: -4207722517224334136
+    second: sheet_soldier_sword_large_2_83
+  - first:
+      213: -3594303469096943223
+    second: sheet_soldier_sword_large_2_84
+  - first:
+      213: -7248922926717929736
+    second: sheet_soldier_sword_large_2_85
+  - first:
+      213: -1868176019893260095
+    second: sheet_soldier_sword_large_2_86
+  - first:
+      213: -7169269081636040726
+    second: sheet_soldier_sword_large_2_87
+  - first:
+      213: -905060517813259076
+    second: sheet_soldier_sword_large_2_88
+  - first:
+      213: -5779498271075033399
+    second: sheet_soldier_sword_large_2_89
+  - first:
+      213: -7154985196089616183
+    second: sheet_soldier_sword_large_2_90
+  - first:
+      213: 1639152826348396940
+    second: sheet_soldier_sword_large_2_91
+  - first:
+      213: 1213717220964297966
+    second: sheet_soldier_sword_large_2_92
+  - first:
+      213: -9121755312864670849
+    second: sheet_soldier_sword_large_2_93
+  - first:
+      213: -7732439435868452528
+    second: sheet_soldier_sword_large_2_94
+  - first:
+      213: 2940730295804615778
+    second: sheet_soldier_sword_large_2_95
+  - first:
+      213: 7804514809825506538
+    second: sheet_soldier_sword_large_2_96
+  - first:
+      213: 3409906705593878659
+    second: sheet_soldier_sword_large_2_97
+  - first:
+      213: -5586308829469695111
+    second: sheet_soldier_sword_large_2_98
+  - first:
+      213: -5364634900926137449
+    second: sheet_soldier_sword_large_2_99
+  - first:
+      213: -7298626459198638283
+    second: sheet_soldier_sword_large_2_100
+  - first:
+      213: -240099080602996948
+    second: sheet_soldier_sword_large_2_101
+  - first:
+      213: 7848002874414543443
+    second: sheet_soldier_sword_large_2_102
+  - first:
+      213: -7800001492147308135
+    second: sheet_soldier_sword_large_2_103
+  - first:
+      213: 425355641876732241
+    second: sheet_soldier_sword_large_2_104
+  - first:
+      213: 2357614745748421235
+    second: sheet_soldier_sword_large_2_105
+  - first:
+      213: -5821395416707190246
+    second: sheet_soldier_sword_large_2_106
+  - first:
+      213: -8734430182403735700
+    second: sheet_soldier_sword_large_2_107
+  - first:
+      213: 7059582057809842283
+    second: sheet_soldier_sword_large_2_108
+  - first:
+      213: -8430444614574380766
+    second: sheet_soldier_sword_large_2_109
+  - first:
+      213: 363190299387326935
+    second: sheet_soldier_sword_large_2_110
+  - first:
+      213: 491829481618763166
+    second: sheet_soldier_sword_large_2_111
+  - first:
+      213: -5612659887131465575
+    second: sheet_soldier_sword_large_2_112
+  - first:
+      213: -4001183188331363634
+    second: sheet_soldier_sword_large_2_113
+  - first:
+      213: 9053566934273783446
+    second: sheet_soldier_sword_large_2_114
+  - first:
+      213: -3845806615581124607
+    second: sheet_soldier_sword_large_2_115
+  - first:
+      213: 267656261011773275
+    second: sheet_soldier_sword_large_2_116
+  - first:
+      213: 4519528085636827804
+    second: sheet_soldier_sword_large_2_117
+  - first:
+      213: 1049567939454478106
+    second: sheet_soldier_sword_large_2_118
+  - first:
+      213: 5456049972765358390
+    second: sheet_soldier_sword_large_2_119
+  - first:
+      213: -3089379504054757887
+    second: sheet_soldier_sword_large_2_120
+  - first:
+      213: 9014404451923882327
+    second: sheet_soldier_sword_large_2_121
+  - first:
+      213: 774627670616017639
+    second: sheet_soldier_sword_large_2_122
+  - first:
+      213: 1595031346713607989
+    second: sheet_soldier_sword_large_2_123
+  - first:
+      213: -954674644187065572
+    second: sheet_soldier_sword_large_2_124
+  - first:
+      213: 6883953928778227981
+    second: sheet_soldier_sword_large_2_125
+  - first:
+      213: 4933582952008968110
+    second: sheet_soldier_sword_large_2_126
+  - first:
+      213: -2103840262598206493
+    second: sheet_soldier_sword_large_2_127
+  - first:
+      213: 1705264127200583407
+    second: sheet_soldier_sword_large_2_128
+  - first:
+      213: 5846727469394384869
+    second: sheet_soldier_sword_large_2_129
+  - first:
+      213: 1106668130784033098
+    second: sheet_soldier_sword_large_2_130
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 712
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c537a369cd8704140800000000000000
+      internalID: 4701890899783349084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 712
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be24e30442a4e88f0800000000000000
+      internalID: -536409786053410069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_2
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 712
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3922b3adb73675b0800000000000000
+      internalID: -5371044217958028996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 712
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7969c0a79b9905ba0800000000000000
+      internalID: -6102208473191377257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 712
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc0a5da714835f010800000000000000
+      internalID: 1221944727785808076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_5
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 712
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2de8eb52d53d4d0800000000000000
+      internalID: -3111040500890676485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_6
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 712
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ed81d6458555c50800000000000000
+      internalID: 6653321144140619395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_7
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 712
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491a6c8cf93d70220800000000000000
+      internalID: 2452161205348245908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 664
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac13ef9a01f35c60800000000000000
+      internalID: 7805847607097629861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 664
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c2b4ff08447fb30800000000000000
+      internalID: 4320997688314899598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_10
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 664
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46de547d8c95e5de0800000000000000
+      internalID: -1342536919769813660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_11
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 664
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347ad647275212990800000000000000
+      internalID: -7412602338165283005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_12
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 664
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134ec44016765c790800000000000000
+      internalID: -7510483137188797391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_13
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 664
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4981ea7fad2632ff0800000000000000
+      internalID: -62097277255280492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d995ec8f7f186a120800000000000000
+      internalID: 2424768351416768925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_15
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 661bad7c9539c4ee0800000000000000
+      internalID: -1275482580638322330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc74fd6fdc368ee0800000000000000
+      internalID: -1259252115483362116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_17
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b834f99d3421e50800000000000000
+      internalID: 6778554991104985939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d4d6762dc3cf7e0800000000000000
+      internalID: -1730441282441097943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_19
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5459d56870e2c20800000000000000
+      internalID: 3183490260274595251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_20
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b9f82ae9b02373b0800000000000000
+      internalID: -5516029135729133128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_21
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca7c8c06e06f4750800000000000000
+      internalID: 6291353745629149899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_22
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b66188727ff7f5b60800000000000000
+      internalID: 7737043384342681195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_23
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c4a774cdca94150800000000000000
+      internalID: 5857402852464020563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_24
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 616
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595b0d2e65aafcb50800000000000000
+      internalID: 6615693667779786133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9f0c6b871ef2e6d0800000000000000
+      internalID: -2962526227779547238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_26
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6449244d3bd6185a0800000000000000
+      internalID: -6520810166328060858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_27
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb59e3c18c70521b0800000000000000
+      internalID: -5682126798809295429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_28
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33e877a2ab0084d0800000000000000
+      internalID: -3134492547427540161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_29
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059ebf3b4e1609220800000000000000
+      internalID: 2490598228835952976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_30
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1fdb9a574e2955b0800000000000000
+      internalID: -5379217395919626470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_31
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa3eba98da93dbd20800000000000000
+      internalID: 3295853919806940074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_32
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a1c6c405e6d8d180800000000000000
+      internalID: -9090279568731356763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_33
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3765f8fed50c560f0800000000000000
+      internalID: -1124281022275430797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_34
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 568
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8b279f8f373e6e0800000000000000
+      internalID: -1809475112098678609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ca9da5d0e007d10800000000000000
+      internalID: 2121210875013082271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_36
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 957ca32bc4976b0c0800000000000000
+      internalID: -4560324202351376551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_37
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc059cbe6f53f3090800000000000000
+      internalID: -8052658274081091380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_38
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5550be30272aae750800000000000000
+      internalID: 6335054436425729365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_39
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123ebebed614c9700800000000000000
+      internalID: 548385194997703457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_40
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2647c664a9fd0350800000000000000
+      internalID: 5984713964339545645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_41
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccbe002953743a2d0800000000000000
+      internalID: -3268690609132475444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_42
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a3fe2909c1df270800000000000000
+      internalID: 8285810296697600571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_43
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0885b97e6bca4680800000000000000
+      internalID: -8769973649001838577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_44
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 520
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748b171c9d9b97c00800000000000000
+      internalID: 898953945541621831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 472
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946c363a5bcb24930800000000000000
+      internalID: 4126067696941123145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_46
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 472
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e8d60f122b54a90800000000000000
+      internalID: -7330256959638237650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_47
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 472
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d28433d05f6e80a0800000000000000
+      internalID: -6877437188016667949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_48
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 472
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677c121c597267a60800000000000000
+      internalID: 7671362539416045430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_49
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 472
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403fff50b7e0ec330800000000000000
+      internalID: 3732937062681146116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ed088d3fcaa4cd70800000000000000
+      internalID: 9062556157243559401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_51
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cdad530c70174f0800000000000000
+      internalID: -832875933968180123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_52
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e8444e5d736faa0800000000000000
+      internalID: -6127648851193721343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_53
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4e7f5fed4b200f0800000000000000
+      internalID: -1152159684951022364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_54
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b7a9138d7912920800000000000000
+      internalID: 2963816984587434808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_55
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf9a17a9a3bdb7e0800000000000000
+      internalID: -1748043539115499558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_56
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7b57ff71a1e5c880800000000000000
+      internalID: -8591212630386451585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_57
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2328a3586cb1d7bb0800000000000000
+      internalID: -4936759077075516878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_58
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b8764827702e270800000000000000
+      internalID: 8278187253489437583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_59
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 424
+        width: 50
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5811c93412510720800000000000000
+      internalID: 2810617889277679708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_soldier_sword_large_2_112
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 682
+        width: 3
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998e17ed193db12b0800000000000000
+      internalID: -5612659887131465575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

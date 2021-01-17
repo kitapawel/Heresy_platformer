@@ -171,7 +171,7 @@ public class EnemyAIBasic : ControlInput
 	}
 	void FightTarget()
 	{		
-		int randomValue = Random.Range(0, 4);
+		int randomValue = Random.Range(0, 6);
 		switch(randomValue)
 		{
 			case 0:
@@ -180,7 +180,11 @@ public class EnemyAIBasic : ControlInput
 			case 1:
 			case 2:
 			case 3:
+			case 4:
 				basicAttack = true;				
+				break;
+			case 5:
+				roll = true;
 				break;
 			default:
 				break;
@@ -197,5 +201,4 @@ public class EnemyAIBasic : ControlInput
 			return false;
 		}
 	}
-
 }

@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour
     Animator myAnimator;
     BoxCollider2D groundChecker;
     AudioSource myAudioSource;
-    HealthSystem myHealthSystem;
+    HealthSystem myHealthSystem;    
 
     [Header("Physical properties")]
     Vector2 myVelocity;
@@ -149,6 +149,10 @@ public class CharacterController : MonoBehaviour
             if (myInput.parry)
             {
                 myAnimator.SetTrigger("Parry");
+            }
+            if (myInput.finisher)
+            {
+                myAnimator.SetTrigger("Finisher");
             }
             if (myInput.throwItem)
             {

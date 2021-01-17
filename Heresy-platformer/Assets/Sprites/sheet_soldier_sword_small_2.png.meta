@@ -1,187 +1,346 @@
 fileFormatVersion: 2
-guid: 76166faf63d64af488066a96d7064967
+guid: 23e5dea8c77190e4895b4046b58e090e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7373212228705670624
-    second: sheet_hero_sword_3_large_0
+      213: 7651563479946538969
+    second: sheet_soldier_sword_small_2_0
   - first:
-      213: -5861913926085933113
-    second: sheet_hero_sword_3_large_1
+      213: 9138109645940713876
+    second: sheet_soldier_sword_small_2_1
   - first:
-      213: 7887878390386880072
-    second: sheet_hero_sword_3_large_2
+      213: 1670225426596879180
+    second: sheet_soldier_sword_small_2_2
   - first:
-      213: -5882010523452086599
-    second: sheet_hero_sword_3_large_3
+      213: -1811025932881849363
+    second: sheet_soldier_sword_small_2_3
   - first:
-      213: -5724087597890731070
-    second: sheet_hero_sword_3_large_4
+      213: 4575671724012431758
+    second: sheet_soldier_sword_small_2_4
   - first:
-      213: -2813775727276118311
-    second: sheet_hero_sword_3_large_5
+      213: 9127421703872671017
+    second: sheet_soldier_sword_small_2_5
   - first:
-      213: 4377445177936319214
-    second: sheet_hero_sword_3_large_6
+      213: 5667383115214690377
+    second: sheet_soldier_sword_small_2_6
   - first:
-      213: -49532440969803380
-    second: sheet_hero_sword_3_large_7
+      213: -3309181005987498777
+    second: sheet_soldier_sword_small_2_7
   - first:
-      213: 7612454580603951409
-    second: sheet_hero_sword_3_large_8
+      213: -9206270923442604710
+    second: sheet_soldier_sword_small_2_8
   - first:
-      213: -6718574262746198148
-    second: sheet_hero_sword_3_large_9
+      213: 8548836145950054694
+    second: sheet_soldier_sword_small_2_9
   - first:
-      213: -4079425792865889137
-    second: sheet_hero_sword_3_large_10
+      213: -2476330106027034620
+    second: sheet_soldier_sword_small_2_10
   - first:
-      213: -6012517300494103218
-    second: sheet_hero_sword_3_large_11
+      213: 1837329546557467380
+    second: sheet_soldier_sword_small_2_11
   - first:
-      213: 138189100930170106
-    second: sheet_hero_sword_3_large_12
+      213: 150615664657707841
+    second: sheet_soldier_sword_small_2_12
   - first:
-      213: 7434478875435881278
-    second: sheet_hero_sword_3_large_13
+      213: -7548493753958583368
+    second: sheet_soldier_sword_small_2_13
   - first:
-      213: 3807207546177384640
-    second: sheet_hero_sword_3_large_14
+      213: -8848548151140316962
+    second: sheet_soldier_sword_small_2_14
   - first:
-      213: -4800090123449355501
-    second: sheet_hero_sword_3_large_15
+      213: -2603688780900005436
+    second: sheet_soldier_sword_small_2_15
   - first:
-      213: -6638126277811930303
-    second: sheet_hero_sword_3_large_16
+      213: 7419244360308168370
+    second: sheet_soldier_sword_small_2_16
   - first:
-      213: -3445705654663883618
-    second: sheet_hero_sword_3_large_17
+      213: -3202059741264534803
+    second: sheet_soldier_sword_small_2_17
   - first:
-      213: -8888440961376732340
-    second: sheet_hero_sword_3_large_18
+      213: -9018764028497357263
+    second: sheet_soldier_sword_small_2_18
   - first:
-      213: 2839486597578342853
-    second: sheet_hero_sword_3_large_19
+      213: -7183521201949809551
+    second: sheet_soldier_sword_small_2_19
   - first:
-      213: 4476981407997320654
-    second: sheet_hero_sword_3_large_20
+      213: 603630065849900813
+    second: sheet_soldier_sword_small_2_20
   - first:
-      213: -6987531833065216040
-    second: sheet_hero_sword_3_large_21
+      213: 247078553232978166
+    second: sheet_soldier_sword_small_2_21
   - first:
-      213: 1573271037432684826
-    second: sheet_hero_sword_3_large_22
+      213: -9142796261414002726
+    second: sheet_soldier_sword_small_2_22
   - first:
-      213: 4062209819856785006
-    second: sheet_hero_sword_3_large_23
+      213: 8023553045754445099
+    second: sheet_soldier_sword_small_2_23
   - first:
-      213: -2764474532380131331
-    second: sheet_hero_sword_3_large_24
+      213: 6027571496925205894
+    second: sheet_soldier_sword_small_2_24
   - first:
-      213: 2319804768747943663
-    second: sheet_hero_sword_3_large_25
+      213: 1008024341247220650
+    second: sheet_soldier_sword_small_2_25
   - first:
-      213: 9102649980413713056
-    second: sheet_hero_sword_3_large_26
+      213: -7127517787711311615
+    second: sheet_soldier_sword_small_2_26
   - first:
-      213: 1901634460997484273
-    second: sheet_hero_sword_3_large_27
+      213: 3373470830157415199
+    second: sheet_soldier_sword_small_2_27
   - first:
-      213: 7944613393478156147
-    second: sheet_hero_sword_3_large_28
+      213: 4517465660575979631
+    second: sheet_soldier_sword_small_2_28
   - first:
-      213: -3490809196920945395
-    second: sheet_hero_sword_3_large_29
+      213: 4168397294303273955
+    second: sheet_soldier_sword_small_2_29
   - first:
-      213: -7067931017173442564
-    second: sheet_hero_sword_3_large_30
+      213: 611593959301669735
+    second: sheet_soldier_sword_small_2_30
   - first:
-      213: 6752730391677711793
-    second: sheet_hero_sword_3_large_31
+      213: -5077315683503509527
+    second: sheet_soldier_sword_small_2_31
   - first:
-      213: -2316164441833477336
-    second: sheet_hero_sword_3_large_32
+      213: 7466068047063745122
+    second: sheet_soldier_sword_small_2_32
   - first:
-      213: 1958619227765591891
-    second: sheet_hero_sword_3_large_33
+      213: 2691548799456251436
+    second: sheet_soldier_sword_small_2_33
   - first:
-      213: 2865778319088097892
-    second: sheet_hero_sword_3_large_34
+      213: 5745909817036440964
+    second: sheet_soldier_sword_small_2_34
   - first:
-      213: -7342749043609883338
-    second: sheet_hero_sword_3_large_35
+      213: 3693417606745196739
+    second: sheet_soldier_sword_small_2_35
   - first:
-      213: -6550855847708335769
-    second: sheet_hero_sword_3_large_36
+      213: -3148186198041806585
+    second: sheet_soldier_sword_small_2_36
   - first:
-      213: 5621746756370352349
-    second: sheet_hero_sword_3_large_37
+      213: 7689113459985840868
+    second: sheet_soldier_sword_small_2_37
   - first:
-      213: -5213196010618183456
-    second: sheet_hero_sword_3_large_38
+      213: 9100222853113502468
+    second: sheet_soldier_sword_small_2_38
   - first:
-      213: -44842162458603747
-    second: sheet_hero_sword_3_large_39
+      213: -8052430085827696612
+    second: sheet_soldier_sword_small_2_39
   - first:
-      213: -7310841787257694350
-    second: sheet_hero_sword_3_large_40
+      213: 1681357305163612144
+    second: sheet_soldier_sword_small_2_40
   - first:
-      213: -1137795075374409004
-    second: sheet_hero_sword_3_large_41
+      213: 6451414490148682061
+    second: sheet_soldier_sword_small_2_41
   - first:
-      213: -7000812615634883589
-    second: sheet_hero_sword_3_large_42
+      213: 2049873844031342859
+    second: sheet_soldier_sword_small_2_42
   - first:
-      213: 4537647835839916870
-    second: sheet_hero_sword_3_large_43
+      213: -3303374558462504025
+    second: sheet_soldier_sword_small_2_43
   - first:
-      213: 3555715829052356564
-    second: sheet_hero_sword_3_large_44
+      213: -3869702379046524420
+    second: sheet_soldier_sword_small_2_44
   - first:
-      213: 8293885440038674817
-    second: sheet_hero_sword_3_large_45
+      213: -5261096062859382950
+    second: sheet_soldier_sword_small_2_45
   - first:
-      213: -7631984790705072653
-    second: sheet_hero_sword_3_large_46
+      213: 8429418846420578559
+    second: sheet_soldier_sword_small_2_46
   - first:
-      213: -8681389546407949512
-    second: sheet_hero_sword_3_large_47
+      213: 569023088198906899
+    second: sheet_soldier_sword_small_2_47
   - first:
-      213: 6619447964051805069
-    second: sheet_hero_sword_3_large_48
+      213: -3051364534160717346
+    second: sheet_soldier_sword_small_2_48
   - first:
-      213: 5111059425563813148
-    second: sheet_hero_sword_3_large_49
+      213: 4178832841828923613
+    second: sheet_soldier_sword_small_2_49
   - first:
-      213: 454134855934404151
-    second: sheet_hero_sword_3_large_50
+      213: -2047715206235057379
+    second: sheet_soldier_sword_small_2_50
   - first:
-      213: 5159253645293672018
-    second: sheet_hero_sword_3_large_51
+      213: -745118004958150870
+    second: sheet_soldier_sword_small_2_51
   - first:
-      213: 8077840565252993553
-    second: sheet_hero_sword_3_large_52
+      213: 3737329685171042868
+    second: sheet_soldier_sword_small_2_52
   - first:
-      213: -5727210535640488738
-    second: sheet_hero_sword_3_large_53
+      213: -3521893689730376124
+    second: sheet_soldier_sword_small_2_53
   - first:
-      213: 5664569162733631831
-    second: sheet_hero_sword_3_large_54
+      213: 7161196762902719414
+    second: sheet_soldier_sword_small_2_54
   - first:
-      213: 1421769760431460558
-    second: sheet_hero_sword_3_large_55
+      213: -6836393551939339316
+    second: sheet_soldier_sword_small_2_55
   - first:
-      213: -6976834923031427063
-    second: sheet_hero_sword_3_large_56
+      213: -221697665334523209
+    second: sheet_soldier_sword_small_2_56
   - first:
-      213: 45537570622170483
-    second: sheet_hero_sword_3_large_57
+      213: -6543875315963680205
+    second: sheet_soldier_sword_small_2_57
   - first:
-      213: 8101463359836567587
-    second: sheet_hero_sword_3_large_58
+      213: -7932547119209484668
+    second: sheet_soldier_sword_small_2_58
   - first:
-      213: 8735127218490569832
-    second: sheet_hero_sword_3_large_59
+      213: 3127966625045335962
+    second: sheet_soldier_sword_small_2_59
+  - first:
+      213: -8086044363246543605
+    second: sheet_soldier_sword_small_2_60
+  - first:
+      213: 2442130079752134300
+    second: sheet_soldier_sword_small_2_61
+  - first:
+      213: -3536420436788523361
+    second: sheet_soldier_sword_small_2_62
+  - first:
+      213: -4205604135231875289
+    second: sheet_soldier_sword_small_2_63
+  - first:
+      213: 8986190569535513909
+    second: sheet_soldier_sword_small_2_64
+  - first:
+      213: 6490366763698335293
+    second: sheet_soldier_sword_small_2_65
+  - first:
+      213: -4659641955068311529
+    second: sheet_soldier_sword_small_2_66
+  - first:
+      213: -7563146411692286818
+    second: sheet_soldier_sword_small_2_67
+  - first:
+      213: 6438318573345607039
+    second: sheet_soldier_sword_small_2_68
+  - first:
+      213: -6500021756839394287
+    second: sheet_soldier_sword_small_2_69
+  - first:
+      213: -4259735943842113767
+    second: sheet_soldier_sword_small_2_70
+  - first:
+      213: -3954615427520013617
+    second: sheet_soldier_sword_small_2_71
+  - first:
+      213: -8043773210416860619
+    second: sheet_soldier_sword_small_2_72
+  - first:
+      213: 8368700637729614956
+    second: sheet_soldier_sword_small_2_73
+  - first:
+      213: -5827370043967604888
+    second: sheet_soldier_sword_small_2_74
+  - first:
+      213: -7514659668520667239
+    second: sheet_soldier_sword_small_2_75
+  - first:
+      213: -4141098911913990766
+    second: sheet_soldier_sword_small_2_76
+  - first:
+      213: 3899592330655683297
+    second: sheet_soldier_sword_small_2_77
+  - first:
+      213: -5379633562486457227
+    second: sheet_soldier_sword_small_2_78
+  - first:
+      213: -8215765915772989493
+    second: sheet_soldier_sword_small_2_79
+  - first:
+      213: 2377389984316494589
+    second: sheet_soldier_sword_small_2_80
+  - first:
+      213: 8929363409447355441
+    second: sheet_soldier_sword_small_2_81
+  - first:
+      213: -4732326438788512897
+    second: sheet_soldier_sword_small_2_82
+  - first:
+      213: 382158054233650475
+    second: sheet_soldier_sword_small_2_83
+  - first:
+      213: -4598365298165036207
+    second: sheet_soldier_sword_small_2_84
+  - first:
+      213: 5160462823900919331
+    second: sheet_soldier_sword_small_2_85
+  - first:
+      213: 869966387556552462
+    second: sheet_soldier_sword_small_2_86
+  - first:
+      213: 3023773716014007181
+    second: sheet_soldier_sword_small_2_87
+  - first:
+      213: 7978024051469934503
+    second: sheet_soldier_sword_small_2_88
+  - first:
+      213: 4929704420287108678
+    second: sheet_soldier_sword_small_2_89
+  - first:
+      213: -4777914362423888644
+    second: sheet_soldier_sword_small_2_90
+  - first:
+      213: 7285455965851838192
+    second: sheet_soldier_sword_small_2_91
+  - first:
+      213: 3130905851242159412
+    second: sheet_soldier_sword_small_2_92
+  - first:
+      213: 8698929281371409196
+    second: sheet_soldier_sword_small_2_93
+  - first:
+      213: -6445810899169356803
+    second: sheet_soldier_sword_small_2_94
+  - first:
+      213: 1563597321977179864
+    second: sheet_soldier_sword_small_2_95
+  - first:
+      213: -6826069821127872527
+    second: sheet_soldier_sword_small_2_96
+  - first:
+      213: 4750839305074252631
+    second: sheet_soldier_sword_small_2_97
+  - first:
+      213: 8641565105505789080
+    second: sheet_soldier_sword_small_2_98
+  - first:
+      213: -8194310158467369833
+    second: sheet_soldier_sword_small_2_99
+  - first:
+      213: 1324719468056331918
+    second: sheet_soldier_sword_small_2_100
+  - first:
+      213: 4857065303894946615
+    second: sheet_soldier_sword_small_2_101
+  - first:
+      213: -5782337735771545280
+    second: sheet_soldier_sword_small_2_102
+  - first:
+      213: 8143419962840285762
+    second: sheet_soldier_sword_small_2_103
+  - first:
+      213: 8584606193142918956
+    second: sheet_soldier_sword_small_2_104
+  - first:
+      213: -2413272923095529430
+    second: sheet_soldier_sword_small_2_105
+  - first:
+      213: 7391537070800201729
+    second: sheet_soldier_sword_small_2_106
+  - first:
+      213: -1091616144278437533
+    second: sheet_soldier_sword_small_2_107
+  - first:
+      213: -8515910833128598913
+    second: sheet_soldier_sword_small_2_108
+  - first:
+      213: -9114259591412526718
+    second: sheet_soldier_sword_small_2_109
+  - first:
+      213: -3222925933169929166
+    second: sheet_soldier_sword_small_2_110
+  - first:
+      213: 6459877033306068290
+    second: sheet_soldier_sword_small_2_111
+  - first:
+      213: 5255871431664000574
+    second: sheet_soldier_sword_small_2_112
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -246,9 +405,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -258,9 +417,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -270,9 +429,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -282,9 +441,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -294,9 +453,9 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 1
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
-    crunchedCompression: 0
+    crunchedCompression: 1
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
@@ -305,7 +464,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_30
+      name: sheet_soldier_sword_small_2_30
       rect:
         serializedVersion: 2
         x: 0
@@ -319,14 +478,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cff5968ff2aa9ed90800000000000000
-      internalID: -7067931017173442564
+      spriteID: 76363f23771dc7800800000000000000
+      internalID: 611593959301669735
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_31
+      name: sheet_soldier_sword_small_2_31
       rect:
         serializedVersion: 2
         x: 100
@@ -340,14 +499,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b53fe3838486bd50800000000000000
-      internalID: 6752730391677711793
+      spriteID: 9efe0406940c989b0800000000000000
+      internalID: -5077315683503509527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_32
+      name: sheet_soldier_sword_small_2_32
       rect:
         serializedVersion: 2
         x: 200
@@ -361,14 +520,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82bef1336b45bdfd0800000000000000
-      internalID: -2316164441833477336
+      spriteID: 2620126f45dcc9760800000000000000
+      internalID: 7466068047063745122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_33
+      name: sheet_soldier_sword_small_2_33
       rect:
         serializedVersion: 2
         x: 300
@@ -382,17 +541,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35fc7397fc96e2b10800000000000000
-      internalID: 1958619227765591891
+      spriteID: c2e08376f5d4a5520800000000000000
+      internalID: 2691548799456251436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_34
+      name: sheet_soldier_sword_small_2_34
       rect:
         serializedVersion: 2
-        x: 401
+        x: 400
         y: 359
         width: 100
         height: 48
@@ -403,14 +562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46a134a923a45c720800000000000000
-      internalID: 2865778319088097892
+      spriteID: 48503e319829dbf40800000000000000
+      internalID: 5745909817036440964
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_35
+      name: sheet_soldier_sword_small_2_35
       rect:
         serializedVersion: 2
         x: 500
@@ -424,14 +583,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63d2bccf5a0591a90800000000000000
-      internalID: -7342749043609883338
+      spriteID: 3c88839aeb7a14330800000000000000
+      internalID: 3693417606745196739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_36
+      name: sheet_soldier_sword_small_2_36
       rect:
         serializedVersion: 2
         x: 0
@@ -445,14 +604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 761ed8e705fa615a0800000000000000
-      internalID: -6550855847708335769
+      spriteID: 7093eea25556f44d0800000000000000
+      internalID: -3148186198041806585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_37
+      name: sheet_soldier_sword_small_2_37
       rect:
         serializedVersion: 2
         x: 100
@@ -466,14 +625,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd8c8aeb3e4740e40800000000000000
-      internalID: 5621746756370352349
+      spriteID: 4ea712404f735ba60800000000000000
+      internalID: 7689113459985840868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_38
+      name: sheet_soldier_sword_small_2_38
       rect:
         serializedVersion: 2
         x: 200
@@ -487,14 +646,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e0ae9a59d107a7b0800000000000000
-      internalID: -5213196010618183456
+      spriteID: 40bd8b8487c7a4e70800000000000000
+      internalID: 9100222853113502468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_39
+      name: sheet_soldier_sword_small_2_39
       rect:
         serializedVersion: 2
         x: 300
@@ -508,14 +667,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fc1b37a40b06ff0800000000000000
-      internalID: -44842162458603747
+      spriteID: c1862932085004090800000000000000
+      internalID: -8052430085827696612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_40
+      name: sheet_soldier_sword_small_2_40
       rect:
         serializedVersion: 2
         x: 400
@@ -529,20 +688,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2775c65012caa8a90800000000000000
-      internalID: -7310841787257694350
+      spriteID: 0fff8c29f81655710800000000000000
+      internalID: 1681357305163612144
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_41
+      name: sheet_soldier_sword_small_2_41
       rect:
         serializedVersion: 2
         x: 500
         y: 294
         width: 100
-        height: 64
+        height: 65
       alignment: 9
       pivot: {x: 0.4, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,14 +709,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4da9e11486db530f0800000000000000
-      internalID: -1137795075374409004
+      spriteID: d49be183c47088950800000000000000
+      internalID: 6451414490148682061
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_42
+      name: sheet_soldier_sword_small_2_42
       rect:
         serializedVersion: 2
         x: 0
@@ -571,14 +730,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfb620a940e18de90800000000000000
-      internalID: -7000812615634883589
+      spriteID: b094ad3866d927c10800000000000000
+      internalID: 2049873844031342859
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_43
+      name: sheet_soldier_sword_small_2_43
       rect:
         serializedVersion: 2
         x: 100
@@ -592,14 +751,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64bee0b4aa6f8fe30800000000000000
-      internalID: 4537647835839916870
+      spriteID: 7a397c2575e0822d0800000000000000
+      internalID: -3303374558462504025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_44
+      name: sheet_soldier_sword_small_2_44
       rect:
         serializedVersion: 2
         x: 200
@@ -613,14 +772,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d736e025b0785130800000000000000
-      internalID: 3555715829052356564
+      spriteID: cf9a276503e0c4ac0800000000000000
+      internalID: -3869702379046524420
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_45
+      name: sheet_soldier_sword_small_2_45
       rect:
         serializedVersion: 2
         x: 300
@@ -634,14 +793,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1812a456ddcc91370800000000000000
-      internalID: 8293885440038674817
+      spriteID: a5f6f0c5105dcf6b0800000000000000
+      internalID: -5261096062859382950
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_46
+      name: sheet_soldier_sword_small_2_46
       rect:
         serializedVersion: 2
         x: 400
@@ -655,14 +814,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f517d2d44eb51690800000000000000
-      internalID: -7631984790705072653
+      spriteID: ff0b1e3a7cf4bf470800000000000000
+      internalID: 8429418846420578559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_47
+      name: sheet_soldier_sword_small_2_47
       rect:
         serializedVersion: 2
         x: 500
@@ -676,14 +835,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83b80991432858780800000000000000
-      internalID: -8681389546407949512
+      spriteID: 3147711eb7395e700800000000000000
+      internalID: 569023088198906899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_48
+      name: sheet_soldier_sword_small_2_48
       rect:
         serializedVersion: 2
         x: 0
@@ -697,14 +856,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d839d7a1ad00ddb50800000000000000
-      internalID: 6619447964051805069
+      spriteID: ed9002d7f1067a5d0800000000000000
+      internalID: -3051364534160717346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_49
+      name: sheet_soldier_sword_small_2_49
       rect:
         serializedVersion: 2
         x: 100
@@ -718,14 +877,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c15a4aec7712ee640800000000000000
-      internalID: 5111059425563813148
+      spriteID: dd8f2f844523ef930800000000000000
+      internalID: 4178832841828923613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_50
+      name: sheet_soldier_sword_small_2_50
       rect:
         serializedVersion: 2
         x: 200
@@ -739,14 +898,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 736e710de396d4600800000000000000
-      internalID: 454134855934404151
+      spriteID: d1391338edd0593e0800000000000000
+      internalID: -2047715206235057379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_51
+      name: sheet_soldier_sword_small_2_51
       rect:
         serializedVersion: 2
         x: 300
@@ -760,14 +919,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2565ed10bd9599740800000000000000
-      internalID: 5159253645293672018
+      spriteID: a2fb8be4f1fc8a5f0800000000000000
+      internalID: -745118004958150870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_52
+      name: sheet_soldier_sword_small_2_52
       rect:
         serializedVersion: 2
         x: 400
@@ -781,14 +940,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 112352422314a1070800000000000000
-      internalID: 8077840565252993553
+      spriteID: 43a74252c89add330800000000000000
+      internalID: 3737329685171042868
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sheet_hero_sword_3_large_53
+      name: sheet_soldier_sword_small_2_53
       rect:
         serializedVersion: 2
         x: 500
@@ -802,8 +961,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed42645ac5cd480b0800000000000000
-      internalID: -5727210535640488738
+      spriteID: 44e5ee65958bf1fc0800000000000000
+      internalID: -3521893689730376124
       vertices: []
       indices: 
       edges: []

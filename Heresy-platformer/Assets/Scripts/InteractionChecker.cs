@@ -7,7 +7,7 @@ public class InteractionChecker : MonoBehaviour
     const int ACTORNONCOLLIDABLE_LAYER = 23;
     public List<GameObject> finishOffTargets = new List<GameObject>();
     public List<GameObject> interactionTargets = new List<GameObject>();
-    public GameObject GetFinishOffTargets()
+    public GameObject GetFinishOffTargets() //TODO does not work, does not properly clear the list
     {
         foreach (GameObject finishOffTarget in finishOffTargets)
         {

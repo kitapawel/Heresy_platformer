@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: bc1d9f45347c0844388775eb0fcc2164
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2669029799029691653
+    second: forest_tileset_0
+  - first:
+      213: -33844633320255495
+    second: forest_tileset_1
+  - first:
+      213: -8399233190599827846
+    second: forest_tileset_2
+  - first:
+      213: 3505022594225606299
+    second: forest_tileset_3
+  - first:
+      213: -842622324862304136
+    second: forest_tileset_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:

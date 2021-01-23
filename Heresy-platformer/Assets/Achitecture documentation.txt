@@ -10,6 +10,13 @@ ActorNotCollidable - Actors transfer to this layer temporarily while dodging, ro
 Thrown - collides with Actor, not with ActorNotCollidable.
 Pickable - collides with other pickables.
 
+# Graphics
+-If camera view size at 32 pixels per unit, then use 768x432 canvas size for background/sky images. It is divisible by 8 and allows for some vertical camera movement.
+-Parallax effect structure contains 1 container object which contains subcontainers for sky/mountains/forests etc.
+--Each subcontainer has a Sprite renderer and the parallax script attached.
+---Each subcontainer has 2 copies of itself as children (but w/o parallax script attached). One to the left, one to the right. These will be moved when camera is out of bounds to create infinite background.
+
+
 # Character setup and architecture
 Input is based on ControlInput and its inherited classes: PlayerInput gets input from player. EnemyAI takes input from AI. Both send data to CharacterController to control and animate the characters.
 
@@ -19,7 +26,7 @@ Input is based on ControlInput and its inherited classes: PlayerInput gets input
 # Combat system architecture
 Combat and damage transmission works based on several systems.
 1. The ControlInput and CharacterController trigger attack animation.
-2. The HitCollisionChecker object contains a trigger collider and check which targets are available for an attack.
+2. The HitCollisionChecker object contains a trigger collider and checks which targets are available for attack.
 3. During an animation the DealDamage() method is called from CombatSystem. It checks the HitCollisionChecker's list, and if targets are found, deals damage to them.
 4. The DealDamage() method gathers important stats from the character and its inventory and passes it to the target's HealthSystem.
 5. Target's HealthSystem takes damage values and decides how to apply damage.

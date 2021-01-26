@@ -20,6 +20,11 @@ Pickable - collides with other pickables.
 # Character setup and architecture
 Input is based on ControlInput and its inherited classes: PlayerInput gets input from player. EnemyAI takes input from AI. Both send data to CharacterController to control and animate the characters.
 
+# Camera
+Maine camera + virtual camera for tracking player
+-Pixel perfect camera for URP and Pixel perfect camera addon on virtual camera
+-BUG: virtual camera may lose the ability to set camera size (field of view appears which is not typical to ortographic camera) - requires adding a new virtual camera
+
 # Special ability architecture
 
 

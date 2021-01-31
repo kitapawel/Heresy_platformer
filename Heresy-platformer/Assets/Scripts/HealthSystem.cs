@@ -23,6 +23,10 @@ public class HealthSystem : MonoBehaviour{
     private float energy;
     [SerializeField]
     private float minEnergy;
+    [SerializeField]
+    private float maxVitality;
+    [SerializeField]
+    private float vitality;
 
     void Start()
     {
@@ -46,6 +50,8 @@ public class HealthSystem : MonoBehaviour{
         maxEnergy = myCharacterStats.baseEnergy;
         energy = maxEnergy;
         minEnergy = myCharacterStats.minEnergy;
+        maxVitality = myCharacterStats.baseVitality;
+        vitality = maxVitality;
     }
 
     private void CheckHealthState()
@@ -139,6 +145,11 @@ public class HealthSystem : MonoBehaviour{
         float div = energy/maxEnergy;
         return div;
     }
+    public float GetVitalityAsPercentage()
+    {
+        float div = vitality/maxVitality;
+        return div;
+    }
 
     public bool CanUseEnergyBasedAction(float energyCost)
     {
@@ -170,6 +181,20 @@ public class HealthSystem : MonoBehaviour{
             }
             CheckIfCanGetUp();
             yield return new WaitForSeconds(1);
+        }
+    }
+
+    public void QuickEnergyRegen()
+    {
+        if (vitality >= 10 && energy < maxEnergy)//TODO parameterize
+        {
+            energy = energy + 20;
+            if (energy > maxEnergy)
+            {
+                energy = maxEnergy;
+                mySoundSystem.PlayEffortSounds();
+            }
+            vitality -= 10;
         }
     }
 }

@@ -5,10 +5,10 @@ OR
 --Override controller for different enemy types with same animation sets (e.g. different armors or weapons).
 
 # Layer architecture
-Actor - player and NPC. Collide with each other.
-ActorNotCollidable - Actors transfer to this layer temporarily while dodging, rolling, falling etc. No collision with Actor, but collide with ActorNotCollidable.
+Actor - player and NPC. Don't collide with each other.
+ActorNonCollidable - Actors transfer to this layer temporarily while dodging, rolling, falling etc. Used to avoid: missiles, falling objects.
 Thrown - collides with Actor, not with ActorNotCollidable.
-Pickable - collides with other pickables.
+Pickable - collides with: pickables, thrown.
 
 # Graphics
 -If camera view size at 32 pixels per unit, then use 768x432 canvas size for background/sky images. It is divisible by 8 and allows for some vertical camera movement.

@@ -5,6 +5,7 @@ public class PlayerCanvasController : MonoBehaviour
 {
     public Image healthBar;
     public Image energyBar;
+    public Image vitalityBar;
     HealthSystem myHealthSystem;
     InventorySystem myInventorySystem;
     
@@ -17,6 +18,7 @@ public class PlayerCanvasController : MonoBehaviour
     {
         healthBar = GameObject.Find("PlayerHealth").GetComponent<Image>();
         energyBar = GameObject.Find("PlayerEnergy").GetComponent<Image>();
+        vitalityBar = GameObject.Find("PlayerVitality").GetComponent<Image>();
         myHealthSystem = FindObjectOfType<PlayerInput>().GetComponent<HealthSystem>();
         myInventorySystem = FindObjectOfType<PlayerInput>().GetComponentInParent<InventorySystem>();
         inventoryWindow.gameObject.SetActive(false);
@@ -26,6 +28,7 @@ public class PlayerCanvasController : MonoBehaviour
     {
         healthBar.fillAmount = myHealthSystem.GetHealthAsPercentage();
         energyBar.fillAmount = myHealthSystem.GetEnergyAsPercentage();
+        vitalityBar.fillAmount = myHealthSystem.GetVitalityAsPercentage();
         ShowUIElements();
     }
 

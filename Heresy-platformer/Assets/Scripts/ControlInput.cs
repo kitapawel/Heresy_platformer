@@ -18,6 +18,7 @@ public abstract class ControlInput : MonoBehaviour
     [HideInInspector] public bool parry;
     [HideInInspector] public bool shiftPressed;
     [HideInInspector] public bool throwItem;
+    [HideInInspector] public bool energyBoost;
 
 
 	protected void ClearInput()
@@ -38,6 +39,7 @@ public abstract class ControlInput : MonoBehaviour
 		parry = false;
 		shiftPressed = false;
 		throwItem = false;
+		energyBoost = false;
 
 		readyToClear = false;
 	}

@@ -118,6 +118,11 @@ public class CharacterController : MonoBehaviour
             float xVelocity = moveSpeed * myInput.horizontal;
             myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
         }
+        else if (myInput.energyBoost == true)
+        {
+            Debug.Log("CharacterController");
+            myHealthSystem.QuickEnergyRegen();
+        }
         else
         {
             isWalking = false;

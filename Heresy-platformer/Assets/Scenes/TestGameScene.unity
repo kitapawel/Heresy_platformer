@@ -1627,6 +1627,10 @@ MonoBehaviour:
   minEnergy: 0
   maxVitality: 0
   vitality: 0
+  healthRegen: 0
+  energyRegen: 0
+  healthRegenCost: 0
+  energyRegenCost: 0
 --- !u!114 &556908228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1681,6 +1685,8 @@ MonoBehaviour:
   baseVitality: 0
   energyRegen: 0
   healthRegen: 0
+  energyRegenCost: 0
+  healthRegenCost: 0
   baseDamageBonus: 0
   currentDamageBonus: 0
   baseCritRate: 0
@@ -6725,6 +6731,10 @@ MonoBehaviour:
   minEnergy: 0
   maxVitality: 0
   vitality: 0
+  healthRegen: 0
+  energyRegen: 0
+  healthRegenCost: 0
+  energyRegenCost: 0
 --- !u!114 &1433177771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6779,6 +6789,8 @@ MonoBehaviour:
   baseVitality: 0
   energyRegen: 0
   healthRegen: 0
+  energyRegenCost: 0
+  healthRegenCost: 0
   baseDamageBonus: 0
   currentDamageBonus: 0
   baseCritRate: 0
@@ -9545,5 +9557,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6799280796471857615, guid: 4920005490b7493439732b9502b25eae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4920005490b7493439732b9502b25eae, type: 3}

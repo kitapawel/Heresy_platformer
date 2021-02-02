@@ -27,6 +27,14 @@ public class HealthSystem : MonoBehaviour{
     private float maxVitality;
     [SerializeField]
     private float vitality;
+    [SerializeField]
+    private float healthRegen;
+    [SerializeField]
+    private float energyRegen;
+    [SerializeField]
+    private float healthRegenCost;
+    [SerializeField]
+    private float energyRegenCost;
 
     void Start()
     {
@@ -52,6 +60,12 @@ public class HealthSystem : MonoBehaviour{
         minEnergy = myCharacterStats.minEnergy;
         maxVitality = myCharacterStats.baseVitality;
         vitality = maxVitality;
+        healthRegen = myCharacterStats.healthRegen;
+        energyRegen = myCharacterStats.energyRegen;
+        healthRegenCost = myCharacterStats.healthRegenCost;
+        energyRegenCost = myCharacterStats.energyRegenCost;
+
+
     }
 
     private void CheckHealthState()
@@ -174,14 +188,19 @@ public class HealthSystem : MonoBehaviour{
     {
         while (myCharacterController.isAlive)
         {
-            energy = energy + myCharacterStats.energyRegen;
-            if (energy > maxEnergy)
+            if (energy < maxEnergy)
             {
-                energy = maxEnergy;
+                energy = energy + energyRegen;
+                vitality -= energyRegenCost;
+                if (energy > maxEnergy)
+                {
+                    energy = maxEnergy;
+                }
+                CheckIfCanGetUp();
+                yield return new WaitForSeconds(1);
             }
-            CheckIfCanGetUp();
             yield return new WaitForSeconds(1);
-        }
+        }        
     }
 
     public void QuickEnergyRegen()

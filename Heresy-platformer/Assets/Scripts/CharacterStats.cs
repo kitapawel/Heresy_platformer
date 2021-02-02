@@ -13,6 +13,10 @@ public class CharacterStats : MonoBehaviour
 
     public float energyRegen;
     public float healthRegen;
+    
+    public float energyRegenCost;
+    public float healthRegenCost;
+
 
     
     [Header("Combat stats:")]
@@ -32,17 +36,20 @@ public class CharacterStats : MonoBehaviour
     {
         //TODO read stats from a save file
         baseHealth = Mathf.Clamp(50, 1f, 100f); // TODO in the future, clamp the incoming values within allowed ranges, using Properties get/set
+        healthRegen = 1f;
+        healthRegenCost = 2f;
 
-        baseEnergy = 50;
-        minEnergy = -10;
+        baseEnergy = 50f;
+        minEnergy = -10f;
+        energyRegen = 1f;
+        energyRegenCost = 0.1f;
 
-        energyRegen = 1;
-        healthRegen = 1;
+        healthRegen = 1f;
 
-        baseVitality = 100;
+        baseVitality = 100f;
 
 
-        baseDamageBonus = 1;
+        baseDamageBonus = 1f;
         currentDamageBonus = baseDamageBonus;
 
         baseCritRate = 0.05f;

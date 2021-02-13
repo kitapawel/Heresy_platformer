@@ -3,6 +3,7 @@
 --Override controller for different animations (e.g. for new skills).
 OR
 --Override controller for different enemy types with same animation sets (e.g. different armors or weapons).
+-Variable animations (e.g. changed between enemies or changed by skillups) require an "empty" default state in the basic animation controller, so they can be replaced on runtime by animations specified in CharacterStats.
 
 # Layer architecture
 Actor - player and NPC. Don't collide with each other.

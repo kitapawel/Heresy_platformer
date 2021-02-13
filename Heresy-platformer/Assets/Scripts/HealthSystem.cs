@@ -14,17 +14,11 @@ public class HealthSystem : MonoBehaviour{
 
     //SerializedFields just for debug purposes
     [SerializeField]
-    private float maxHealthPoints;
-    [SerializeField]
     private float healthPoints;
-    [SerializeField]
-    private float maxEnergy;
     [SerializeField]
     private float energy;
     [SerializeField]
     private float minEnergy;
-    [SerializeField]
-    private float maxVitality;
     [SerializeField]
     private float vitality;
     [SerializeField]
@@ -53,18 +47,14 @@ public class HealthSystem : MonoBehaviour{
 
     private void InitializeStats()
     {
-        maxHealthPoints = myCharacterStats.baseHealth;
-        healthPoints = maxHealthPoints;
-        maxEnergy = myCharacterStats.baseEnergy;
-        energy = maxEnergy;
+        healthPoints = myCharacterStats.maxHealth;
+        energy = myCharacterStats.maxEnergy;
         minEnergy = myCharacterStats.minEnergy;
-        maxVitality = myCharacterStats.baseVitality;
-        vitality = maxVitality;
+        vitality = myCharacterStats.maxVitality;
         healthRegen = myCharacterStats.healthRegen;
         energyRegen = myCharacterStats.energyRegen;
         healthRegenCost = myCharacterStats.healthRegenCost;
         energyRegenCost = myCharacterStats.energyRegenCost;
-
 
     }
 
@@ -151,17 +141,17 @@ public class HealthSystem : MonoBehaviour{
 
     public float GetHealthAsPercentage()
     {
-        float div = healthPoints/maxHealthPoints;
+        float div = healthPoints/ myCharacterStats.maxHealth;
         return div;
     }    
     public float GetEnergyAsPercentage()
     {
-        float div = energy/maxEnergy;
+        float div = energy/ myCharacterStats.maxEnergy;
         return div;
     }
     public float GetVitalityAsPercentage()
     {
-        float div = vitality/maxVitality;
+        float div = vitality/myCharacterStats.maxVitality;
         return div;
     }
 
@@ -188,13 +178,13 @@ public class HealthSystem : MonoBehaviour{
     {
         while (myCharacterController.isAlive)
         {
-            if (energy < maxEnergy)
+            if (energy < myCharacterStats.maxEnergy)
             {
                 energy = energy + energyRegen;
                 vitality -= energyRegenCost;
-                if (energy > maxEnergy)
+                if (energy > myCharacterStats.maxEnergy)
                 {
-                    energy = maxEnergy;
+                    energy = myCharacterStats.maxEnergy;
                 }
                 CheckIfCanGetUp();
                 yield return new WaitForSeconds(1);
@@ -205,12 +195,12 @@ public class HealthSystem : MonoBehaviour{
 
     public void QuickEnergyRegen()
     {
-        if (vitality >= 10 && energy < maxEnergy)//TODO parameterize
+        if (vitality >= 10 && energy < myCharacterStats.maxEnergy)//TODO parameterize
         {
             energy = energy + 20;
-            if (energy > maxEnergy)
+            if (energy > myCharacterStats.maxEnergy)
             {
-                energy = maxEnergy;
+                energy = myCharacterStats.maxEnergy;
                 mySoundSystem.PlayEffortSounds();
             }
             vitality -= 10;

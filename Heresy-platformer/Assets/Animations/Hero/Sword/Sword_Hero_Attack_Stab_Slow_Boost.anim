@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sword_Hero_Attack_Fast
+  m_Name: Sword_Hero_Attack_Stab_Slow_Boost
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,22 +20,22 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 4537647835839916870, guid: 76166faf63d64af488066a96d7064967,
+      value: {fileID: -6550855847708335769, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
-    - time: 0.083333336
-      value: {fileID: 3555715829052356564, guid: 76166faf63d64af488066a96d7064967,
-        type: 3}
-    - time: 0.25
-      value: {fileID: 8293885440038674817, guid: 76166faf63d64af488066a96d7064967,
-        type: 3}
-    - time: 0.35
-      value: {fileID: -7631984790705072653, guid: 76166faf63d64af488066a96d7064967,
+    - time: 0.15
+      value: {fileID: -5213196010618183456, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
     - time: 0.41666666
-      value: {fileID: -7631984790705072653, guid: 76166faf63d64af488066a96d7064967,
+      value: {fileID: -44842162458603747, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
-    - time: 0.5
-      value: {fileID: -8681389546407949512, guid: 76166faf63d64af488066a96d7064967,
+    - time: 0.6666667
+      value: {fileID: -7310841787257694350, guid: 76166faf63d64af488066a96d7064967,
+        type: 3}
+    - time: 0.8333333
+      value: {fileID: -1137795075374409004, guid: 76166faf63d64af488066a96d7064967,
+        type: 3}
+    - time: 0.9166667
+      value: {fileID: -1137795075374409004, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -56,23 +56,23 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 4537647835839916870, guid: 76166faf63d64af488066a96d7064967, type: 3}
-    - {fileID: 3555715829052356564, guid: 76166faf63d64af488066a96d7064967, type: 3}
-    - {fileID: 8293885440038674817, guid: 76166faf63d64af488066a96d7064967, type: 3}
-    - {fileID: -7631984790705072653, guid: 76166faf63d64af488066a96d7064967, type: 3}
-    - {fileID: -7631984790705072653, guid: 76166faf63d64af488066a96d7064967, type: 3}
-    - {fileID: -8681389546407949512, guid: 76166faf63d64af488066a96d7064967, type: 3}
+    - {fileID: -6550855847708335769, guid: 76166faf63d64af488066a96d7064967, type: 3}
+    - {fileID: -5213196010618183456, guid: 76166faf63d64af488066a96d7064967, type: 3}
+    - {fileID: -44842162458603747, guid: 76166faf63d64af488066a96d7064967, type: 3}
+    - {fileID: -7310841787257694350, guid: 76166faf63d64af488066a96d7064967, type: 3}
+    - {fileID: -1137795075374409004, guid: 76166faf63d64af488066a96d7064967, type: 3}
+    - {fileID: -1137795075374409004, guid: 76166faf63d64af488066a96d7064967, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.93333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -87,21 +87,28 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0
+  - time: 0.016666668
     functionName: SetCanWalk
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.23333333
+  - time: 0.35
+    functionName: BoostVelocity
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 200
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.36666667
     functionName: PlayWeaponSwingSounds
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.25
+  - time: 0.41666666
     functionName: DealDamage
     data: 
     objectReferenceParameter: {fileID: 0}

@@ -8,11 +8,11 @@ public class CharacterController : MonoBehaviour
     [Header("Component references")]
     ControlInput myInput;
     Rigidbody2D myRigidBody2D;
-    SpriteRenderer mySpriteRenderer;
     Animator myAnimator;
     BoxCollider2D groundChecker;
     AudioSource myAudioSource;
-    HealthSystem myHealthSystem;    
+    HealthSystem myHealthSystem;
+    CharacterStats myCharacterStats;
 
     [Header("Physical properties")]
     Vector2 myVelocity;
@@ -45,11 +45,11 @@ public class CharacterController : MonoBehaviour
     {
         myInput = GetComponent<ControlInput>();
         myRigidBody2D = GetComponent<Rigidbody2D>();
-        mySpriteRenderer = GetComponent<SpriteRenderer>();
         myAnimator = GetComponent<Animator>();
         groundChecker = GetComponentInChildren<BoxCollider2D>();
         myAudioSource = GetComponent<AudioSource>();
         myHealthSystem = GetComponent<HealthSystem>();
+        myCharacterStats = GetComponent<CharacterStats>();
     }
 
     private void FixedUpdate()
@@ -69,23 +69,26 @@ public class CharacterController : MonoBehaviour
 
     void ProcessMovement()
     {
-        if (myInput.jump && isGrounded && canWalk)
-        {            
+        if (myInput.jump && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.actionCost))
+        {
+            myHealthSystem.UseEnergy(myCharacterStats.actionCost);
             SetCanWalk(0);
             myRigidBody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             isWalking = false;
             //Set the SetCanWalk parameter in other animations, so that after jump the value is reset
         }
-        else if (myInput.roll && isGrounded && canWalk)
+        else if (myInput.roll && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.actionCost))
         {
+            myHealthSystem.UseEnergy(myCharacterStats.actionCost);
             SetCanWalk(0);
             isWalking = false;
             myAnimator.SetTrigger("Roll");
             myRigidBody2D.velocity = new Vector2(0f, 0f);
             myRigidBody2D.AddForce(new Vector2(rollForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
         }
-        else if (myInput.dodge && isGrounded && canWalk)
-        {               
+        else if (myInput.dodge && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.actionCost))
+        {
+            myHealthSystem.UseEnergy(myCharacterStats.actionCost);
             SetCanWalk(0);
             isWalking = false;
             myAnimator.SetTrigger("Dodge");
@@ -100,8 +103,10 @@ public class CharacterController : MonoBehaviour
                 StartCoroutine("Climbing");
             }
         }
-        else if (myInput.shiftPressed && myInput.horizontal != 0 && canWalk)
+        else if (myInput.shiftPressed && myInput.horizontal != 0 && canWalk && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.runCost))
         {
+            myHealthSystem.UseEnergy(myCharacterStats.runCost*Time.deltaTime);
+
             isWalking = true;
             myAnimator.SetBool("isMoving", true);
             myAnimator.SetFloat("MoveBlendValue", 1);
@@ -120,7 +125,6 @@ public class CharacterController : MonoBehaviour
         }
         else if (myInput.energyBoost == true)
         {
-            Debug.Log("CharacterController");
             myHealthSystem.QuickEnergyRegen();
         }
         else
@@ -133,35 +137,40 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded && canWalk)
         {
-            if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(10))
+            if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("Attack");
-                myHealthSystem.UseEnergy(10);
+                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
             }
-            if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(10))
+            if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("Stab");
-                myHealthSystem.UseEnergy(10);
+                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
             }
-            if (myInput.basicAttack && !myHealthSystem.CanUseEnergyBasedAction(10))
+            if (myInput.basicAttack && !myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("AttackSlow");
+                myHealthSystem.UseEnergy(1f);
             }
-            if (myInput.advancedAttack && !myHealthSystem.CanUseEnergyBasedAction(10))
+            if (myInput.advancedAttack && !myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("AttackSlow");
+                myHealthSystem.UseEnergy(1f);
             }
-            if (myInput.parry)
+            if (myInput.parry && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("Parry");
+                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
             }
             if (myInput.finisher)
             {
                 myAnimator.SetTrigger("Finisher");
+                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
             }
-            if (myInput.throwItem)
+            if (myInput.throwItem && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.actionCost))
             {
                 myAnimator.SetTrigger("Throw");
+                myHealthSystem.UseEnergy(myCharacterStats.actionCost);
             }
         }
     }
@@ -343,5 +352,4 @@ public class CharacterController : MonoBehaviour
     {
         transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
     }
-
 }

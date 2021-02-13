@@ -13,12 +13,18 @@ public class CombatSystem : MonoBehaviour
 
     HitCollisionChecker hitCollisionChecker;
     InteractionChecker interactionChecker;
-    [SerializeField] private float damageBonus;
-    [SerializeField] private float critRate;
-    [SerializeField] private float critDamage;
+    public float damageBonus;
+    public float critRate;
+    public float critDamage;
+
+    const int WEAK_ATTACK = 1;
+    float weakAttackMultiplier = 0.8f;
+    const int NORMAL_ATTACK = 0;
+    float normalAttackMultiplier = 1f;
+    const int STRONG_ATTACK = 2;
+    float strongAttackMultiplier = 1.2f;
 
     public GameObject thrownStartingPoint;
-
 
     void Start()
     {
@@ -39,15 +45,36 @@ public class CombatSystem : MonoBehaviour
         critDamage = myCharacterStats.currentCritBonus;
     }
 
-    public void DealDamage()
+    public void DealDamage(int attackMode)
     {
         foreach (GameObject hitTarget in hitCollisionChecker.hitTargets)
         {
+            //Assign basic values to damage calculation
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
             float damageToDeal = myInventorySystem.equippedWeapon.damage + damageBonus;
             float stabilityDamageToDeal = myInventorySystem.equippedWeapon.stabilityDamage; //TODO maybe spice this up a bit
             float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
+
+            //Modify damage value depending on whether the attack was strong or weak
+            if (attackMode == 1)
+            {
+                damageToDeal = damageToDeal * weakAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * weakAttackMultiplier;
+                appliedForce = appliedForce * weakAttackMultiplier;
+            } else if (attackMode == 2)
+            {
+                damageToDeal = damageToDeal * strongAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * strongAttackMultiplier;
+                appliedForce = appliedForce * strongAttackMultiplier;
+            } else
+            {
+                damageToDeal = damageToDeal * normalAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * normalAttackMultiplier;
+                appliedForce = appliedForce * normalAttackMultiplier;
+            }
+
+            //Send data to target
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {
                 Debug.Log(hitTarget + " organic target was hit for " + damageToDeal + " dmg + " +stabilityDamageToDeal + " stability damage.");

@@ -33,29 +33,30 @@ public class CharacterStats : MonoBehaviour
     public float baseCritBonus;
     public float currentCritBonus;
 
+    public float weakAttackMultiplier;
+    public float normalAttackMultiplier;
+    public float strongAttackMultiplier;
+
+    public float primaryAttackLevel;
+    public float secondaryAttackLevel;
+
     [Header("Animations:")]
     Animator myAnimator;
     [SerializeField] AnimatorOverrideController animatorOverrideController;
-    public AnimationClip basicPrimaryAttack;
-    public AnimationClip basicSecondaryAttack;
-    public AnimationClip basicTiredAttack;
-    public AnimationClip basicParry;
-    public AnimationClip basicParryRiposte;
-    public AnimationClip basicDodge;
-    public AnimationClip basicRoll;
-
-    const string ATTACK_PRIMARY = "Default_Primary_Attack";
-    const string ATTACK_SECONDARY = "Default_Secondary_Attack";
-    const string ATTACK_TIRED = "Default_Tired_Attack";
-    const string PARRY = "Default_Parry";
-    const string PARRY_RIPOSTE = "Default_Parry_Riposte"; 
-    const string DODGE = "Default_Dodge";
-    const string ROLL = "Default_Roll";
 
     private void Awake()
     {
         myAnimator = GetComponent<Animator>();
         InitializeCharacter();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            primaryAttackLevel = 5;
+            secondaryAttackLevel = 5;
+        }
     }
 
     private void InitializeCharacter()
@@ -89,13 +90,14 @@ public class CharacterStats : MonoBehaviour
         baseCritBonus = 1.10f;
         currentCritBonus = baseCritBonus;
 
-        myAnimator.runtimeAnimatorController = animatorOverrideController;
-        animatorOverrideController[ATTACK_PRIMARY] = basicPrimaryAttack;
-        animatorOverrideController[ATTACK_SECONDARY] = basicSecondaryAttack;
-        animatorOverrideController[ATTACK_TIRED] = basicTiredAttack;
-        animatorOverrideController[PARRY] = basicParry;
-        animatorOverrideController[PARRY_RIPOSTE] = basicParryRiposte;
-        animatorOverrideController[DODGE] = basicDodge;
-        animatorOverrideController[ROLL] = basicRoll;
+        weakAttackMultiplier = 0.8f;
+        normalAttackMultiplier = 1f;
+        strongAttackMultiplier = 1.2f;
+
+        primaryAttackLevel = 0;
+        secondaryAttackLevel = 0;
+
+        //myAnimator.runtimeAnimatorController = animatorOverrideController;
+
     }
 }

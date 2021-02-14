@@ -14,6 +14,7 @@ public abstract class ControlInput : MonoBehaviour
     [HideInInspector] public bool climb;
     [HideInInspector] public bool basicAttack;
     [HideInInspector] public bool advancedAttack;
+    [HideInInspector] public bool combo;
     [HideInInspector] public bool finisher;
     [HideInInspector] public bool parry;
     [HideInInspector] public bool shiftPressed;
@@ -35,6 +36,7 @@ public abstract class ControlInput : MonoBehaviour
 		climb = false;
 		basicAttack = false;
 		advancedAttack = false;
+		combo = false;
 		finisher = false;
 		parry = false;
 		shiftPressed = false;

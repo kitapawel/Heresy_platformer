@@ -139,24 +139,32 @@ public class CharacterController : MonoBehaviour
         {
             if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
-                myAnimator.SetTrigger("Attack");
+                myAnimator.SetTrigger("PrimaryAttack");
+                myAnimator.SetFloat("PrimaryAttackBlendValue", myCharacterStats.primaryAttackLevel);                
                 myHealthSystem.UseEnergy(myCharacterStats.attackCost);
             }
             if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
-                myAnimator.SetTrigger("Stab");
+                myAnimator.SetTrigger("SecondaryAttack");
+                myAnimator.SetFloat("SecondaryAttackBlendValue", myCharacterStats.primaryAttackLevel);
                 myHealthSystem.UseEnergy(myCharacterStats.attackCost);
             }
-            if (myInput.basicAttack && !myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
+            if (myInput.combo && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
+            {
+                myAnimator.SetTrigger("Combo");
+                //myAnimator.SetFloat("SecondaryAttackBlendValue", myCharacterStats.primaryAttackLevel);
+                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
+            }
+            if ((myInput.basicAttack|| myInput.advancedAttack||myInput.combo) && !myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("AttackSlow");
                 myHealthSystem.UseEnergy(1f);
             }
-            if (myInput.advancedAttack && !myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
+            /*if (myInput.advancedAttack && !myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("AttackSlow");
                 myHealthSystem.UseEnergy(1f);
-            }
+            }*/
             if (myInput.parry && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("Parry");

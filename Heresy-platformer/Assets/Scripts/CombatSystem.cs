@@ -18,11 +18,8 @@ public class CombatSystem : MonoBehaviour
     public float critDamage;
 
     const int WEAK_ATTACK = 1;
-    float weakAttackMultiplier = 0.8f;
     const int NORMAL_ATTACK = 0;
-    float normalAttackMultiplier = 1f;
     const int STRONG_ATTACK = 2;
-    float strongAttackMultiplier = 1.2f;
 
     public GameObject thrownStartingPoint;
 
@@ -57,21 +54,21 @@ public class CombatSystem : MonoBehaviour
             float attackVector = myCharacterController.GetSpriteDirection();
 
             //Modify damage value depending on whether the attack was strong or weak
-            if (attackMode == 1)
+            if (attackMode == WEAK_ATTACK)
             {
-                damageToDeal = damageToDeal * weakAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * weakAttackMultiplier;
-                appliedForce = appliedForce * weakAttackMultiplier;
-            } else if (attackMode == 2)
+                damageToDeal = damageToDeal * myCharacterStats.weakAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.weakAttackMultiplier;
+                appliedForce = appliedForce * myCharacterStats.weakAttackMultiplier;
+            } else if (attackMode == STRONG_ATTACK)
             {
-                damageToDeal = damageToDeal * strongAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * strongAttackMultiplier;
-                appliedForce = appliedForce * strongAttackMultiplier;
+                damageToDeal = damageToDeal * myCharacterStats.strongAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.strongAttackMultiplier;
+                appliedForce = appliedForce * myCharacterStats.strongAttackMultiplier;
             } else
             {
-                damageToDeal = damageToDeal * normalAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * normalAttackMultiplier;
-                appliedForce = appliedForce * normalAttackMultiplier;
+                damageToDeal = damageToDeal * myCharacterStats.normalAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.normalAttackMultiplier;
+                appliedForce = appliedForce * myCharacterStats.normalAttackMultiplier;
             }
 
             //Send data to target

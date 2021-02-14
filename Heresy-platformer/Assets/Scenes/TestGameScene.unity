@@ -1414,6 +1414,7 @@ MonoBehaviour:
   climb: 0
   basicAttack: 0
   advancedAttack: 0
+  combo: 0
   finisher: 0
   parry: 0
   shiftPressed: 0
@@ -1550,22 +1551,22 @@ MonoBehaviour:
   healthRegen: 0
   energyRegenCost: 0
   healthRegenCost: 0
+  attackCost: 0
+  actionCost: 0
+  runCost: 0
   baseDamageBonus: 0
   currentDamageBonus: 0
   baseCritRate: 0
   currentCritRate: 0
   baseCritBonus: 0
   currentCritBonus: 0
+  weakAttackMultiplier: 0
+  normalAttackMultiplier: 0
+  strongAttackMultiplier: 0
+  primaryAttackLevel: 0
+  secondaryAttackLevel: 0
   animatorOverrideController: {fileID: 22100000, guid: f1864cd1fafe55c4b9d4f5d9122c79b2,
     type: 2}
-  basicPrimaryAttack: {fileID: 7400000, guid: 1c59717d9aa87784b89f838a4fb8883e, type: 2}
-  basicSecondaryAttack: {fileID: 7400000, guid: 5109c58ec717ee5419c7cfd0b2232a66,
-    type: 2}
-  basicTiredAttack: {fileID: 7400000, guid: b19facdc6bdc4fc4985194cb3a7b2a09, type: 2}
-  basicParry: {fileID: 7400000, guid: 636e9787162797e46b891c088be46f7a, type: 2}
-  basicParryRiposte: {fileID: 7400000, guid: fd9731401c5f9d246b64dd8ac8c1cb88, type: 2}
-  basicDodge: {fileID: 7400000, guid: 1e8e223a1a879b44f9263be385847d63, type: 2}
-  basicRoll: {fileID: 7400000, guid: 25171baa1926a67479fbc006ec54e2b3, type: 2}
 --- !u!95 &556908231
 Animator:
   serializedVersion: 3

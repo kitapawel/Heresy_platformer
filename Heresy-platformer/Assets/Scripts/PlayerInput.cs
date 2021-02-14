@@ -57,9 +57,10 @@ public class PlayerInput : ControlInput
 		jump = jump || Input.GetKeyDown(KeyCode.W);
 		dodge = dodge || Input.GetKeyDown(KeyCode.S);
 		basicAttack = basicAttack || Input.GetMouseButtonDown(0);
-		advancedAttack = advancedAttack || Input.GetMouseButtonDown(2);
+		advancedAttack = advancedAttack || Input.GetMouseButtonDown(1);
+		combo = combo || Input.GetMouseButtonDown(2);
 		finisher = finisher || Input.GetKeyDown(KeyCode.R);
-		parry = parry || Input.GetMouseButtonDown(1);
+		parry = parry || Input.GetKeyDown(KeyCode.Tab);
 		roll = roll || Input.GetKeyDown(KeyCode.Space);
 		climb = climb || Input.GetKeyDown(KeyCode.Z);
 		throwItem = throwItem || Input.GetKeyDown(KeyCode.Q);

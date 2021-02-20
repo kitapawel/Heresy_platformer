@@ -24,7 +24,7 @@ public class CheckGroundCollision : MonoBehaviour
         if (!collision.isTrigger)
         {
             parentCharacterMovementController.CheckGroundCollision(true);
-        }        
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

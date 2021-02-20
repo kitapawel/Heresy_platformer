@@ -1,18 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerCanvasController : MonoBehaviour
 {
+    HealthSystem myHealthSystem;
+    InventorySystem myInventorySystem;
+    CharacterStats myCharacterStats;
+
     public Image healthBar;
     public Image energyBar;
     public Image vitalityBar;
-    HealthSystem myHealthSystem;
-    InventorySystem myInventorySystem;
-    
     public Transform inventoryWindow;
+
     bool isInventoryWindowActive = false;
 
     public InventorySlot inventorySlotPrefab;
+    public TMP_Dropdown primaryAttackDropDown;
+    public TMP_Dropdown secondaryAttackDropDown;
+    public TMP_Dropdown comboAttackDropDown;
+
 
     private void Start()
     {
@@ -21,7 +28,10 @@ public class PlayerCanvasController : MonoBehaviour
         vitalityBar = GameObject.Find("PlayerVitality").GetComponent<Image>();
         myHealthSystem = FindObjectOfType<PlayerInput>().GetComponent<HealthSystem>();
         myInventorySystem = FindObjectOfType<PlayerInput>().GetComponentInParent<InventorySystem>();
+        myCharacterStats = FindObjectOfType<PlayerInput>().GetComponentInParent<CharacterStats>();
         inventoryWindow.gameObject.SetActive(false);
+
+
     }
 
     private void Update()
@@ -30,6 +40,7 @@ public class PlayerCanvasController : MonoBehaviour
         energyBar.fillAmount = myHealthSystem.GetEnergyAsPercentage();
         vitalityBar.fillAmount = myHealthSystem.GetVitalityAsPercentage();
         ShowUIElements();
+        Debug.Log(primaryAttackDropDown.value);
     }
 
     public void UpdateInventoryPanel()
@@ -65,4 +76,21 @@ public class PlayerCanvasController : MonoBehaviour
         }
     }
 
+    public void SelectAttack()
+    {
+        float primValue = primaryAttackDropDown.value;
+        myCharacterStats.primaryAttackLevel = primValue;
+        float secValue = secondaryAttackDropDown.value;
+        myCharacterStats.secondaryAttackLevel = secValue;
+/*        if (dropDownValue == 0)
+        {
+            myCharacterStats.primaryAttackLevel = 0;
+        } else if (dropDownValue == 1)
+        {
+            myCharacterStats.primaryAttackLevel = 1;
+        } else if (dropDownValue == 2)
+        {
+            myCharacterStats.primaryAttackLevel = 2;
+        }*/
+    }
 }

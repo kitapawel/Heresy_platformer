@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DefaultExecutionOrder(-100)]
-public class EnemyAIBasic : ControlInput
+public class EnemyAI : ControlInput
 {
 	[SerializeField]
 	AIState aiState = AIState.Searching;
+	[SerializeField]
+	AIType aiType = AIType.Basic;
 
 	CharacterController myCharacterController;
 	Animator myAnimator;
@@ -28,8 +30,11 @@ public class EnemyAIBasic : ControlInput
 	float lookAroundIntervalBase = 3f;
 	[SerializeField]
 	float lookAroundInterval = 3f;
+	[SerializeField]
+	float reflexes = .2f;//TODO parameterize based on AI type
 
 	bool isTargetInMeleeRange;
+	bool turnAroundInProgess = false;
 
 	void Start()
 	{
@@ -108,9 +113,10 @@ public class EnemyAIBasic : ControlInput
 	
 	void LookForTargets()
 	{
-		IsTargetInLineOfSight();
-		IsTargetInMeleeRange();
-	}
+        IsTargetInLineOfSight();
+        IsTargetInMeleeRange();
+        DidTargetGoBehind();
+    }
 	void IsTargetInLineOfSight()
 	{
 		RaycastHit2D eyeRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.right * myCharacterController.GetSpriteDirection(), sightRange, ~meleeIgnoreTargetLayers);
@@ -145,17 +151,26 @@ public class EnemyAIBasic : ControlInput
 		{
 			isTargetInMeleeRange = true;
 		}
-/*		isTargetInMeleeRange = false;
-		foreach (GameObject hitTarget in myHitCollisionChecker.hitTargets)
-		{
-			if (hitTarget.gameObject.CompareTag("Player"))
-            {
-				isTargetInMeleeRange = true;
-			} else
-            {
-				isTargetInMeleeRange = false;
+	}	
+	void DidTargetGoBehind()
+	{	if (!turnAroundInProgess)
+        {
+			RaycastHit2D backRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.left * myCharacterController.GetSpriteDirection(), 0.5f, ~meleeIgnoreTargetLayers);
+			if (backRaycastHit)
+			{
+				if (backRaycastHit.transform.CompareTag("Player"))
+				{
+					StartCoroutine(TurnAroundAfterTimeElapsed(reflexes));
+				}
 			}
-		}*/
+		}
+	}
+	IEnumerator TurnAroundAfterTimeElapsed(float value)
+	{
+		turnAroundInProgess = true;
+		yield return new WaitForSeconds(value);
+		myCharacterController.LookTheOtherWay();
+		turnAroundInProgess = false;		
 	}
 
 	void ChaseTarget()
@@ -201,4 +216,6 @@ public class EnemyAIBasic : ControlInput
 			return false;
 		}
 	}
+
+
 }

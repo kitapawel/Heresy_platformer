@@ -9,13 +9,10 @@ public class CharacterController : MonoBehaviour
     ControlInput myInput;
     Rigidbody2D myRigidBody2D;
     Animator myAnimator;
-    BoxCollider2D groundChecker;
-    AudioSource myAudioSource;
     HealthSystem myHealthSystem;
     CharacterStats myCharacterStats;
 
     [Header("Physical properties")]
-    Vector2 myVelocity;
 
     [Header("Boolean values")]
     public bool isAlive = true;
@@ -46,8 +43,6 @@ public class CharacterController : MonoBehaviour
         myInput = GetComponent<ControlInput>();
         myRigidBody2D = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
-        groundChecker = GetComponentInChildren<BoxCollider2D>();
-        myAudioSource = GetComponent<AudioSource>();
         myHealthSystem = GetComponent<HealthSystem>();
         myCharacterStats = GetComponent<CharacterStats>();
     }
@@ -61,7 +56,6 @@ public class CharacterController : MonoBehaviour
         if (isAlive)
         {
             CheckIfGrounded();
-            MonitorVelocity();
             ProcessMovement();
             ProcessAttacks();
         }
@@ -146,7 +140,7 @@ public class CharacterController : MonoBehaviour
             if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("SecondaryAttack");
-                myAnimator.SetFloat("SecondaryAttackBlendValue", myCharacterStats.primaryAttackLevel);
+                myAnimator.SetFloat("SecondaryAttackBlendValue", myCharacterStats.secondaryAttackLevel);
                 myHealthSystem.UseEnergy(myCharacterStats.attackCost);
             }
             if (myInput.combo && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
@@ -160,11 +154,6 @@ public class CharacterController : MonoBehaviour
                 myAnimator.SetTrigger("AttackSlow");
                 myHealthSystem.UseEnergy(1f);
             }
-            /*if (myInput.advancedAttack && !myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
-            {
-                myAnimator.SetTrigger("AttackSlow");
-                myHealthSystem.UseEnergy(1f);
-            }*/
             if (myInput.parry && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
             {
                 myAnimator.SetTrigger("Parry");
@@ -199,11 +188,6 @@ public class CharacterController : MonoBehaviour
 /*        yield return new WaitForSeconds(0.1f);
         CheckIfCanClimb();*/
         myRigidBody2D.bodyType = RigidbodyType2D.Dynamic;
-    }
-
-    public void MonitorVelocity()
-    {
-        myVelocity = myRigidBody2D.velocity;
     }
 
     public void SetCanWalk(int value)
@@ -333,13 +317,11 @@ public class CharacterController : MonoBehaviour
         if (value == true)
         {
             isTouchingGround = true;
-            //UnityEngine.Debug.Log(isTouchingGround);
         }
         if (value == false)
         {
             isTouchingGround = false;
             SetCanWalk(0);
-            //UnityEngine.Debug.Log(isTouchingGround);
         }
     }
     public float GetSpriteDirection()

@@ -10,4 +10,10 @@ public class Item : ScriptableObject
 
     public string flavourText;
 
+    public virtual void UseItem()
+    {
+        Debug.Log("Used: " + prefabName);
+    }
+
+
 }

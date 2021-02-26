@@ -13,6 +13,10 @@ public class Armor : Item
     public int projectileSlots;
     public int inventorySlots;
 
-    //TODO Implement slots for modifiers, rarity for number of modifiers and getter methods to calculate values+mods
+    public override void UseItem()
+    {
 
+    }
+
+    //TODO Implement slots for modifiers, rarity for number of modifiers and getter methods to calculate values+mods
 }

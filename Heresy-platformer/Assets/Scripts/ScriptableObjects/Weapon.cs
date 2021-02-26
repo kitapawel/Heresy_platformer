@@ -5,7 +5,6 @@ public class Weapon : Item
 {
     public WeaponType weaponType;
 
-
     public float damage;
     public float stabilityDamage;
     public float force;

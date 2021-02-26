@@ -40,7 +40,6 @@ public class PlayerCanvasController : MonoBehaviour
         energyBar.fillAmount = myHealthSystem.GetEnergyAsPercentage();
         vitalityBar.fillAmount = myHealthSystem.GetVitalityAsPercentage();
         ShowUIElements();
-        Debug.Log(primaryAttackDropDown.value);
     }
 
     public void UpdateInventoryPanel()

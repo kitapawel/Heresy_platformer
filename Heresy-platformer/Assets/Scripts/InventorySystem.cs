@@ -41,24 +41,29 @@ public class InventorySystem : MonoBehaviour
         projectileCount = equippedArmor.projectileSlots;
         inventorySpace = baseInventorySpace + equippedArmor.inventorySlots;
     }
-
     //Initiated from the PickableItem script, flows to the PlayerCanvasController to update inventory UI
-    public void EquipItem(ScriptableObject scriptableObject)
+    public void PickItemToInventory(ScriptableObject scriptableObject)
+    {
+        if (items.Count <= inventorySpace)
+        {
+            items.Add(scriptableObject as Item);
+            playerCanvasController.UpdateInventoryPanel();
+        }
+    }
+    //Used after item is clicked in the inventory; InventorySlot does the processing
+    public void UseItemInInventory(ScriptableObject scriptableObject)
     {
         if (scriptableObject.GetType() == typeof(Weapon))
-        {            
-            GameObject droppedWeapon = Instantiate(equippedWeapon.prefab);
-            droppedWeapon.transform.position = thrownStartingPoint.transform.position;
-            droppedWeapon.transform.parent = null;
+        {
+            PickItemToInventory(equippedWeapon);
             equippedWeapon = scriptableObject as Weapon;
+
             //TODO notify CharacterController to switch animations
-        } 
+        }
         else if (scriptableObject.GetType() == typeof(Armor))
         {
             //TODO cannot equip if more items would overflow inventory
-            GameObject droppedArmor = Instantiate(equippedArmor.prefab);
-            droppedArmor.transform.position = thrownStartingPoint.transform.position;
-            droppedArmor.transform.parent = null;
+            PickItemToInventory(equippedArmor);
             equippedArmor = scriptableObject as Armor;
         } else
         {
@@ -68,10 +73,14 @@ public class InventorySystem : MonoBehaviour
                 playerCanvasController.UpdateInventoryPanel();
             }
         }
+    }
 
-    }    
+    public void RemoveItemFromInventory(Item item)//item is destroyed
+    {
+        items.Remove(item);
+    }
 
-    public void DropItem(Item item)
+    public void DropItem(Item item)//item is dropped to the ground
     {
         GameObject droppedItem = Instantiate(item.prefab);
         droppedItem.transform.position = thrownStartingPoint.transform.position;
@@ -89,7 +98,6 @@ public class InventorySystem : MonoBehaviour
             return false;
         }
     }
-
     public float GetDefenseValue()
     {
         float defenseRandomValue = Mathf.Round(Random.Range(0f, equippedArmor.defense));
@@ -107,5 +115,4 @@ public class InventorySystem : MonoBehaviour
         float poise = equippedArmor.poise;
         return poise;
     }
-
 }

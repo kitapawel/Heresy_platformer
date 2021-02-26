@@ -81,7 +81,7 @@ public class PickableItem : MonoBehaviour
                 {
                     //the whole EquipItem operation needs to be completed, otherwise Destroy() operation might
                     //get omitted, which will lead to duplication
-                    FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().EquipItem(scriptableObject);
+                    FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().PickItemToInventory(scriptableObject);
                     Destroy(gameObject);
                 }
                 else

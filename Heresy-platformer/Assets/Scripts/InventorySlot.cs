@@ -9,15 +9,16 @@ public class InventorySlot : MonoBehaviour
 
 	public Item item;  // Current item in the slot
 
-    private void Start()
-    {
-        
-    }
     public void RemoveItemFromInventory()
     {
         FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().DropItem(item);
         FindObjectOfType<PlayerCanvasController>().UpdateInventoryPanel();
-
+    }
+    public void UseClickedItem()
+    {
+        FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().UseItemInInventory(item);
+        FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().RemoveItemFromInventory(item);
+        FindObjectOfType<PlayerCanvasController>().UpdateInventoryPanel();
     }
 
     /*    // Add item to the slot

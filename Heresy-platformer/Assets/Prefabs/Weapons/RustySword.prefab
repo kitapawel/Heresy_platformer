@@ -73,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -5907963261406464630, guid: 196967c75da64fe4391419bb26867dfb,
+  m_SortingOrder: 3
+  m_Sprite: {fileID: -8587604464591548400, guid: 2c73f847c764aac44b78e2b4e3284bb9,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -112,11 +112,11 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.21875, y: 0.21875}
-      - {x: -0.21875, y: -0.0625}
-      - {x: -0.0625, y: -0.21875}
+      - {x: -0.21875, y: 0.15212181}
+      - {x: 0.05756075, y: -0.19325039}
       - {x: 0.21875, y: -0.21875}
-      - {x: 0.21875, y: 0.125}
-      - {x: 0, y: 0.21875}
+      - {x: 0.19643785, y: -0.061997235}
+      - {x: -0.15618518, y: 0.21768755}
 --- !u!114 &2492795002531070303
 MonoBehaviour:
   m_ObjectHideFlags: 0

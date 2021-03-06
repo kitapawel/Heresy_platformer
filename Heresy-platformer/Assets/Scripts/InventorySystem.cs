@@ -56,6 +56,7 @@ public class InventorySystem : MonoBehaviour
         if (scriptableObject.GetType() == typeof(Weapon))
         {
             PickItemToInventory(equippedWeapon);
+            RemoveItemFromInventory(scriptableObject as Item);
             equippedWeapon = scriptableObject as Weapon;
 
             //TODO notify CharacterController to switch animations
@@ -64,6 +65,7 @@ public class InventorySystem : MonoBehaviour
         {
             //TODO cannot equip if more items would overflow inventory
             PickItemToInventory(equippedArmor);
+            RemoveItemFromInventory(scriptableObject as Item);
             equippedArmor = scriptableObject as Armor;
         } else
         {

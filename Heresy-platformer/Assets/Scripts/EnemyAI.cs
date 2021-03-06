@@ -13,6 +13,7 @@ public class EnemyAI : ControlInput
 	CharacterController myCharacterController;
 	Animator myAnimator;
 	AIPerception myAIPerception;
+	CharacterStats myCharacterStats;
 
 	public LayerMask meleeTargetLayers;
 	public LayerMask meleeIgnoreTargetLayers;
@@ -39,10 +40,12 @@ public class EnemyAI : ControlInput
 	void Start()
 	{
 		myCharacterController = GetComponent<CharacterController>();
+		myCharacterStats = GetComponent<CharacterStats>();
 		myAnimator = GetComponent<Animator>();
 		myAIPerception = GetComponentInChildren<AIPerception>();
 		meleeTargetLayers = LayerMask.GetMask("Actor", "ActorNonCollidable");
 		meleeIgnoreTargetLayers = LayerMask.GetMask("Pickable");
+		InitializeAIMode();
 	}
 	void Update()
 	{
@@ -57,6 +60,24 @@ public class EnemyAI : ControlInput
 		PerformStateActions();
 		readyToClear = true;
 	}
+
+	private void InitializeAIMode()
+    {
+		if (aiType == AIType.Basic)
+        {
+			myCharacterStats.primaryAttackLevel = 0;
+			myCharacterStats.secondaryAttackLevel = 0;
+        } else if (aiType == AIType.Aggressive)
+        {
+			myCharacterStats.primaryAttackLevel = 3;
+			myCharacterStats.secondaryAttackLevel = 4;
+		} else if (aiType == AIType.Uncertain)
+        {
+			myCharacterStats.primaryAttackLevel = 0;
+			myCharacterStats.secondaryAttackLevel = 0;
+		}
+
+    }
 
 	void CheckState()
 	{
@@ -153,7 +174,7 @@ public class EnemyAI : ControlInput
 		}
 	}	
 	void DidTargetGoBehind()
-	{	if (!turnAroundInProgess)
+	{	if (!turnAroundInProgess && myAnimator.GetBool("isFallen") == false)
         {
 			RaycastHit2D backRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.left * myCharacterController.GetSpriteDirection(), 0.5f, ~meleeIgnoreTargetLayers);
 			if (backRaycastHit)
@@ -186,7 +207,7 @@ public class EnemyAI : ControlInput
 	}
 	void FightTarget()
 	{		
-		int randomValue = Random.Range(0, 6);
+		int randomValue = Random.Range(0, 10);
 		switch(randomValue)
 		{
 			case 0:
@@ -200,6 +221,12 @@ public class EnemyAI : ControlInput
 				break;
 			case 5:
 				roll = true;
+				break;
+			case 6:
+			case 7:				
+			case 8:
+			case 9:
+				advancedAttack = true;
 				break;
 			default:
 				break;

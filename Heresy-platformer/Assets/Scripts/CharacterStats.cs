@@ -96,8 +96,7 @@ public class CharacterStats : MonoBehaviour
 
         primaryAttackLevel = 0;
         secondaryAttackLevel = 0;
-
-        //myAnimator.runtimeAnimatorController = animatorOverrideController;
-
     }
+
+
 }

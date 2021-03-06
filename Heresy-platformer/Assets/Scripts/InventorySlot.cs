@@ -17,7 +17,6 @@ public class InventorySlot : MonoBehaviour
     public void UseClickedItem()
     {
         FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().UseItemInInventory(item);
-        FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().RemoveItemFromInventory(item);
         FindObjectOfType<PlayerCanvasController>().UpdateInventoryPanel();
     }
 

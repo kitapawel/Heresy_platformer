@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RustySword
   m_EditorClassIdentifier: 
   prefabName: Rusty Sword
-  icon: {fileID: -5907963261406464630, guid: 196967c75da64fe4391419bb26867dfb, type: 3}
+  icon: {fileID: -8587604464591548400, guid: 2c73f847c764aac44b78e2b4e3284bb9, type: 3}
   prefab: {fileID: 1459760042894036328, guid: 875057faf3f717543ba8767c8e1d29b7, type: 3}
   flavourText: 
   weaponType: 0

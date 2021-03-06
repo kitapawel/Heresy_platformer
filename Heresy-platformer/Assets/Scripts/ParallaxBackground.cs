@@ -8,7 +8,7 @@ public class ParallaxBackground : MonoBehaviour
 {
     private float bckgrImageLength;
     private float bckgrImageStartPosition;
-    public GameObject camera;
+    public GameObject myCamera;
     public float parallaxEffectAmount; //0 for no movement, 1 for speed equal to camera
 
     // Start is called before the first frame update
@@ -18,10 +18,10 @@ public class ParallaxBackground : MonoBehaviour
         bckgrImageLength = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        float offsetRelativeToCamera = camera.transform.position.x * (1 - parallaxEffectAmount);
-        float dist = camera.transform.position.x * parallaxEffectAmount;
+        float offsetRelativeToCamera = myCamera.transform.position.x * (1 - parallaxEffectAmount);
+        float dist = myCamera.transform.position.x * parallaxEffectAmount;
         
         transform.position = new Vector3(bckgrImageStartPosition + dist, transform.position.y, transform.position.z);
 

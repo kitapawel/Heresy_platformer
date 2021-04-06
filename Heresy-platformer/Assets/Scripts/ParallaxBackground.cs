@@ -11,7 +11,6 @@ public class ParallaxBackground : MonoBehaviour
     public GameObject myCamera;
     public float parallaxEffectAmount; //0 for no movement, 1 for speed equal to camera
 
-    // Start is called before the first frame update
     void Start()
     {
         bckgrImageStartPosition = transform.position.x;

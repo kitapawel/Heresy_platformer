@@ -23,9 +23,9 @@ public class CharacterController : MonoBehaviour
     bool isGrounded = true;
     bool isTouchingGround = true;
 
-    [Header("Character's movement stats")]
-    [SerializeField] float moveSpeed = 1.8f;
-    [SerializeField] float runSpeed = 3.6f;
+    [Header("Character's movement stats")]//TODO initialize from characterstats
+    [SerializeField] float moveSpeed = 1.6f;
+    [SerializeField] float runSpeed = 3.2f;
     [SerializeField] float jumpForce = 320f;
     [SerializeField] float rollForce = 500f;
     [SerializeField] float dodgeForce = 320f;

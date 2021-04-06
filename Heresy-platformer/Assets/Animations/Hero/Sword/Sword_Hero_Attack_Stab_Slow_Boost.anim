@@ -22,19 +22,19 @@ AnimationClip:
     - time: 0
       value: {fileID: -6550855847708335769, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
-    - time: 0.15
+    - time: 0.16666667
       value: {fileID: -5213196010618183456, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
-    - time: 0.41666666
+    - time: 0.5
       value: {fileID: -44842162458603747, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
-    - time: 0.6666667
+    - time: 0.73333335
       value: {fileID: -7310841787257694350, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
-    - time: 0.8333333
+    - time: 0.9
       value: {fileID: -1137795075374409004, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
-    - time: 0.9166667
+    - time: 1
       value: {fileID: -1137795075374409004, guid: 76166faf63d64af488066a96d7064967,
         type: 3}
     attribute: m_Sprite
@@ -67,7 +67,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.93333334
+    m_StopTime: 1.0166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -94,21 +94,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.35
+  - time: 0.38333333
     functionName: BoostVelocity
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 200
     intParameter: 0
     messageOptions: 0
-  - time: 0.36666667
+  - time: 0.46666667
     functionName: PlayWeaponSwingSounds
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.41666666
+  - time: 0.5
     functionName: DealDamage
     data: 
     objectReferenceParameter: {fileID: 0}

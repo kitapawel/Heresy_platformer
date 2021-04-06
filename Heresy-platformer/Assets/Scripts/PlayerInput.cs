@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 [DefaultExecutionOrder(-100)]
 public class PlayerInput : ControlInput
@@ -15,6 +14,8 @@ public class PlayerInput : ControlInput
 	{
 		ClearInput();//clear inputs befor process inputs
 		IsShiftPressed();
+		if (EventSystem.current.IsPointerOverGameObject())
+			return;
 		ProcessInputs();
 
 		//Clamp the horizontal input to be between -1 and 1

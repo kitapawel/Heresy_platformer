@@ -79,7 +79,9 @@ public class PlayerCanvasController : MonoBehaviour
     {
         float primValue = primaryAttackDropDown.value;        
         float secValue = secondaryAttackDropDown.value;
-        if (primValue == 0f || primValue == 1f || primValue == 2f || primValue == 3f || primValue == 4f)
+        myCharacterStats.primaryAttackLevel = primValue;
+        myCharacterStats.secondaryAttackLevel = secValue;
+        /*if (primValue == 0f || primValue == 1f || primValue == 2f || primValue == 3f || primValue == 4f)
         {
             myCharacterStats.primaryAttackLevel = primValue;
         } else
@@ -88,11 +90,11 @@ public class PlayerCanvasController : MonoBehaviour
         }
         if (secValue == 0f || secValue == 1f || secValue == 2f || secValue == 3f || secValue == 4f)
         {
-            myCharacterStats.primaryAttackLevel = secValue;
+            myCharacterStats.secondaryAttackLevel = secValue;
         }
         else
         {
             myCharacterStats.secondaryAttackLevel = 0;
-        }       
+        }       */
     }
 }

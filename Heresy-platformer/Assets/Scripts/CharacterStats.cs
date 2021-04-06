@@ -5,6 +5,9 @@ using UnityEngine;
 [DefaultExecutionOrder(-95)]
 public class CharacterStats : MonoBehaviour
 {
+    [Header("General stats:")]
+    public int level;
+
     [Header("Survivability stats:")]
     public float baseHealth;
     public float baseEnergy;
@@ -48,15 +51,6 @@ public class CharacterStats : MonoBehaviour
     {
         myAnimator = GetComponent<Animator>();
         InitializeCharacter();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            primaryAttackLevel = 5;
-            secondaryAttackLevel = 5;
-        }
     }
 
     private void InitializeCharacter()

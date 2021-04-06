@@ -1,0 +1,838 @@
+fileFormatVersion: 2
+guid: eb83453fe29a9504baefb2d9521aed95
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6361091447416956284
+    second: sheet_hero_tools_3_0
+  - first:
+      213: 2744419400179348828
+    second: sheet_hero_tools_3_1
+  - first:
+      213: -8633482333147033648
+    second: sheet_hero_tools_3_2
+  - first:
+      213: -7840422172707719469
+    second: sheet_hero_tools_3_3
+  - first:
+      213: 6877940384407108105
+    second: sheet_hero_tools_3_4
+  - first:
+      213: -6736426849271041507
+    second: sheet_hero_tools_3_5
+  - first:
+      213: -7540760072746900103
+    second: sheet_hero_tools_3_6
+  - first:
+      213: 4691307396987097683
+    second: sheet_hero_tools_3_7
+  - first:
+      213: 2548882108407785170
+    second: sheet_hero_tools_3_8
+  - first:
+      213: -854269846033001003
+    second: sheet_hero_tools_3_9
+  - first:
+      213: -5172808900565986815
+    second: sheet_hero_tools_3_10
+  - first:
+      213: 1845773492879240575
+    second: sheet_hero_tools_3_11
+  - first:
+      213: 3492097119448288657
+    second: sheet_hero_tools_3_12
+  - first:
+      213: -5909316297612963939
+    second: sheet_hero_tools_3_13
+  - first:
+      213: -8378483488987755302
+    second: sheet_hero_tools_3_14
+  - first:
+      213: -5357379486367123693
+    second: sheet_hero_tools_3_15
+  - first:
+      213: 3144319687980077553
+    second: sheet_hero_tools_3_16
+  - first:
+      213: 9113870647669402139
+    second: sheet_hero_tools_3_17
+  - first:
+      213: -7945208649354811577
+    second: sheet_hero_tools_3_18
+  - first:
+      213: 5828653927585069623
+    second: sheet_hero_tools_3_19
+  - first:
+      213: -2772088217291135017
+    second: sheet_hero_tools_3_20
+  - first:
+      213: 405508599835466667
+    second: sheet_hero_tools_3_21
+  - first:
+      213: 8899148139947458802
+    second: sheet_hero_tools_3_22
+  - first:
+      213: 4395217078615330944
+    second: sheet_hero_tools_3_23
+  - first:
+      213: -4045269646030801041
+    second: sheet_hero_tools_3_24
+  - first:
+      213: 8176319122072271038
+    second: sheet_hero_tools_3_25
+  - first:
+      213: -7841469853605477307
+    second: sheet_hero_tools_3_26
+  - first:
+      213: -9212758459519731730
+    second: sheet_hero_tools_3_27
+  - first:
+      213: -4151437089053178362
+    second: sheet_hero_tools_3_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48adfe4f70dd8b7a0800000000000000
+      internalID: -6361091447416956284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 650
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55716667e2261620800000000000000
+      internalID: 2744419400179348828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 650
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0df09266f85bf2880800000000000000
+      internalID: -8633482333147033648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 650
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6f8a20399313390800000000000000
+      internalID: -7840422172707719469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 650
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a36e6b65a537f50800000000000000
+      internalID: 6877940384407108105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 650
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12bbc1c8776382a0800000000000000
+      internalID: -6736426849271041507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 585
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975e87f9aa6d95790800000000000000
+      internalID: -7540760072746900103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 585
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3521491d83fda1140800000000000000
+      internalID: 4691307396987097683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 455
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6aef5e5c27f5320800000000000000
+      internalID: 2548882108407785170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_9
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 455
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d510e4e9160524f0800000000000000
+      internalID: -854269846033001003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 455
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10219ce26bd7638b0800000000000000
+      internalID: -5172808900565986815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_11
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 455
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d26e266318d9910800000000000000
+      internalID: 1845773492879240575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_12
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 455
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d41e504db667030800000000000000
+      internalID: 3492097119448288657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_13
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 455
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9f4a5fd224edfda0800000000000000
+      internalID: -5909316297612963939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adcc86a68a5a9bb80800000000000000
+      internalID: -8378483488987755302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 325
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3177f14edb3c6a5b0800000000000000
+      internalID: -5357379486367123693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_16
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 325
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f1d15ec81ed2ab20800000000000000
+      internalID: 3144319687980077553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 325
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1aa1331119fa7e70800000000000000
+      internalID: 9113870647669402139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_18
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 325
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74768d434d2fcb190800000000000000
+      internalID: -7945208649354811577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_19
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 325
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ab4689dd983e050800000000000000
+      internalID: 5828653927585069623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_20
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 325
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7e05a14709789d0800000000000000
+      internalID: -2772088217291135017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab1f8e4ce7a0a500800000000000000
+      internalID: 405508599835466667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 195
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f085256510208b70800000000000000
+      internalID: 8899148139947458802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_23
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 195
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080d89965a2fefc30800000000000000
+      internalID: 4395217078615330944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_24
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 195
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67f9af80b05cd7c0800000000000000
+      internalID: -4045269646030801041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 195
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8f959ebee187170800000000000000
+      internalID: 8176319122072271038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_26
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 195
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54449eac6b08d2390800000000000000
+      internalID: -7841469853605477307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_27
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 195
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee7f9da0ef4b52080800000000000000
+      internalID: -9212758459519731730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet_hero_tools_3_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 100
+        height: 65
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6068a9776f12366c0800000000000000
+      internalID: -4151437089053178362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -65,18 +65,34 @@ public class EnemyAI : ControlInput
     {
 		if (aiType == AIType.Basic)
         {
-			myCharacterStats.primaryAttackLevel = 0;
-			myCharacterStats.secondaryAttackLevel = 0;
-        } else if (aiType == AIType.Aggressive)
-        {
-			myCharacterStats.primaryAttackLevel = 3;
-			myCharacterStats.secondaryAttackLevel = 4;
-		} else if (aiType == AIType.Uncertain)
+			if (myCharacterStats.level == 1)
+            {
+				myCharacterStats.primaryAttackLevel = 0;
+				myCharacterStats.secondaryAttackLevel = 0;
+			} else if (myCharacterStats.level == 2)
+            {
+				myCharacterStats.primaryAttackLevel = 1;
+				myCharacterStats.secondaryAttackLevel = 1;
+			} else if (myCharacterStats.level == 3)
+            {
+				myCharacterStats.primaryAttackLevel = 2;
+				myCharacterStats.secondaryAttackLevel = 2;
+			}
+		} else if (aiType == AIType.Aggressive)
+        {	
+				myCharacterStats.primaryAttackLevel = RandomAttackLevelValue();
+				myCharacterStats.secondaryAttackLevel = RandomAttackLevelValue();
+		} else
         {
 			myCharacterStats.primaryAttackLevel = 0;
 			myCharacterStats.secondaryAttackLevel = 0;
 		}
+    }
 
+	private float RandomAttackLevelValue()
+    {
+		int result = Random.Range(0, myCharacterStats.level + 2);
+		return result;
     }
 
 	void CheckState()

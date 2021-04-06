@@ -4,6 +4,9 @@
 OR
 --Override controller for different enemy types with same animation sets (e.g. different armors or weapons).
 -Animation states for attacks/dodge/parry based on 1D blend trees. All possible animations are present in the tree, once invoked in the CharacterController a skill value is taken from CharacterStats to determine which animation is used. 
+-When creating animations add events for SetCanWalk, PlayWeaponSwingSounds, DealDamage and optionally BoostVelocity (if character is moved).
+-DealDamage has an int parameter that determines whether the hit is Normal (0), Weak (1) or Strong (2). Animation names are appended with -,0,+ to show what type of hit it should contain.
+
 
 # Layer architecture
 Actor - player and NPC. Don't collide with each other.
@@ -22,9 +25,9 @@ Pickable - collides with: pickables, thrown.
 Input is based on ControlInput and its inherited classes: PlayerInput gets input from player. EnemyAI takes input from AI. Both send data to CharacterController to control and animate the characters.
 
 # Camera
-Maine camera + virtual camera for tracking player
+Main camera + virtual camera for tracking player
 -Pixel perfect camera for URP and Pixel perfect camera addon on virtual camera
--BUG: virtual camera may lose the ability to set camera size (field of view appears which is not typical to ortographic camera) - requires adding a new virtual camera
+-Possible Unity BUG: virtual camera may lose the ability to set camera size (field of view appears which is not typical to ortographic camera) - requires adding a new virtual camera
 
 # Special ability architecture
 

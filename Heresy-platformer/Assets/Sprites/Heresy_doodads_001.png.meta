@@ -1,367 +1,193 @@
 fileFormatVersion: 2
-guid: 2c73f847c764aac44b78e2b4e3284bb9
+guid: 38eab2a73f61fee4ba3f80829fcffefb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4946864348746363171
-    second: Heresy-terrain_and_doodads_0
+      213: 4626577553430884001
+    second: Heresy_doodads_001_0
   - first:
-      213: 7782494876934383867
-    second: Heresy-terrain_and_doodads_1
+      213: 8885709193001826746
+    second: Heresy_doodads_001_1
   - first:
-      213: 2581253387789779784
-    second: Heresy-terrain_and_doodads_2
+      213: 7467498342929977933
+    second: Heresy_doodads_001_2
   - first:
-      213: -5994178826465545195
-    second: Heresy-terrain_and_doodads_3
+      213: 4584351331836258692
+    second: Heresy_doodads_001_3
   - first:
-      213: -6958827450840967922
-    second: Heresy-terrain_and_doodads_4
+      213: 1569185632444326818
+    second: Heresy_doodads_001_4
   - first:
-      213: 7516208398984127439
-    second: Heresy-terrain_and_doodads_5
+      213: -1839342103459649109
+    second: Heresy_doodads_001_5
   - first:
-      213: -963536825855064576
-    second: Heresy-terrain_and_doodads_6
+      213: -7237981900038316825
+    second: Heresy_doodads_001_6
   - first:
-      213: -6769960876057387936
-    second: Heresy-terrain_and_doodads_7
+      213: -3143626897466466437
+    second: Heresy_doodads_001_7
   - first:
-      213: 221630112927252377
-    second: Heresy-terrain_and_doodads_8
+      213: 8288974658768613676
+    second: Heresy_doodads_001_8
   - first:
-      213: -5544495858210025636
-    second: Heresy-terrain_and_doodads_9
+      213: -4850907195831379640
+    second: Heresy_doodads_001_9
   - first:
-      213: -1247633980836116771
-    second: Heresy-terrain_and_doodads_10
+      213: -7082854405963856471
+    second: Heresy_doodads_001_10
   - first:
-      213: -5380204753063553139
-    second: Heresy-terrain_and_doodads_11
+      213: -2533925861863674049
+    second: Heresy_doodads_001_11
   - first:
-      213: -10178646931056417
-    second: Heresy-terrain_and_doodads_12
+      213: 2243784846788083591
+    second: Heresy_doodads_001_12
   - first:
-      213: 574442097854514799
-    second: Heresy-terrain_and_doodads_13
+      213: -1920372012165345461
+    second: Heresy_doodads_001_13
   - first:
-      213: 3719493999452396156
-    second: Heresy-terrain_and_doodads_14
+      213: 8792602997978919958
+    second: Heresy_doodads_001_14
   - first:
-      213: -3000342106389326289
-    second: Heresy-terrain_and_doodads_15
+      213: 3677674619267339126
+    second: Heresy_doodads_001_15
   - first:
-      213: -7051566446722856937
-    second: Heresy-terrain_and_doodads_16
+      213: 8065704523966588138
+    second: Heresy_doodads_001_16
   - first:
-      213: -5187264031758220045
-    second: Heresy-terrain_and_doodads_17
+      213: -8744386307762437821
+    second: Heresy_doodads_001_17
   - first:
-      213: -475856692197183152
-    second: Heresy-terrain_and_doodads_18
+      213: 6362352282593891812
+    second: Heresy_doodads_001_18
   - first:
-      213: 610848131084763203
-    second: Heresy-terrain_and_doodads_19
+      213: -1568460202922129181
+    second: Heresy_doodads_001_19
   - first:
-      213: 1833110439615221033
-    second: Heresy-terrain_and_doodads_20
+      213: 8142243020382906524
+    second: Heresy_doodads_001_20
   - first:
-      213: 1336281836045813824
-    second: Heresy-terrain_and_doodads_21
+      213: 940934367432955459
+    second: Heresy_doodads_001_21
   - first:
-      213: -685886374851068505
-    second: Heresy-terrain_and_doodads_22
+      213: -4801129365746003149
+    second: Heresy_doodads_001_22
   - first:
-      213: -2021418227944255972
-    second: Heresy-terrain_and_doodads_23
+      213: -888301587444760273
+    second: Heresy_doodads_001_23
   - first:
-      213: -8515118387283713350
-    second: Heresy-terrain_and_doodads_24
+      213: 5625172300162215581
+    second: Heresy_doodads_001_24
   - first:
-      213: -2766215913777232070
-    second: Heresy-terrain_and_doodads_25
+      213: 2364510806380714781
+    second: Heresy_doodads_001_25
   - first:
-      213: -8848954441025352223
-    second: Heresy-terrain_and_doodads_26
+      213: -3441687036681296202
+    second: Heresy_doodads_001_26
   - first:
-      213: -998879884002500593
-    second: Heresy-terrain_and_doodads_27
+      213: -6042164119071135805
+    second: Heresy_doodads_001_27
   - first:
-      213: -8209220988454081376
-    second: Heresy-terrain_and_doodads_28
+      213: -5873603834137722228
+    second: Heresy_doodads_001_28
   - first:
-      213: -749320592354080465
-    second: Heresy-terrain_and_doodads_29
+      213: 2191503394246219676
+    second: Heresy_doodads_001_29
   - first:
-      213: -8157007331484406098
-    second: Heresy-terrain_and_doodads_30
+      213: -8260058783934721053
+    second: Heresy_doodads_001_30
   - first:
-      213: 7771621107155444596
-    second: Heresy-terrain_and_doodads_31
+      213: 2586643248584983248
+    second: Heresy_doodads_001_31
   - first:
-      213: -2950550656651213901
-    second: Heresy-terrain_and_doodads_32
+      213: -4078134617320123205
+    second: Heresy_doodads_001_32
   - first:
-      213: 5256756350532298194
-    second: Heresy-terrain_and_doodads_33
+      213: -6868156540888111288
+    second: Heresy_doodads_001_33
   - first:
-      213: -7849697273075547117
-    second: Heresy-terrain_and_doodads_34
+      213: 5085529158392775226
+    second: Heresy_doodads_001_34
   - first:
-      213: 3324594507028231076
-    second: Heresy-terrain_and_doodads_35
+      213: -5642430426234222621
+    second: Heresy_doodads_001_35
   - first:
-      213: 7799367757753366
-    second: Heresy-terrain_and_doodads_36
+      213: -6211690960164720677
+    second: Heresy_doodads_001_36
   - first:
-      213: 6915134298822569649
-    second: Heresy-terrain_and_doodads_37
+      213: 3165508710898861823
+    second: Heresy_doodads_001_37
   - first:
-      213: 8499100584142325413
-    second: Heresy-terrain_and_doodads_38
+      213: 2203137149513269640
+    second: Heresy_doodads_001_38
   - first:
-      213: 7095706226876600584
-    second: Heresy-terrain_and_doodads_39
+      213: 9139507062095262258
+    second: Heresy_doodads_001_39
   - first:
-      213: 1278774871986530164
-    second: Heresy-terrain_and_doodads_40
+      213: 1768469232630058971
+    second: Heresy_doodads_001_40
   - first:
-      213: -8953263355600145000
-    second: Heresy-terrain_and_doodads_41
+      213: -7311948868760100616
+    second: Heresy_doodads_001_41
   - first:
-      213: -8888355694681185151
-    second: Heresy-terrain_and_doodads_42
+      213: -1487543856984164237
+    second: Heresy_doodads_001_42
   - first:
-      213: -3353726371988728575
-    second: Heresy-terrain_and_doodads_43
+      213: -5385231064299057927
+    second: Heresy_doodads_001_43
   - first:
-      213: -7436813304462936719
-    second: Heresy-terrain_and_doodads_44
+      213: 7339699284247009160
+    second: Heresy_doodads_001_44
   - first:
-      213: -2838089066253282636
-    second: Heresy-terrain_and_doodads_45
+      213: -5518356203636302469
+    second: Heresy_doodads_001_45
   - first:
-      213: 7196705938427118600
-    second: Heresy-terrain_and_doodads_46
+      213: 3620374968437428534
+    second: Heresy_doodads_001_46
   - first:
-      213: -968129629281421530
-    second: Heresy-terrain_and_doodads_47
+      213: -4896679356896480878
+    second: Heresy_doodads_001_47
   - first:
-      213: 6493775268467424028
-    second: Heresy-terrain_and_doodads_48
+      213: 7179882959902045806
+    second: Heresy_doodads_001_48
   - first:
-      213: -5168663941976712121
-    second: Heresy-terrain_and_doodads_49
+      213: -5170133036251054280
+    second: Heresy_doodads_001_49
   - first:
-      213: 5116912808751929516
-    second: Heresy-terrain_and_doodads_50
+      213: 723777038381779747
+    second: Heresy_doodads_001_50
   - first:
-      213: -4471846290788655601
-    second: Heresy-terrain_and_doodads_51
+      213: -1737926536078122332
+    second: Heresy_doodads_001_51
   - first:
-      213: 7586769946721775276
-    second: Heresy-terrain_and_doodads_52
+      213: 8045749687555686635
+    second: Heresy_doodads_001_52
   - first:
-      213: 5083840131303432610
-    second: Heresy-terrain_and_doodads_53
+      213: 2158609363358068062
+    second: Heresy_doodads_001_53
   - first:
-      213: -8990899581612632
-    second: Heresy-terrain_and_doodads_54
+      213: 843453768984695998
+    second: Heresy_doodads_001_54
   - first:
-      213: -7624464322896311022
-    second: Heresy-terrain_and_doodads_55
+      213: -2762305711207049981
+    second: Heresy_doodads_001_55
   - first:
-      213: 272518815372009961
-    second: Heresy-terrain_and_doodads_56
+      213: -5687509447645538346
+    second: Heresy_doodads_001_56
   - first:
-      213: -6011910541614366877
-    second: Heresy-terrain_and_doodads_57
+      213: 1723614011414364887
+    second: Heresy_doodads_001_57
   - first:
-      213: -5147888966737414606
-    second: Heresy-terrain_and_doodads_58
+      213: 8398468844920829768
+    second: Heresy_doodads_001_58
   - first:
-      213: -3891028969756639758
-    second: Heresy-terrain_and_doodads_59
+      213: 3139489718999489901
+    second: Heresy_doodads_001_59
   - first:
-      213: -3777740734619625455
-    second: Heresy-terrain_and_doodads_60
+      213: -2149581164005283475
+    second: Heresy_doodads_001_60
   - first:
-      213: -172671602194553907
-    second: Heresy-terrain_and_doodads_61
-  - first:
-      213: -8164211724167662916
-    second: Heresy-terrain_and_doodads_62
-  - first:
-      213: -514372731692943082
-    second: Heresy-terrain_and_doodads_63
-  - first:
-      213: -4607969883924804220
-    second: Heresy-terrain_and_doodads_64
-  - first:
-      213: 7393555220323677064
-    second: Heresy-terrain_and_doodads_65
-  - first:
-      213: 5162828830391973403
-    second: Heresy-terrain_and_doodads_66
-  - first:
-      213: -18139862210465342
-    second: Heresy-terrain_and_doodads_67
-  - first:
-      213: 6734106603141953763
-    second: Heresy-terrain_and_doodads_68
-  - first:
-      213: -3557829891804859790
-    second: Heresy-terrain_and_doodads_69
-  - first:
-      213: 834873216253712403
-    second: Heresy-terrain_and_doodads_70
-  - first:
-      213: -6996072555249481516
-    second: Heresy-terrain_and_doodads_71
-  - first:
-      213: -7119896777565945044
-    second: Heresy-terrain_and_doodads_72
-  - first:
-      213: -5960540652470870217
-    second: Heresy-terrain_and_doodads_73
-  - first:
-      213: -1674690292662318651
-    second: Heresy-terrain_and_doodads_74
-  - first:
-      213: 7620690549577997820
-    second: Heresy-terrain_and_doodads_75
-  - first:
-      213: 5456670014657451785
-    second: Heresy-terrain_and_doodads_76
-  - first:
-      213: 2728150807348377038
-    second: Heresy-terrain_and_doodads_77
-  - first:
-      213: 3958479118080726990
-    second: Heresy-terrain_and_doodads_78
-  - first:
-      213: 5022209694549316168
-    second: Heresy-terrain_and_doodads_79
-  - first:
-      213: -8864878832590001581
-    second: Heresy-terrain_and_doodads_80
-  - first:
-      213: 565091741533217746
-    second: Heresy-terrain_and_doodads_81
-  - first:
-      213: 2047032384098172153
-    second: Heresy-terrain_and_doodads_82
-  - first:
-      213: 3564829614243655167
-    second: Heresy-terrain_and_doodads_83
-  - first:
-      213: 7131391289008093645
-    second: Heresy-terrain_and_doodads_84
-  - first:
-      213: -4890598653048566458
-    second: Heresy-terrain_and_doodads_85
-  - first:
-      213: -1717523193724293187
-    second: Heresy-terrain_and_doodads_86
-  - first:
-      213: 5709619753156775294
-    second: Heresy-terrain_and_doodads_87
-  - first:
-      213: -4175534723306646329
-    second: Heresy-terrain_and_doodads_88
-  - first:
-      213: -7884694482691008297
-    second: Heresy-terrain_and_doodads_89
-  - first:
-      213: -1273141424901290451
-    second: Heresy-terrain_and_doodads_90
-  - first:
-      213: 8710335053641485283
-    second: Heresy-terrain_and_doodads_91
-  - first:
-      213: -7553927924921339604
-    second: Heresy-terrain_and_doodads_92
-  - first:
-      213: -7743884713722806538
-    second: Heresy-terrain_and_doodads_93
-  - first:
-      213: -2792404323087437925
-    second: Heresy-terrain_and_doodads_94
-  - first:
-      213: 1435455976506067919
-    second: Heresy-terrain_and_doodads_95
-  - first:
-      213: -2505714350435933337
-    second: Heresy-terrain_and_doodads_96
-  - first:
-      213: -952158070651430336
-    second: Heresy-terrain_and_doodads_97
-  - first:
-      213: -6465703108064724823
-    second: Heresy-terrain_and_doodads_98
-  - first:
-      213: -3251353084244362672
-    second: Heresy-terrain_and_doodads_99
-  - first:
-      213: 8730022425412322137
-    second: Heresy-terrain_and_doodads_100
-  - first:
-      213: -3510520126728762896
-    second: Heresy-terrain_and_doodads_101
-  - first:
-      213: -8730782815799722126
-    second: Heresy-terrain_and_doodads_102
-  - first:
-      213: 9189346302583566802
-    second: Heresy-terrain_and_doodads_103
-  - first:
-      213: 987964309257789123
-    second: Heresy-terrain_and_doodads_104
-  - first:
-      213: 6415206684017556149
-    second: Heresy-terrain_and_doodads_105
-  - first:
-      213: 6846226622513508317
-    second: Heresy-terrain_and_doodads_106
-  - first:
-      213: 8169985140062963556
-    second: Heresy-terrain_and_doodads_107
-  - first:
-      213: -8587604464591548400
-    second: Heresy-terrain_and_doodads_108
-  - first:
-      213: -7818580372076584283
-    second: Heresy-terrain_and_doodads_109
-  - first:
-      213: -4081166109314300091
-    second: Heresy-terrain_and_doodads_110
-  - first:
-      213: 3532873268898536761
-    second: Heresy-terrain_and_doodads_111
-  - first:
-      213: 6825333677306421015
-    second: Heresy-terrain_and_doodads_112
-  - first:
-      213: -6809500841366662441
-    second: Heresy-terrain_and_doodads_113
-  - first:
-      213: -6577759861202557224
-    second: Heresy-terrain_and_doodads_114
-  - first:
-      213: 4910895978915717712
-    second: Heresy-terrain_and_doodads_115
-  - first:
-      213: -4846251471336491011
-    second: Heresy-terrain_and_doodads_116
-  - first:
-      213: -268447522826536958
-    second: Heresy-terrain_and_doodads_117
-  - first:
-      213: 5731153972983359594
-    second: Heresy-terrain_and_doodads_118
-  - first:
-      213: 4447475096301982603
-    second: Heresy-terrain_and_doodads_66
+      213: 5550012066887915345
+    second: Heresy_doodads_001_61
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -485,7 +311,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_0
+      name: Heresy_doodads_001_0
       rect:
         serializedVersion: 2
         x: 0
@@ -493,20 +319,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 32132136aeac6a440800000000000000
-      internalID: 4946864348746363171
+      spriteID: 1ae2b0ea5c7e43040800000000000000
+      internalID: 4626577553430884001
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_1
+      name: Heresy_doodads_001_1
       rect:
         serializedVersion: 2
         x: 32
@@ -514,20 +340,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf8a8fd6bd9f00c60800000000000000
-      internalID: 7782494876934383867
+      spriteID: ab9fb4abe61605b70800000000000000
+      internalID: 8885709193001826746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_2
+      name: Heresy_doodads_001_2
       rect:
         serializedVersion: 2
         x: 64
@@ -535,20 +361,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 843cb76b74472d320800000000000000
-      internalID: 2581253387789779784
+      spriteID: d42d82bad22e1a760800000000000000
+      internalID: 7467498342929977933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_3
+      name: Heresy_doodads_001_3
       rect:
         serializedVersion: 2
         x: 96
@@ -556,104 +382,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5147a58ad1660dca0800000000000000
-      internalID: -5994178826465545195
+      spriteID: 48960b35f33ee9f30800000000000000
+      internalID: 4584351331836258692
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e05136b8d474d6f90800000000000000
-      internalID: -6958827450840967922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc3a14f57bfee4860800000000000000
-      internalID: 7516208398984127439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 006c6e6ac54d0a2f0800000000000000
-      internalID: -963536825855064576
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 288
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06c9e47b3744c02a0800000000000000
-      internalID: -6769960876057387936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_9
+      name: Heresy_doodads_001_4
       rect:
         serializedVersion: 2
         x: 0
@@ -661,83 +403,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5f44c8946efd03b0800000000000000
-      internalID: -5544495858210025636
+      spriteID: 2a3ad70d40ed6c510800000000000000
+      internalID: 1569185632444326818
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_10
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd68e8231838faee0800000000000000
-      internalID: -1247633980836116771
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_11
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8757ca584ca555b0800000000000000
-      internalID: -5380204753063553139
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_12
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd851651396dbdff0800000000000000
-      internalID: -10178646931056417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_13
+      name: Heresy_doodads_001_5
       rect:
         serializedVersion: 2
         x: 128
@@ -745,62 +424,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6606a26b04d8f700800000000000000
-      internalID: 574442097854514799
+      spriteID: ba92ed62a185976e0800000000000000
+      internalID: -1839342103459649109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_14
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7a9e85f51c4e9330800000000000000
-      internalID: 3719493999452396156
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_15
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 256
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f26540030c4ac56d0800000000000000
-      internalID: -3000342106389326289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_16
+      name: Heresy_doodads_001_6
       rect:
         serializedVersion: 2
         x: 224
@@ -808,20 +445,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71845017dadc32e90800000000000000
-      internalID: -7051566446722856937
+      spriteID: 7ec52857fc58d8b90800000000000000
+      internalID: -7237981900038316825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_19
+      name: Heresy_doodads_001_7
       rect:
         serializedVersion: 2
         x: 0
@@ -829,20 +466,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 340c409832b2a7800800000000000000
-      internalID: 610848131084763203
+      spriteID: b7fd52e0ef79f54d0800000000000000
+      internalID: -3143626897466466437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_20
+      name: Heresy_doodads_001_8
       rect:
         serializedVersion: 2
         x: 32
@@ -850,20 +487,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92d435b8b34807910800000000000000
-      internalID: 1833110439615221033
+      spriteID: c213e18098a580370800000000000000
+      internalID: 8288974658768613676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_21
+      name: Heresy_doodads_001_9
       rect:
         serializedVersion: 2
         x: 64
@@ -871,20 +508,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 048415dff3d6b8210800000000000000
-      internalID: 1336281836045813824
+      spriteID: 849951a4b9d1eacb0800000000000000
+      internalID: -4850907195831379640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_22
+      name: Heresy_doodads_001_10
       rect:
         serializedVersion: 2
         x: 96
@@ -892,20 +529,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7adb8bed9fd3b76f0800000000000000
-      internalID: -685886374851068505
+      spriteID: 9a5c6b0c175a4bd90800000000000000
+      internalID: -7082854405963856471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_23
+      name: Heresy_doodads_001_11
       rect:
         serializedVersion: 2
         x: 128
@@ -913,20 +550,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1e02e4e4da72f3e0800000000000000
-      internalID: -2021418227944255972
+      spriteID: f3fa07c9adfa5dcd0800000000000000
+      internalID: -2533925861863674049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_24
+      name: Heresy_doodads_001_12
       rect:
         serializedVersion: 2
         x: 160
@@ -934,125 +571,125 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab2ae8911f834d980800000000000000
-      internalID: -8515118387283713350
+      spriteID: 78f35391e66832f10800000000000000
+      internalID: 2243784846788083591
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_25
+      name: Heresy_doodads_001_13
       rect:
         serializedVersion: 2
         x: 192
-        y: 224
+        y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a37864f484d6c99d0800000000000000
-      internalID: -2766215913777232070
+      spriteID: b4f484a54d77955e0800000000000000
+      internalID: -1920372012165345461
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_26
+      name: Heresy_doodads_001_14
       rect:
         serializedVersion: 2
         x: 224
-        y: 224
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1ed8115d1d2323580800000000000000
-      internalID: -8848954441025352223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_31
-      rect:
-        serializedVersion: 2
-        x: 64
         y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 473adec98385adb60800000000000000
-      internalID: 7771621107155444596
+      spriteID: 614719967d9950a70800000000000000
+      internalID: 8792602997978919958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_32
+      name: Heresy_doodads_001_15
       rect:
         serializedVersion: 2
-        x: 96
+        x: 256
         y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b3428a7fc98d07d0800000000000000
-      internalID: -2950550656651213901
+      spriteID: 67356e0c499b90330800000000000000
+      internalID: 3677674619267339126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_33
+      name: Heresy_doodads_001_16
       rect:
         serializedVersion: 2
-        x: 128
+        x: 288
         y: 192
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d5a140ac00c3f840800000000000000
-      internalID: 5256756350532298194
+      spriteID: ae42a46d7832fef60800000000000000
+      internalID: 8065704523966588138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_38
+      name: Heresy_doodads_001_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341c70b9bf2b5a680800000000000000
+      internalID: -8744386307762437821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_18
       rect:
         serializedVersion: 2
         x: 32
@@ -1060,20 +697,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a64e1c73fed2f570800000000000000
-      internalID: 8499100584142325413
+      spriteID: 4e597eb11bd9b4850800000000000000
+      internalID: 6362352282593891812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_39
+      name: Heresy_doodads_001_19
       rect:
         serializedVersion: 2
         x: 64
@@ -1081,20 +718,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 801d18bf733097260800000000000000
-      internalID: 7095706226876600584
+      spriteID: 3e84d7861c5bb3ae0800000000000000
+      internalID: -1568460202922129181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_40
+      name: Heresy_doodads_001_20
       rect:
         serializedVersion: 2
         x: 96
@@ -1102,20 +739,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 477e37888fe1fb110800000000000000
-      internalID: 1278774871986530164
+      spriteID: c98a3d833ee0ff070800000000000000
+      internalID: 8142243020382906524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_41
+      name: Heresy_doodads_001_21
       rect:
         serializedVersion: 2
         x: 128
@@ -1123,20 +760,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8957eec1a6e9fb380800000000000000
-      internalID: -8953263355600145000
+      spriteID: 3465cc762dede0d00800000000000000
+      internalID: 940934367432955459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_42
+      name: Heresy_doodads_001_22
       rect:
         serializedVersion: 2
         x: 160
@@ -1144,20 +781,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1842535969736a480800000000000000
-      internalID: -8888355694681185151
+      spriteID: 33353028746fe5db0800000000000000
+      internalID: -4801129365746003149
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_43
+      name: Heresy_doodads_001_23
       rect:
         serializedVersion: 2
         x: 192
@@ -1165,20 +802,41 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10590cb22ab2571d0800000000000000
-      internalID: -3353726371988728575
+      spriteID: f2180f2a96e1ca3f0800000000000000
+      internalID: -888301587444760273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_45
+      name: Heresy_doodads_001_24
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e298f4760a01e40800000000000000
+      internalID: 5625172300162215581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_25
       rect:
         serializedVersion: 2
         x: 256
@@ -1186,20 +844,41 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b29d05f7051d98d0800000000000000
-      internalID: -2838089066253282636
+      spriteID: d1b15e9fc0e60d020800000000000000
+      internalID: 2364510806380714781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_52
+      name: Heresy_doodads_001_26
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b66b8effdbac30d0800000000000000
+      internalID: -3441687036681296202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_27
       rect:
         serializedVersion: 2
         x: 160
@@ -1207,20 +886,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caee5f2f11f994960800000000000000
-      internalID: 7586769946721775276
+      spriteID: 3c767281fbbe52ca0800000000000000
+      internalID: -6042164119071135805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_53
+      name: Heresy_doodads_001_28
       rect:
         serializedVersion: 2
         x: 192
@@ -1228,20 +907,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a167310aad6d8640800000000000000
-      internalID: 5083840131303432610
+      spriteID: c8249dabe64cc7ea0800000000000000
+      internalID: -5873603834137722228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_55
+      name: Heresy_doodads_001_29
       rect:
         serializedVersion: 2
         x: 256
@@ -1249,20 +928,20 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21d402f2816703690800000000000000
-      internalID: -7624464322896311022
+      spriteID: c97db1ad9b8c96e10800000000000000
+      internalID: 2191503394246219676
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_56
+      name: Heresy_doodads_001_30
       rect:
         serializedVersion: 2
         x: 288
@@ -1270,308 +949,581 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e1ebd03b6e28c300800000000000000
-      internalID: 272518815372009961
+      spriteID: 3e3d9b7bc406e5d80800000000000000
+      internalID: -8260058783934721053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_36
+      name: Heresy_doodads_001_31
       rect:
         serializedVersion: 2
-        x: 262
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d20298745a95e320800000000000000
+      internalID: 2586643248584983248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_32
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb419642c2e8767c0800000000000000
+      internalID: -4078134617320123205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_33
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847a69ed3086fa0a0800000000000000
+      internalID: -6868156540888111288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_34
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3284e443dd639640800000000000000
+      internalID: 5085529158392775226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_35
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e704761c6f02b1b0800000000000000
+      internalID: -5642430426234222621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_36
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf60e09bf3abc9a0800000000000000
+      internalID: -6211690960164720677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_39
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 64
-        width: 51
-        height: 40
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61c6ca0db75bb1000800000000000000
-      internalID: 7799367757753366
+      spriteID: 232bc52ff3d06de70800000000000000
+      internalID: 9139507062095262258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_117
+      name: Heresy_doodads_001_40
       rect:
         serializedVersion: 2
-        x: 293
-        y: 288
-        width: 22
-        height: 12
+        x: 32
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20837197668464cf0800000000000000
-      internalID: -268447522826536958
+      spriteID: bdf4f17b56dda8810800000000000000
+      internalID: 1768469232630058971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_118
+      name: Heresy_doodads_001_41
       rect:
         serializedVersion: 2
-        x: 293
-        y: 303
-        width: 22
-        height: 14
+        x: 64
+        y: 64
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a68edb86c26298f40800000000000000
-      internalID: 5731153972983359594
+      spriteID: 8f02cb58e3db68a90800000000000000
+      internalID: -7311948868760100616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_66
+      name: Heresy_doodads_001_42
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378f4a05ebe2b5be0800000000000000
+      internalID: -1487543856984164237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_43
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc4e0311e0d345b0800000000000000
+      internalID: -5385231064299057927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_44
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8875bb39c99dbd560800000000000000
+      internalID: 7339699284247009160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_45
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d5f22354cda63b0800000000000000
+      internalID: -5518356203636302469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6677d9e28114a360800000000000000
+      internalID: 7179882959902045806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f7eb4656fff38b0800000000000000
+      internalID: -5170133036251054280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_50
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b8455b16f5b0a00800000000000000
+      internalID: 723777038381779747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_51
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2a65bf505a1e7e0800000000000000
+      internalID: -1737926536078122332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_52
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be0877e66be38af60800000000000000
+      internalID: 8045749687555686635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_53
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d2ac777cbe4fd10800000000000000
+      internalID: 2158609363358068062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb41cccebbc84bb00800000000000000
+      internalID: 843453768984695998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_55
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305987a47915aa9d0800000000000000
+      internalID: -2762305711207049981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7d8648a48e111b0800000000000000
+      internalID: -5687509447645538346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_57
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d24d30bfc18be710800000000000000
+      internalID: 1723614011414364887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heresy_doodads_001_58
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 96
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b83d97e490b98bd30800000000000000
-      internalID: 4447475096301982603
+      spriteID: 847f0bedaea5d8470800000000000000
+      internalID: 8398468844920829768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_67
+      name: Heresy_doodads_001_59
       rect:
         serializedVersion: 2
-        x: 295
-        y: 298
-        width: 4
-        height: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c1bba434ed8fbff0800000000000000
-      internalID: -18139862210465342
+      spriteID: d6d94f40445b19b20800000000000000
+      internalID: 3139489718999489901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_68
+      name: Heresy_doodads_001_60
       rect:
         serializedVersion: 2
-        x: 295
-        y: 296
-        width: 11
-        height: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e873e7d64a547d50800000000000000
-      internalID: 6734106603141953763
+      spriteID: d69289ff1572b22e0800000000000000
+      internalID: -2149581164005283475
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_69
+      name: Heresy_doodads_001_61
       rect:
         serializedVersion: 2
-        x: 305
-        y: 298
-        width: 8
-        height: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 27274b7409c00aec0800000000000000
-      internalID: -3557829891804859790
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_70
-      rect:
-        serializedVersion: 2
-        x: 311
-        y: 291
-        width: 2
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3185a4f44c0169b00800000000000000
-      internalID: 834873216253712403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_71
-      rect:
-        serializedVersion: 2
-        x: 306
-        y: 292
-        width: 2
-        height: 6
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d8ce79e315f8ee90800000000000000
-      internalID: -6996072555249481516
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_72
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 288
-        width: 13
-        height: 3
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c23cbb78a9b013d90800000000000000
-      internalID: -7119896777565945044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_73
-      rect:
-        serializedVersion: 2
-        x: 295
-        y: 288
-        width: 2
-        height: 8
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73fd23c5bd7e74da0800000000000000
-      internalID: -5960540652470870217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_76
-      rect:
-        serializedVersion: 2
-        x: 301
-        y: 293
-        width: 5
-        height: 3
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 907de28b77cf9bb40800000000000000
-      internalID: 5456670014657451785
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_77
-      rect:
-        serializedVersion: 2
-        x: 297
-        y: 291
-        width: 9
-        height: 2
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec5f1b574b65cd520800000000000000
-      internalID: 2728150807348377038
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Heresy-terrain_and_doodads_78
-      rect:
-        serializedVersion: 2
-        x: 308
-        y: 291
-        width: 2
-        height: 4
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ec7d004f8c75fe630800000000000000
-      internalID: 3958479118080726990
+      spriteID: 1575cf1d19a950d40800000000000000
+      internalID: 5550012066887915345
       vertices: []
       indices: 
       edges: []

@@ -24,3 +24,5 @@ MonoBehaviour:
   critRateBonus: 0
   critDamageBonus: 1.3
   energyCost: 0
+  structuralDamage: 5
+  impact: 0

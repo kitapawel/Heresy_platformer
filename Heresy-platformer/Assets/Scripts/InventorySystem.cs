@@ -11,6 +11,7 @@ public class InventorySystem : MonoBehaviour
 
     public Weapon equippedWeapon;
     public Armor equippedArmor;
+    public Tool equippedTool;
     public int projectileCount;
     public int baseInventorySpace = 3;
     public int inventorySpace;

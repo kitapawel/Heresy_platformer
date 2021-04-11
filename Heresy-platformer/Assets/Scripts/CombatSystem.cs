@@ -52,6 +52,8 @@ public class CombatSystem : MonoBehaviour
             float stabilityDamageToDeal = myInventorySystem.equippedWeapon.stabilityDamage; //TODO maybe spice this up a bit
             float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
+            float structuralDamageToDeal = myInventorySystem.equippedWeapon.structuralDamage;
+            float structuralImpact = myInventorySystem.equippedWeapon.impact;
 
             //Modify damage value depending on whether the attack was strong or weak
             if (attackMode == WEAK_ATTACK)
@@ -80,7 +82,54 @@ public class CombatSystem : MonoBehaviour
             if (hitTarget.GetComponentInParent<StructureSystem>())
             {
                 Debug.Log(hitTarget + " structural target was hit for " + damageToDeal + " dmg.");
-                hitTarget.GetComponentInParent<StructureSystem>().ProcessIncomingHit(damageToDeal);
+                hitTarget.GetComponentInParent<StructureSystem>().ProcessIncomingHit(structuralDamageToDeal, structuralImpact);
+            }
+        }
+    }
+
+    public void DealDamageTool (int attackMode) //used to attack with tools (due to the fact that animation events only take 1 parameter)
+    {
+        foreach (GameObject hitTarget in hitCollisionChecker.hitTargets)
+        {
+            //Assign basic values to damage calculation
+            GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
+            float damageToDeal = myInventorySystem.equippedTool.damage + damageBonus;
+            float stabilityDamageToDeal = myInventorySystem.equippedTool.stabilityDamage; //TODO maybe spice this up a bit
+            float appliedForce = myInventorySystem.equippedTool.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
+            float attackVector = myCharacterController.GetSpriteDirection();
+            float structuralDamageToDeal = myInventorySystem.equippedTool.structuralDamage;
+            float structuralImpact = myInventorySystem.equippedTool.impact;
+
+            //Modify damage value depending on whether the attack was strong or weak
+            if (attackMode == WEAK_ATTACK)
+            {
+                damageToDeal = damageToDeal * myCharacterStats.weakAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.weakAttackMultiplier;
+                appliedForce = appliedForce * myCharacterStats.weakAttackMultiplier;
+            }
+            else if (attackMode == STRONG_ATTACK)
+            {
+                damageToDeal = damageToDeal * myCharacterStats.strongAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.strongAttackMultiplier;
+                appliedForce = appliedForce * myCharacterStats.strongAttackMultiplier;
+            }
+            else
+            {
+                damageToDeal = damageToDeal * myCharacterStats.normalAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.normalAttackMultiplier;
+                appliedForce = appliedForce * myCharacterStats.normalAttackMultiplier;
+            }
+
+            //Send data to target
+            if (hitTarget.GetComponentInParent<HealthSystem>())
+            {
+                Debug.Log(hitTarget + " organic target was hit for " + damageToDeal + " dmg + " + stabilityDamageToDeal + " stability damage.");
+                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
+            }
+            if (hitTarget.GetComponentInParent<StructureSystem>())
+            {
+                Debug.Log(hitTarget + " structural target was hit for " + damageToDeal + " dmg.");
+                hitTarget.GetComponentInParent<StructureSystem>().ProcessIncomingHit(structuralDamageToDeal, structuralImpact);
             }
         }
     }

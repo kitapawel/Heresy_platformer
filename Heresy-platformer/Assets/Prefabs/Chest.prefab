@@ -345,7 +345,7 @@ SpriteRenderer:
   m_Size: {x: 0.1875, y: 0.09375}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &6130472194778939032
@@ -806,6 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a43b4e5e01efa45996eade6027c936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  structuralType: 3
   intactObject: {fileID: 4013702969282711112}
   destroyedObjectParts: {fileID: 4013702969022859910}
   maxStructurePoints: 50

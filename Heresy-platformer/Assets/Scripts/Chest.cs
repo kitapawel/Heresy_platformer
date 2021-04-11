@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class Chest : MonoBehaviour
 {
-
     [SerializeField] Sprite openState;
     [SerializeField] Sprite closedState;
     SpriteRenderer mySpriteRenderer;

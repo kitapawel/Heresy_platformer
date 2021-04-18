@@ -32,6 +32,7 @@ public class CharacterController : MonoBehaviour
 
     const int ACTOR_LAYER = 22;
     const int ACTORNONCOLLIDABLE_LAYER = 23;
+    const int DEAD_LAYER = 27;
 
     private void Awake()
     {
@@ -240,7 +241,9 @@ public class CharacterController : MonoBehaviour
         myAnimator.SetBool("isGrounded", true);//Dirty trick... stops falling animation when death occurs mid-air
         myAnimator.Play("Death");
         DisableChildComponents();
-        SetCollisionLayer(0);
+        Destroy(myHealthSystem);
+        gameObject.layer = DEAD_LAYER;
+        //SetCollisionLayer(0);
         canWalk = false;
         this.enabled = false;
     }

@@ -13,6 +13,8 @@ Actor - player and NPC. Don't collide with each other.
 ActorNonCollidable - Actors transfer to this layer temporarily while dodging, rolling, falling etc. Used to avoid: missiles, falling objects.
 Thrown - collides with Actor, not with ActorNotCollidable.
 Pickable - collides with: pickables, thrown.
+Dead - for bodies. To be included in the layer ignore list in AI script. This way the enemy AI will stop noticing corpses and focus on live targets.
+Interactable - for items like Trees, Ores, Chests, Support elements. Can be destroyed or interacted with, but do not obstruct walking.
 
 # Graphics
 -If camera view size at 32 pixels per unit, then use 768x432 canvas size for background/sky images. It is divisible by 8 and allows for some vertical camera movement.

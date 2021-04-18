@@ -63,6 +63,7 @@ public class StructureSystem : MonoBehaviour
 
     private void DestroyObject() //TODO remove this scropt from parent object once it is destroyed?
     {
+        mySoundSystem.PlayOnDestroySounds();
         if (structuralType == StructuralType.Container)
         {
             intactObject.SetActive(false);

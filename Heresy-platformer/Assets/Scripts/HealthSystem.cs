@@ -192,7 +192,6 @@ public class HealthSystem : MonoBehaviour{
             yield return new WaitForSeconds(1);
         }        
     }
-
     public void QuickEnergyRegen()
     {
         if (vitality >= 10 && energy < myCharacterStats.maxEnergy)//TODO parameterize

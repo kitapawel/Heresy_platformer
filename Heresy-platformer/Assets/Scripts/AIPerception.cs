@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class AIPerception : MonoBehaviour
 {
-    bool isPlayerInRange;
+    bool isTargetInRage;
 
-    public bool IsPlayerInRange()
+    public bool IsTargetInRange()
     {
-        if (isPlayerInRange)
+        if (isTargetInRage)
         {
             return true;
         } else
@@ -18,16 +18,17 @@ public class AIPerception : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        //TODO - check for faction alignment
+        if (collision.gameObject.GetComponent<HealthSystem>())
         {
-            isPlayerInRange = true;
+            isTargetInRage = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.GetComponent<HealthSystem>())
         {
-            isPlayerInRange = false;
+            isTargetInRage = false;
         }
     }
 }

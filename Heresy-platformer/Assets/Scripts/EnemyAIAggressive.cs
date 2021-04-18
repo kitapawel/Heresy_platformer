@@ -110,7 +110,7 @@ public class EnemyAIAggressive : ControlInput
 		{
 			if (eyeRaycastHit.transform.tag != "Player")
 			{
-				if (!myAIPerception.IsPlayerInRange())
+				if (!myAIPerception.IsTargetInRange())
 				{
 					target = null;
 				}

@@ -33,7 +33,7 @@ public class Chest : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = true;
             Debug.Log("Player is in range.");
@@ -41,7 +41,7 @@ public class Chest : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             isPlayerInRange = false;
             Debug.Log("Player is no longer in range.");
@@ -53,7 +53,8 @@ public class Chest : MonoBehaviour
         {
             isClosed = false;
             mySpriteRenderer.sprite = openState;
-        } else
+        }
+        else
         {
             isClosed = true;
             mySpriteRenderer.sprite = closedState;

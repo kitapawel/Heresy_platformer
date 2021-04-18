@@ -32,7 +32,7 @@ public class EnemyAI : ControlInput
 	[SerializeField]
 	float lookAroundInterval = 3f;
 	[SerializeField]
-	float reflexes = .2f;//TODO parameterize based on AI type
+	float reflexes = .8f;//TODO parameterize based on AI type
 
 	bool isTargetInMeleeRange;
 	bool turnAroundInProgess = false;
@@ -44,7 +44,7 @@ public class EnemyAI : ControlInput
 		myAnimator = GetComponent<Animator>();
 		myAIPerception = GetComponentInChildren<AIPerception>();
 		meleeTargetLayers = LayerMask.GetMask("Actor", "ActorNonCollidable");
-		meleeIgnoreTargetLayers = LayerMask.GetMask("Pickable");
+		meleeIgnoreTargetLayers = LayerMask.GetMask("Pickable", "Dead");
 		InitializeAIMode();
 	}
 	void Update()
@@ -162,7 +162,7 @@ public class EnemyAI : ControlInput
 		{
 			if (eyeRaycastHit.transform != target.transform)
             {
-				if (!myAIPerception.IsPlayerInRange())
+				if (!myAIPerception.IsTargetInRange())
 				{
 					target = null;
 				}
@@ -170,7 +170,8 @@ public class EnemyAI : ControlInput
 		}
 		if (eyeRaycastHit)
 		{
-			if (eyeRaycastHit.transform.CompareTag("Player"))
+			//if (eyeRaycastHit.transform.CompareTag("Player"))
+			if (eyeRaycastHit.transform.GetComponent<HealthSystem>())
 			{
 				target = eyeRaycastHit.transform.gameObject;
 			}
@@ -195,7 +196,8 @@ public class EnemyAI : ControlInput
 			RaycastHit2D backRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.left * myCharacterController.GetSpriteDirection(), 0.5f, ~meleeIgnoreTargetLayers);
 			if (backRaycastHit)
 			{
-				if (backRaycastHit.transform.CompareTag("Player"))
+				//if (backRaycastHit.transform.CompareTag("Player"))
+				if (backRaycastHit.transform.GetComponent<HealthSystem>())
 				{
 					StartCoroutine(TurnAroundAfterTimeElapsed(reflexes));
 				}

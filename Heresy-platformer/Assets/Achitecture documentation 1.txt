@@ -41,3 +41,8 @@ Combat and damage transmission works based on several systems.
 3. During an animation the DealDamage() method is called from CombatSystem. It checks the HitCollisionChecker's list, and if targets are found, deals damage to them.
 4. The DealDamage() method gathers important stats from the character and its inventory and passes it to the target's HealthSystem.
 5. Target's HealthSystem takes damage values and decides how to apply damage.
+
+# Stamina system
+Most actions cost stamina.
+-Running and generic action cost is defined in character stats.
+-Weapon/tool attack costs are defined by weapon stats and are reduced by a multiplier from character stats. The lower the multiplier the better.

@@ -16,6 +16,7 @@ public abstract class ControlInput : MonoBehaviour
     [HideInInspector] public bool advancedAttack;
     [HideInInspector] public bool combo;
     [HideInInspector] public bool finisher;
+    [HideInInspector] public bool useTool;
     [HideInInspector] public bool parry;
     [HideInInspector] public bool shiftPressed;
     [HideInInspector] public bool throwItem;
@@ -38,6 +39,7 @@ public abstract class ControlInput : MonoBehaviour
 		advancedAttack = false;
 		combo = false;
 		finisher = false;
+		useTool = false;
 		parry = false;
 		shiftPressed = false;
 		throwItem = false;

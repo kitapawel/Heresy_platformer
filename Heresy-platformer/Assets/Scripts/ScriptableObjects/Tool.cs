@@ -15,4 +15,16 @@ public class Tool : Item
 
     public float structuralDamage;
     public float impact; // flat value that goes throug structural armor
+
+    public float GetToolType()
+    {
+        float value = 0;
+        if (toolType == ToolType.Axe)
+            value = 0;
+        else if (toolType == ToolType.Pick)
+            value = 1;
+        else if(toolType == ToolType.Shovel)
+            value = 2;
+        return value;
+    }
 }

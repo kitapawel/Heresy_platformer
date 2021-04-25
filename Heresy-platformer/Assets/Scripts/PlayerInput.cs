@@ -61,6 +61,7 @@ public class PlayerInput : ControlInput
 		advancedAttack = advancedAttack || Input.GetMouseButtonDown(1);
 		combo = combo || Input.GetMouseButtonDown(2);
 		finisher = finisher || Input.GetKeyDown(KeyCode.R);
+		useTool = useTool || Input.GetKeyDown(KeyCode.F);
 		parry = parry || Input.GetKeyDown(KeyCode.Tab);
 		roll = roll || Input.GetKeyDown(KeyCode.Space);
 		climb = climb || Input.GetKeyDown(KeyCode.Z);

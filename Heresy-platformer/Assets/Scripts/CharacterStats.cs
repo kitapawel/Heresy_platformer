@@ -24,7 +24,7 @@ public class CharacterStats : MonoBehaviour
     public float energyRegenCost;
     public float healthRegenCost;
 
-    public float attackCost;
+    public float attackEfficiency; // multiplier of weapon/tool use cost
     public float actionCost;
     public float runCost;
 
@@ -67,7 +67,7 @@ public class CharacterStats : MonoBehaviour
         energyRegen = 1f;
         energyRegenCost = 0.1f;
 
-        attackCost = 5f;
+        attackEfficiency = 1f;
         actionCost = 5f;
         runCost = 1f;
 

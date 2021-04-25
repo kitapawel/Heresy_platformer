@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour
     Animator myAnimator;
     HealthSystem myHealthSystem;
     CharacterStats myCharacterStats;
+    InventorySystem myInventorySystem;
 
     [Header("Physical properties")]
 
@@ -46,6 +47,7 @@ public class CharacterController : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myHealthSystem = GetComponent<HealthSystem>();
         myCharacterStats = GetComponent<CharacterStats>();
+        myInventorySystem = GetComponent<InventorySystem>();
     }
 
     private void FixedUpdate()
@@ -132,38 +134,51 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded && canWalk)
         {
-            if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
+            if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
             {
                 myAnimator.SetTrigger("PrimaryAttack");
                 myAnimator.SetFloat("PrimaryAttackBlendValue", myCharacterStats.primaryAttackLevel);                
-                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
+                myHealthSystem.UseEnergy(GetWeaponStaminaCost());
             }
-            if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
+            if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
             {
                 myAnimator.SetTrigger("SecondaryAttack");
                 myAnimator.SetFloat("SecondaryAttackBlendValue", myCharacterStats.secondaryAttackLevel);
-                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
+                myHealthSystem.UseEnergy(GetWeaponStaminaCost());
             }
-            if (myInput.combo && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
+            if (myInput.combo && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
             {
                 myAnimator.SetTrigger("Combo");
                 //myAnimator.SetFloat("SecondaryAttackBlendValue", myCharacterStats.primaryAttackLevel);
-                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
+                myHealthSystem.UseEnergy(GetWeaponStaminaCost());
             }
-            if ((myInput.basicAttack|| myInput.advancedAttack||myInput.combo) && !myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
+            if ((myInput.basicAttack|| myInput.advancedAttack||myInput.combo) && !myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
             {
                 myAnimator.SetTrigger("AttackSlow");
                 myHealthSystem.UseEnergy(1f);
             }
-            if (myInput.parry && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackCost))
+            if (myInput.parry && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.attackEfficiency))
             {
                 myAnimator.SetTrigger("Parry");
-                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
+                myHealthSystem.UseEnergy(myCharacterStats.attackEfficiency);
             }
             if (myInput.finisher)
             {
                 myAnimator.SetTrigger("Finisher");
-                myHealthSystem.UseEnergy(myCharacterStats.attackCost);
+                myHealthSystem.UseEnergy(myCharacterStats.attackEfficiency);
+            }
+            if (myInput.useTool && myHealthSystem.CanUseEnergyBasedAction(GetToolStaminaCost()))
+            {
+                if (myInventorySystem.equippedTool != null)
+                {
+                    myAnimator.SetTrigger("Tool");
+                    myAnimator.SetFloat("ToolBlendValue", myInventorySystem.equippedTool.GetToolType());
+                    myHealthSystem.UseEnergy(myInventorySystem.equippedTool.energyCost * myCharacterStats.attackEfficiency);
+                } else
+                {
+                    Debug.Log("No tool equipped.");
+                }
+
             }
             if (myInput.throwItem && myHealthSystem.CanUseEnergyBasedAction(myCharacterStats.actionCost))
             {
@@ -172,6 +187,15 @@ public class CharacterController : MonoBehaviour
             }
         }
     }
+    private float GetWeaponStaminaCost()
+    {
+        return myInventorySystem.equippedWeapon.energyCost * myCharacterStats.attackEfficiency;
+    }
+    private float GetToolStaminaCost()
+    {
+        return myInventorySystem.equippedTool.energyCost * myCharacterStats.attackEfficiency;
+    }
+
     IEnumerator Climbing()
     {
         SetCanWalk(0);

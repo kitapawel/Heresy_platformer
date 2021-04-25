@@ -68,7 +68,18 @@ public class InventorySystem : MonoBehaviour
             PickItemToInventory(equippedArmor);
             RemoveItemFromInventory(scriptableObject as Item);
             equippedArmor = scriptableObject as Armor;
-        } else
+        }
+        else if (scriptableObject.GetType() == typeof(Tool))
+        {
+            //TODO cannot equip if more items would overflow inventory
+            if (equippedTool != null)
+            {
+                PickItemToInventory(equippedTool);
+            }
+            RemoveItemFromInventory(scriptableObject as Item);
+            equippedTool = scriptableObject as Tool;
+        }
+        else
         {
             if (items.Count <= inventorySpace)
             {

@@ -100,11 +100,17 @@ public class EnemyAI : ControlInput
 		if (target == null)
         {
 			aiState = AIState.Searching;
-        } else if (isTargetInMeleeRange)
+		}
+		else if (target && !IsTargetHostile())
+		{
+			aiState = AIState.Searching;
+		}
+		else if (isTargetInMeleeRange && IsTargetHostile())
         {
 			aiState = AIState.Fighting;
+			return;
 		}
-		else
+		else if (IsTargetHostile())
         {
 			aiState = AIState.Chasing;
         }
@@ -176,6 +182,14 @@ public class EnemyAI : ControlInput
 				target = eyeRaycastHit.transform.gameObject;
 			}
 		}
+	}
+	bool IsTargetHostile()
+    {
+		if (myCharacterStats.factionType == target.GetComponent<CharacterStats>().factionType){
+			return false;
+        } else
+		return true;
+
 	}
 	void IsTargetInMeleeRange()
 	{

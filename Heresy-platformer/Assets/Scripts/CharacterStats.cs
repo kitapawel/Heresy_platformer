@@ -7,6 +7,7 @@ public class CharacterStats : MonoBehaviour
 {
     [Header("General stats:")]
     public int level;
+    public FactionType factionType;
 
     [Header("Survivability stats:")]
     public float baseHealth;

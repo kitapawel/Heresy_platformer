@@ -114,9 +114,22 @@ public class InventorySystem : MonoBehaviour
     }
     public float GetDefenseValue()
     {
-        float defenseRandomValue = Mathf.Round(Random.Range(0f, equippedArmor.defense));
-        Debug.Log("InventorySystem.armor roll: " + defenseRandomValue);
-        return defenseRandomValue;
+        float defenseBaseValue;
+        if (equippedArmor.armorType == ArmorType.Light)
+        {
+            defenseBaseValue = 0f;
+        } else if (equippedArmor.armorType == ArmorType.Medium)
+        {
+            defenseBaseValue = 0.2f;
+        } else if (equippedArmor.armorType == ArmorType.Heavy)
+        {
+            defenseBaseValue = 0.4f;
+        } else
+        {
+            defenseBaseValue = 0;
+        }
+        float defenseFinalValue = Mathf.Clamp((defenseBaseValue + (equippedArmor.defense * 0.03f)), 0f, 0.8f);
+        return defenseFinalValue;
     }
     public float GetStabilityValue()
     {

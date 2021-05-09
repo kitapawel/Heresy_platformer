@@ -86,7 +86,7 @@ public class HealthSystem : MonoBehaviour{
         }
     }
 
-    public void ProcessIncomingHit(float incomingDamage, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker = null)
+    public void ProcessIncomingHit(float incomingDamage, float incomingPiercingDamage, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker = null)
     {
         CameraEffects.ScreenShakeAtHit();
         if (myCharacterController.isParrying)
@@ -103,7 +103,7 @@ public class HealthSystem : MonoBehaviour{
         {
             CheckHealthState();
             CheckStability();
-            TakeHealthDamage(incomingDamage);
+            TakeHealthDamage(incomingDamage, incomingPiercingDamage);
             TakeStabilityDamage(incomingStabilityDamage);
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
@@ -113,13 +113,15 @@ public class HealthSystem : MonoBehaviour{
             myBloodFX.Play();
         }
     }
-    private void TakeHealthDamage(float incomingDamage)
+    private void TakeHealthDamage(float incomingDamage, float incomingPiercingDamage)
     {
-        float finalDamageValue = incomingDamage - myInventorySystem.GetDefenseValue();
-        if (finalDamageValue < 1f)
+        float damageReduction = incomingDamage * myInventorySystem.GetDefenseValue();
+        float finalDamageValue = incomingDamage - damageReduction;
+        if (finalDamageValue < 0f)
         {
-            finalDamageValue = 1;
+            finalDamageValue = 0f;
         }
+        finalDamageValue += incomingPiercingDamage;
         healthPoints -= finalDamageValue;
         CheckHealthState();
         mySoundSystem.PlayPainSounds();

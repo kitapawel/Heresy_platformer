@@ -48,12 +48,13 @@ public class CombatSystem : MonoBehaviour
         {
             //Assign basic values to damage calculation
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
-            float damageToDeal = myInventorySystem.equippedWeapon.damage + damageBonus;
+            float damageToDeal = myInventorySystem.equippedWeapon.GetWeaponDamage() + damageBonus;
+            float piercingDamage = myInventorySystem.equippedWeapon.armorPenetration; //TODO maybe spice this up a bit
             float stabilityDamageToDeal = myInventorySystem.equippedWeapon.stabilityDamage; //TODO maybe spice this up a bit
             float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
             float structuralDamageToDeal = myInventorySystem.equippedWeapon.structuralDamage;
-            float structuralImpact = myInventorySystem.equippedWeapon.impact;
+            float structuralImpact = myInventorySystem.equippedWeapon.structuralPenetration;
 
             //Modify damage value depending on whether the attack was strong or weak
             if (attackMode == WEAK_ATTACK)
@@ -77,7 +78,7 @@ public class CombatSystem : MonoBehaviour
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {
                 Debug.Log(hitTarget + " organic target was hit for " + damageToDeal + " dmg + " +stabilityDamageToDeal + " stability damage.");
-                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
+                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, piercingDamage, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
             } 
             if (hitTarget.GetComponentInParent<StructureSystem>())
             {
@@ -93,12 +94,13 @@ public class CombatSystem : MonoBehaviour
         {
             //Assign basic values to damage calculation
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
-            float damageToDeal = myInventorySystem.equippedTool.damage + damageBonus;
+            float damageToDeal = myInventorySystem.equippedTool.GetToolDamage() + damageBonus;
+            float piercingDamage = myInventorySystem.equippedTool.armorPenetration + damageBonus;
             float stabilityDamageToDeal = myInventorySystem.equippedTool.stabilityDamage; //TODO maybe spice this up a bit
             float appliedForce = myInventorySystem.equippedTool.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
             float structuralDamageToDeal = myInventorySystem.equippedTool.structuralDamage;
-            float structuralImpact = myInventorySystem.equippedTool.impact;
+            float structuralImpact = myInventorySystem.equippedTool.structuralPenetration;
 
             //Modify damage value depending on whether the attack was strong or weak
             if (attackMode == WEAK_ATTACK)
@@ -124,7 +126,7 @@ public class CombatSystem : MonoBehaviour
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {
                 Debug.Log(hitTarget + " organic target was hit for " + damageToDeal + " dmg + " + stabilityDamageToDeal + " stability damage.");
-                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
+                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, piercingDamage, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
             }
             if (hitTarget.GetComponentInParent<StructureSystem>())
             {
@@ -171,7 +173,7 @@ public class CombatSystem : MonoBehaviour
             if (finishOffTarget.GetComponentInParent<HealthSystem>())
             {
                 Debug.Log(finishOffTarget + " organic target was hit for " + damageToDeal + " dmg + " + stabilityDamageToDeal + " stability damage.");
-                finishOffTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, stabilityDamageToDeal, appliedForce, attackVector);
+                finishOffTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, myInventorySystem.equippedWeapon.armorPenetration, stabilityDamageToDeal, appliedForce, attackVector);
             }
         }
     }

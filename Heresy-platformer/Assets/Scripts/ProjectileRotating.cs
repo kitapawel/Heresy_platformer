@@ -15,6 +15,8 @@ public class ProjectileRotating : MonoBehaviour
     [SerializeField]
     float damage;
     [SerializeField]
+    float piercingDamage;
+    [SerializeField]
     float stabilitydamage;
     [SerializeField]
     float force;
@@ -59,7 +61,7 @@ public class ProjectileRotating : MonoBehaviour
         {
             float attackVector = 1f * throwingEntity.GetComponent<CharacterController>().GetSpriteDirection();
             HealthSystem targetHealthSystem = target.GetComponent<HealthSystem>();
-            targetHealthSystem.ProcessIncomingHit(damage, stabilitydamage, force, attackVector);
+            targetHealthSystem.ProcessIncomingHit(damage, piercingDamage, stabilitydamage, force, attackVector);
         }
     }
 

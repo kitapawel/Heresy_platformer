@@ -17,9 +17,9 @@ MonoBehaviour:
   prefab: {fileID: 1459760042894036328, guid: a7fcd5cb7bf8bf443910769c1e7a67b3, type: 3}
   flavourText: 
   armorType: 2
-  defense: 25
-  stability: 10
-  poise: 25
-  weight: 10
+  defense: 0
+  stability: 0
+  poise: 0
+  weight: 1
   projectileSlots: 1
   inventorySlots: 1

@@ -57,7 +57,7 @@ public class CharacterStats : MonoBehaviour
     private void InitializeCharacter()
     {
         //TODO read stats from a save file
-        baseHealth = Mathf.Clamp(50, 1f, 100f); // TODO in the future, clamp the incoming values within allowed ranges, using Properties get/set
+        baseHealth = Mathf.Clamp(20, 1f, 100f); // TODO in the future, clamp the incoming values within allowed ranges, using Properties get/set
         maxHealth = baseHealth;
         healthRegen = 1f;
         healthRegenCost = 2f;

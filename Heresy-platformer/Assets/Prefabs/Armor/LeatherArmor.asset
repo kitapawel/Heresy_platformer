@@ -16,8 +16,8 @@ MonoBehaviour:
   icon: {fileID: 940934367432955459, guid: 38eab2a73f61fee4ba3f80829fcffefb, type: 3}
   prefab: {fileID: 1459760042894036328, guid: 823765e13a92ba141b5901ff53108075, type: 3}
   flavourText: 
-  armorType: 1
-  defense: 15
+  armorType: 2
+  defense: 0
   stability: 5
   poise: 10
   weight: 5

@@ -17,12 +17,13 @@ MonoBehaviour:
   prefab: {fileID: 1459760042894036328, guid: 14d3e96116e7e184da7dfe5b177df3dd, type: 3}
   flavourText: 
   toolType: 0
-  damage: 10
+  minDamage: 2
+  maxDamage: 10
   stabilityDamage: 5
-  force: 50
-  armorPenetration: 5
+  force: 70
+  armorPenetration: 3
   critRateBonus: 0
   critDamageBonus: 1.5
   energyCost: 20
-  structuralDamage: 5
-  impact: 5
+  structuralDamage: 3
+  structuralPenetration: 2

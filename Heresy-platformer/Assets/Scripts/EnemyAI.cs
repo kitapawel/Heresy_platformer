@@ -44,7 +44,7 @@ public class EnemyAI : ControlInput
 		myAnimator = GetComponent<Animator>();
 		myAIPerception = GetComponentInChildren<AIPerception>();
 		meleeTargetLayers = LayerMask.GetMask("Actor", "ActorNonCollidable");
-		meleeIgnoreTargetLayers = LayerMask.GetMask("Pickable", "Dead");
+		meleeIgnoreTargetLayers = LayerMask.GetMask("Pickable", "Dead", "Interactable");
 		InitializeAIMode();
 	}
 	void Update()
@@ -101,7 +101,7 @@ public class EnemyAI : ControlInput
         {
 			aiState = AIState.Searching;
 		}
-		else if (target && !IsTargetHostile())
+		else if (!IsTargetHostile())
 		{
 			aiState = AIState.Searching;
 		}
@@ -140,7 +140,7 @@ public class EnemyAI : ControlInput
 
 	void LookAround()
 	{
-		if (myAnimator.GetBool("isFallen") == false && !target)
+		if (myAnimator.GetBool("isFallen") == false)
 		{
 			if (lookAroundInterval <= 0)
 			{
@@ -176,8 +176,8 @@ public class EnemyAI : ControlInput
 		}
 		if (eyeRaycastHit)
 		{
-			//if (eyeRaycastHit.transform.CompareTag("Player"))
-			if (eyeRaycastHit.transform.GetComponent<HealthSystem>())
+			//if (eyeRaycastHit.transform.GetComponent<HealthSystem>() && IsTargetHostile())
+			if (eyeRaycastHit.transform.GetComponent<CharacterStats>().factionType != myCharacterStats.factionType)
 			{
 				target = eyeRaycastHit.transform.gameObject;
 			}
@@ -187,8 +187,11 @@ public class EnemyAI : ControlInput
     {
 		if (myCharacterStats.factionType == target.GetComponent<CharacterStats>().factionType){
 			return false;
-        } else
-		return true;
+        }
+        else
+        {
+			return true;
+		}
 
 	}
 	void IsTargetInMeleeRange()
@@ -209,9 +212,9 @@ public class EnemyAI : ControlInput
         {
 			RaycastHit2D backRaycastHit = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y + 0.85f), Vector2.left * myCharacterController.GetSpriteDirection(), 0.5f, ~meleeIgnoreTargetLayers);
 			if (backRaycastHit)
-			{
-				//if (backRaycastHit.transform.CompareTag("Player"))
-				if (backRaycastHit.transform.GetComponent<HealthSystem>())
+			{				
+				//if (backRaycastHit.transform.GetComponent<HealthSystem>())
+				if (backRaycastHit.transform.GetComponent<CharacterStats>().factionType != myCharacterStats.factionType)
 				{
 					StartCoroutine(TurnAroundAfterTimeElapsed(reflexes));
 				}
@@ -225,7 +228,6 @@ public class EnemyAI : ControlInput
 		myCharacterController.LookTheOtherWay();
 		turnAroundInProgess = false;		
 	}
-
 	void ChaseTarget()
 	{
 		if (IsTargetToTheRight())//(transform.position.x < target.transform.position.x)

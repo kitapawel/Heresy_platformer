@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Com.LuisPedroFonseca.ProCamera2D;
 
 public class HealthSystem : MonoBehaviour{
 
@@ -88,7 +89,7 @@ public class HealthSystem : MonoBehaviour{
 
     public void ProcessIncomingHit(float incomingDamage, float incomingPiercingDamage, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker = null)
     {
-        CameraEffects.ScreenShakeAtHit();
+        ProCamera2DShake.Instance.Shake("PlayerHit");
         if (myCharacterController.isParrying)
         {
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);

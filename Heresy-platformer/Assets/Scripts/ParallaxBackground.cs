@@ -17,7 +17,7 @@ public class ParallaxBackground : MonoBehaviour
         bckgrImageLength = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float offsetRelativeToCamera = myCamera.transform.position.x * (1 - parallaxEffectAmount);
         float dist = myCamera.transform.position.x * parallaxEffectAmount;

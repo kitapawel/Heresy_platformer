@@ -166,7 +166,7 @@ public class HealthSystem : MonoBehaviour{
             return true;
         } else
         {
-            Debug.LogError("Tried to use ability that costs " + energyCost + 
+            Debug.LogWarning("Tried to use ability that costs " + energyCost + 
                 " but only the following number of energy points left: " + energy);
             return false;
         }

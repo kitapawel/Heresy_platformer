@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: RustySaber
   m_EditorClassIdentifier: 
   prefabName: Rusty Saber
-  icon: {fileID: 5085529158392775226, guid: 38eab2a73f61fee4ba3f80829fcffefb, type: 3}
+  icon: {fileID: -7849697273075547117, guid: 70d61780237e8ad42962e72f2227842c, type: 3}
   prefab: {fileID: 1459760042894036328, guid: 2632c92f570f62140abb9a18afdc3c50, type: 3}
   flavourText: 
   weaponType: 0
   minDamage: 3
   maxDamage: 5
   stabilityDamage: 1
-  force: 30
+  force: 60
   armorPenetration: 1
   critRateBonus: 0
   critDamageBonus: 1.3

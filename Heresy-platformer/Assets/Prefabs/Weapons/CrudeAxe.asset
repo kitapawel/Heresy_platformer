@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: CrudeAxe
   m_EditorClassIdentifier: 
   prefabName: Crude Axe
-  icon: {fileID: 7339699284247009160, guid: 38eab2a73f61fee4ba3f80829fcffefb, type: 3}
+  icon: {fileID: -7436813304462936719, guid: 70d61780237e8ad42962e72f2227842c, type: 3}
   prefab: {fileID: 1459760042894036328, guid: 14d3e96116e7e184da7dfe5b177df3dd, type: 3}
   flavourText: 
   toolType: 0
   minDamage: 2
   maxDamage: 10
   stabilityDamage: 5
-  force: 70
+  force: 150
   armorPenetration: 3
   critRateBonus: 0
   critDamageBonus: 1.5

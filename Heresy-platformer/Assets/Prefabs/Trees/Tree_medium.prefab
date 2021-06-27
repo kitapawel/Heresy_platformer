@@ -150,9 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a43b4e5e01efa45996eade6027c936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structuralType: 0
+  structuralType: 5
   intactObject: {fileID: 0}
   destroyedObjectParts: {fileID: 0}
+  intactSprite: {fileID: 0}
+  destroyedSprite: {fileID: 0}
   maxStructurePoints: 10
   structurePoints: 10
   rigidity: 0

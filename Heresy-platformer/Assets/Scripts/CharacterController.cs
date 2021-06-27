@@ -279,7 +279,12 @@ public class CharacterController : MonoBehaviour
         {
             var child = transform.GetChild(i).gameObject;
             if (child != null)
-                child.SetActive(false);
+            {
+                if (!child.GetComponent<ParticleSystem>())
+                {
+                    child.SetActive(false);
+                }
+            }                
         }
         myInput.enabled = false;
     }

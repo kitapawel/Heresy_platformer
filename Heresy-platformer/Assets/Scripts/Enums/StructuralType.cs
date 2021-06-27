@@ -1,4 +1,4 @@
 ﻿public enum StructuralType
 {
-	Tree, Rock, Building, Container
+	Building, Container, Door, DoorToAnotherLocation, Rock, Tree 
 }

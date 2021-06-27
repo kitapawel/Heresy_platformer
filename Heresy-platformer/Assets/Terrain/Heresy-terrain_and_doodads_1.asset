@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Heresy-terrain_and_doodads_1
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 7782494876934383867, guid: 2c73f847c764aac44b78e2b4e3284bb9,
+  m_Sprite: {fileID: -5519051278557835307, guid: 6b4c841f6cfd2fe4cb234a36e51a3e17,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:

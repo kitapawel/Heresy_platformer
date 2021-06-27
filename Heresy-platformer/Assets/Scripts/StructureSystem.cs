@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SoundSystemForInanimateObjects))]
+//[RequireComponent(typeof(SoundSystemForInanimateObjects))]
 public class StructureSystem : MonoBehaviour
 {
     public StructuralType structuralType;
@@ -14,18 +14,26 @@ public class StructureSystem : MonoBehaviour
     [SerializeField] GameObject intactObject; // used when intactobject is replaced by destroyed objects
     [SerializeField] GameObject destroyedObjectParts; // parent object under which child objects for destroyed parts should be put
 
+    [SerializeField] Sprite intactSprite; // used when sprite is replaced with another sprite on destroy
+    [SerializeField] Sprite destroyedSprite;
+
     [SerializeField]
-    private float maxStructurePoints = 50;
+    private float maxStructurePoints = 2;
     [SerializeField]
-    private float structurePoints = 50;
+    private float structurePoints = 2;
     [SerializeField]
-    private float rigidity = 0;
+    private float rigidity = 1;
 
 
     void Start()
     {
         myRigidbody2D = GetComponent<Rigidbody2D>();
-        mySoundSystem = GetComponent<SoundSystemForInanimateObjects>();
+        mySoundSystem = GetComponentInParent<SoundSystemForInanimateObjects>(); // needs a soundsystemforinanimateobjects on gameobject or parent
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
+        if (mySoundSystem == null)
+        {
+            Debug.LogError("No soundsystem for " + this);
+        }
 
         if (structuralType == StructuralType.Container)
         {
@@ -72,14 +80,21 @@ public class StructureSystem : MonoBehaviour
         else if (structuralType == StructuralType.Tree)
         {
             myRigidbody2D.isKinematic = false;
+            //TODO add gathering component >> enables resource gathering OR make gathering part of structure system
+            //TODO remove this structure system
+        }
+        else if (structuralType == StructuralType.DoorToAnotherLocation)
+        {
+            GetComponentInParent<MapLocation>().OpenDoor();
         }
         else if (structuralType == StructuralType.Building)
         {
 
         }
-        else if (structuralType == StructuralType.Rock)
+        else if (structuralType == StructuralType.Rock || structuralType == StructuralType.Door)
         {
- 
+            mySpriteRenderer.sprite = destroyedSprite;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
 
 

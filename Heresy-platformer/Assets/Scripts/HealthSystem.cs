@@ -87,7 +87,7 @@ public class HealthSystem : MonoBehaviour{
         }
     }
 
-    public void ProcessIncomingHit(float incomingDamage, float incomingPiercingDamage, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker = null)
+    public void ProcessIncomingHit(float incomingDamage, float incomingArmorPenetration, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker = null)
     {
         ProCamera2DShake.Instance.Shake("PlayerHit");
         if (myCharacterController.isParrying)
@@ -104,7 +104,7 @@ public class HealthSystem : MonoBehaviour{
         {
             CheckHealthState();
             CheckStability();
-            TakeHealthDamage(incomingDamage, incomingPiercingDamage);
+            TakeHealthDamage(incomingDamage, incomingArmorPenetration);
             TakeStabilityDamage(incomingStabilityDamage);
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
@@ -116,13 +116,15 @@ public class HealthSystem : MonoBehaviour{
     }
     private void TakeHealthDamage(float incomingDamage, float incomingPiercingDamage)
     {
-        float damageReduction = incomingDamage * myInventorySystem.GetDefenseValue();
-        float finalDamageValue = incomingDamage - damageReduction;
+
+        float damageReduction = incomingPiercingDamage / myInventorySystem.GetDefenseValue();
+        float finalDamageValue = incomingDamage * damageReduction;
+        Debug.Log("Incoming dmg: " + incomingDamage + ", Armor Pen: " + incomingPiercingDamage + ", Defense: " + myInventorySystem.GetDefenseValue());
+        Debug.Log("Dmg reduction: " + damageReduction + ", Final damage: " + finalDamageValue);
         if (finalDamageValue < 0f)
         {
             finalDamageValue = 0f;
         }
-        finalDamageValue += incomingPiercingDamage;
         healthPoints -= finalDamageValue;
         CheckHealthState();
         mySoundSystem.PlayPainSounds();
@@ -132,7 +134,7 @@ public class HealthSystem : MonoBehaviour{
         float finalDamageValue = incomingStabilityDamage - myInventorySystem.GetStabilityValue();
         if (finalDamageValue < 1f)
         {
-            finalDamageValue = 1;
+            finalDamageValue = 1f;
         }
         if (energy < minEnergy)
         {
@@ -162,7 +164,6 @@ public class HealthSystem : MonoBehaviour{
     {
         if (energyCost <= energy)
         {
-            Debug.Log("Enough energy to use skill.");
             return true;
         } else
         {
@@ -174,7 +175,6 @@ public class HealthSystem : MonoBehaviour{
     public void UseEnergy(float energyCost)
     {
         energy -= energyCost;
-        Debug.Log("Used energy");
     }
 
     IEnumerator RegenerateEnergy()

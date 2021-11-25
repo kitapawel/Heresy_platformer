@@ -10,7 +10,6 @@ public class CombatSystem : MonoBehaviour
     CharacterStats myCharacterStats;
     InventorySystem myInventorySystem;
 
-
     HitCollisionChecker hitCollisionChecker;
     InteractionChecker interactionChecker;
     public float damageBonus;
@@ -49,7 +48,7 @@ public class CombatSystem : MonoBehaviour
             //Assign basic values to damage calculation
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
             float damageToDeal = myInventorySystem.equippedWeapon.GetWeaponDamage() + damageBonus;
-            float piercingDamage = myInventorySystem.equippedWeapon.armorPenetration; //TODO maybe spice this up a bit
+            float armorPiercing = myInventorySystem.equippedWeapon.armorPenetration + 10f;
             float stabilityDamageToDeal = myInventorySystem.equippedWeapon.stabilityDamage; //TODO maybe spice this up a bit
             float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
@@ -76,13 +75,11 @@ public class CombatSystem : MonoBehaviour
 
             //Send data to target
             if (hitTarget.GetComponentInParent<HealthSystem>())
-            {
-                Debug.Log(hitTarget + " organic target was hit for " + damageToDeal + " dmg + " +stabilityDamageToDeal + " stability damage.");
-                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, piercingDamage, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
+            {                
+                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, armorPiercing, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
             } 
             if (hitTarget.GetComponentInParent<StructureSystem>())
             {
-                Debug.Log(hitTarget + " structural target was hit for " + damageToDeal + " dmg.");
                 hitTarget.GetComponentInParent<StructureSystem>().ProcessIncomingHit(structuralDamageToDeal, structuralImpact);
             }
         }

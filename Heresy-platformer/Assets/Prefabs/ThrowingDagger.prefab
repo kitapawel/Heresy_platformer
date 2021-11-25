@@ -154,6 +154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb80878462b81eb42be27329b4c0f513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  throwingEntity: {fileID: 0}
   damage: 2
+  piercingDamage: 0
   stabilitydamage: 25
-  force: 333
+  force: 50

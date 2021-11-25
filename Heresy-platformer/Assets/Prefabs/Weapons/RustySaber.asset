@@ -17,8 +17,8 @@ MonoBehaviour:
   prefab: {fileID: 1459760042894036328, guid: 2632c92f570f62140abb9a18afdc3c50, type: 3}
   flavourText: 
   weaponType: 0
-  minDamage: 3
-  maxDamage: 5
+  minDamage: 10
+  maxDamage: 10
   stabilityDamage: 1
   force: 60
   armorPenetration: 1

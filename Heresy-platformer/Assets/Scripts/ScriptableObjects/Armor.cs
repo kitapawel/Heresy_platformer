@@ -3,9 +3,9 @@
 [CreateAssetMenu(fileName = "NewArmor", menuName = "ScriptableObjects/Armor", order = 2)]
 public class Armor : Item
 {
-    public ArmorType armorType; // light 0, medium 0.2, heavy 0.4
+    public ArmorType armorType; // light 10, medium 20, heavy 30
 
-    public float defense; // 0.03 for each point of defense
+    public float defense; // 1 for each point of defense
     public float stability; // reduces stability damage
     public float poise; // reduces force applied by hit
     public float weight; // impact on user's movement

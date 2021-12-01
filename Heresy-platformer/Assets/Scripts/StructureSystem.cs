@@ -22,7 +22,7 @@ public class StructureSystem : MonoBehaviour
     [SerializeField]
     private float structurePoints = 2;
     [SerializeField]
-    private float rigidity = 1;
+    private float hardness = 5;
 
 
     void Start()
@@ -52,15 +52,16 @@ public class StructureSystem : MonoBehaviour
         }
     }
 
-    public void ProcessIncomingHit(float incomingDamage, float impact)
+    public void ProcessIncomingHit(float incomingDamage)
     {
         CheckStructureState();
-        float damageReduction = incomingDamage - rigidity;
-        if (damageReduction < 0)
+        float damageReduction = Mathf.Round(Random.Range(0f, hardness)); ;
+        float damageToDeal = (incomingDamage - damageReduction);
+        if (damageToDeal < 0f)
         {
-            damageReduction = 0;
+            damageToDeal = 0f;
         }
-        TakeDamage(damageReduction + impact);
+        TakeDamage(damageToDeal);
     }
     private void TakeDamage(float incomingDamage)
     {

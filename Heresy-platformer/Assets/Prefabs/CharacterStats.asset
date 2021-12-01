@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b3fd3c01e813140872643793ab0b8a, type: 3}
+  m_Name: CharacterStats
+  m_EditorClassIdentifier: 
+  level: 0
+  factionType: 0
+  baseHealth: 50
+  baseEnergy: 50
+  baseVitality: 100
+  healthRegen: 1
+  healthRegenCost: 2
+  energyRegen: 1
+  energyRegenCost: 0.1
+  attackEfficiency: 1
+  actionCost: 5
+  runCost: 1
+  baseDamageBonus: 1
+  baseCritRate: 0.05
+  baseCritBonus: 1.1
+  weakAttackMultiplier: 0.8
+  normalAttackMultiplier: 1
+  strongAttackMultiplier: 1.2
+  primaryAttackLevel: 0
+  secondaryAttackLevel: 0
+  defaultAnimatorOverrideController: {fileID: 22100000, guid: 2e4869fe84ac23b478fac0cd0d7c0461,
+    type: 2}

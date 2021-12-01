@@ -5,6 +5,8 @@ using UnityEngine;
 [DefaultExecutionOrder(-100)]
 public class EnemyAI : ControlInput
 {
+	[SerializeField] 
+	CharacterStats characterStats;
 	[SerializeField]
 	AIState aiState = AIState.Searching;
 	[SerializeField]
@@ -13,7 +15,7 @@ public class EnemyAI : ControlInput
 	CharacterController myCharacterController;
 	Animator myAnimator;
 	AIPerception myAIPerception;
-	CharacterStats myCharacterStats;
+
 
 	public LayerMask meleeTargetLayers;
 	public LayerMask meleeIgnoreTargetLayers;
@@ -40,7 +42,6 @@ public class EnemyAI : ControlInput
 	void Start()
 	{
 		myCharacterController = GetComponent<CharacterController>();
-		myCharacterStats = GetComponent<CharacterStats>();
 		myAnimator = GetComponent<Animator>();
 		myAIPerception = GetComponentInChildren<AIPerception>();
 		meleeTargetLayers = LayerMask.GetMask("Actor", "ActorNonCollidable");
@@ -65,33 +66,33 @@ public class EnemyAI : ControlInput
     {
 		if (aiType == AIType.Basic)
         {
-			if (myCharacterStats.level == 1)
+			if (characterStats.level == 1)
             {
-				myCharacterStats.primaryAttackLevel = 0;
-				myCharacterStats.secondaryAttackLevel = 0;
-			} else if (myCharacterStats.level == 2)
+				characterStats.primaryAttackLevel = 0;
+				characterStats.secondaryAttackLevel = 0;
+			} else if (characterStats.level == 2)
             {
-				myCharacterStats.primaryAttackLevel = 1;
-				myCharacterStats.secondaryAttackLevel = 1;
-			} else if (myCharacterStats.level == 3)
+				characterStats.primaryAttackLevel = 1;
+				characterStats.secondaryAttackLevel = 1;
+			} else if (characterStats.level == 3)
             {
-				myCharacterStats.primaryAttackLevel = 2;
-				myCharacterStats.secondaryAttackLevel = 2;
+				characterStats.primaryAttackLevel = 2;
+				characterStats.secondaryAttackLevel = 2;
 			}
 		} else if (aiType == AIType.Aggressive)
         {	
-				myCharacterStats.primaryAttackLevel = RandomAttackLevelValue();
-				myCharacterStats.secondaryAttackLevel = RandomAttackLevelValue();
+				characterStats.primaryAttackLevel = RandomAttackLevelValue();
+				characterStats.secondaryAttackLevel = RandomAttackLevelValue();
 		} else
         {
-			myCharacterStats.primaryAttackLevel = 0;
-			myCharacterStats.secondaryAttackLevel = 0;
+			characterStats.primaryAttackLevel = 0;
+			characterStats.secondaryAttackLevel = 0;
 		}
     }
 
 	private float RandomAttackLevelValue()
     {
-		int result = Random.Range(0, myCharacterStats.level + 2);
+		int result = Random.Range(0, characterStats.level + 2);
 		return result;
     }
 
@@ -177,7 +178,7 @@ public class EnemyAI : ControlInput
 		if (eyeRaycastHit)
 		{
 			//if (eyeRaycastHit.transform.GetComponent<HealthSystem>() && IsTargetHostile())
-			if (eyeRaycastHit.transform.GetComponent<CharacterStats>().factionType != myCharacterStats.factionType)
+			if (eyeRaycastHit.transform.GetComponent<CombatSystem>().GetCurrentFactionType() != GetComponent<CombatSystem>().GetCurrentFactionType())
 			{
 				target = eyeRaycastHit.transform.gameObject;
 			}
@@ -185,7 +186,7 @@ public class EnemyAI : ControlInput
 	}
 	bool IsTargetHostile()
     {
-		if (myCharacterStats.factionType == target.GetComponent<CharacterStats>().factionType){
+		if (GetComponent<CombatSystem>().GetCurrentFactionType() == target.GetComponent<CombatSystem>().GetCurrentFactionType()){
 			return false;
         }
         else
@@ -214,7 +215,7 @@ public class EnemyAI : ControlInput
 			if (backRaycastHit)
 			{				
 				//if (backRaycastHit.transform.GetComponent<HealthSystem>())
-				if (backRaycastHit.transform.GetComponent<CharacterStats>().factionType != myCharacterStats.factionType)
+				if (backRaycastHit.transform.GetComponent<CombatSystem>().GetCurrentFactionType() != GetComponent<CombatSystem>().GetCurrentFactionType())
 				{
 					StartCoroutine(TurnAroundAfterTimeElapsed(reflexes));
 				}

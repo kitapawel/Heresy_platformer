@@ -5,8 +5,7 @@ public class Tool : Item
 {
     public ToolType toolType;
 
-    public float minDamage;
-    public float maxDamage;
+    public float damage;
     public float stabilityDamage;
     public float force;
     public float armorPenetration; // flat value that goes throug organic armor
@@ -15,14 +14,7 @@ public class Tool : Item
     public float energyCost;
 
     public float structuralDamage;
-    public float structuralPenetration; // flat value that goes throug structural armor
 
-    public float GetToolDamage()
-    {
-        float toolDamage = Mathf.Round(Random.Range(minDamage, maxDamage));
-
-        return toolDamage;
-    }
     public float GetToolType()
     {
         float value = 0;

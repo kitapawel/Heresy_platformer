@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &243495328
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243495329}
+  m_Layer: 22
+  m_Name: ThrowStartingPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243495329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243495328}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.5, y: 0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4214025809544596525}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4214025809228539732
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,8 +357,8 @@ GameObject:
   - component: {fileID: 4214025809473733242}
   - component: {fileID: 4214025809473733241}
   - component: {fileID: 4214025809473733240}
-  m_Layer: 22
-  m_Name: HitCollisionChecker
+  m_Layer: 30
+  m_Name: HitChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,7 +372,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4214025809473733243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.698, y: 0.582, z: 0}
+  m_LocalPosition: {x: 0.7, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4214025809544596525}
@@ -391,11 +421,12 @@ GameObject:
   - component: {fileID: 4214025809544596520}
   - component: {fileID: 4214025809544596521}
   - component: {fileID: 4214025809544596503}
-  - component: {fileID: 1481264873065702109}
   - component: {fileID: 4214025809544596523}
   - component: {fileID: 4214025809544596502}
   - component: {fileID: 4214025809544596501}
   - component: {fileID: 4214025809544596500}
+  - component: {fileID: 16433358}
+  - component: {fileID: 16433369}
   m_Layer: 22
   m_Name: Player 1
   m_TagString: Player
@@ -419,6 +450,7 @@ Transform:
   - {fileID: 4214025809473733242}
   - {fileID: 4214025810664467638}
   - {fileID: 4214025810869086684}
+  - {fileID: 243495329}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -498,7 +530,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -9105475249740611915, guid: c8bb66c6696bed040b347733b75e17ac,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -521,7 +553,7 @@ Animator:
   m_GameObject: {fileID: 4214025809544596526}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bbbbfbafc2835954fa82e2bec92793eb, type: 2}
+  m_Controller: {fileID: 22100000, guid: 2e4869fe84ac23b478fac0cd0d7c0461, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -549,37 +581,17 @@ MonoBehaviour:
   climb: 0
   basicAttack: 0
   advancedAttack: 0
+  combo: 0
+  finisher: 0
+  useTool: 0
   parry: 0
   shiftPressed: 0
   throwItem: 0
-  normalCursor: {fileID: 0}
-  useCursor: {fileID: 0}
+  energyBoost: 0
+  normalCursor: {fileID: 2800000, guid: dac0e9e8fdad0124fb90d9dd44c36eac, type: 3}
+  useCursor: {fileID: 2800000, guid: bd0492b676dba0c48b6e665e8e2b1cfb, type: 3}
   cursorHotSpot: {x: 0, y: 0}
   isInCombatMode: 1
---- !u!114 &1481264873065702109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4214025809544596526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83b3fd3c01e813140872643793ab0b8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseHealth: 0
-  baseEnergy: 0
-  baseStability: 0
-  minStability: 0
-  currentStability: 0
-  baseVitality: 0
-  baseDamageBonus: 0
-  currentDamageBonus: 0
-  baseCritRate: 0
-  currentCritRate: 0
-  baseCritBonus: 0
-  currentCritBonus: 0
 --- !u!114 &4214025809544596523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -592,7 +604,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c083a4734dc914ea78822c40af8a08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterStats: {fileID: 11400000, guid: 8f77904a8eab3ad4da1db92ded69273e, type: 2}
   isAlive: 1
+  canClimb: 0
   isParrying: 0
   moveSpeed: 1.8
   runSpeed: 3.6
@@ -611,10 +625,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87d45ef926ce644391737008609f766, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterStats: {fileID: 11400000, guid: 8f77904a8eab3ad4da1db92ded69273e, type: 2}
   damageBonus: 0
   critRate: 0
-  critDamage: 0
-  thrownStartingPoint: {fileID: 0}
+  critDamageBonus: 0
+  thrownStartingPoint: {fileID: 243495328}
 --- !u!114 &4214025809544596501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,13 +642,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81759e01eb5567a409e2d6c89ed893bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 0
-  healthPoints: 0
+  characterStats: {fileID: 11400000, guid: 8f77904a8eab3ad4da1db92ded69273e, type: 2}
+  currentHealth: 0
+  maxHealth: 0
   maxEnergy: 0
-  energy: 0
-  minStability: 0
-  maxStability: 0
-  stability: 0
+  currentEnergy: 0
+  maxVitality: 0
+  currentVitality: 0
+  healthRegen: 0
+  energyRegen: 0
+  healthRegenCost: 0
+  energyRegenCost: 0
 --- !u!114 &4214025809544596500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -666,12 +685,60 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a491927f26f93fb43a88217ba1a2e5a2, type: 3}
   - {fileID: 8300000, guid: 5d22597ada72e224e9be4221b2a6b652, type: 3}
   - {fileID: 8300000, guid: 840336247861f0f4bbbe23e4f6d59aa1, type: 3}
-  painSounds: []
+  painSounds:
+  - {fileID: 8300000, guid: 42d5af3378a1d8e49b10d92f22fefc7f, type: 3}
+  - {fileID: 8300000, guid: dc1edfe830d3f4a499e85bf2b5232f4d, type: 3}
+  - {fileID: 8300000, guid: 586dcac06bd429f44857d5e2ca6e6699, type: 3}
   parrySounds:
   - {fileID: 8300000, guid: 4b7a23155d897be49be6fc80fd7c1ede, type: 3}
   - {fileID: 8300000, guid: 85bec74dce8405949afcf1ebbe4eff0e, type: 3}
   - {fileID: 8300000, guid: 99c1f470b0ad7ec439c0f23a1b96d686, type: 3}
-  getHitSounds: []
+  getHitSounds:
+  - {fileID: 8300000, guid: 727877a8ecb1726468b32a8362d4885d, type: 3}
+  - {fileID: 8300000, guid: 90dc79582ac0ed2438adaee7c333a0bf, type: 3}
+--- !u!114 &16433358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214025809544596526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d98c06573cc55c44a92f9698c0acc9f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultWeapon: {fileID: 11400000, guid: fa52226412e08fe489594f9d1003d3a0, type: 2}
+  defaultArmor: {fileID: 11400000, guid: 40f3199eb0a1abe4fb9f0b4a5024b1f2, type: 2}
+  equippedWeapon: {fileID: 0}
+  equippedArmor: {fileID: 0}
+  equippedTool: {fileID: 0}
+  projectileCount: 0
+  baseInventorySpace: 3
+  inventorySpace: 0
+  playerCanvasController: {fileID: 0}
+  equippedThrownWeapon: {fileID: 3717726366138527824, guid: ac925cde1b9195740a6d7b3c04271013,
+    type: 3}
+  thrownStartingPoint: {fileID: 243495328}
+  items: []
+--- !u!114 &16433369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214025809544596526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2427fb0af19aa3442979b4e98b921ef4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  expedition:
+    factionType: 3
+  army:
+    factionType: 0
+  bandits:
+    factionType: 1
 --- !u!1 &4214025809734970814
 GameObject:
   m_ObjectHideFlags: 0
@@ -885,7 +952,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2, y: 0.05}
+  m_Size: {x: 0.4, y: 0.05}
   m_EdgeRadius: 0
 --- !u!114 &4214025809946498775
 MonoBehaviour:
@@ -1358,7 +1425,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4214025810664467638}
   - component: {fileID: 4214025810664467637}
-  m_Layer: 22
+  - component: {fileID: 355186066}
+  m_Layer: 21
   m_Name: InteractionChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,7 +1460,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.2, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1403,8 +1471,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.5}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &355186066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4214025810664467639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036615ccb701c664d8fdc325694820eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishOffTargets: []
+  interactionTargets: []
 --- !u!1 &4214025811165892722
 GameObject:
   m_ObjectHideFlags: 0

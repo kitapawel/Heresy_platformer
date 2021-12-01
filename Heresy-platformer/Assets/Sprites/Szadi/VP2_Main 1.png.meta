@@ -203,6 +203,15 @@ TextureImporter:
   - first:
       213: -2798063418504467209
     second: VP2_Main 1_66
+  - first:
+      213: 439800418412884206
+    second: VP2_Main 1_67
+  - first:
+      213: 2775484141571307018
+    second: VP2_Main 1_68
+  - first:
+      213: 7488204280894017934
+    second: VP2_Main 1_69
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -331,10 +340,10 @@ TextureImporter:
         serializedVersion: 2
         x: 6
         y: 544
-        width: 564
+        width: 282
         height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -438,8 +447,8 @@ TextureImporter:
         y: 544
         width: 208
         height: 140
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -480,8 +489,8 @@ TextureImporter:
         y: 544
         width: 208
         height: 140
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -501,8 +510,8 @@ TextureImporter:
         y: 352
         width: 294
         height: 155
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1699,7 +1708,7 @@ TextureImporter:
         width: 255
         height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1720,7 +1729,7 @@ TextureImporter:
         width: 256
         height: 168
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1728,6 +1737,69 @@ TextureImporter:
       bones: []
       spriteID: 7fca60945284b29d0800000000000000
       internalID: -2798063418504467209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VP2_Main 1_67
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 544
+        width: 282
+        height: 200
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0719f762c7a1600800000000000000
+      internalID: 439800418412884206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VP2_Main 1_68
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 701
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0676122f10848620800000000000000
+      internalID: 2775484141571307018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VP2_Main 1_69
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 701
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e815f388e127be760800000000000000
+      internalID: 7488204280894017934
       vertices: []
       indices: 
       edges: []

@@ -5,8 +5,7 @@ public class Weapon : Item
 {
     public WeaponType weaponType;
     
-    public float minDamage;
-    public float maxDamage;
+    public float damage;
     public float stabilityDamage;
     public float force;
     public float armorPenetration;// flat value that goes through organic armor
@@ -15,11 +14,5 @@ public class Weapon : Item
     public float energyCost;
 
     public float structuralDamage; // damage reduced by rigidity of structural object
-    public float structuralPenetration; // flat value that goes through structural armor
 
-    public float GetWeaponDamage()
-    {
-        float weaponDamage = Mathf.Round(Random.Range(minDamage, maxDamage));
-        return weaponDamage;
-    }
 }

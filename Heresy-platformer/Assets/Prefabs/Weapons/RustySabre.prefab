@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2492795002531070303}
   - component: {fileID: 596070563857759496}
   m_Layer: 0
-  m_Name: RustySaber
+  m_Name: RustySabre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,10 +73,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: -7849697273075547117, guid: 70d61780237e8ad42962e72f2227842c,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.7493477, b: 0.41037738, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801594d79bf271c4fb6b1e7100433306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: e601b44732f9e9c4693031176f077020, type: 2}
+  scriptableObject: {fileID: 11400000, guid: cf02e5f2e4704bc43862e4f554df5401, type: 2}
   rotateSpeed: 40
 --- !u!50 &596070563857759496
 Rigidbody2D:

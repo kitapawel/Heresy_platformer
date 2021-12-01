@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2492795002531070303}
   - component: {fileID: 596070563857759496}
   m_Layer: 0
-  m_Name: CrudeAxe
+  m_Name: Sabre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
-  m_Sprite: {fileID: -7436813304462936719, guid: 70d61780237e8ad42962e72f2227842c,
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -7849697273075547117, guid: 70d61780237e8ad42962e72f2227842c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,16 +111,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.24947035, y: -0.19046362}
-      - {x: -0.24947043, y: -0.25124452}
-      - {x: -0.17695051, y: -0.2505117}
-      - {x: 0.050650902, y: -0.019486725}
-      - {x: 0.09972623, y: -0.06149508}
-      - {x: 0.16273877, y: -0.06398671}
-      - {x: 0.28286946, y: 0.0582131}
-      - {x: 0.28409696, y: 0.12462131}
-      - {x: 0.14195226, y: 0.16061023}
-      - {x: 0.06960359, y: 0.1542573}
+    - - {x: -0.19112538, y: 0.25062454}
+      - {x: -0.19112542, y: 0.124497265}
+      - {x: 0.11599737, y: -0.19218794}
+      - {x: 0.21875007, y: -0.19218789}
+      - {x: 0.21875, y: -0.112996496}
+      - {x: -0.12643561, y: 0.22193743}
 --- !u!114 &2492795002531070303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801594d79bf271c4fb6b1e7100433306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: 50138617e89e734419628f90e39f9244, type: 2}
+  scriptableObject: {fileID: 11400000, guid: d0f64fb09ee18cc40ae00a716a72beef, type: 2}
   rotateSpeed: 40
 --- !u!50 &596070563857759496
 Rigidbody2D:

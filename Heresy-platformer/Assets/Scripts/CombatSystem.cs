@@ -5,16 +5,18 @@ using UnityEngine.Timeline;
 
 public class CombatSystem : MonoBehaviour
 {
+    [SerializeField] CharacterStats characterStats;
+    public FactionType factionType;
+
     Animator myAnimator;
     CharacterController myCharacterController;
-    CharacterStats myCharacterStats;
     InventorySystem myInventorySystem;
 
     HitCollisionChecker hitCollisionChecker;
     InteractionChecker interactionChecker;
     public float damageBonus;
     public float critRate;
-    public float critDamage;
+    public float critDamageBonus;
 
     const int WEAK_ATTACK = 1;
     const int NORMAL_ATTACK = 0;
@@ -22,23 +24,23 @@ public class CombatSystem : MonoBehaviour
 
     public GameObject thrownStartingPoint;
 
-    void Start()
+    void Awake()
     {
         myAnimator = GetComponent<Animator>();
         myCharacterController = GetComponent<CharacterController>();
         hitCollisionChecker = GetComponentInChildren<HitCollisionChecker>();
         interactionChecker = GetComponentInChildren<InteractionChecker>();
-        myCharacterStats = GetComponent<CharacterStats>();
         myInventorySystem = GetComponent<InventorySystem>();
 
-        UpdateCharacterStats();
+        InitializeCharacterStats();
     }
 
-    private void UpdateCharacterStats()
+    private void InitializeCharacterStats()
     {
-        damageBonus = myCharacterStats.currentDamageBonus;
-        critRate = myCharacterStats.currentCritRate;
-        critDamage = myCharacterStats.currentCritBonus;
+        damageBonus = characterStats.baseDamageBonus;
+        critRate = characterStats.baseCritRate;
+        critDamageBonus = characterStats.baseCritBonus;
+        factionType = characterStats.factionType;
     }
 
     public void DealDamage(int attackMode)
@@ -47,40 +49,39 @@ public class CombatSystem : MonoBehaviour
         {
             //Assign basic values to damage calculation
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
-            float damageToDeal = myInventorySystem.equippedWeapon.GetWeaponDamage() + damageBonus;
-            float armorPiercing = myInventorySystem.equippedWeapon.armorPenetration + 10f;
+            float damageToDeal = myInventorySystem.equippedWeapon.damage + damageBonus;
+            float armorPenetration = myInventorySystem.equippedWeapon.armorPenetration;
             float stabilityDamageToDeal = myInventorySystem.equippedWeapon.stabilityDamage; //TODO maybe spice this up a bit
             float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
             float structuralDamageToDeal = myInventorySystem.equippedWeapon.structuralDamage;
-            float structuralImpact = myInventorySystem.equippedWeapon.structuralPenetration;
 
             //Modify damage value depending on whether the attack was strong or weak
             if (attackMode == WEAK_ATTACK)
             {
-                damageToDeal = damageToDeal * myCharacterStats.weakAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.weakAttackMultiplier;
-                appliedForce = appliedForce * myCharacterStats.weakAttackMultiplier;
+                damageToDeal = damageToDeal * characterStats.weakAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.weakAttackMultiplier;
+                appliedForce = appliedForce * characterStats.weakAttackMultiplier;
             } else if (attackMode == STRONG_ATTACK)
             {
-                damageToDeal = damageToDeal * myCharacterStats.strongAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.strongAttackMultiplier;
-                appliedForce = appliedForce * myCharacterStats.strongAttackMultiplier;
+                damageToDeal = damageToDeal * characterStats.strongAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.strongAttackMultiplier;
+                appliedForce = appliedForce * characterStats.strongAttackMultiplier;
             } else
             {
-                damageToDeal = damageToDeal * myCharacterStats.normalAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.normalAttackMultiplier;
-                appliedForce = appliedForce * myCharacterStats.normalAttackMultiplier;
+                damageToDeal = damageToDeal * characterStats.normalAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.normalAttackMultiplier;
+                appliedForce = appliedForce * characterStats.normalAttackMultiplier;
             }
 
             //Send data to target
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {                
-                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, armorPiercing, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
+                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, armorPenetration, stabilityDamageToDeal, appliedForce, attackVector, attackerObject);
             } 
             if (hitTarget.GetComponentInParent<StructureSystem>())
             {
-                hitTarget.GetComponentInParent<StructureSystem>().ProcessIncomingHit(structuralDamageToDeal, structuralImpact);
+                hitTarget.GetComponentInParent<StructureSystem>().ProcessIncomingHit(structuralDamageToDeal);
             }
         }
     }
@@ -91,32 +92,31 @@ public class CombatSystem : MonoBehaviour
         {
             //Assign basic values to damage calculation
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
-            float damageToDeal = myInventorySystem.equippedTool.GetToolDamage() + damageBonus;
+            float damageToDeal = myInventorySystem.equippedTool.damage + damageBonus;
             float piercingDamage = myInventorySystem.equippedTool.armorPenetration + damageBonus;
             float stabilityDamageToDeal = myInventorySystem.equippedTool.stabilityDamage; //TODO maybe spice this up a bit
             float appliedForce = myInventorySystem.equippedTool.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
             float structuralDamageToDeal = myInventorySystem.equippedTool.structuralDamage;
-            float structuralImpact = myInventorySystem.equippedTool.structuralPenetration;
 
             //Modify damage value depending on whether the attack was strong or weak
             if (attackMode == WEAK_ATTACK)
             {
-                damageToDeal = damageToDeal * myCharacterStats.weakAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.weakAttackMultiplier;
-                appliedForce = appliedForce * myCharacterStats.weakAttackMultiplier;
+                damageToDeal = damageToDeal * characterStats.weakAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.weakAttackMultiplier;
+                appliedForce = appliedForce * characterStats.weakAttackMultiplier;
             }
             else if (attackMode == STRONG_ATTACK)
             {
-                damageToDeal = damageToDeal * myCharacterStats.strongAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.strongAttackMultiplier;
-                appliedForce = appliedForce * myCharacterStats.strongAttackMultiplier;
+                damageToDeal = damageToDeal * characterStats.strongAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.strongAttackMultiplier;
+                appliedForce = appliedForce * characterStats.strongAttackMultiplier;
             }
             else
             {
-                damageToDeal = damageToDeal * myCharacterStats.normalAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * myCharacterStats.normalAttackMultiplier;
-                appliedForce = appliedForce * myCharacterStats.normalAttackMultiplier;
+                damageToDeal = damageToDeal * characterStats.normalAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.normalAttackMultiplier;
+                appliedForce = appliedForce * characterStats.normalAttackMultiplier;
             }
 
             //Send data to target
@@ -128,7 +128,7 @@ public class CombatSystem : MonoBehaviour
             if (hitTarget.GetComponentInParent<StructureSystem>())
             {
                 Debug.Log(hitTarget + " structural target was hit for " + damageToDeal + " dmg.");
-                hitTarget.GetComponentInParent<StructureSystem>().ProcessIncomingHit(structuralDamageToDeal, structuralImpact);
+                hitTarget.GetComponentInParent<StructureSystem>().ProcessIncomingHit(structuralDamageToDeal);
             }
         }
     }
@@ -138,7 +138,7 @@ public class CombatSystem : MonoBehaviour
         float critChance = Mathf.Clamp(critRate + myInventorySystem.equippedWeapon.critRateBonus, 0, 1f);
         if (Random.Range(0f, 1f) < critChance)
         {
-            float bonusCriticalDamage = critDamage + myInventorySystem.equippedWeapon.critDamageBonus;
+            float bonusCriticalDamage = critDamageBonus + myInventorySystem.equippedWeapon.critDamageBonus;
             damage = damage * bonusCriticalDamage;
             Debug.Log("Critical hit: " + damage);
             return Mathf.Round(damage);//TODO decide how to do rounding and at which point to round
@@ -173,6 +173,11 @@ public class CombatSystem : MonoBehaviour
                 finishOffTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, myInventorySystem.equippedWeapon.armorPenetration, stabilityDamageToDeal, appliedForce, attackVector);
             }
         }
+    }
+
+    public FactionType GetCurrentFactionType()
+    {
+        return factionType;
     }
 
 }

@@ -10,20 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13ed792dd8240b48be1e56d22afab4d, type: 3}
-  m_Name: CrudeAxe
+  m_Name: CrudePiokAxe
   m_EditorClassIdentifier: 
   prefabName: Crude Axe
   icon: {fileID: -7436813304462936719, guid: 70d61780237e8ad42962e72f2227842c, type: 3}
-  prefab: {fileID: 1459760042894036328, guid: 14d3e96116e7e184da7dfe5b177df3dd, type: 3}
+  prefab: {fileID: 1459760042894036328, guid: eeb8887fc37cf924882bc5fe1ae4d432, type: 3}
   flavourText: 
-  toolType: 0
-  minDamage: 2
-  maxDamage: 10
-  stabilityDamage: 5
-  force: 150
-  armorPenetration: 3
-  critRateBonus: 0
+  toolType: 1
+  damage: 15
+  stabilityDamage: 10
+  force: 125
+  armorPenetration: 15
+  critRateBonus: 5
   critDamageBonus: 1.5
-  energyCost: 20
-  structuralDamage: 3
-  structuralPenetration: 2
+  energyCost: 25
+  structuralDamage: 12

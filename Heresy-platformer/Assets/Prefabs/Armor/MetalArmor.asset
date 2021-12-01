@@ -18,8 +18,8 @@ MonoBehaviour:
   flavourText: 
   armorType: 3
   defense: 0
-  stability: 0
-  poise: 0
-  weight: 1
+  stability: 10
+  poise: 20
+  weight: 10
   projectileSlots: 1
   inventorySlots: 1

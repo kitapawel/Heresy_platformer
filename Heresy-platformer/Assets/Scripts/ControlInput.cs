@@ -22,7 +22,6 @@ public abstract class ControlInput : MonoBehaviour
     [HideInInspector] public bool throwItem;
     [HideInInspector] public bool energyBoost;
 
-
 	protected void ClearInput()
 	{
 		//If we're not ready to clear input, exit

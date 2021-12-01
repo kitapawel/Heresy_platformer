@@ -117,16 +117,16 @@ public class InventorySystem : MonoBehaviour
         float defenseBaseValue;
         if (equippedArmor.armorType == ArmorType.Light)
         {
-            defenseBaseValue = 10f;
+            defenseBaseValue = Mathf.Round(Random.Range(0f, 2f));                
         } else if (equippedArmor.armorType == ArmorType.Medium)
         {
-            defenseBaseValue = 20f;
+            defenseBaseValue = Mathf.Round(Random.Range(2f, 4f));
         } else if (equippedArmor.armorType == ArmorType.Heavy)
         {
-            defenseBaseValue = 30f;
+            defenseBaseValue = Mathf.Round(Random.Range(3f, 6f));
         } else
         {
-            defenseBaseValue = 1f;
+            defenseBaseValue = 0f;
         }
         float defenseFinalValue = defenseBaseValue + equippedArmor.defense;
         return defenseFinalValue;

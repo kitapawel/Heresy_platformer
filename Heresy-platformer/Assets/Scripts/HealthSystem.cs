@@ -5,23 +5,27 @@ using Com.LuisPedroFonseca.ProCamera2D;
 
 public class HealthSystem : MonoBehaviour{
 
+    [SerializeField] CharacterStats characterStats;
     private CharacterController myCharacterController;
     private Animator myAnimator;
     private Rigidbody2D myRigidbody2d;
     private SoundSystemForAnimateObjects mySoundSystem;
-    private CharacterStats myCharacterStats;
     private InventorySystem myInventorySystem;
     private ParticleSystem myBloodFX;
 
     //SerializedFields just for debug purposes
     [SerializeField]
-    private float healthPoints;
+    private float currentHealth;
     [SerializeField]
-    private float energy;
+    private float maxHealth;
     [SerializeField]
-    private float minEnergy;
+    private float maxEnergy;
     [SerializeField]
-    private float vitality;
+    private float currentEnergy;
+    [SerializeField]
+    private float maxVitality;
+    [SerializeField]
+    private float currentVitality;
     [SerializeField]
     private float healthRegen;
     [SerializeField]
@@ -33,7 +37,6 @@ public class HealthSystem : MonoBehaviour{
 
     void Start()
     {
-        myCharacterStats = GetComponent<CharacterStats>();
         myInventorySystem = GetComponent<InventorySystem>();
         myCharacterController = GetComponent<CharacterController>();
         myRigidbody2d = GetComponent<Rigidbody2D>();
@@ -48,20 +51,22 @@ public class HealthSystem : MonoBehaviour{
 
     private void InitializeStats()
     {
-        healthPoints = myCharacterStats.maxHealth;
-        energy = myCharacterStats.maxEnergy;
-        minEnergy = myCharacterStats.minEnergy;
-        vitality = myCharacterStats.maxVitality;
-        healthRegen = myCharacterStats.healthRegen;
-        energyRegen = myCharacterStats.energyRegen;
-        healthRegenCost = myCharacterStats.healthRegenCost;
-        energyRegenCost = myCharacterStats.energyRegenCost;
+        maxHealth = characterStats.baseHealth;
+        currentHealth = characterStats.baseHealth;
+        maxEnergy = characterStats.baseEnergy;
+        currentEnergy = characterStats.baseEnergy;
+        maxVitality = characterStats.baseVitality;
+        currentVitality = characterStats.baseVitality;
+        healthRegen = characterStats.healthRegen;
+        energyRegen = characterStats.energyRegen;
+        healthRegenCost = characterStats.healthRegenCost;
+        energyRegenCost = characterStats.energyRegenCost;
 
     }
 
     private void CheckHealthState()
     {
-        if (healthPoints <= 0)
+        if (currentHealth <= 0)
         {
             myCharacterController.SetAliveState(0);
         }
@@ -70,7 +75,7 @@ public class HealthSystem : MonoBehaviour{
     {
         if (myCharacterController.isAlive)
         {
-            if (energy <= 0)
+            if (currentEnergy <= 0)
             {
                 myCharacterController.Fall();
             }
@@ -80,7 +85,7 @@ public class HealthSystem : MonoBehaviour{
     {
         if (myCharacterController.isAlive)
         {
-            if (energy > 0)
+            if (currentEnergy > 0)
             {
                 myAnimator.SetBool("isFallen", false);
             }
@@ -105,7 +110,7 @@ public class HealthSystem : MonoBehaviour{
             CheckHealthState();
             CheckStability();
             TakeHealthDamage(incomingDamage, incomingArmorPenetration);
-            TakeStabilityDamage(incomingStabilityDamage);
+            //TakeStabilityDamage(incomingStabilityDamage);
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
             myCharacterController.GetHit();
@@ -114,22 +119,26 @@ public class HealthSystem : MonoBehaviour{
             myBloodFX.Play();
         }
     }
-    private void TakeHealthDamage(float incomingDamage, float incomingPiercingDamage)
+    private void TakeHealthDamage(float incomingDamage, float incomingArmorPenetration)
     {
-
-        float damageReduction = incomingPiercingDamage / myInventorySystem.GetDefenseValue();
-        float finalDamageValue = incomingDamage * damageReduction;
-        Debug.Log("Incoming dmg: " + incomingDamage + ", Armor Pen: " + incomingPiercingDamage + ", Defense: " + myInventorySystem.GetDefenseValue());
-        Debug.Log("Dmg reduction: " + damageReduction + ", Final damage: " + finalDamageValue);
-        if (finalDamageValue < 0f)
+        float defenseValue = myInventorySystem.GetDefenseValue();
+        float damageReduction = defenseValue - incomingArmorPenetration;
+        if (damageReduction < 0f)
         {
-            finalDamageValue = 0f;
+            damageReduction = 0f;
         }
-        healthPoints -= finalDamageValue;
+        float finalDamageValue = incomingDamage - damageReduction;
+        if (finalDamageValue < 1f)
+        {
+            finalDamageValue = 1f;
+        }
+        Debug.Log("Incoming dmg: " + incomingDamage + ", Armor Pen: " + incomingArmorPenetration + ", Defense: " + defenseValue);
+        Debug.Log("Dmg reduction: " + damageReduction + ", Final damage: " + finalDamageValue);
+        currentHealth -= finalDamageValue;
         CheckHealthState();
         mySoundSystem.PlayPainSounds();
     } 
-    private void TakeStabilityDamage(float incomingStabilityDamage)
+/*    private void TakeStabilityDamage(float incomingStabilityDamage)
     {
         float finalDamageValue = incomingStabilityDamage - myInventorySystem.GetStabilityValue();
         if (finalDamageValue < 1f)
@@ -142,52 +151,52 @@ public class HealthSystem : MonoBehaviour{
         }
         energy -= incomingStabilityDamage;
         CheckStability();
-    }
+    }*/
 
     public float GetHealthAsPercentage()
     {
-        float div = healthPoints/ myCharacterStats.maxHealth;
+        float div = currentHealth / maxHealth;
         return div;
     }    
     public float GetEnergyAsPercentage()
     {
-        float div = energy/ myCharacterStats.maxEnergy;
+        float div = currentEnergy / maxEnergy;
         return div;
     }
     public float GetVitalityAsPercentage()
     {
-        float div = vitality/myCharacterStats.maxVitality;
+        float div = currentVitality / maxVitality;
         return div;
     }
 
     public bool CanUseEnergyBasedAction(float energyCost)
     {
-        if (energyCost <= energy)
+        if (energyCost <= maxEnergy)
         {
             return true;
         } else
         {
             Debug.LogWarning("Tried to use ability that costs " + energyCost + 
-                " but only the following number of energy points left: " + energy);
+                " but only the following number of energy points left: " + currentEnergy);
             return false;
         }
     }
     public void UseEnergy(float energyCost)
     {
-        energy -= energyCost;
+        currentEnergy -= energyCost;
     }
 
     IEnumerator RegenerateEnergy()
     {
         while (myCharacterController.isAlive)
         {
-            if (energy < myCharacterStats.maxEnergy)
+            if (currentEnergy < maxEnergy)
             {
-                energy = energy + energyRegen;
-                vitality -= energyRegenCost;
-                if (energy > myCharacterStats.maxEnergy)
+                currentEnergy = currentEnergy + energyRegen;
+                currentVitality -= energyRegenCost;
+                if (currentEnergy > maxEnergy)
                 {
-                    energy = myCharacterStats.maxEnergy;
+                    currentEnergy = maxEnergy;
                 }
                 CheckIfCanGetUp();
                 yield return new WaitForSeconds(1);
@@ -197,15 +206,15 @@ public class HealthSystem : MonoBehaviour{
     }
     public void QuickEnergyRegen()
     {
-        if (vitality >= 10 && energy < myCharacterStats.maxEnergy)//TODO parameterize
+        if (currentVitality >= 10 && currentEnergy < maxEnergy)//TODO parameterize
         {
-            energy = energy + 20;
-            if (energy > myCharacterStats.maxEnergy)
+            currentEnergy = currentEnergy + 20;
+            if (currentEnergy > maxEnergy)
             {
-                energy = myCharacterStats.maxEnergy;
+                currentEnergy = maxEnergy;
                 mySoundSystem.PlayEffortSounds();
             }
-            vitality -= 10;
+            currentVitality -= 10;
         }
     }
 }

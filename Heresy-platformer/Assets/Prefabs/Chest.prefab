@@ -806,7 +806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a43b4e5e01efa45996eade6027c936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  structuralType: 3
+  structuralType: 1
   intactObject: {fileID: 4013702969282711112}
   destroyedObjectParts: {fileID: 4013702969022859910}
   intactSprite: {fileID: 0}

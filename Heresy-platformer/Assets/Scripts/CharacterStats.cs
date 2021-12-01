@@ -3,95 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [DefaultExecutionOrder(-95)]
-public class CharacterStats : MonoBehaviour
+[CreateAssetMenu(fileName = "NewCharacterStatsProfile", menuName = "ScriptableObjects/CharacterStats", order = 4)]
+public class CharacterStats : ScriptableObject
 {
     [Header("General stats:")]
     public int level;
     public FactionType factionType;
 
     [Header("Survivability stats:")]
-    public float baseHealth;
-    public float baseEnergy;
-    public float baseVitality;
+    public float baseHealth = Mathf.Clamp(50, 1f, 100f);
+    public float baseEnergy = Mathf.Clamp(50, 1f, 100f);
+    public float baseVitality = Mathf.Clamp(100, 1f, 200f);
 
-    public float maxHealth;
-    public float maxEnergy;
-    public float maxVitality;
+    public float healthRegen = 1f;
+    public float healthRegenCost = 2f;
 
-    public float minEnergy;
+    public float energyRegen = 1f;
+    public float energyRegenCost = .1f;
 
-    public float energyRegen;
-    public float healthRegen;    
-    public float energyRegenCost;
-    public float healthRegenCost;
 
-    public float attackEfficiency; // multiplier of weapon/tool use cost
-    public float actionCost;
-    public float runCost;
+    public float attackEfficiency = 1f; // multiplier of weapon/tool use cost
+    public float actionCost = 5f;
+    public float runCost = 1f;
 
     [Header("Combat stats:")]
-    public float baseDamageBonus;
-    public float currentDamageBonus;
-    public float baseCritRate;
-    public float currentCritRate;
-    public float baseCritBonus;
-    public float currentCritBonus;
+    public float baseDamageBonus = 0;
+    public float baseCritRate = 0.05f;
+    public float baseCritBonus = 1.10f;
 
-    public float weakAttackMultiplier;
-    public float normalAttackMultiplier;
-    public float strongAttackMultiplier;
 
-    public float primaryAttackLevel;
-    public float secondaryAttackLevel;
+    public float weakAttackMultiplier = 0.8f;
+    public float normalAttackMultiplier = 1f;
+    public float strongAttackMultiplier = 1.2f;
+
+    public float primaryAttackLevel = 0;
+    public float secondaryAttackLevel = 0;
 
     [Header("Animations:")]
-    Animator myAnimator;
-    [SerializeField] AnimatorOverrideController animatorOverrideController;
-
-    private void Awake()
-    {
-        myAnimator = GetComponent<Animator>();
-        InitializeCharacter();
-    }
-
-    private void InitializeCharacter()
-    {
-        //TODO read stats from a save file
-        baseHealth = Mathf.Clamp(20, 1f, 100f); // TODO in the future, clamp the incoming values within allowed ranges, using Properties get/set
-        maxHealth = baseHealth;
-        healthRegen = 1f;
-        healthRegenCost = 2f;
-
-        baseEnergy = 50f;
-        maxEnergy = baseEnergy;
-        minEnergy = -10f;
-        energyRegen = 1f;
-        energyRegenCost = 0.1f;
-
-        attackEfficiency = 1f;
-        actionCost = 5f;
-        runCost = 1f;
-
-        baseVitality = 100f;
-        maxVitality = baseVitality;
-
-
-        baseDamageBonus = 1f;
-        currentDamageBonus = baseDamageBonus;
-
-        baseCritRate = 0.05f;
-        currentCritRate = baseCritRate;
-
-        baseCritBonus = 1.10f;
-        currentCritBonus = baseCritBonus;
-
-        weakAttackMultiplier = 0.8f;
-        normalAttackMultiplier = 1f;
-        strongAttackMultiplier = 1.2f;
-
-        primaryAttackLevel = 0;
-        secondaryAttackLevel = 0;
-    }
-
+    [SerializeField] AnimatorOverrideController defaultAnimatorOverrideController;
 
 }

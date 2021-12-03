@@ -12,7 +12,6 @@ public class MapLocation : MonoBehaviour
     [SerializeField]
     bool isLocked = false;
 
-
     private void Awake()
     {
         lockedDoor.SetActive(false);

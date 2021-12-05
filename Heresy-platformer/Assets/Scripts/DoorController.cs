@@ -40,6 +40,7 @@ public class DoorController : MonoBehaviour
     }
     public void GoThrough()
     {
+        
         FindObjectOfType<PlayerInput>().transform.position = thisDoorLeadsTo.position;
     }
 }

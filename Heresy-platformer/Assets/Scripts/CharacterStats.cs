@@ -22,9 +22,9 @@ public class CharacterStats : ScriptableObject
     public float energyRegenCost = .1f;
 
 
-    public float attackEfficiency = 1f; // multiplier of weapon/tool use cost
-    public float actionCost = 5f;
-    public float runCost = 1f;
+    public float baseAttackEfficiency = 1f; // multiplier of weapon/tool use cost
+    public float baseActionCost = 5f;
+    public float BaseRunCost = 1f;
 
     [Header("Combat stats:")]
     public float baseDamageBonus = 0;
@@ -36,8 +36,15 @@ public class CharacterStats : ScriptableObject
     public float normalAttackMultiplier = 1f;
     public float strongAttackMultiplier = 1.2f;
 
-    public float primaryAttackLevel = 0;
-    public float secondaryAttackLevel = 0;
+    public float basePrimaryAttackLevel = 0;
+    public float baseSecondaryAttackLevel = 0;
+
+    [Header("Movement stats:")]
+    public float baseMoveSpeed = 1.6f;
+    public float baseRunSpeed = 3.2f;
+    public float baseJumpForce = 180f;
+    public float baseRollForce = 500f;
+    public float baseDodgeForce = 320f;
 
     [Header("Animations:")]
     [SerializeField] AnimatorOverrideController defaultAnimatorOverrideController;

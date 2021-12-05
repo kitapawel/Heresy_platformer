@@ -68,25 +68,25 @@ public class EnemyAI : ControlInput
         {
 			if (characterStats.level == 1)
             {
-				characterStats.primaryAttackLevel = 0;
-				characterStats.secondaryAttackLevel = 0;
+				myCharacterController.primaryAttackLevel = 0;
+				myCharacterController.secondaryAttackLevel = 0;
 			} else if (characterStats.level == 2)
             {
-				characterStats.primaryAttackLevel = 1;
-				characterStats.secondaryAttackLevel = 1;
+				myCharacterController.primaryAttackLevel = 1;
+				myCharacterController.secondaryAttackLevel = 1;
 			} else if (characterStats.level == 3)
             {
-				characterStats.primaryAttackLevel = 2;
-				characterStats.secondaryAttackLevel = 2;
+				myCharacterController.primaryAttackLevel = 2;
+				myCharacterController.secondaryAttackLevel = 2;
 			}
 		} else if (aiType == AIType.Aggressive)
-        {	
-				characterStats.primaryAttackLevel = RandomAttackLevelValue();
-				characterStats.secondaryAttackLevel = RandomAttackLevelValue();
+        {
+			myCharacterController.primaryAttackLevel = RandomAttackLevelValue();
+			myCharacterController.secondaryAttackLevel = RandomAttackLevelValue();
 		} else
         {
-			characterStats.primaryAttackLevel = 0;
-			characterStats.secondaryAttackLevel = 0;
+			myCharacterController.primaryAttackLevel = 0;
+			myCharacterController.secondaryAttackLevel = 0;
 		}
     }
 

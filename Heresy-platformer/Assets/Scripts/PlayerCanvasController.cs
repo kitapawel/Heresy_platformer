@@ -6,7 +6,7 @@ public class PlayerCanvasController : MonoBehaviour
 {
     HealthSystem myHealthSystem;
     InventorySystem myInventorySystem;
-    CharacterStats myCharacterStats;
+    CharacterController myCharacterController;
 
     public Image healthBar;
     public Image energyBar;
@@ -28,10 +28,8 @@ public class PlayerCanvasController : MonoBehaviour
         vitalityBar = GameObject.Find("PlayerVitality").GetComponent<Image>();
         myHealthSystem = FindObjectOfType<PlayerInput>().GetComponent<HealthSystem>();
         myInventorySystem = FindObjectOfType<PlayerInput>().GetComponentInParent<InventorySystem>();
-        myCharacterStats = FindObjectOfType<PlayerInput>().GetComponentInParent<CharacterStats>();
+        myCharacterController = FindObjectOfType<PlayerInput>().GetComponentInParent<CharacterController>();
         inventoryWindow.gameObject.SetActive(false);
-
-
     }
 
     private void Update()
@@ -79,8 +77,8 @@ public class PlayerCanvasController : MonoBehaviour
     {
         float primValue = primaryAttackDropDown.value;        
         float secValue = secondaryAttackDropDown.value;
-        myCharacterStats.primaryAttackLevel = primValue;
-        myCharacterStats.secondaryAttackLevel = secValue;
+        myCharacterController.primaryAttackLevel = primValue;
+        myCharacterController.secondaryAttackLevel = secValue;
         /*if (primValue == 0f || primValue == 1f || primValue == 2f || primValue == 3f || primValue == 4f)
         {
             myCharacterStats.primaryAttackLevel = primValue;

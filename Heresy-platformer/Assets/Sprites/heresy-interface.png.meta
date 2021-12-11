@@ -1,0 +1,1150 @@
+fileFormatVersion: 2
+guid: eb2087767771cca41aab3039766fcf6d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5000139799723287763
+    second: heresy-interface_0
+  - first:
+      213: 7679429190298442865
+    second: heresy-interface_1
+  - first:
+      213: 909629723937679323
+    second: heresy-interface_2
+  - first:
+      213: -1848025611575797051
+    second: heresy-interface_3
+  - first:
+      213: 843373025939758765
+    second: heresy-interface_4
+  - first:
+      213: 4391245013296707968
+    second: heresy-interface_5
+  - first:
+      213: 8147460868375691251
+    second: heresy-interface_6
+  - first:
+      213: -4423847345595193188
+    second: heresy-interface_7
+  - first:
+      213: 3379043846054454427
+    second: heresy-interface_8
+  - first:
+      213: -4540912218046106366
+    second: heresy-interface_9
+  - first:
+      213: 7792071248695091766
+    second: heresy-interface_10
+  - first:
+      213: -3145903547564499109
+    second: heresy-interface_11
+  - first:
+      213: 8980268880899712712
+    second: heresy-interface_12
+  - first:
+      213: 3160289418618427010
+    second: heresy-interface_13
+  - first:
+      213: -2315613756334065224
+    second: heresy-interface_14
+  - first:
+      213: -9118422671785515108
+    second: heresy-interface_15
+  - first:
+      213: 3220055452832151009
+    second: heresy-interface_16
+  - first:
+      213: -6863626331230493931
+    second: heresy-interface_17
+  - first:
+      213: 3831454961107132843
+    second: heresy-interface_18
+  - first:
+      213: -428279926429610795
+    second: heresy-interface_19
+  - first:
+      213: -4989856596889081692
+    second: heresy-interface_20
+  - first:
+      213: -3210435748631739220
+    second: heresy-interface_21
+  - first:
+      213: -6707381271645083700
+    second: heresy-interface_22
+  - first:
+      213: -904188990946200913
+    second: heresy-interface_23
+  - first:
+      213: 5513479958102230656
+    second: heresy-interface_24
+  - first:
+      213: -7709015268898956607
+    second: heresy-interface_25
+  - first:
+      213: 2537550257743960834
+    second: heresy-interface_26
+  - first:
+      213: 4191783705147603404
+    second: heresy-interface_27
+  - first:
+      213: 8810792983846769739
+    second: heresy-interface_28
+  - first:
+      213: -8864476661191935920
+    second: heresy-interface_29
+  - first:
+      213: 7902367275564826914
+    second: heresy-interface_30
+  - first:
+      213: -7650855246535236236
+    second: heresy-interface_31
+  - first:
+      213: 4363097561270107215
+    second: heresy-interface_32
+  - first:
+      213: -1042454239722767979
+    second: heresy-interface_33
+  - first:
+      213: -272194437165599269
+    second: heresy-interface_34
+  - first:
+      213: -6761838297690207698
+    second: heresy-interface_35
+  - first:
+      213: -6826591791788687688
+    second: heresy-interface_36
+  - first:
+      213: -1319502181253485016
+    second: heresy-interface_37
+  - first:
+      213: 6994800639748373992
+    second: heresy-interface_38
+  - first:
+      213: 8009213576101986623
+    second: heresy-interface_39
+  - first:
+      213: 8359129307093801622
+    second: heresy-interface_40
+  - first:
+      213: -3243201880907621380
+    second: heresy-interface_41
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: heresy-interface_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 372
+        width: 127
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b5332185feb9ab0800000000000000
+      internalID: -5000139799723287763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_1
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 444
+        width: 176
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17c11854920d29a60800000000000000
+      internalID: 7679429190298442865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 171
+        width: 240
+        height: 289
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7217c1a67af9c00800000000000000
+      internalID: 909629723937679323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_3
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 382
+        width: 100
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca533e5f7e7a56e0800000000000000
+      internalID: -1848025611575797051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_4
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 347
+        width: 127
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae19487c4344bb00800000000000000
+      internalID: 843373025939758765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_5
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 363
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0897143e216d0fc30800000000000000
+      internalID: 4391245013296707968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_6
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 363
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ffbde02e78911170800000000000000
+      internalID: 8147460868375691251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_7
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 362
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c986e3917465b92c0800000000000000
+      internalID: -4423847345595193188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 362
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94ab8c9976c4ee20800000000000000
+      internalID: 3379043846054454427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_9
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 361
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205712f75607bf0c0800000000000000
+      internalID: -4540912218046106366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_10
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 341
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632610b348ff22c60800000000000000
+      internalID: 7792071248695091766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_11
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 341
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fd6c524618754d0800000000000000
+      internalID: -3145903547564499109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_12
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 351
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6a589b7f250ac70800000000000000
+      internalID: 8980268880899712712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_13
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 353
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2865d287b7a9bdb20800000000000000
+      internalID: 3160289418618427010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_14
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 352
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b933b8ae894ddfd0800000000000000
+      internalID: -2315613756334065224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_15
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 342
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c972b5834ead47180800000000000000
+      internalID: -9118422671785515108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_16
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 342
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5be1faf5fefac20800000000000000
+      internalID: 3220055452832151009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_17
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 341
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5132dff77308fb0a0800000000000000
+      internalID: -6863626331230493931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_18
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 342
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1e2b9bcff0c2530800000000000000
+      internalID: 3831454961107132843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_19
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 342
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc8bb01da17e0af0800000000000000
+      internalID: -428279926429610795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_20
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 304
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8694eccd770cab0800000000000000
+      internalID: -4989856596889081692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_21
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 304
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4079c32bd3273d0800000000000000
+      internalID: -3210435748631739220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_22
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 304
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7ac7a45489ae2a0800000000000000
+      internalID: -6707381271645083700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_23
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 276
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa235d047eca373f0800000000000000
+      internalID: -904188990946200913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_24
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 276
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0864bea6fc0d38c40800000000000000
+      internalID: 5513479958102230656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 276
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca17310573140590800000000000000
+      internalID: -7709015268898956607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_26
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 276
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20b9780d380373320800000000000000
+      internalID: 2537550257743960834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_27
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 276
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9f79022153c2a30800000000000000
+      internalID: 4191783705147603404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_28
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 276
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44d0b78989364a70800000000000000
+      internalID: 8810792983846769739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_29
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 276
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058f9e1517d0bf480800000000000000
+      internalID: -8864476661191935920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_30
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 294
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22186b82b29daad60800000000000000
+      internalID: 7902367275564826914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_31
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 281
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 475655270b3b2d590800000000000000
+      internalID: -7650855246535236236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_32
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 257
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4cb0e38d16dc8c30800000000000000
+      internalID: 4363097561270107215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_33
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 257
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59979b264657881f0800000000000000
+      internalID: -1042454239722767979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_34
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 208
+        width: 229
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd538eef998f83cf0800000000000000
+      internalID: -272194437165599269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_35
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 171
+        width: 229
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a0b8dd4ef1922a0800000000000000
+      internalID: -6761838297690207698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_36
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 110
+        width: 237
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be76d72fe21341a0800000000000000
+      internalID: -6826591791788687688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_37
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 66
+        width: 237
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e6806d1cf20bde0800000000000000
+      internalID: -1319502181253485016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_38
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 68
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ed70ee2f16821160800000000000000
+      internalID: 6994800639748373992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_39
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 67
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f318bc51051762f60800000000000000
+      internalID: 8009213576101986623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_40
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 68
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69a12e4f0d7910470800000000000000
+      internalID: 8359129307093801622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: heresy-interface_41
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 10
+        width: 237
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb5f919215ddf2d0800000000000000
+      internalID: -3243201880907621380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

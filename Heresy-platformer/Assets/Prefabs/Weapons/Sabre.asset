@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sabre
   m_EditorClassIdentifier: 
   prefabName: Saber
-  icon: {fileID: -7849697273075547117, guid: 70d61780237e8ad42962e72f2227842c, type: 3}
+  icon: {fileID: -4055861434489959728, guid: 4b6e1b7c4a7699f47b7a2b9426b284e5, type: 3}
   prefab: {fileID: 1459760042894036328, guid: 46352c8435895ca4bb7d6562bcc09f69, type: 3}
   flavourText: 
   weaponType: 0

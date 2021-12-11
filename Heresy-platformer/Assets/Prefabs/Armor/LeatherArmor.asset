@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LeatherArmor
   m_EditorClassIdentifier: 
   prefabName: 
-  icon: {fileID: 1833110439615221033, guid: 70d61780237e8ad42962e72f2227842c, type: 3}
+  icon: {fileID: 180111694980099957, guid: 4b6e1b7c4a7699f47b7a2b9426b284e5, type: 3}
   prefab: {fileID: 1459760042894036328, guid: 823765e13a92ba141b5901ff53108075, type: 3}
   flavourText: 
   armorType: 2

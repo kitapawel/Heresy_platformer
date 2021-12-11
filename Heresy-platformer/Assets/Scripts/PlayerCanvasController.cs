@@ -23,9 +23,9 @@ public class PlayerCanvasController : MonoBehaviour
 
     private void Start()
     {
-        healthBar = GameObject.Find("PlayerHealth").GetComponent<Image>();
-        energyBar = GameObject.Find("PlayerEnergy").GetComponent<Image>();
-        vitalityBar = GameObject.Find("PlayerVitality").GetComponent<Image>();
+        //healthBar = GameObject.Find("PlayerHealth").GetComponent<Image>();
+        //energyBar = GameObject.Find("PlayerEnergy").GetComponent<Image>();
+        //vitalityBar = GameObject.Find("PlayerVitality").GetComponent<Image>();
         myHealthSystem = FindObjectOfType<PlayerInput>().GetComponent<HealthSystem>();
         myInventorySystem = FindObjectOfType<PlayerInput>().GetComponentInParent<InventorySystem>();
         myCharacterController = FindObjectOfType<PlayerInput>().GetComponentInParent<CharacterController>();

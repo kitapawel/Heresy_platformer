@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RustyMechette
   m_EditorClassIdentifier: 
   prefabName: Rusty Machette
-  icon: {fileID: -7849697273075547117, guid: 70d61780237e8ad42962e72f2227842c, type: 3}
+  icon: {fileID: -5848339526714394423, guid: 4b6e1b7c4a7699f47b7a2b9426b284e5, type: 3}
   prefab: {fileID: 1459760042894036328, guid: 2632c92f570f62140abb9a18afdc3c50, type: 3}
   flavourText: 
   weaponType: 0

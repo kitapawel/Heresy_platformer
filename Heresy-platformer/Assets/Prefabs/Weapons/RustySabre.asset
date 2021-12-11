@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RustySabre
   m_EditorClassIdentifier: 
   prefabName: Rusty Saber
-  icon: {fileID: -7849697273075547117, guid: 70d61780237e8ad42962e72f2227842c, type: 3}
+  icon: {fileID: -5848339526714394423, guid: 4b6e1b7c4a7699f47b7a2b9426b284e5, type: 3}
   prefab: {fileID: 1459760042894036328, guid: 733b60448fa03284d95c83c2e8726c4f, type: 3}
   flavourText: 
   weaponType: 0

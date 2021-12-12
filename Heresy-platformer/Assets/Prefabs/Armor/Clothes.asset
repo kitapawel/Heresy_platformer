@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: Clothes
   icon: {fileID: -3955517460261426690, guid: b9785a7af6a571b448ad1f9fcc786438, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 1459760042894036328, guid: 9fd1a656454571c4f853f57142936448, type: 3}
   flavourText: 
   armorType: 1
   defense: 0

@@ -12,6 +12,10 @@ public class PlayerCanvasController : MonoBehaviour
     public Image energyBar;
     public Image vitalityBar;
     public Transform inventoryWindow;
+    public Transform inventoryBag;
+    public EquippedItemSlot equippedArmor;
+    public EquippedItemSlot equippedWeapon;
+    public EquippedItemSlot equippedTool;
 
     bool isInventoryWindowActive = false;
 
@@ -23,9 +27,10 @@ public class PlayerCanvasController : MonoBehaviour
 
     private void Start()
     {
-        //healthBar = GameObject.Find("PlayerHealth").GetComponent<Image>();
-        //energyBar = GameObject.Find("PlayerEnergy").GetComponent<Image>();
-        //vitalityBar = GameObject.Find("PlayerVitality").GetComponent<Image>();
+        //first three lines automatically find images provided that gameobject names are correct
+        healthBar = GameObject.Find("PlayerHealth").GetComponent<Image>();
+        energyBar = GameObject.Find("PlayerEnergy").GetComponent<Image>();
+        vitalityBar = GameObject.Find("PlayerVitality").GetComponent<Image>();
         myHealthSystem = FindObjectOfType<PlayerInput>().GetComponent<HealthSystem>();
         myInventorySystem = FindObjectOfType<PlayerInput>().GetComponentInParent<InventorySystem>();
         myCharacterController = FindObjectOfType<PlayerInput>().GetComponentInParent<CharacterController>();
@@ -43,33 +48,43 @@ public class PlayerCanvasController : MonoBehaviour
     public void UpdateInventoryPanel()
     {
         //clear inventory window to not duplicate icons
-        foreach (Transform child in inventoryWindow)
+        foreach (Transform child in inventoryBag)
         {
             Destroy(child.gameObject);
         }
-        //
         foreach (Item item in myInventorySystem.items)
         {
-            InventorySlot inventorySlot = Instantiate(inventorySlotPrefab, inventoryWindow);
+            InventorySlot inventorySlot = Instantiate(inventorySlotPrefab, inventoryBag);
             inventorySlot.item = item;
             inventorySlot.icon.sprite = item.icon;
         }
+        equippedArmor.item = myInventorySystem.equippedArmor;
+        equippedArmor.icon.sprite = myInventorySystem.equippedArmor.icon;
+        equippedWeapon.item = myInventorySystem.equippedWeapon;
+        equippedWeapon.icon.sprite = myInventorySystem.equippedWeapon.icon;
+        //equippedTool.item = myInventorySystem.equippedTool;
+        //equippedTool.icon.sprite = myInventorySystem.equippedTool.icon;
     }
 
     public void ShowUIElements()
     {
         if (Input.GetKeyDown(KeyCode.B))
         {
-            if (isInventoryWindowActive == false)
-            {
-                isInventoryWindowActive = true;
-                inventoryWindow.gameObject.SetActive(true);
-            }
-            else
-            {
-                isInventoryWindowActive = false;
-                inventoryWindow.gameObject.SetActive(false);
-            }
+            ToggleInventoryWindow();
+        }
+    }
+
+    public void ToggleInventoryWindow()
+    {
+        if (isInventoryWindowActive == false)
+        {
+            isInventoryWindowActive = true;
+            inventoryWindow.gameObject.SetActive(true);
+        }
+        else
+        {
+            isInventoryWindowActive = false;
+            inventoryWindow.gameObject.SetActive(false);
         }
     }
 

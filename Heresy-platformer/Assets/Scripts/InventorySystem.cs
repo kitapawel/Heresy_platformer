@@ -41,6 +41,7 @@ public class InventorySystem : MonoBehaviour
         }
         projectileCount = equippedArmor.projectileSlots;
         inventorySpace = baseInventorySpace + equippedArmor.inventorySlots;
+        playerCanvasController.UpdateInventoryPanel();
     }
     //Initiated from the PickableItem script, flows to the PlayerCanvasController to update inventory UI
     public void PickItemToInventory(ScriptableObject scriptableObject)

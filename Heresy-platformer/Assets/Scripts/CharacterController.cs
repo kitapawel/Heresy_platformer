@@ -66,8 +66,14 @@ public class CharacterController : MonoBehaviour
         if (isAlive)
         {
             CheckIfGrounded();
-            ProcessMovement();
-            ProcessAttacks();
+            if (!myInventorySystem.isInventoryOverflowing())
+            {
+                ProcessMovement();
+                ProcessAttacks();
+            } else
+            {
+                Debug.Log("Inventory overflowing!");
+            }
         }
     }
     private void InitializeStats()

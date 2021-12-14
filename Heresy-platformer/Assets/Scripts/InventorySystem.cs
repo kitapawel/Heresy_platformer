@@ -12,9 +12,10 @@ public class InventorySystem : MonoBehaviour
     public Weapon equippedWeapon;
     public Armor equippedArmor;
     public Tool equippedTool;
+    public Accessory equippedAccessory;
     public int projectileCount;
-    public int baseInventorySpace = 3;
-    public int inventorySpace;
+    public int baseInventorySlots = 2;
+    public int inventorySlots;
     public PlayerCanvasController playerCanvasController;
 
     public ProjectileRotating equippedThrownWeapon;
@@ -40,13 +41,12 @@ public class InventorySystem : MonoBehaviour
             equippedArmor = defaultArmor;
         }
         projectileCount = equippedArmor.projectileSlots;
-        inventorySpace = baseInventorySpace + equippedArmor.inventorySlots;
-        playerCanvasController.UpdateInventoryPanel();
+        inventorySlots = baseInventorySlots;
     }
     //Initiated from the PickableItem script, flows to the PlayerCanvasController to update inventory UI
     public void PickItemToInventory(ScriptableObject scriptableObject)
     {
-        if (items.Count <= inventorySpace)
+        if (items.Count <= GetCurrentInventorySlots())
         {
             items.Add(scriptableObject as Item);
             playerCanvasController.UpdateInventoryPanel();
@@ -80,9 +80,19 @@ public class InventorySystem : MonoBehaviour
             RemoveItemFromInventory(scriptableObject as Item);
             equippedTool = scriptableObject as Tool;
         }
+        else if (scriptableObject.GetType() == typeof(Accessory))
+        {
+            //TODO cannot equip if more items would overflow inventory
+            if (equippedAccessory != null)
+            {
+                PickItemToInventory(equippedAccessory);
+            }
+            RemoveItemFromInventory(scriptableObject as Item);
+            equippedAccessory = scriptableObject as Accessory;
+        }
         else
         {
-            if (items.Count <= inventorySpace)
+            if (items.Count <= GetCurrentInventorySlots())
             {
                 items.Add(scriptableObject as Item);
                 playerCanvasController.UpdateInventoryPanel();
@@ -105,7 +115,7 @@ public class InventorySystem : MonoBehaviour
 
     public bool isInventoryFull()
     {
-        if (inventorySpace <= items.Count)
+        if (GetCurrentInventorySlots() <= items.Count)
         {
             return true;
         } else
@@ -113,6 +123,29 @@ public class InventorySystem : MonoBehaviour
             return false;
         }
     }
+    public bool isInventoryOverflowing()
+    {
+        if (GetCurrentInventorySlots() < items.Count)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+    public float GetCurrentInventorySlots()
+    {
+        int totalInventorySlots = inventorySlots + equippedArmor.inventorySlots;
+        if (equippedAccessory)
+        {
+            totalInventorySlots += equippedAccessory.inventorySlots;
+        }
+        return totalInventorySlots;
+    }
+
     public float GetDefenseValue()
     {
         float defenseBaseValue;
@@ -143,4 +176,5 @@ public class InventorySystem : MonoBehaviour
         float poise = equippedArmor.poise;
         return poise;
     }
+
 }

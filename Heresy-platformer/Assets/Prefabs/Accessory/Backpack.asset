@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f44b4a8115f8944bb3f5640f8f6530, type: 3}
+  m_Name: Backpack
+  m_EditorClassIdentifier: 
+  prefabName: Backpack
+  icon: {fileID: 21300000, guid: fc76135299c79874eba1e5557d3b28e3, type: 3}
+  prefab: {fileID: 0}
+  flavourText: 
+  inventorySlots: 5
+  damage: 0
+  stabilityDamage: 0
+  force: 0
+  armorPenetration: 0
+  critRateBonus: 0
+  critDamageBonus: 0
+  energyCost: 0
+  structuralDamage: 0

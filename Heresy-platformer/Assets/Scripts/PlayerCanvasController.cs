@@ -16,10 +16,12 @@ public class PlayerCanvasController : MonoBehaviour
     public EquippedItemSlot equippedArmor;
     public EquippedItemSlot equippedWeapon;
     public EquippedItemSlot equippedTool;
+    public EquippedItemSlot equippedAccessory;
 
     bool isInventoryWindowActive = false;
 
     public InventorySlot inventorySlotPrefab;
+    public TMP_Text inventorySlotTrackerText;
     public TMP_Dropdown primaryAttackDropDown;
     public TMP_Dropdown secondaryAttackDropDown;
     public TMP_Dropdown comboAttackDropDown;
@@ -35,6 +37,7 @@ public class PlayerCanvasController : MonoBehaviour
         myInventorySystem = FindObjectOfType<PlayerInput>().GetComponentInParent<InventorySystem>();
         myCharacterController = FindObjectOfType<PlayerInput>().GetComponentInParent<CharacterController>();
         inventoryWindow.gameObject.SetActive(false);
+        UpdateInventoryPanel();
     }
 
     private void Update()
@@ -58,12 +61,25 @@ public class PlayerCanvasController : MonoBehaviour
             inventorySlot.item = item;
             inventorySlot.icon.sprite = item.icon;
         }
+
         equippedArmor.item = myInventorySystem.equippedArmor;
         equippedArmor.icon.sprite = myInventorySystem.equippedArmor.icon;
         equippedWeapon.item = myInventorySystem.equippedWeapon;
         equippedWeapon.icon.sprite = myInventorySystem.equippedWeapon.icon;
-        //equippedTool.item = myInventorySystem.equippedTool;
-        //equippedTool.icon.sprite = myInventorySystem.equippedTool.icon;
+        if (myInventorySystem.equippedTool)
+        {
+            equippedTool.item = myInventorySystem.equippedTool;
+            equippedTool.icon.sprite = myInventorySystem.equippedTool.icon;
+        }
+        if (myInventorySystem.equippedAccessory)
+        {
+            equippedAccessory.item = myInventorySystem.equippedAccessory;
+            equippedAccessory.icon.sprite = myInventorySystem.equippedAccessory.icon;
+        }
+
+        string newString = (myInventorySystem.items.Count + "/" + myInventorySystem.GetCurrentInventorySlots());
+        inventorySlotTrackerText.text = newString;
+
     }
 
     public void ShowUIElements()

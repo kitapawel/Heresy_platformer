@@ -22,4 +22,4 @@ MonoBehaviour:
   poise: 10
   weight: 5
   projectileSlots: 1
-  inventorySlots: 1
+  inventorySlots: 3

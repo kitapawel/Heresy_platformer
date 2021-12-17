@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +11,7 @@ public class PickableItem : MonoBehaviour
     const int PICKABLE_LAYER = 25;
 
     [SerializeField]
-    ScriptableObject scriptableObject;
+    Item pickableItem;
     [SerializeField] 
     private float rotateSpeed = 20f;
     bool isMousePressed = false;
@@ -38,8 +39,8 @@ public class PickableItem : MonoBehaviour
         {            
             PickObject();
         }
+        DisplayTooltip();
     }
-
 
     private void Start()
     {
@@ -75,13 +76,13 @@ public class PickableItem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && isPlayerInRange)
         {
-            if (scriptableObject)
+            if (pickableItem)
             {
-                if (FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().isInventoryFull() == false)
+                if (FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().IsInventoryFull() == false)
                 {
                     //the whole EquipItem operation needs to be completed, otherwise Destroy() operation might
                     //get omitted, which will lead to duplication
-                    FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().PickItemToInventory(scriptableObject);
+                    FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().PickItemToInventory(pickableItem);
                     Destroy(gameObject);
                 }
                 else
@@ -91,6 +92,13 @@ public class PickableItem : MonoBehaviour
             }
         }
     }
+
+    private void DisplayTooltip()
+    {
+       string tooltipText = pickableItem.name;
+       FindObjectOfType<TooltipController>().ShowToolTip(tooltipText);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //PickableItem detects collision checker on AllActorChecker layer, not the Player on Actor layer

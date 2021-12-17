@@ -113,7 +113,7 @@ public class InventorySystem : MonoBehaviour
         items.Remove(item);
     }
 
-    public bool isInventoryFull()
+    public bool IsInventoryFull()
     {
         if (GetCurrentInventorySlots() <= items.Count)
         {
@@ -123,7 +123,7 @@ public class InventorySystem : MonoBehaviour
             return false;
         }
     }
-    public bool isInventoryOverflowing()
+    public bool IsInventoryOverflowing()
     {
         if (GetCurrentInventorySlots() < items.Count)
         {

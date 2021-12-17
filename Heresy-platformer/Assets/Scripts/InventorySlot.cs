@@ -1,13 +1,24 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class InventorySlot : MonoBehaviour
+public class InventorySlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-	public Image icon;
+    private bool mouse_over = false;
+    public Image icon;
 	public Button removeButton;
 
 	public Item item;  // Current item in the slot
 
+    void Update()
+    {
+        if (mouse_over)
+        {
+            string tooltipText = GetComponent<InventorySlot>().item.name;
+            FindObjectOfType<TooltipController>().ShowToolTip(tooltipText);
+
+        }
+    }
     public void RemoveItemFromInventory()
     {
         FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().DropItem(item);
@@ -17,6 +28,17 @@ public class InventorySlot : MonoBehaviour
     {
         FindObjectOfType<PlayerInput>().GetComponent<InventorySystem>().UseItemInInventory(item);
         FindObjectOfType<PlayerCanvasController>().UpdateInventoryPanel();
+    }
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        mouse_over = true;
+        Debug.Log("Mouse enter");
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        mouse_over = false;
+        Debug.Log("Mouse exit");
     }
 
     /*    // Add item to the slot

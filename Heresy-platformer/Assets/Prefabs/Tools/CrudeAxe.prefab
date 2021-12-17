@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801594d79bf271c4fb6b1e7100433306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scriptableObject: {fileID: 11400000, guid: 50138617e89e734419628f90e39f9244, type: 2}
+  pickableItem: {fileID: 11400000, guid: 50138617e89e734419628f90e39f9244, type: 2}
   rotateSpeed: 40
 --- !u!50 &596070563857759496
 Rigidbody2D:

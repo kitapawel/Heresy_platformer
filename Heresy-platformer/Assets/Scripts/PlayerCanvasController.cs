@@ -22,6 +22,7 @@ public class PlayerCanvasController : MonoBehaviour
 
     public InventorySlot inventorySlotPrefab;
     public TMP_Text inventorySlotTrackerText;
+    public TMP_Text equippedStats;
     public TMP_Dropdown primaryAttackDropDown;
     public TMP_Dropdown secondaryAttackDropDown;
     public TMP_Dropdown comboAttackDropDown;
@@ -76,10 +77,22 @@ public class PlayerCanvasController : MonoBehaviour
             equippedAccessory.item = myInventorySystem.equippedAccessory;
             equippedAccessory.icon.sprite = myInventorySystem.equippedAccessory.icon;
         }
+        UpdateEquipmentText();
+        UpdateBagText();
 
+    }
+
+    private void UpdateEquipmentText()
+    {
+        string newString = string.Format("Damage: " + myInventorySystem.equippedWeapon.damage + "\n" +
+                                          "Defense: " + myInventorySystem.equippedArmor.defense + "\n");
+        equippedStats.text = newString;
+    }
+
+    private void UpdateBagText()
+    {
         string newString = (myInventorySystem.items.Count + "/" + myInventorySystem.GetCurrentInventorySlots());
         inventorySlotTrackerText.text = newString;
-
     }
 
     public void ShowUIElements()

@@ -21,7 +21,7 @@ MonoBehaviour:
   stabilityDamage: 2
   force: 80
   armorPenetration: 1
-  critRateBonus: 5
+  critRateBonus: 0.05
   critDamageBonus: 1.25
   energyCost: 5
   structuralDamage: 1

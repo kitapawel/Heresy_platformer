@@ -21,16 +21,21 @@ MonoBehaviour:
   healthRegenCost: 2
   energyRegen: 1
   energyRegenCost: 0.1
-  attackEfficiency: 1
-  actionCost: 5
-  runCost: 1
+  baseAttackEfficiency: 1
+  baseActionCost: 5
+  BaseRunCost: 1
   baseDamageBonus: 1
   baseCritRate: 0.05
-  baseCritBonus: 1.1
+  baseCritBonus: 0.1
   weakAttackMultiplier: 0.8
   normalAttackMultiplier: 1
   strongAttackMultiplier: 1.2
-  primaryAttackLevel: 0
-  secondaryAttackLevel: 0
+  basePrimaryAttackLevel: 0
+  baseSecondaryAttackLevel: 0
+  baseMoveSpeed: 1.6
+  baseRunSpeed: 3.2
+  baseJumpForce: 180
+  baseRollForce: 500
+  baseDodgeForce: 320
   defaultAnimatorOverrideController: {fileID: 22100000, guid: 2e4869fe84ac23b478fac0cd0d7c0461,
     type: 2}

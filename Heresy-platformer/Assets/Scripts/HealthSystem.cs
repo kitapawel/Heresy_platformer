@@ -17,13 +17,13 @@ public class HealthSystem : MonoBehaviour{
     [SerializeField]
     private float currentHealth;
     [SerializeField]
-    private float maxHealth;
+    public float maxHealth;
     [SerializeField]
-    private float maxEnergy;
+    public float maxEnergy;
     [SerializeField]
     private float currentEnergy;
     [SerializeField]
-    private float maxVitality;
+    public float maxVitality;
     [SerializeField]
     private float currentVitality;
     [SerializeField]

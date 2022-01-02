@@ -6,8 +6,8 @@ using TMPro;
 public class TooltipController : MonoBehaviour
 {
     public TMP_Text tooltip;
+    public Vector3 offset;
 
-    // Start is called before the first frame update
     void Start()
     {
         tooltip = GetComponent<TextMeshProUGUI>();
@@ -16,7 +16,7 @@ public class TooltipController : MonoBehaviour
 
     public void ShowToolTip(string txt)
     {
-        if (tooltip != null)
+        if (tooltip != null && FindObjectOfType<PlayerInput>().GetComponent<CharacterController>().isInspecting)
         {
             tooltip.text = txt;
         }

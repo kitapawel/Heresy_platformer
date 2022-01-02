@@ -21,7 +21,7 @@ public abstract class ControlInput : MonoBehaviour
     [HideInInspector] public bool shiftPressed;
     [HideInInspector] public bool throwItem;
     [HideInInspector] public bool energyBoost;
-
+	[HideInInspector] public bool inspect;
 	protected void ClearInput()
 	{
 		//If we're not ready to clear input, exit
@@ -43,6 +43,7 @@ public abstract class ControlInput : MonoBehaviour
 		shiftPressed = false;
 		throwItem = false;
 		energyBoost = false;
+		inspect = false;
 
 		readyToClear = false;
 	}

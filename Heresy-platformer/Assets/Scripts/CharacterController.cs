@@ -16,6 +16,7 @@ public class CharacterController : MonoBehaviour
     [Header("Physical properties")]
 
     [Header("Boolean values")]
+    public bool isInspecting = false;
     public bool isAlive = true;
     bool canWalk = true;
     public bool canClimb = false;
@@ -90,74 +91,93 @@ public class CharacterController : MonoBehaviour
         secondaryAttackLevel = characterStats.baseSecondaryAttackLevel;
     }
     void ProcessMovement()
-    {
-        if (myInput.jump && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
+    {        
+        if (myInput.inspect && myInput.horizontal==0)
         {
-            myHealthSystem.UseEnergy(actionCost);
-            SetCanWalk(0);
-            myRigidBody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-            isWalking = false;
-            //Set the SetCanWalk parameter in other animations, so that after jump the value is reset
-        }
-        else if (myInput.roll && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
-        {
-            myHealthSystem.UseEnergy(actionCost);
-            SetCanWalk(0);
-            isWalking = false;
-            myAnimator.SetTrigger("Roll");
-            myRigidBody2D.velocity = new Vector2(0f, 0f);
-            myRigidBody2D.AddForce(new Vector2(rollForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
-        }
-        else if (myInput.dodge && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
-        {
-            myHealthSystem.UseEnergy(actionCost);
-            SetCanWalk(0);
-            isWalking = false;
-            myAnimator.SetTrigger("Dodge");
-            myRigidBody2D.velocity = new Vector2(0f, 0f);
-            myRigidBody2D.AddForce(new Vector2(-dodgeForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
-        }
-        else if (myInput.climb && isGrounded && canWalk)
-        {
-            CheckIfCanClimb();
-            if (canClimb)
+            if (isInspecting == true)
             {
-                StartCoroutine("Climbing");
+                FindObjectOfType<TooltipController>().ShowToolTip("");
+                isInspecting = false;
+                myAnimator.SetBool("isInspecting", false);
+
+            }
+            else
+            {
+                isInspecting = true;
+                myAnimator.SetBool("isInspecting", true);
             }
         }
-        else if (myInput.shiftPressed && myInput.horizontal != 0 && canWalk && myHealthSystem.CanUseEnergyBasedAction(runCost))
-        {
-            myHealthSystem.UseEnergy(runCost*Time.deltaTime);
 
-            isWalking = true;
-            myAnimator.SetBool("isMoving", true);
-            myAnimator.SetFloat("MoveBlendValue", 1);
-            transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
-            float xVelocity = runSpeed * myInput.horizontal;
-            myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
-        }
-        else if (myInput.shiftPressed == false && myInput.horizontal != 0 && canWalk)
+        if (!isInspecting)
         {
-            isWalking = true;
-            myAnimator.SetBool("isMoving", true);
-            myAnimator.SetFloat("MoveBlendValue", 0);
-            transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
-            float xVelocity = moveSpeed * myInput.horizontal;
-            myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
-        }
-        else if (myInput.energyBoost == true)
-        {
-            myHealthSystem.QuickEnergyRegen();
-        }
-        else
-        {
-            isWalking = false;
-            myAnimator.SetBool("isMoving", false);
-        }
+            if (myInput.jump && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
+            {
+                myHealthSystem.UseEnergy(actionCost);
+                SetCanWalk(0);
+                myRigidBody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+                isWalking = false;
+                //Set the SetCanWalk parameter in other animations, so that after jump the value is reset
+            }
+            else if (myInput.roll && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
+            {
+                myHealthSystem.UseEnergy(actionCost);
+                SetCanWalk(0);
+                isWalking = false;
+                myAnimator.SetTrigger("Roll");
+                myRigidBody2D.velocity = new Vector2(0f, 0f);
+                myRigidBody2D.AddForce(new Vector2(rollForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
+            }
+            else if (myInput.dodge && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
+            {
+                myHealthSystem.UseEnergy(actionCost);
+                SetCanWalk(0);
+                isWalking = false;
+                myAnimator.SetTrigger("Dodge");
+                myRigidBody2D.velocity = new Vector2(0f, 0f);
+                myRigidBody2D.AddForce(new Vector2(-dodgeForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
+            }
+            else if (myInput.climb && isGrounded && canWalk)
+            {
+                CheckIfCanClimb();
+                if (canClimb)
+                {
+                    StartCoroutine("Climbing");
+                }
+            }
+            else if (myInput.shiftPressed && myInput.horizontal != 0 && canWalk && myHealthSystem.CanUseEnergyBasedAction(runCost))
+            {
+                myHealthSystem.UseEnergy(runCost * Time.deltaTime);
+
+                isWalking = true;
+                myAnimator.SetBool("isMoving", true);
+                myAnimator.SetFloat("MoveBlendValue", 1);
+                transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
+                float xVelocity = runSpeed * myInput.horizontal;
+                myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
+            }
+            else if (myInput.shiftPressed == false && myInput.horizontal != 0 && canWalk)
+            {
+                isWalking = true;
+                myAnimator.SetBool("isMoving", true);
+                myAnimator.SetFloat("MoveBlendValue", 0);
+                transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
+                float xVelocity = moveSpeed * myInput.horizontal;
+                myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
+            }
+            else if (myInput.energyBoost == true)
+            {
+                myHealthSystem.QuickEnergyRegen();
+            }
+            else
+            {
+                isWalking = false;
+                myAnimator.SetBool("isMoving", false);
+            }
+        }        
     }
     void ProcessAttacks()
     {
-        if (isGrounded && canWalk)
+        if (isGrounded && canWalk && !isInspecting)
         {
             if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
             {

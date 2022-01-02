@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b63640de18cdb245b859bf0f6655b90, type: 3}
   m_Name: MetalArmor
   m_EditorClassIdentifier: 
-  prefabName: 
+  prefabName: Metal Armor
   icon: {fileID: 3707257154504999516, guid: 4b6e1b7c4a7699f47b7a2b9426b284e5, type: 3}
   prefab: {fileID: 1459760042894036328, guid: a7fcd5cb7bf8bf443910769c1e7a67b3, type: 3}
   flavourText: 
   armorType: 3
   defense: 0
-  stability: 10
   poise: 20
   weight: 10
   projectileSlots: 1

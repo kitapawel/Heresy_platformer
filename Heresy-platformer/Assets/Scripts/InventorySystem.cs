@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[DefaultExecutionOrder (-1)]
 public class InventorySystem : MonoBehaviour
 {
     //TODO determine which type of weapon can go to main weapon slot

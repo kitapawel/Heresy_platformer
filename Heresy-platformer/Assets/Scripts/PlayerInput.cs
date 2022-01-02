@@ -8,16 +8,13 @@ public class PlayerInput : ControlInput
 	[SerializeField] Texture2D useCursor = null;
 	[SerializeField] Vector2 cursorHotSpot = new Vector2(0, 0);
 
-	public bool isInCombatMode = true;
+
 
 	void Update()
 	{
 		ClearInput();//clear inputs befor process inputs
 		IsShiftPressed();
-		if (EventSystem.current.IsPointerOverGameObject())
-			return;
 		ProcessInputs();
-
 		//Clamp the horizontal input to be between -1 and 1
 		horizontal = Mathf.Clamp(horizontal, -1f, 1f);
 	}
@@ -26,23 +23,6 @@ public class PlayerInput : ControlInput
 	{
 		readyToClear = true;
 	}
-
-	/*	void SwitchPlayerMode()
-		{
-			if (Input.GetKeyUp(KeyCode.Tab))
-			{
-				if (isInCombatMode)
-				{
-					isInCombatMode = false;
-					Cursor.SetCursor(useCursor, cursorHotSpot, CursorMode.Auto);
-				}
-				else
-				{
-					isInCombatMode = true;
-					Cursor.SetCursor(normalCursor, cursorHotSpot, CursorMode.Auto);
-				}
-			}
-		}*/
 
 	void ProcessMove()
     {
@@ -67,6 +47,7 @@ public class PlayerInput : ControlInput
 		climb = climb || Input.GetKeyDown(KeyCode.Z);
 		throwItem = throwItem || Input.GetKeyDown(KeyCode.Q);
 		energyBoost = energyBoost || Input.GetKeyDown(KeyCode.V);
+		inspect = inspect || Input.GetKeyDown(KeyCode.F1);
 
 		//Interface inputs
 

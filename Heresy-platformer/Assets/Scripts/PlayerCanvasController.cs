@@ -29,7 +29,7 @@ public class PlayerCanvasController : MonoBehaviour
     public TMP_Dropdown comboAttackDropDown;
 
 
-    private void Start()
+    void Start()
     {
         //first three lines automatically find images provided that gameobject names are correct
         healthBar = GameObject.Find("PlayerHealth").GetComponent<Image>();
@@ -43,7 +43,7 @@ public class PlayerCanvasController : MonoBehaviour
         UpdateInventoryPanel();
     }
 
-    private void Update()
+    void Update()
     {
         healthBar.fillAmount = myHealthSystem.GetHealthAsPercentage();
         energyBar.fillAmount = myHealthSystem.GetEnergyAsPercentage();

@@ -15,13 +15,13 @@ public abstract class ControlInput : MonoBehaviour
     [HideInInspector] public bool basicAttack;
     [HideInInspector] public bool advancedAttack;
     [HideInInspector] public bool combo;
-    [HideInInspector] public bool finisher;
     [HideInInspector] public bool useTool;
     [HideInInspector] public bool parry;
     [HideInInspector] public bool shiftPressed;
     [HideInInspector] public bool throwItem;
     [HideInInspector] public bool energyBoost;
 	[HideInInspector] public bool inspect;
+	[HideInInspector] public bool inventory;
 	protected void ClearInput()
 	{
 		//If we're not ready to clear input, exit
@@ -37,13 +37,13 @@ public abstract class ControlInput : MonoBehaviour
 		basicAttack = false;
 		advancedAttack = false;
 		combo = false;
-		finisher = false;
 		useTool = false;
 		parry = false;
 		shiftPressed = false;
 		throwItem = false;
 		energyBoost = false;
 		inspect = false;
+		inventory = false;
 
 		readyToClear = false;
 	}

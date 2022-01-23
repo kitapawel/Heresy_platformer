@@ -40,14 +40,14 @@ public class PlayerInput : ControlInput
 		basicAttack = basicAttack || Input.GetMouseButtonDown(0);
 		advancedAttack = advancedAttack || Input.GetMouseButtonDown(1);
 		combo = combo || Input.GetMouseButtonDown(2);
-		finisher = finisher || Input.GetKeyDown(KeyCode.R);
 		useTool = useTool || Input.GetKeyDown(KeyCode.F);
 		parry = parry || Input.GetKeyDown(KeyCode.Tab);
 		roll = roll || Input.GetKeyDown(KeyCode.Space);
 		climb = climb || Input.GetKeyDown(KeyCode.Z);
 		throwItem = throwItem || Input.GetKeyDown(KeyCode.Q);
-		energyBoost = energyBoost || Input.GetKeyDown(KeyCode.V);
-		inspect = inspect || Input.GetKeyDown(KeyCode.F1);
+		energyBoost = energyBoost || Input.GetKeyDown(KeyCode.X);
+		inspect = inspect || Input.GetKeyDown(KeyCode.V);
+		inventory = inventory || Input.GetKeyDown(KeyCode.B);
 
 		//Interface inputs
 

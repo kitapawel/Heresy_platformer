@@ -1,7 +1,22 @@
 fileFormatVersion: 2
-guid: 1b4f40fdca6cf3541b86c19a4bcd226d
+guid: 1b3d41d7ec2969e4cbf5808a9b6b9a57
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8577592328560963074
+    second: HeroKnight_BlockNoEffect_0
+  - first:
+      213: 8396230882716476698
+    second: HeroKnight_BlockNoEffect_1
+  - first:
+      213: -8271384949692295404
+    second: HeroKnight_BlockNoEffect_2
+  - first:
+      213: 8604013831667479539
+    second: HeroKnight_BlockNoEffect_3
+  - first:
+      213: -273785325106040665
+    second: HeroKnight_BlockNoEffect_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,12 +56,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.4, y: 0.13}
-  spritePixelsToUnits: 26
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +138,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: HeroKnight_BlockNoEffect_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 2
+        width: 41
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20eedfbd6cab90770800000000000000
+      internalID: 8577592328560963074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_BlockNoEffect_1
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 2
+        width: 43
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a15ea70b087658470800000000000000
+      internalID: 8396230882716476698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_BlockNoEffect_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 2
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41714114633263d80800000000000000
+      internalID: -8271384949692295404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_BlockNoEffect_3
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 2
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3761f6ef8976770800000000000000
+      internalID: 8604013831667479539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroKnight_BlockNoEffect_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 2
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0f65882b1533cf0800000000000000
+      internalID: -273785325106040665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

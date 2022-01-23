@@ -48,7 +48,6 @@ public class PlayerCanvasController : MonoBehaviour
         healthBar.fillAmount = myHealthSystem.GetHealthAsPercentage();
         energyBar.fillAmount = myHealthSystem.GetEnergyAsPercentage();
         vitalityBar.fillAmount = myHealthSystem.GetVitalityAsPercentage();
-        ShowUIElements();
     }
 
     public void UpdateInventoryPanel()
@@ -114,11 +113,20 @@ public class PlayerCanvasController : MonoBehaviour
         inventorySlotTrackerText.text = newString;
     }
 
-    public void ShowUIElements()
+    public void OpenInventoryWindow()
     {
-        if (Input.GetKeyDown(KeyCode.B))
+        if (isInventoryWindowActive == false)
         {
-            ToggleInventoryWindow();
+            isInventoryWindowActive = true;
+            inventoryWindow.gameObject.SetActive(true);
+        }
+    }
+    public void CloseInventoryWindow()
+    {
+        if (isInventoryWindowActive == true)
+        {
+            isInventoryWindowActive = false;
+            inventoryWindow.gameObject.SetActive(false);
         }
     }
 

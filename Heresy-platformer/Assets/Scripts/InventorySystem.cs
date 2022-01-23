@@ -26,7 +26,10 @@ public class InventorySystem : MonoBehaviour
 
     private void Start()
     {
-        playerCanvasController = FindObjectOfType<PlayerCanvasController>();
+        if (gameObject.tag == "Player")
+        {
+            playerCanvasController = FindObjectOfType<PlayerCanvasController>();   
+        }
         InitializeInventory();
     }
 
@@ -57,7 +60,14 @@ public class InventorySystem : MonoBehaviour
     {
         if (scriptableObject.GetType() == typeof(Weapon))
         {
-            PickItemToInventory(equippedWeapon);
+            if(items.Count <= GetCurrentInventorySlots())
+            {
+                PickItemToInventory(equippedWeapon);
+            } else
+            {
+                DropItem(equippedWeapon);
+                FindObjectOfType<TooltipController>().ShowNotification("Inventory is full. Dropping: " + equippedWeapon.name);
+            }
             RemoveItemFromInventory(scriptableObject as Item);
             equippedWeapon = scriptableObject as Weapon;
 
@@ -65,8 +75,15 @@ public class InventorySystem : MonoBehaviour
         }
         else if (scriptableObject.GetType() == typeof(Armor))
         {
-            //TODO cannot equip if more items would overflow inventory
-            PickItemToInventory(equippedArmor);
+            if (items.Count <= GetCurrentInventorySlots())
+            {
+                PickItemToInventory(equippedArmor);
+            }
+            else
+            {
+                DropItem(equippedArmor);
+                FindObjectOfType<TooltipController>().ShowNotification("Inventory is full. Dropping: " + equippedArmor.name);
+            }            
             RemoveItemFromInventory(scriptableObject as Item);
             equippedArmor = scriptableObject as Armor;
         }
@@ -75,7 +92,15 @@ public class InventorySystem : MonoBehaviour
             //TODO cannot equip if more items would overflow inventory
             if (equippedTool != null)
             {
-                PickItemToInventory(equippedTool);
+                if (items.Count <= GetCurrentInventorySlots())
+                {
+                    PickItemToInventory(equippedTool);
+                }
+                else
+                {
+                    DropItem(equippedTool);
+                    FindObjectOfType<TooltipController>().ShowNotification("Inventory is full. Dropping: " + equippedTool.name);
+                }
             }
             RemoveItemFromInventory(scriptableObject as Item);
             equippedTool = scriptableObject as Tool;
@@ -85,7 +110,15 @@ public class InventorySystem : MonoBehaviour
             //TODO cannot equip if more items would overflow inventory
             if (equippedAccessory != null)
             {
-                PickItemToInventory(equippedAccessory);
+                if (items.Count <= GetCurrentInventorySlots())
+                {
+                    PickItemToInventory(equippedAccessory);
+                }
+                else
+                {
+                    DropItem(equippedAccessory);
+                    FindObjectOfType<TooltipController>().ShowNotification("Inventory is full. Dropping: " + equippedAccessory.name);
+                }
             }
             RemoveItemFromInventory(scriptableObject as Item);
             equippedAccessory = scriptableObject as Accessory;
@@ -126,7 +159,7 @@ public class InventorySystem : MonoBehaviour
     public bool IsInventoryOverflowing()
     {
         if (GetCurrentInventorySlots() < items.Count)
-        {
+        {            
             return true;
         }
         else

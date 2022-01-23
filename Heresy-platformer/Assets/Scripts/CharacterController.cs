@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CharacterController : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class CharacterController : MonoBehaviour
     private void Awake()
     {
         gameObject.AddComponent<AudioSource>();
+
     }
 
     private void Start()
@@ -70,10 +72,10 @@ public class CharacterController : MonoBehaviour
             if (!myInventorySystem.IsInventoryOverflowing())
             {
                 ProcessMovement();
-                ProcessAttacks();
-            } else
-            {
-                Debug.Log("Inventory overflowing!");
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    ProcessAttacks();
+                }
             }
         }
     }
@@ -106,6 +108,11 @@ public class CharacterController : MonoBehaviour
                 isInspecting = true;
                 myAnimator.SetBool("isInspecting", true);
             }
+        }
+
+        if (myInput.inventory)
+        {
+            FindObjectOfType<PlayerCanvasController>().ToggleInventoryWindow();
         }
 
         if (!isInspecting)
@@ -205,11 +212,6 @@ public class CharacterController : MonoBehaviour
             if (myInput.parry && myHealthSystem.CanUseEnergyBasedAction(attackEfficiency))
             {
                 myAnimator.SetTrigger("Parry");
-                myHealthSystem.UseEnergy(attackEfficiency);
-            }
-            if (myInput.finisher)
-            {
-                myAnimator.SetTrigger("Finisher");
                 myHealthSystem.UseEnergy(attackEfficiency);
             }
             if (myInput.useTool && myHealthSystem.CanUseEnergyBasedAction(GetToolStaminaCost()))
@@ -346,6 +348,11 @@ public class CharacterController : MonoBehaviour
 
     public void GetHit()
     {
+        if (isInspecting)
+        {
+            myAnimator.SetBool("isInspecting", false);
+            isInspecting = false;
+        }
         if (isGrounded && myAnimator.GetBool("isFallen") == false)
         {
             myAnimator.Play("GetHit");

@@ -8,7 +8,6 @@ public class CombatSystem : MonoBehaviour
     [SerializeField] CharacterStats characterStats;
     public FactionType factionType;
 
-    Animator myAnimator;
     CharacterController myCharacterController;
     InventorySystem myInventorySystem;
 
@@ -17,6 +16,9 @@ public class CombatSystem : MonoBehaviour
     public float damageBonus;
     public float critRate;
     public float critDamageBonus;
+    public float weakAttackMultiplier;
+    public float normalAttackMultiplier;
+    public float strongAttackMultiplier;
 
     const int WEAK_ATTACK = 1;
     const int NORMAL_ATTACK = 0;
@@ -26,7 +28,6 @@ public class CombatSystem : MonoBehaviour
 
     void Awake()
     {
-        myAnimator = GetComponent<Animator>();
         myCharacterController = GetComponent<CharacterController>();
         hitCollisionChecker = GetComponentInChildren<HitCollisionChecker>();
         interactionChecker = GetComponentInChildren<InteractionChecker>();
@@ -40,6 +41,10 @@ public class CombatSystem : MonoBehaviour
         damageBonus = characterStats.baseDamageBonus;
         critRate = characterStats.baseCritRate;
         critDamageBonus = characterStats.baseCritBonus;
+        weakAttackMultiplier = characterStats.weakAttackMultiplier;
+        normalAttackMultiplier = characterStats.normalAttackMultiplier;
+        strongAttackMultiplier = characterStats.strongAttackMultiplier;
+
         factionType = characterStats.factionType;
     }
 
@@ -59,21 +64,21 @@ public class CombatSystem : MonoBehaviour
             //Modify damage value depending on whether the attack was strong or weak
             if (attackMode == WEAK_ATTACK)
             {
-                damageToDeal = damageToDeal * characterStats.weakAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.weakAttackMultiplier;
-                appliedForce = appliedForce * characterStats.weakAttackMultiplier;
+                damageToDeal = damageToDeal * weakAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * weakAttackMultiplier;
+                appliedForce = appliedForce * weakAttackMultiplier;
             } else if (attackMode == STRONG_ATTACK)
             {
-                damageToDeal = damageToDeal * characterStats.strongAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.strongAttackMultiplier;
-                appliedForce = appliedForce * characterStats.strongAttackMultiplier;
+                damageToDeal = damageToDeal * strongAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * strongAttackMultiplier;
+                appliedForce = appliedForce * strongAttackMultiplier;
             } else
             {
-                damageToDeal = damageToDeal * characterStats.normalAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.normalAttackMultiplier;
-                appliedForce = appliedForce * characterStats.normalAttackMultiplier;
+                damageToDeal = damageToDeal * normalAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * normalAttackMultiplier;
+                appliedForce = appliedForce * normalAttackMultiplier;
             }
-
+            damageToDeal = CalculateCriticalDamage(damageToDeal);
             //Send data to target
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {                
@@ -102,22 +107,24 @@ public class CombatSystem : MonoBehaviour
             //Modify damage value depending on whether the attack was strong or weak
             if (attackMode == WEAK_ATTACK)
             {
-                damageToDeal = damageToDeal * characterStats.weakAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.weakAttackMultiplier;
-                appliedForce = appliedForce * characterStats.weakAttackMultiplier;
+                damageToDeal = damageToDeal * weakAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * weakAttackMultiplier;
+                appliedForce = appliedForce * weakAttackMultiplier;
             }
             else if (attackMode == STRONG_ATTACK)
             {
-                damageToDeal = damageToDeal * characterStats.strongAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.strongAttackMultiplier;
-                appliedForce = appliedForce * characterStats.strongAttackMultiplier;
+                damageToDeal = damageToDeal * strongAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * strongAttackMultiplier;
+                appliedForce = appliedForce * strongAttackMultiplier;
             }
             else
             {
-                damageToDeal = damageToDeal * characterStats.normalAttackMultiplier;
-                stabilityDamageToDeal = stabilityDamageToDeal * characterStats.normalAttackMultiplier;
-                appliedForce = appliedForce * characterStats.normalAttackMultiplier;
+                damageToDeal = damageToDeal * normalAttackMultiplier;
+                stabilityDamageToDeal = stabilityDamageToDeal * normalAttackMultiplier;
+                appliedForce = appliedForce * normalAttackMultiplier;
             }
+
+            damageToDeal = CalculateCriticalDamage(damageToDeal);
 
             //Send data to target
             if (hitTarget.GetComponentInParent<HealthSystem>())
@@ -135,16 +142,17 @@ public class CombatSystem : MonoBehaviour
 
     private float CalculateCriticalDamage(float damage)
     {
-        float critChance = Mathf.Clamp(critRate + myInventorySystem.equippedWeapon.critRateBonus, 0, 1f);
-        if (Random.Range(0f, 1f) < critChance)
+        float critChance = Mathf.Clamp(critRate + myInventorySystem.equippedWeapon.critRateBonus, 0f, .9f);
+        float critRoll = Random.Range(0f, 1f);
+        if (critRoll < critChance)
         {
             float bonusCriticalDamage = critDamageBonus + myInventorySystem.equippedWeapon.critDamageBonus;
             damage = damage * bonusCriticalDamage;
-            Debug.Log("Critical hit: " + damage);
+            Debug.Log("Critical hit roll: " + critRoll + ", dealt critical damage:" + damage);
             return Mathf.Round(damage);//TODO decide how to do rounding and at which point to round
         } else
         {
-            Debug.Log("Normal hit: " + damage);
+            Debug.Log("Critical hit roll: " + critRoll + ", dealt normal damage:" + damage);
             return Mathf.Round(damage);
         }
     }
@@ -158,21 +166,6 @@ public class CombatSystem : MonoBehaviour
             thrownW.throwingEntity = transform.gameObject;
             thrownW.GetComponent<Rigidbody2D>().AddForce(new Vector2(20f * myCharacterController.GetSpriteDirection(), 5f), ForceMode2D.Impulse);
         }        
-    }
-    public void FinishOff()
-    {
-        foreach (GameObject finishOffTarget in interactionChecker.finishOffTargets)
-        {            
-            float damageToDeal = 5f;
-            float stabilityDamageToDeal = myInventorySystem.equippedWeapon.stabilityDamage; //TODO maybe spice this up a bit
-            float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
-            float attackVector = myCharacterController.GetSpriteDirection();
-            if (finishOffTarget.GetComponentInParent<HealthSystem>())
-            {
-                Debug.Log(finishOffTarget + " organic target was hit for " + damageToDeal + " dmg + " + stabilityDamageToDeal + " stability damage.");
-                finishOffTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, myInventorySystem.equippedWeapon.armorPenetration, stabilityDamageToDeal, appliedForce, attackVector);
-            }
-        }
     }
 
     public FactionType GetCurrentFactionType()

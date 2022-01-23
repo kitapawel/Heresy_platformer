@@ -14,12 +14,20 @@ public class TooltipController : MonoBehaviour
         tooltip.text = "";
     }
 
-    public void ShowToolTip(string txt)
+    public void ShowToolTip(string txt) //tooltip for objects in "Inspect" mode
     {
         if (tooltip != null && FindObjectOfType<PlayerInput>().GetComponent<CharacterController>().isInspecting)
         {
             tooltip.text = txt;
         }
     }
+    public void ShowNotification(string txt) //notifications for actions, e.g. if some action fails, not related to "Inspect" mode
+    {
+        if (tooltip != null)
+        {
+            tooltip.text = txt;            
+        }
+    }
+
 }
 

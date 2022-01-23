@@ -87,7 +87,7 @@ public class PickableItem : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Inventory is full. Try to free up some space.");
+                    FindObjectOfType<TooltipController>().ShowNotification("Inventory is full. Try to free up some space.");
                 }
             }
         }

@@ -132,9 +132,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.02, y: -0.05}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0.03125, w: 0}
+    border: {x: 0, y: 0, z: 0.03846154, w: 0}
     pivot: {x: 0.3034134, y: 0.97179306}
-    oldSize: {x: 0.1875, y: 0.21875}
+    oldSize: {x: 0.23076923, y: 0.26923078}
     newSize: {x: 0.109375, y: 0.140625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -292,7 +292,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.8538437, y: 0.89316136}
-    oldSize: {x: 0.125, y: 0.28125}
+    oldSize: {x: 0.15384616, y: 0.34615386}
     newSize: {x: 0.109375, y: 0.140625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -391,9 +391,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.2, y: 0.109713614}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.5
 --- !u!114 &4214025809473733240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,8 +488,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: 0.5}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: -0.030000001, y: 0.6046245}
+  m_Size: {x: 0.5, y: 1.209249}
   m_Direction: 0
 --- !u!212 &4214025809544596520
 SpriteRenderer:
@@ -588,10 +588,10 @@ MonoBehaviour:
   shiftPressed: 0
   throwItem: 0
   energyBoost: 0
+  inspect: 0
   normalCursor: {fileID: 2800000, guid: dac0e9e8fdad0124fb90d9dd44c36eac, type: 3}
   useCursor: {fileID: 2800000, guid: bd0492b676dba0c48b6e665e8e2b1cfb, type: 3}
   cursorHotSpot: {x: 0, y: 0}
-  isInCombatMode: 1
 --- !u!114 &4214025809544596523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -605,6 +605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 11400000, guid: 8f77904a8eab3ad4da1db92ded69273e, type: 2}
+  isInspecting: 0
   isAlive: 1
   canClimb: 0
   isParrying: 0
@@ -613,6 +614,11 @@ MonoBehaviour:
   jumpForce: 160
   rollForce: 250
   dodgeForce: 160
+  runCost: 0
+  attackEfficiency: 0
+  actionCost: 0
+  primaryAttackLevel: 0
+  secondaryAttackLevel: 0
 --- !u!114 &4214025809544596502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -626,6 +632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterStats: {fileID: 11400000, guid: 8f77904a8eab3ad4da1db92ded69273e, type: 2}
+  factionType: 0
   damageBonus: 0
   critRate: 0
   critDamageBonus: 0
@@ -713,9 +720,10 @@ MonoBehaviour:
   equippedWeapon: {fileID: 0}
   equippedArmor: {fileID: 0}
   equippedTool: {fileID: 0}
+  equippedAccessory: {fileID: 0}
   projectileCount: 0
-  baseInventorySpace: 3
-  inventorySpace: 0
+  baseInventorySlots: 2
+  inventorySlots: 0
   playerCanvasController: {fileID: 0}
   equippedThrownWeapon: {fileID: 3717726366138527824, guid: ac925cde1b9195740a6d7b3c04271013,
     type: 3}
@@ -842,7 +850,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.4999966, y: 0.028194852}
-    oldSize: {x: 0.21875, y: 0.28125}
+    oldSize: {x: 0.26923078, y: 0.34615386}
     newSize: {x: 0.109375, y: 0.140625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1071,7 +1079,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.53369796, y: 0.0019870335}
-    oldSize: {x: 0.21875, y: 0.28125}
+    oldSize: {x: 0.26923078, y: 0.34615386}
     newSize: {x: 0.109375, y: 0.140625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1204,7 +1212,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.73589784, y: 0.9324748}
-    oldSize: {x: 0.15625, y: 0.1875}
+    oldSize: {x: 0.1923077, y: 0.23076923}
     newSize: {x: 0.109375, y: 0.140625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1361,7 +1369,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.26409608, y: 1.0391933}
-    oldSize: {x: 0.15625, y: 0.21875}
+    oldSize: {x: 0.1923077, y: 0.26923078}
     newSize: {x: 0.109375, y: 0.140625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1460,7 +1468,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2, y: -0.3}
+  m_Offset: {x: 0.1818043, y: -0.17111474}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1471,7 +1479,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1152387, y: 1.2577705}
   m_EdgeRadius: 0
 --- !u!114 &355186066
 MonoBehaviour:

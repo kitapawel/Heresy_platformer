@@ -6,7 +6,6 @@ public class Weapon : Item
     public WeaponType weaponType;
     
     public float damage;
-    public float stabilityDamage;
     public float force;
     public float armorPenetration;// flat value that goes through organic armor
     public float critRateBonus;

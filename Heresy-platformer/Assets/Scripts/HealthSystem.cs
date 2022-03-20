@@ -92,7 +92,7 @@ public class HealthSystem : MonoBehaviour{
         }
     }
 
-    public void ProcessIncomingHit(float incomingDamage, float incomingArmorPenetration, float incomingStabilityDamage, float appliedForce, float attackVector, GameObject attacker = null)
+    public void ProcessIncomingHit(float incomingDamage, float incomingArmorPenetration, float appliedForce, float attackVector, GameObject attacker = null)
     {
         ProCamera2DShake.Instance.Shake("PlayerHit");
         if (myCharacterController.isParrying)
@@ -100,7 +100,6 @@ public class HealthSystem : MonoBehaviour{
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
             mySoundSystem.PlayParrySounds();
-            UseEnergy(/*parry proficiency minus*/ incomingStabilityDamage);
             CharacterController attackersCharacterController = attacker.GetComponent<CharacterController>();
             attackersCharacterController.GetParried(appliedForce*2, -attackVector);
             CheckHealthState();
@@ -110,7 +109,6 @@ public class HealthSystem : MonoBehaviour{
             CheckHealthState();
             CheckStability();
             TakeHealthDamage(incomingDamage, incomingArmorPenetration);
-            //TakeStabilityDamage(incomingStabilityDamage);
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
             myCharacterController.GetHit();
@@ -138,20 +136,6 @@ public class HealthSystem : MonoBehaviour{
         CheckHealthState();
         mySoundSystem.PlayPainSounds();
     } 
-/*    private void TakeStabilityDamage(float incomingStabilityDamage)
-    {
-        float finalDamageValue = incomingStabilityDamage - myInventorySystem.GetStabilityValue();
-        if (finalDamageValue < 1f)
-        {
-            finalDamageValue = 1f;
-        }
-        if (energy < minEnergy)
-        {
-            energy = minEnergy;
-        }
-        energy -= incomingStabilityDamage;
-        CheckStability();
-    }*/
 
     public float GetHealthAsPercentage()
     {

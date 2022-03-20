@@ -61,7 +61,7 @@ public class ProjectileRotating : MonoBehaviour
         {
             float attackVector = 1f * throwingEntity.GetComponent<CharacterController>().GetSpriteDirection();
             HealthSystem targetHealthSystem = target.GetComponent<HealthSystem>();
-            targetHealthSystem.ProcessIncomingHit(damage, piercingDamage, stabilitydamage, force, attackVector);
+            targetHealthSystem.ProcessIncomingHit(damage, piercingDamage, force, attackVector);
         }
     }
 

@@ -6,7 +6,6 @@ public class Tool : Item
     public ToolType toolType;
 
     public float damage;
-    public float stabilityDamage;
     public float force;
     public float armorPenetration; // flat value that goes throug organic armor
     public float critRateBonus;

@@ -36,7 +36,7 @@ public class CharacterController : MonoBehaviour
 
     [Header("Character's action stats")]
     public float attackEfficiency;
-    public float actionCost;
+    public float actionEfficiency;
     public float primaryAttackLevel;
     public float secondaryAttackLevel;
 
@@ -87,7 +87,7 @@ public class CharacterController : MonoBehaviour
         rollForce = characterStats.baseRollForce;
         dodgeForce = characterStats.baseDodgeForce;
         attackEfficiency = characterStats.baseAttackEfficiency;
-        actionCost = characterStats.baseActionCost;
+        actionEfficiency = characterStats.baseActionEfficiency;
         runCost = characterStats.BaseRunCost;
         primaryAttackLevel = characterStats.basePrimaryAttackLevel;
         secondaryAttackLevel = characterStats.baseSecondaryAttackLevel;
@@ -117,26 +117,26 @@ public class CharacterController : MonoBehaviour
 
         if (!isInspecting)
         {
-            if (myInput.jump && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
+            if (myInput.jump && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(4f * actionEfficiency))
             {
-                myHealthSystem.UseEnergy(actionCost);
+                myHealthSystem.UseEnergy(actionEfficiency);
                 SetCanWalk(0);
                 myRigidBody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
                 isWalking = false;
                 //Set the SetCanWalk parameter in other animations, so that after jump the value is reset
             }
-            else if (myInput.roll && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
+            else if (myInput.roll && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(5f * actionEfficiency))
             {
-                myHealthSystem.UseEnergy(actionCost);
+                myHealthSystem.UseEnergy(actionEfficiency);
                 SetCanWalk(0);
                 isWalking = false;
                 myAnimator.SetTrigger("Roll");
                 myRigidBody2D.velocity = new Vector2(0f, 0f);
                 myRigidBody2D.AddForce(new Vector2(rollForce * GetSpriteDirection(), 0f), ForceMode2D.Impulse);
             }
-            else if (myInput.dodge && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(actionCost))
+            else if (myInput.dodge && isGrounded && canWalk && myHealthSystem.CanUseEnergyBasedAction(3f * actionEfficiency))
             {
-                myHealthSystem.UseEnergy(actionCost);
+                myHealthSystem.UseEnergy(actionEfficiency);
                 SetCanWalk(0);
                 isWalking = false;
                 myAnimator.SetTrigger("Dodge");
@@ -151,16 +151,28 @@ public class CharacterController : MonoBehaviour
                     StartCoroutine("Climbing");
                 }
             }
-            else if (myInput.shiftPressed && myInput.horizontal != 0 && canWalk && myHealthSystem.CanUseEnergyBasedAction(runCost))
+            else if (myInput.shiftPressed && myInput.horizontal != 0 && canWalk)
             {
-                myHealthSystem.UseEnergy(runCost * Time.deltaTime);
+                if (myHealthSystem.CanUseEnergyBasedAction(runCost * actionEfficiency))
+                {
+                    myHealthSystem.UseEnergy(runCost*actionEfficiency * Time.deltaTime);
 
-                isWalking = true;
-                myAnimator.SetBool("isMoving", true);
-                myAnimator.SetFloat("MoveBlendValue", 1);
-                transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
-                float xVelocity = runSpeed * myInput.horizontal;
-                myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
+                    isWalking = true;
+                    myAnimator.SetBool("isMoving", true);
+                    myAnimator.SetFloat("MoveBlendValue", 1);
+                    transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
+                    float xVelocity = runSpeed * myInput.horizontal;
+                    myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
+                }
+                else
+                {
+                    isWalking = true;
+                    myAnimator.SetBool("isMoving", true);
+                    myAnimator.SetFloat("MoveBlendValue", 0);
+                    transform.localScale = new Vector3(GetMoveDirection(), transform.localScale.y, transform.localScale.z);
+                    float xVelocity = moveSpeed * myInput.horizontal;
+                    myRigidBody2D.velocity = new Vector2(xVelocity, myRigidBody2D.velocity.y);
+                }
             }
             else if (myInput.shiftPressed == false && myInput.horizontal != 0 && canWalk)
             {
@@ -186,33 +198,43 @@ public class CharacterController : MonoBehaviour
     {
         if (isGrounded && canWalk && !isInspecting)
         {
-            if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
+            if (myInput.basicAttack && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost() * attackEfficiency))
             {
                 myAnimator.SetTrigger("PrimaryAttack");
                 myAnimator.SetFloat("PrimaryAttackBlendValue", primaryAttackLevel);                
-                myHealthSystem.UseEnergy(GetWeaponStaminaCost());
+                myHealthSystem.UseEnergy(GetWeaponStaminaCost() * attackEfficiency);
             }
-            if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
+            if (myInput.advancedAttack && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost() * (attackEfficiency + 1f)))
             {
                 myAnimator.SetTrigger("SecondaryAttack");
                 myAnimator.SetFloat("SecondaryAttackBlendValue", secondaryAttackLevel);
-                myHealthSystem.UseEnergy(GetWeaponStaminaCost());
+                myHealthSystem.UseEnergy(GetWeaponStaminaCost() * (attackEfficiency + 1f));
             }
-            if (myInput.combo && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
+            if (myInput.combo && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost() * (attackEfficiency + 2f)))
             {
                 myAnimator.SetTrigger("Combo");
                 //myAnimator.SetFloat("SecondaryAttackBlendValue", myCharacterStats.primaryAttackLevel);
-                myHealthSystem.UseEnergy(GetWeaponStaminaCost());
+                myHealthSystem.UseEnergy(GetWeaponStaminaCost() * (attackEfficiency + 2f));
             }
-            if ((myInput.basicAttack|| myInput.advancedAttack||myInput.combo) && !myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost()))
+            if (myInput.basicAttack && !myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost() * attackEfficiency))
             {
                 myAnimator.SetTrigger("AttackSlow");
                 myHealthSystem.UseEnergy(1f);
             }
-            if (myInput.parry && myHealthSystem.CanUseEnergyBasedAction(attackEfficiency))
+            if (myInput.advancedAttack && !myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost() * (attackEfficiency + 1f)))
+            {
+                myAnimator.SetTrigger("AttackSlow");
+                myHealthSystem.UseEnergy(1f);
+            }
+            if (myInput.combo && !myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost() * (attackEfficiency + 2f)))
+            {
+                myAnimator.SetTrigger("AttackSlow");
+                myHealthSystem.UseEnergy(1f);
+            }
+            if (myInput.parry && myHealthSystem.CanUseEnergyBasedAction(GetWeaponStaminaCost() * (attackEfficiency)))
             {
                 myAnimator.SetTrigger("Parry");
-                myHealthSystem.UseEnergy(attackEfficiency);
+                myHealthSystem.UseEnergy(GetWeaponStaminaCost() * attackEfficiency);
             }
             if (myInput.useTool && myHealthSystem.CanUseEnergyBasedAction(GetToolStaminaCost()))
             {
@@ -227,10 +249,10 @@ public class CharacterController : MonoBehaviour
                 }
 
             }
-            if (myInput.throwItem && myHealthSystem.CanUseEnergyBasedAction(actionCost))
+            if (myInput.throwItem && myHealthSystem.CanUseEnergyBasedAction(actionEfficiency))
             {
                 myAnimator.SetTrigger("Throw");
-                myHealthSystem.UseEnergy(actionCost);
+                myHealthSystem.UseEnergy(actionEfficiency);
             }
         }
     }

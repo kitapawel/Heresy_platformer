@@ -18,7 +18,6 @@ MonoBehaviour:
   flavourText: 
   armorType: 1
   defense: 0
-  stability: 0
   poise: 0
   weight: 0
   projectileSlots: 2

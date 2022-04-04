@@ -92,7 +92,7 @@ public class HealthSystem : MonoBehaviour{
         }
     }
 
-    public void ProcessIncomingHit(float incomingDamage, float incomingArmorPenetration, float appliedForce, float attackVector, GameObject attacker = null)
+    public void ProcessIncomingHit(float incomingDamage, float incomingAttackPower, float appliedForce, float attackVector, GameObject attacker = null)
     {
         ProCamera2DShake.Instance.Shake("PlayerHit");
         if (myCharacterController.isParrying)
@@ -108,7 +108,7 @@ public class HealthSystem : MonoBehaviour{
         {
             CheckHealthState();
             CheckStability();
-            TakeHealthDamage(incomingDamage, incomingArmorPenetration);
+            TakeHealthDamage(incomingDamage, incomingAttackPower);
             myCharacterController.transform.localScale = new Vector3(-attackVector, transform.localScale.y, transform.localScale.z);
             myRigidbody2d.AddForce(new Vector2(attackVector * appliedForce, 0f), ForceMode2D.Impulse);
             myCharacterController.GetHit();
@@ -117,21 +117,20 @@ public class HealthSystem : MonoBehaviour{
             myBloodFX.Play();
         }
     }
-    private void TakeHealthDamage(float incomingDamage, float incomingArmorPenetration)
+    private void TakeHealthDamage(float incomingDamage, float incomingAttackPower)
     {
+        Debug.Log("Incoming dmg: " + incomingDamage + ", AttackPower: " + incomingAttackPower);
         float defenseValue = myInventorySystem.GetDefenseValue();
-        float damageReduction = defenseValue - incomingArmorPenetration;
-        if (damageReduction < 0f)
+        Debug.Log("Defense: " + defenseValue);
+        float damageReduction = (10f + incomingAttackPower)/(10f + defenseValue);
+        Debug.Log("Damage reduction: " + damageReduction);
+        if (damageReduction < 0.1f)
         {
-            damageReduction = 0f;
+            damageReduction = 0.1f;
         }
-        float finalDamageValue = incomingDamage - damageReduction;
-        if (finalDamageValue < 1f)
-        {
-            finalDamageValue = 1f;
-        }
-        Debug.Log("Incoming dmg: " + incomingDamage + ", Armor Pen: " + incomingArmorPenetration + ", Defense: " + defenseValue);
-        Debug.Log("Dmg reduction: " + damageReduction + ", Final damage: " + finalDamageValue);
+        float finalDamageValue = incomingDamage * damageReduction;
+        Debug.Log("Final damage: " + finalDamageValue);
+
         currentHealth -= finalDamageValue;
         CheckHealthState();
         mySoundSystem.PlayPainSounds();
@@ -155,7 +154,7 @@ public class HealthSystem : MonoBehaviour{
 
     public bool CanUseEnergyBasedAction(float energyCost)
     {
-        if (energyCost <= maxEnergy)
+        if (energyCost <= currentEnergy)
         {
             return true;
         } else

@@ -13,7 +13,7 @@ public class CombatSystem : MonoBehaviour
 
     HitCollisionChecker hitCollisionChecker;
     InteractionChecker interactionChecker;
-    public float damageBonus;
+    public float attackPower;
     public float critRate;
     public float critDamageBonus;
     public float weakAttackMultiplier;
@@ -38,7 +38,7 @@ public class CombatSystem : MonoBehaviour
 
     private void InitializeCharacterStats()
     {
-        damageBonus = characterStats.baseDamageBonus;
+        attackPower = characterStats.baseAttackPower;
         critRate = characterStats.baseCritRate;
         critDamageBonus = characterStats.baseCritBonus;
         weakAttackMultiplier = characterStats.weakAttackMultiplier;
@@ -54,7 +54,8 @@ public class CombatSystem : MonoBehaviour
         {
             //Assign basic values to damage calculation
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
-            float damageToDeal = myInventorySystem.equippedWeapon.damage + damageBonus;
+            float damageToDeal = Random.Range(myInventorySystem.equippedWeapon.minDamage, myInventorySystem.equippedWeapon.maxDamage);
+            float totalAttackPower = attackPower + myInventorySystem.equippedWeapon.attackPowerBonus;
             float armorPenetration = myInventorySystem.equippedWeapon.armorPenetration;
             float appliedForce = myInventorySystem.equippedWeapon.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
@@ -78,7 +79,7 @@ public class CombatSystem : MonoBehaviour
             //Send data to target
             if (hitTarget.GetComponentInParent<HealthSystem>())
             {                
-                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, armorPenetration, appliedForce, attackVector, attackerObject);
+                hitTarget.GetComponentInParent<HealthSystem>().ProcessIncomingHit(damageToDeal, totalAttackPower, appliedForce, attackVector, attackerObject);
             } 
             if (hitTarget.GetComponentInParent<StructureSystem>())
             {
@@ -93,8 +94,8 @@ public class CombatSystem : MonoBehaviour
         {
             //Assign basic values to damage calculation
             GameObject attackerObject = transform.gameObject;//get information about the attacking object and pass to the damaged object
-            float damageToDeal = myInventorySystem.equippedTool.damage + damageBonus;
-            float piercingDamage = myInventorySystem.equippedTool.armorPenetration + damageBonus;
+            float damageToDeal = myInventorySystem.equippedTool.minDamage;
+            float piercingDamage = myInventorySystem.equippedTool.armorPenetration;
             float appliedForce = myInventorySystem.equippedTool.force; //TODO randomize this and maybe tie this somehow to stabilitydamage
             float attackVector = myCharacterController.GetSpriteDirection();
             float structuralDamageToDeal = myInventorySystem.equippedTool.structuralDamage;
@@ -140,11 +141,11 @@ public class CombatSystem : MonoBehaviour
             float bonusCriticalDamage = critDamageBonus + myInventorySystem.equippedWeapon.critDamageBonus;
             damage = damage * bonusCriticalDamage;
             Debug.Log("Critical hit roll: " + critRoll + ", dealt critical damage:" + damage);
-            return Mathf.Round(damage);//TODO decide how to do rounding and at which point to round
+            return damage;//TODO decide how to do rounding and at which point to round
         } else
         {
             Debug.Log("Critical hit roll: " + critRoll + ", dealt normal damage:" + damage);
-            return Mathf.Round(damage);
+            return damage;
         }
     }
 

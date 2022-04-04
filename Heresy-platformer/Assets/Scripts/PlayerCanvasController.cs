@@ -92,7 +92,7 @@ public class PlayerCanvasController : MonoBehaviour
             "Defense: {4} | Poise: {5} | Weight: {6} \n\n"+
             "Other\n"+
             "Health: {7} | Energy: {8} | Vitality: {9}\n\n",
-            myInventorySystem.equippedWeapon.damage + myCombatSystem.damageBonus,
+            myInventorySystem.equippedWeapon.minDamage + myCombatSystem.attackPower,
             (myInventorySystem.equippedWeapon.critRateBonus + myCombatSystem.critRate) * 100, 
             (myInventorySystem.equippedWeapon.critDamageBonus + myCombatSystem.critDamageBonus) * 100,
             myInventorySystem.equippedWeapon.armorPenetration,

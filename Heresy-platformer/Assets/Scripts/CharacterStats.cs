@@ -23,11 +23,11 @@ public class CharacterStats : ScriptableObject
 
 
     public float baseAttackEfficiency = 1f; // multiplier of weapon/tool use cost
-    public float baseActionCost = 5f;
+    public float baseActionEfficiency = 1f; // multiplier of weapon/tool use cost
     public float BaseRunCost = 1f;
 
     [Header("Combat stats:")]
-    public float baseDamageBonus = 0;
+    public float baseAttackPower = 0;
     public float baseCritRate = 0.05f;
     public float baseCritBonus = 1.10f;
 
